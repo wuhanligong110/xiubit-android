@@ -48,7 +48,7 @@ android {
         //gradle 的配置会覆盖清单文件中的配置
         applicationId "com.v5ent.xiubit"
         multiDexEnabled true //Android分包 防止id的数目超过65536报错
-        versionName "4.6.6"
+        versionName "1.0.0"
         versionCode 953
         flavorDimensions "1024"
         ndk {

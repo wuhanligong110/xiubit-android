@@ -121,10 +121,10 @@ public class FragmentHomePage extends FragmentBase {
     RelativeLayout mHeadRe;
     @BindView(R.id.arrow1)
     ImageView mArrow1;
-    @BindView(R.id.arrow3)
+    /*@BindView(R.id.arrow3)
     ImageView mArrow3;
     @BindView(R.id.fundSiftTitleRl)
-    RelativeLayout mFundSiftTitleRl;
+    RelativeLayout mFundSiftTitleRl;*/
     @BindView(R.id.home_page_tab1)
     LinearLayout mHomePageTab1;
     @BindView(R.id.home_page_tab2)
@@ -736,7 +736,8 @@ public class FragmentHomePage extends FragmentBase {
         }
     }
 
-    @OnClick({R.id.headRe, R.id.guideBgLl, R.id.knowAboutUsEntry, R.id.insurance_title_rl, R.id.home_page_tab1, R.id.home_page_tab2, R.id.home_page_tab3, R.id.home_page_tab4, R.id.newuser_tab, R.id.fundSiftTitleRl, R.id.infoIv, R.id.choiceProductRl})
+//    @OnClick({R.id.headRe, R.id.guideBgLl, R.id.knowAboutUsEntry, R.id.insurance_title_rl, R.id.home_page_tab1, R.id.home_page_tab2, R.id.home_page_tab3, R.id.home_page_tab4, R.id.newuser_tab, R.id.fundSiftTitleRl, R.id.infoIv, R.id.choiceProductRl})
+    @OnClick({R.id.headRe, R.id.guideBgLl, R.id.knowAboutUsEntry, R.id.home_page_tab1, R.id.home_page_tab2, R.id.home_page_tab3, R.id.home_page_tab4, R.id.newuser_tab, R.id.infoIv, R.id.choiceProductRl})
     public void onViewClicked(View view) {
         Intent intent = null;
         switch (view.getId()) {
@@ -776,12 +777,12 @@ public class FragmentHomePage extends FragmentBase {
 //                    mHandler.removeCallbacks(mShakeRunnable);
 //                }
                 break;
-            case R.id.fundSiftTitleRl:  //更多基金
+            /*case R.id.fundSiftTitleRl:  //更多基金
                 MobclickAgent.onEvent(ctx, "S_4_2");
                 intent = new Intent(ctx, MainActivity.class);
                 intent.putExtra("skipTab", "p1t2");
                 startActivity(intent);
-                break;
+                break;*/
 
             case R.id.home_page_tab1:
 //                //网贷
@@ -835,12 +836,12 @@ public class FragmentHomePage extends FragmentBase {
                 break;
 
 
-            case R.id.insurance_title_rl://更多保险
+            /*case R.id.insurance_title_rl://更多保险
                 MobclickAgent.onEvent(ctx, "S_5_2");
                 intent = new Intent(ctx, MainActivity.class);
                 intent.putExtra("skipTab", "p1t3");
                 startActivity(intent);
-                break;
+                break;*/
 //            case R.id.signCalendarEntry: //签到
 //                MobclickAgent.onEvent(ctx, "S_7_1");
 //                if (LoginService.getInstance().isTokenExsit())
