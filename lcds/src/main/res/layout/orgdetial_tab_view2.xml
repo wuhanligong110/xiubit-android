@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+    android:background="@color/WHITE"
+    android:paddingTop="15dp"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp">
+
+    <LinearLayout
+        android:id="@+id/productReleaseTimeLl"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+
+        android:layout_marginBottom="15dp">
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textSize="12dp"
+            android:textColor="@color/text_gray_common_title"
+            android:text="发标时间:"
+            />
+
+        <TextView
+            android:layout_weight="3.8"
+            android:id="@+id/productReleaseTimeTv"
+            style="@style/text_small_gray_size_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/WHITE"
+            android:lineSpacingExtra="6sp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rechargeLimitLl"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:textSize="12dp"
+            android:textColor="@color/text_gray_common_title"
+            android:text="充值限制:"
+            />
+
+        <TextView
+            android:id="@+id/rechargeLimitTv"
+            style="@style/text_small_gray_size_style"
+            android:layout_width="0dp"
+            android:layout_weight="3.8"
+            android:layout_height="wrap_content"
+            android:background="@color/WHITE"
+            android:lineSpacingExtra="6sp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/interestTimeLl"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:textSize="12dp"
+            android:textColor="@color/text_gray_common_title"
+            android:text="起息时间:"
+            />
+
+        <TextView
+            android:id="@+id/interestTimeTv"
+            style="@style/text_small_gray_size_style"
+            android:layout_width="0dp"
+            android:layout_weight="3.8"
+            android:layout_height="wrap_content"
+            android:background="@color/WHITE"
+            android:lineSpacingExtra="6sp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/withdrawalChargesLl"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:textSize="12dp"
+            android:textColor="@color/text_gray_common_title"
+            android:text="提现费用:"
+            />
+
+        <TextView
+            android:id="@+id/withdrawalChargesTv"
+            style="@style/text_small_gray_size_style"
+            android:layout_width="0dp"
+            android:layout_weight="3.8"
+            android:layout_height="wrap_content"
+            android:background="@color/WHITE"
+            android:lineSpacingExtra="6sp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/cashInTimeLl"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:textSize="12dp"
+            android:textColor="@color/text_gray_common_title"
+            android:text="提现到账:"
+            />
+
+        <TextView
+            android:id="@+id/cashInTimeTv"
+            style="@style/text_small_gray_size_style"
+            android:layout_width="0dp"
+            android:layout_weight="3.8"
+            android:layout_height="wrap_content"
+            android:background="@color/WHITE"
+            android:lineSpacingExtra="6sp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/investOthersLl"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:textSize="12dp"
+            android:textColor="@color/text_gray_common_title"
+            android:text="其他:"
+            />
+
+        <TextView
+            android:id="@+id/investOthersTv"
+            style="@style/text_small_gray_size_style"
+            android:layout_width="0dp"
+            android:layout_weight="3.8"
+            android:layout_height="wrap_content"
+            android:background="@color/WHITE"
+            android:lineSpacingExtra="6sp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

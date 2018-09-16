@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/bgIv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/signin_success_bg"
+        app:layout_constraintDimensionRatio="1080:2137"
+        />
+
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.41" />
+
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.65" />
+
+
+    <LinearLayout
+        app:layout_constraintTop_toBottomOf="@id/guideline1"
+        app:layout_constraintBottom_toTopOf="@id/guideline2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/signAwardTv"
+                    android:layout_marginTop="@dimen/w12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/w18"
+                    android:textColor="@color/text_black_common"
+                    tools:text="签到奖励0.30元 + 0.30元*1"/>
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/redpacketAwardTv"
+                    android:layout_marginTop="@dimen/w12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/w18"
+                    android:textColor="@color/text_red_common"
+                    android:drawableRight="@drawable/icon_redpacket"
+                    android:drawablePadding="@dimen/w4"
+                    tools:text="+分享奖励"/>
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/signDayNumResultTv"
+                android:layout_marginTop="@dimen/w10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/w12"
+                android:textColor="@color/text_gray_common"
+                android:text="今日签到已完成! 连续签到0天"/>
+
+            <Button
+                android:id="@+id/signShareBtn"
+                android:layout_width="@dimen/w253"
+                android:layout_height="@dimen/w49"
+                android:layout_marginTop="@dimen/w20"
+                android:background="@drawable/sign_share_friend_btn_bg"
+                style="?android:attr/borderlessButtonStyle"
+                android:ellipsize="none"
+                android:text="分享好友  不错过翻倍奖励"
+                android:textSize="@dimen/w15"
+                android:textColor="@color/text_red_common"
+                android:visibility="visible"/>
+        </LinearLayout>
+
+
+
+        <TextView
+            android:id="@+id/lookAwardMoneySuccessEntry"
+            android:padding="@dimen/w8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/w10"
+            android:textSize="@dimen/w12"
+            android:textColor="@color/text_black_common"
+            android:text="查看累计奖励金>>"/>
+
+    </LinearLayout>
+
+
+
+
+
+
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:gravity="center">
+
+<!--1、使用android:cardCornerRadius属性指定圆角半径
+2、使用CardView.setRadius 设置圆角半径。
+3、使用 android:cardBackgroundColor属性设置卡片颜色
+   ,而不是backgroud
+
+-->
+<android.support.v7.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_marginLeft="@dimen/prompt_window_margin_left_and_right"
+    android:layout_marginRight="@dimen/prompt_window_margin_left_and_right"
+    android:layout_height="wrap_content"
+    android:background="@color/WHITE"
+    app:cardBackgroundColor="@color/WHITE"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/WHITE"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_marginLeft="@dimen/prompt_content_margin_left_and_right"
+            android:layout_marginRight="@dimen/prompt_content_margin_left_and_right"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/prompt_content_margin_top_and_bottom"
+            android:layout_marginTop="@dimen/prompt_content_margin_top_and_bottom"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="确定拨打客服电话"
+                android:textColor="@color/text_black_common_deep"
+                android:textSize="@dimen/prompt_title_text_size" />
+
+            <TextView
+                android:id="@+id/text_service_phone_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:gravity="center"
+                android:textColor="@color/text_gray_common_title"
+                android:textSize="@dimen/prompt_contant_text_size"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/text_service_work_time"
+                android:layout_width="wrap_content"
+                android:textSize="12dp"
+                android:textColor="@color/text_gray_common"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="工作日早9:00-18:00" />
+        </LinearLayout>
+
+        <View style="@style/line_horizontal_common" />
+
+        <LinearLayout
+            android:id="@+id/bottom_ll"
+            android:layout_width="fill_parent"
+            android:layout_height="44dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/negativeButton"
+                style="@style/text_middle_blue_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/item_click_bg"
+                android:gravity="center"
+                android:text="@string/cancel"
+                android:textColor="@color/prompt_btn_cancle"
+                android:textSize="@dimen/prompt_btn_text_size" />
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="@color/line_common" />
+
+            <Button
+                android:id="@+id/positiveButton"
+                android:layout_width="0dp"
+                android:textColor="@color/prompt_btn_postion"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/item_click_bg"
+                android:gravity="center"
+                android:text="确认"
+                android:textSize="@dimen/prompt_btn_text_size" />
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>
+
+</RelativeLayout>
+

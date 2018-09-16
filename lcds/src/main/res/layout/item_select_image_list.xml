@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/backgroud_common">
+
+
+    <ImageView
+        android:id="@+id/imageIv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintDimensionRatio="200:355"
+        android:scaleType="fitXY"
+        />
+
+    <ImageView
+        android:paddingLeft="@dimen/w30"
+        android:paddingBottom="@dimen/w30"
+        android:paddingTop="5dp"
+        android:paddingRight="5dp"
+        android:id="@+id/selectIv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/unselect_image_box"/>
+
+
+</android.support.constraint.ConstraintLayout>

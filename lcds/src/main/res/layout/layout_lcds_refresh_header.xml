@@ -1,0 +1,48 @@
+    <RelativeLayout
+        android:layout_centerInParent="true"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            >
+
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="@dimen/w20"
+                    android:layout_height="@dimen/w20"
+                    android:src="@drawable/lcds_pull_refresh_iv"/>
+
+                <ImageView
+                    android:id="@+id/progressIv"
+                    android:layout_width="@dimen/w20"
+                    android:layout_height="@dimen/w20"
+                    />
+
+
+            </FrameLayout>
+
+
+
+            <TextView
+                android:id="@+id/default_header_title"
+                android:layout_marginLeft="@dimen/w6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_black_common"
+                android:textSize="@dimen/w12"
+                android:text="平台合规 投资更安心"/>
+
+
+
+        </LinearLayout>
+    </RelativeLayout>

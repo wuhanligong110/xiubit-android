@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/backgroud_common"
+              android:orientation="vertical">
+
+    <include layout="@layout/header_layout"/>
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/text_white_common"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/list_viewpager_title_height"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/titleRL01"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/text1"
+                    style="@style/list_viewpager_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/my_msg"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/text1_new_count"
+                    style="@style/text_num_two_red_bg_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="4dp"
+                    android:layout_toRightOf="@id/text1"
+                    android:text="0"
+                    android:visibility="invisible"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/titleRL02"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/text2"
+                    style="@style/list_viewpager_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/bulletin"
+                    />
+
+                <TextView
+                    android:id="@+id/text2_new_count"
+                    style="@style/text_num_two_red_bg_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="4dp"
+                    android:layout_toRightOf="@id/text2"
+                    android:text="0"
+                    android:visibility="invisible"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/cursor"
+            android:layout_width="80dp"
+            android:layout_height="2dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:background="@color/text_blue_common"/>
+    </LinearLayout>
+
+    <View style="@style/line_horizontal_common"></View>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vPager"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:flipInterval="30"
+            android:persistentDrawingCache="animation"/>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <View style="@style/line_horizontal_common"/>
+
+            <LinearLayout
+                android:id="@+id/mine_msg_person_delete_ll"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/WHITE"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <CheckBox
+                    android:id="@+id/bottom_delete_checkbox"
+                    style="@style/text_middle_blue_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="12dp"
+                    android:button="@drawable/checkbox"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical|left"
+                    android:paddingBottom="12dp"
+                    android:paddingRight="12dp"
+                    android:paddingTop="12dp"
+                    android:text="  全选"/>
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/text_bottom_delete"
+                    style="@style/text_middle_blue_style"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|right"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:text="删除"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/text_nitice_bottom_delete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <View style="@style/line_horizontal_common"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/text_blue_common"
+            android:gravity="center"
+            android:text="@string/delete_all"
+            android:textColor="@color/WHITE"
+            android:textSize="18sp"></TextView>
+
+    </LinearLayout>
+
+</LinearLayout>

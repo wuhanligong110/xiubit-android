@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:color="@color/text_blue_common"
+        android:drawable="@drawable/smart_test_selected_shape"
+        android:state_selected="true"></item>
+    <item
+        android:drawable="@drawable/smart_test_unselected_shape" android:state_selected="false"></item>
+</selector>

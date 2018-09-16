@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+
+    <item type="id" name="auto_focus"/>
+  <item type="id" name="decode"/>
+  <item type="id" name="decode_failed"/>
+  <item type="id" name="decode_succeeded"/>
+    <item type="id" name="quit"/>
+
+    <item type="id" name="customer_deal_bug_refresh_view"/>
+  <item type="id" name="customer_deal_redeem_refresh_view"/>
+    <item type="id" name="invest_record_refresh_view"/>
+  <item type="id" name="invest_customer_refresh_view"/>
+
+</resources>

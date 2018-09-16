@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroud_common"
+    android:orientation="vertical" >
+
+    <View style="@style/line_horizontal_common" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/text_white_common"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <org.xsl781.ui.view.ClearEditText
+            android:id="@+id/cedt_invite_name_or_phone_search"
+            style="@style/edit_text_size_style"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="7dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="7dp"
+            android:layout_weight="2"
+            android:background="@drawable/btn_while_small_default"
+            android:drawableLeft="@drawable/icon_msg_search"
+            android:drawablePadding="10dp"
+            android:hint="@string/input_name_or_phone"
+            android:paddingLeft="15dp"
+            android:singleLine="true"
+            android:textColorHint="@color/hint_text" />
+
+        <LinearLayout
+            android:layout_width="118dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginRight="12dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="0dp" >
+
+            <TextView
+                style="@style/text_small_black_size_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/selected" />
+
+            <TextView
+                android:id="@+id/text_customer_selected_count"
+                android:layout_width="33dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:background="@drawable/text_small_num_bg"
+                android:gravity="center"
+                android:padding="0dp"
+                android:text="0"
+                android:textColor="@color/WHITE"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/titleTv"
+                style="@style/text_small_black_size_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="位客户" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View style="@style/line_horizontal_common" />
+
+    <TextView
+        android:id="@+id/text_prompt"
+        style="@style/text_small_black_size_style"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:gravity="center_vertical"
+        android:text="以下好友尚未注册，快邀请他们成为你的客户吧" />
+
+    <View style="@style/line_horizontal_common" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backgroud_common" >
+
+        <Button
+            android:id="@+id/btn_invest"
+            style="@style/btn_normal_style"
+            android:layout_alignParentBottom="true"
+            android:text="邀请" />
+
+        <RelativeLayout
+            android:id="@+id/layout_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/btn_invest"
+            android:background="@color/backgroud_common" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/backgroud_common" >
+
+                <com.toobei.common.view.ListBlankLayout
+                    android:id="@+id/list_blank_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" />
+
+                <TextView
+                    android:id="@+id/dialog"
+                    android:layout_width="80.0dip"
+                    android:layout_height="80.0dip"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:background="@drawable/v2_gallery_contacts_dialog_background"
+                    android:gravity="center"
+                    android:padding="5dip"
+                    android:textColor="@color/backgroud_common"
+                    android:textSize="35.0dip"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="@color/Color_0" >
+
+                <org.xsl781.ui.view.EnLetterView
+                    android:id="@+id/right_letter"
+                    android:layout_width="25dip"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/Color_0" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

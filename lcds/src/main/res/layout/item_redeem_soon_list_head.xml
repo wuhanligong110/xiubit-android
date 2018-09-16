@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:id="@+id/redeem_list_head_ll"
+              android:layout_width="match_parent"
+              android:layout_height="35dp"
+              android:layout_marginBottom="-12dp"
+              android:background="@color/backgroud_common"
+              android:orientation="horizontal">
+
+
+    <RelativeLayout
+
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:orientation="horizontal">
+
+        <View
+            style="@style/line_vertical_common_no_margin"
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="22dp"
+            android:background="#D1E1EF"/>
+
+        <TextView
+            android:id="@+id/text_customer_invest_enddate_year"
+            style="@style/text_small_white_size_style"
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="24dp"
+            android:background="@drawable/bg_redeem_year"
+            android:gravity="center"
+            android:text="2016a"
+            android:textSize="10dp"
+            />
+
+
+    </RelativeLayout>
+
+    <ViewStub
+        android:layout_width="match_parent"
+        android:layout_height="30dp"/>
+</LinearLayout>

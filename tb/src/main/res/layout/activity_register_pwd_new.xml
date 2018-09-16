@@ -1,0 +1,222 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroud_common"
+    android:orientation="vertical" >
+
+    <include layout="@layout/header_layout" />
+
+    <View style="@style/line_horizontal_common" />
+
+    <TextView
+        android:id="@+id/reset_login_pwd_title"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginLeft="12dp"
+        android:gravity="center_vertical"
+        android:textColor="@color/text_black_common"
+        android:textSize="12sp" />
+
+    <View style="@style/line_horizontal_common" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@color/WHITE"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/edit_text_size_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="12dp"
+                android:layout_weight="1"
+                android:gravity="center|left"
+                android:text="@string/vcode" />
+
+            <org.xsl781.ui.view.ClearEditText
+                android:id="@+id/cedt_vcode"
+                style="@style/edit_text_size_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical|left"
+                android:layout_weight="3"
+                android:background="@android:color/transparent"
+                android:hint="@string/input_sms_vcode"
+                android:inputType="number"
+                android:paddingLeft="6dp"
+                android:paddingRight="12dp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1.5"
+                android:padding="4dp" >
+
+                <View
+                    style="@style/line_vertical_common_no_margin"/>
+
+                <Button
+                    android:id="@+id/btn_resend_sms_vcode"
+                    style="@style/text_small_black_size_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:background="@color/WHITE"
+                    android:gravity="center"
+                    android:textColor="@color/text_red_common"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- android:inputType="mobile" -->
+
+        <View style="@style/line_horizontal_common" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/WHITE" >
+
+            <TextView
+                android:id="@+id/passwordTv"
+                style="@style/edit_text_size_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="15dp"
+                android:text="输入密码" />
+
+            <org.xsl781.ui.view.ClearEditText
+                android:id="@+id/passwordEt"
+                style="@style/edit_text_size_style"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_vertical|left"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="45dp"
+                android:layout_toRightOf="@+id/passwordTv"
+                android:layout_weight="3"
+                android:background="@android:color/transparent"
+                android:hint="6~20位数字、字母和符号组合"
+                android:paddingLeft="6dp"
+                android:singleLine="true"
+                android:password="true"
+                android:paddingRight="12dp" />
+
+            <ImageView
+                android:id="@+id/eye1Iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/img_login_pwd_eye_close" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:layout_alignParentBottom="true"
+                android:background="@color/line_common" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="44dp"
+            android:background="@color/WHITE" >
+
+            <TextView
+                android:id="@+id/surePasswordTv"
+                style="@style/edit_text_size_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="15dp"
+                android:text="确认密码" />
+
+            <org.xsl781.ui.view.ClearEditText
+                android:id="@+id/surePasswordEt"
+                style="@style/edit_text_size_style"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_vertical|left"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="45dp"
+                android:layout_toRightOf="@+id/surePasswordTv"
+                android:layout_weight="3"
+                android:background="@android:color/transparent"
+                android:hint="请再次输入密码"
+                android:paddingLeft="6dp"
+                android:singleLine="true"
+                android:password="true"
+                android:paddingRight="12dp" />
+
+            <ImageView
+                android:id="@+id/eye2Iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/img_login_pwd_eye_close" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/checkIv"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center"
+                android:background="@drawable/iv_check"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="我同意"
+                android:textColor="@color/BLACK"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/protocalTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/user_agreement"
+                android:textColor="@color/text_link_blue"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btn_complete"
+            android:layout_marginTop="20dp"
+            style="@style/top_text_color_size_style"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_ll_height"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/btn_grey_big_default"
+            android:scaleType="fitCenter"
+            android:text="@string/complete" />
+    </LinearLayout>
+
+</LinearLayout>

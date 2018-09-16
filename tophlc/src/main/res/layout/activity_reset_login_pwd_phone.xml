@@ -1,0 +1,76 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroud_common"
+    android:orientation="vertical">
+
+    <include layout="@layout/header_layout" />
+
+    <View style="@style/line_horizontal_common" />
+
+    <View
+        android:id="@+id/top_line_view"
+        android:layout_width="match_parent"
+        android:layout_height="12dp" />
+
+    <TextView
+        android:id="@+id/remind_text"
+        style="@style/remind_text_size_style"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:text="请填写您已经注册的手机号码，方便我们帮您找回密码"
+        android:visibility="gone" />
+
+    <View style="@style/line_horizontal_common" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/WHITE"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/edit_text_size_style"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/mobile" />
+
+        <org.xsl781.ui.view.ClearEditText
+            android:id="@+id/cedt_phone"
+            style="@style/edit_text_size_style"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical|left"
+            android:layout_weight="3"
+            android:background="@android:color/transparent"
+            android:hint="@string/login_hint_text"
+            android:inputType="phone"
+            android:paddingLeft="6dp"
+            android:paddingRight="12dp" />
+    </LinearLayout>
+
+    <!-- android:inputType="mobile" -->
+
+    <View style="@style/line_horizontal_common" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="30dp" />
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_ll_height"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:background="@drawable/btn_login_selector"
+        android:scaleType="fitCenter"
+        android:text="@string/next"
+        android:textColor="@color/WHITE"
+        android:textSize="@dimen/top_title_text_size" />
+
+</LinearLayout>

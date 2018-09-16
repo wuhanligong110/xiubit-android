@@ -1,0 +1,392 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/backgroud_common"
+              android:orientation="vertical">
+
+    <include layout="@layout/header_layout"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="83dp"
+                android:background="@color/WHITE"
+                android:gravity="left"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/text_small_gray_size_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/can_withdraw_money_yuan"/>
+
+                <com.toobei.common.view.MyTextView
+                    android:id="@+id/text_account_balance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="4dp"
+                    android:gravity="left"
+                    android:text="0.00"
+                    android:textColor="@color/text_blue_common"
+                    android:textSize="33dp"
+                    />
+            </LinearLayout>
+
+            <View style="@style/line_horizontal_common"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/WHITE"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp">
+
+                    <TextView
+                        style="@style/text_middle_gray64_style"
+                        android:textSize="@dimen/w16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center|left"
+                        android:layout_marginRight="@dimen/w8"
+                        android:text="@string/bank_card"/>
+
+                    <TextView
+                        android:id="@+id/text_bank_card_info"
+                        style="@style/text_middle_black_style"
+                        android:textSize="@dimen/w16"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center|left"
+                        android:text=""/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/bank_name_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <View style="@style/line_horizontal_common"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:orientation="horizontal"
+                        android:paddingLeft="15dp">
+
+                        <TextView
+                            style="@style/text_middle_gray64_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center|left"
+                            android:layout_marginRight="@dimen/w8"
+                            android:textSize="@dimen/w16"
+                            android:text="@string/bank_name"/>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:id="@+id/text_bank_name"
+                                style="@style/text_middle_black_style"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="3"
+                                android:gravity="center|left"
+                                android:textSize="@dimen/w16"
+                                android:text=""/>
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="15dp"
+                                android:src="@drawable/img_arrow_right"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View style="@style/line_horizontal_common"/>
+                </LinearLayout>
+
+                <!--todo -->
+                <LinearLayout
+                    android:id="@+id/bank_branch_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:orientation="horizontal"
+                        android:paddingLeft="15dp">
+
+                        <TextView
+                            style="@style/text_middle_gray64_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="@dimen/w8"
+                            android:gravity="center|left"
+                            android:text="所属支行"/>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:orientation="horizontal"
+                            android:layout_marginRight="15dp">
+
+                            <TextView
+                                android:id="@+id/text_province"
+                                style="@style/text_middle_black_style"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:drawableRight="@drawable/img_select_down_icon"
+                                android:gravity="center|left"
+                                android:text="选择省份"
+                                android:textColor="@color/text_color_hint_common"/>
+
+                            />
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View style="@style/line_horizontal_common"/>
+
+                    <View style="@style/line_horizontal_common"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:orientation="horizontal"
+                        android:paddingLeft="15dp">
+
+                        <TextView
+                            style="@style/text_middle_gray96_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="@dimen/w8"
+                            android:gravity="center|left"
+                            android:text="空空空空"
+                            android:visibility="invisible"/>
+
+                        <TextView
+                            android:id="@+id/text_city"
+                            style="@style/text_middle_black_style"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical|left"
+                            android:layout_marginRight="15dp"
+                            android:layout_weight="3"
+                            android:drawableRight="@drawable/img_select_down_icon"
+                            android:gravity="center|left"
+                            android:text="选择城市"
+                            android:textColor="@color/text_color_hint_common"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:orientation="horizontal"
+                        android:paddingLeft="15dp">
+
+                        <TextView
+                            style="@style/text_middle_gray96_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center|left"
+                            android:layout_marginRight="@dimen/w8"
+                            android:text="空空空空"
+                            android:visibility="invisible"/>
+
+                        <org.xsl781.ui.view.ClearEditText
+                            android:id="@+id/cedt_address"
+                            style="@style/edit_text_size_style"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical|left"
+                            android:layout_weight="3"
+                            android:background="@android:color/transparent"
+                            android:hint="请填写支行名称"
+                            android:inputType="text"
+                            android:layout_marginRight="15dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="15dp"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/WHITE"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp">
+
+                    <TextView
+                        style="@style/text_middle_gray64_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center|left"
+                        android:text="@string/withdraw_money"
+                        android:layout_marginRight="@dimen/w8"
+                        android:textSize="@dimen/w16"/>
+
+                    <org.xsl781.ui.view.ClearEditText
+                        android:id="@+id/cedt_input_money"
+                        style="@style/edit_text_size_style"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical|left"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:hint="请输入提现金额，最低20元"
+                        android:inputType="numberDecimal"
+                        android:paddingRight="15dp"
+                        android:textSize="@dimen/w16"/>
+
+                    <TextView
+                        android:id="@+id/allWithdrawOutTv"
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@color/WHITE"
+                        android:text="全部提现"
+                        android:layout_marginRight="@dimen/w8"
+                        android:textColor="@color/text_blue_common"
+                        android:textSize="@dimen/w14"/>
+                </LinearLayout>
+
+                <View style="@style/line_horizontal_common"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp">
+
+                    <TextView
+                        style="@style/text_middle_gray64_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center|left"
+                        android:layout_marginRight="@dimen/w8"
+                        android:text="@string/to_account_time"
+                        android:textSize="@dimen/w16"/>
+
+                    <TextView
+                        android:id="@+id/text_to_account_time"
+                        style="@style/text_middle_black_style"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center|left"
+                        android:textSize="@dimen/w16"/>
+                </LinearLayout>
+
+                <View style="@style/line_horizontal_common"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp">
+
+                    <TextView
+                        style="@style/text_middle_gray64_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center|left"
+                        android:layout_marginRight="@dimen/w8"
+                        android:text="@string/can_withdraw_cost"
+                        android:textSize="@dimen/w16"/>
+
+                    <TextView
+                        android:id="@+id/text_can_withdraw_cost"
+                        style="@style/text_middle_black_style"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center|left"
+                        android:textSize="@dimen/w16"/>
+                </LinearLayout>
+
+                <View style="@style/line_horizontal_common"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/text_small_black_size_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/warm_prompt"
+                    />
+
+                <TextView
+                    android:id="@+id/infoTv"
+                    style="@style/text_small_black_size_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/withdraw_prompt"
+                    android:textColor="@color/text_gray_common"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_commit"
+        android:textColor="@color/text_white_common"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_ll_height"
+        android:enabled="false"
+        android:background="@drawable/btn_blue_selector"
+        android:text="余额及提现金额需 ≥ 20元"
+        android:textSize="16dp"/>
+</LinearLayout>

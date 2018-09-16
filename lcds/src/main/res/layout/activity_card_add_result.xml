@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+    android:background="@color/backgroud_common"
+    >
+
+
+    <LinearLayout
+        android:id="@+id/bound_bank_card_success_ll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/h195"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/bind_bank_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/img_bound_bank_card_success"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            android:text="绑卡成功"
+            android:textColor="@color/text_black_common"
+            android:textSize="18dp"/>
+        
+        <TextView
+            android:id="@+id/bankCardInfoTv"
+            android:layout_marginTop="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_gray_common"
+            android:textSize="14dp"
+            android:text=""/>
+        
+        
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/completeBtn"
+        style="@style/btn_common_style"
+        android:text="完成"/>
+    
+    <View
+       style="@style/line_horizontal_common"
+        android:layout_marginBottom="12dp"/>
+    
+    <View
+        style="@style/line_horizontal_common"/>
+    
+    <LinearLayout
+        android:id="@+id/goRedPocketLl"
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:background="@color/WHITE"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:visibility="gone">
+        
+        <ImageView
+            android:layout_marginRight="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/bind_card_arrowd_icon"/>
+        
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_gray_common_title"
+            android:textSize="@dimen/w14"
+            android:drawableLeft="@drawable/bind_card_repocket_icon"
+            android:text="恭喜您，成功领取20元红包！"
+            android:drawablePadding="10dp"/>
+        
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/black_arrow_right_mine"/>
+        
+    </LinearLayout>
+
+    <View
+        style="@style/line_horizontal_common"/>
+    
+    <TextView
+        android:id="@+id/bottomRemindTv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:textSize="12dp"
+        android:background="@color/backgroud_common"
+        android:gravity="center_horizontal|bottom"
+        android:paddingBottom="20dp"
+        android:textColor="@color/text_gray_common"
+        android:text="@string/card_bind_bottom_remind"/>
+        
+        
+</LinearLayout>

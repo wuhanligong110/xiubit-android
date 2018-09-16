@@ -1,0 +1,73 @@
+-optimizations !code/simplification/arithmetic,!field/*,!class/merging/*
+-optimizationpasses 7
+-dontpreverify
+-verbose
+-dontwarn android.support.**
+-ignorewarnings
+ 
+-injars 'F:\xsl781_test\xsl781_v1.0.jar'
+-outjars 'F:\xsl781_test\xsl781_v1.0_00.jar'
+
+#jar包依赖的其他库的位置和名称
+-libraryjars 'G:\360yunpan\qiyigu\workspace\esmoke\xsl781\libs\android-support-v4.jar'
+-libraryjars 'G:\javasoft\adt-bundle-windows-x86_64-20131030\sdk\platforms\android-19\android.jar'
+
+# -optimizations 7
+-keep public class * extends android.app.Activity
+
+-keep public class * extends android.app.Application
+
+-keep public class * extends android.app.Service
+
+-keep public class * extends android.remark.BroadcastReceiver
+
+-keep public class * extends android.remark.ContentProvider
+
+-keep public class * extends android.app.backup.BackupAgentHelper
+
+-keep public class * extends android.preference.Preference
+
+-keepclasseswithmembers class * {
+    public <init>(android.remark.Context,android.util.AttributeSet);
+}
+
+-keepclasseswithmembers class * {
+    public <init>(android.remark.Context,android.util.AttributeSet,int);
+}
+
+-keepclassmembers class * extends android.app.Activity {
+    public void *(android.view.View);
+}
+
+-keep class * extends android.os.Parcelable {
+    public static final android.os.Parcelable$Creator *;
+}
+
+-keep class org.xsl781.DB
+ {
+    public <fields>;
+    public <methods>;
+}
+
+-keep class org.xsl781.Http
+ {
+    public <fields>;
+    public <methods>;
+}
+
+
+-keep class org.xsl781.ui.**.** {
+    <fields>;
+    <methods>;
+}
+
+-keepclasseswithmembers,allowshrinking class * {
+    native <methods>;
+}
+
+# Also keep - Enumerations. Keep the special static methods that are required in
+# enumeration classes.
+-keepclassmembers enum  * {
+    public static **[] values();
+    public static ** valueOf(java.lang.String);
+}

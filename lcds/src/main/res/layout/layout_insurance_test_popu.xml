@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="bottom|center_horizontal"
+    android:orientation="vertical"
+    android:background="@color/WHITE"
+    >
+
+
+    <com.toobei.common.view.flowlayout.TagFlowLayout
+        android:id="@+id/contantFl"
+        android:layout_marginTop="@dimen/w15"
+        android:layout_marginBottom="@dimen/w15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:flChildSpacing="@dimen/w15"
+        app:max_select="1"
+        android:background="@color/WHITE"
+        app:tag_gravity="left"
+        >
+
+    </com.toobei.common.view.flowlayout.TagFlowLayout>
+
+    <TextView
+        android:id="@+id/confirmBtn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/w40"
+        android:background="@color/top_title_bg"
+        android:textSize="@dimen/w16"
+        android:gravity="center"
+        android:textColor="@color/text_white_common"
+        android:text="确定" >
+    </TextView>
+</LinearLayout>

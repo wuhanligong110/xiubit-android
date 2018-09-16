@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ShapedImageView">
+        <attr name="shape_mode" format="enum">
+            <enum name="round_rect" value="1" />
+            <enum name="circle" value="2" />
+        </attr>
+        <attr name="round_radius" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="RCRelativeLayout">
+        <!--圆形-->
+        <attr name="round_as_circle" format="boolean"/>
+        <!--全部圆角半径-->
+        <attr name="round_corner" format="integer|dimension"/>
+        <!--针对各个角的半径-->
+        <attr name="round_corner_top_left" format="integer|dimension"/>
+        <attr name="round_corner_top_right" format="integer|dimension"/>
+        <attr name="round_corner_bottom_left" format="integer|dimension"/>
+        <attr name="round_corner_bottom_right" format="integer|dimension"/>
+
+        <!--描边颜色／半径-->
+        <attr name="stroke_color" format="color|reference"/>
+        <attr name="stroke_width" format="integer|dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="AutoResizeTextView">
+        <!-- 格式示例 ：fonts/DINOT-Medium.ttf-->
+        <attr name="fontfit_typeface" format="enum">
+            <enum name="pingfang" value="0" />
+            <enum name="dinot_medium" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="TagFlowLayout">
+        <attr name="max_select" format="integer"></attr>
+        <attr name="tag_gravity">
+            <enum name="left" value="-1" />
+            <enum name="center" value="0" />
+            <enum name="right" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="PagerSlidingTabStrip">
+        <attr name="pstsIndicatorColor" format="color" />
+        <attr name="pstsIndicatorHeight" format="dimension" />
+        <attr name="pstsUnderlineColor" format="color" />
+        <attr name="pstsUnderlineHeight" format="dimension" />
+        <attr name="pstsDividerColor" format="color" />
+        <attr name="pstsDividerWidth" format="dimension" />
+        <attr name="pstsDividerPadding" format="dimension" />
+        <attr name="pstsScrollOffset" format="dimension" />
+        <attr name="pstsShouldExpand" format="boolean" />
+        <attr name="pstsPaddingMiddle" format="boolean" />
+        <attr name="pstsTabPaddingLeftRight" format="dimension" />
+        <attr name="pstsTabBackground" format="reference" />
+        <attr name="pstsTabTextSize" format="dimension" />
+        <attr name="pstsTabTextColor" format="reference" />
+        <attr name="pstsTabTextStyle" format="reference">
+            <flag name="normal" value="0x0" />
+            <flag name="bold" value="0x1" />
+            <flag name="italic" value="0x2" />
+        </attr>
+        <attr name="pstsTabTextAllCaps" format="boolean" />
+        <attr name="pstsTabTextAlpha" format="integer" />
+        <attr name="pstsTabTextFontFamily" format="string" />
+    </declare-styleable>
+
+
+    <declare-styleable name="SwitchView">
+        <attr name="hasShadow" format="boolean"/>
+        <attr name="primaryColor" format="color"/>
+        <attr name="primaryColorDark" format="color"/>
+        <attr name="offColor" format="color"/>
+        <attr name="offColorDark" format="color"/>
+        <attr name="shadowColor" format="color"/>
+        <attr name="ratioAspect" format="float"/>
+        <attr name="isOpened" format="boolean"/>
+    </declare-styleable>
+</resources>

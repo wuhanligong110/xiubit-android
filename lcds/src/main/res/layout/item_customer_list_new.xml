@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@color/WHITE"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <com.toobei.common.view.ShapedImageView
+            android:id="@+id/headIv"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/WHITE"
+            android:scaleType="fitXY"
+            app:shape_mode="circle"/>
+
+        <TextView
+            android:id="@+id/nameTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/text_black_common"
+            android:textSize="15dp"
+            />
+
+        <TextView
+            android:id="@+id/lastInvestTimeTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_gray_common"
+            android:textSize="12dp"
+            />
+    </LinearLayout>
+
+    <View
+        style="@style/line_horizontal_common"/>
+
+</LinearLayout>

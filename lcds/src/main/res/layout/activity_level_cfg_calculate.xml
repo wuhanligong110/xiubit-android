@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/rootView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/WHITE"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/cfg_level_calculate_top_bg"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:overScrollMode="never"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    >
+
+                    <TextView
+                        android:id="@+id/levelText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:text="职级类型:"
+                        android:textColor="@color/text_white_common"
+                        android:textSize="12dp"
+                        android:layout_marginRight="6dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/levelSelectTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/levelText"
+                        android:background="@drawable/bg_blue1b_round_rectangle"
+                        android:drawablePadding="4dp"
+                        android:drawableRight="@drawable/pull_down_white"
+                        android:paddingBottom="6dp"
+                        android:paddingLeft="12dp"
+                        android:paddingRight="12dp"
+                        android:paddingTop="6dp"
+                        android:text="总监"
+                        android:textColor="@color/text_white_common"
+                        android:textSize="14dp"/>
+
+                    <TextView
+                        android:id="@+id/yearProfitTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/bg_blue1b_round_rectangle"
+                        android:drawablePadding="4dp"
+                        android:drawableRight="@drawable/pull_down_white"
+                        android:paddingBottom="6dp"
+                        android:paddingLeft="12dp"
+                        android:paddingRight="12dp"
+                        android:paddingTop="6dp"
+                        android:text="1.5%"
+                        android:textColor="@color/text_white_common"
+                        android:textSize="14dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@id/yearProfitTv"
+                        android:text="佣金率:"
+                        android:textColor="@color/text_white_common"
+                        android:layout_marginRight="6dp"
+                        android:textSize="12dp"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/shawdowRl"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:background="@drawable/calcula_shadow_bg">
+
+                    <LinearLayout
+                        android:id="@+id/cardLl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/circle_rectangle_while"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"/>
+
+                            <TextView
+                                style="@style/text_small12_gray_common6c_style"
+                                android:layout_width="85dp"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="年化业绩(万元)"/>
+
+                            <TextView
+                                style="@style/text_small12_gray_common6c_style"
+                                android:layout_width="86dp"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="收入(元)"/>
+
+                        </LinearLayout>
+
+                        <View
+                            style="@style/line_horizontal_common"
+                            android:background="@color/line_common"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/levelExplainTv1"
+                                style="@style/text_small12_gray_common6c_style"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="自己出单"/>
+
+                            <EditText
+                                android:id="@+id/inputEt1"
+                                android:layout_width="85dp"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/calcula_input_edit_bg"
+                                android:textCursorDrawable="@drawable/edittext_cursor_shape"
+                                android:cursorVisible="true"
+                                android:focusable="true"
+                                android:gravity="center"
+                                android:hint=""
+                                android:inputType="number"
+                                android:maxLength="5"
+                                android:singleLine="true"
+                                android:textColor="@color/text_gray_common_title"
+                                android:textColorHint="@color/text_gray_common"
+                                android:textSize="16dp"/>
+
+                            <com.v5ent.xiubit.view.MyTextView
+                                android:id="@+id/outIncomeTv1"
+                                style="@style/text_middle16_black6c_style"
+                                android:layout_width="86dp"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="0"/>
+
+                        </LinearLayout>
+
+                        <View
+                            style="@style/line_horizontal_common"
+                            android:background="@color/line_common"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/text_small12_gray_common6c_style"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="直接推荐理财师出单"/>
+
+                            <EditText
+                                android:id="@+id/inputEt2"
+                                android:layout_width="85dp"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/calcula_input_edit_bg"
+                                android:textCursorDrawable="@drawable/edittext_cursor_shape"
+                                android:cursorVisible="true"
+                                android:focusable="true"
+                                android:gravity="center"
+                                android:hint=""
+                                android:inputType="number"
+                                android:maxLength="5"
+                                android:singleLine="true"
+                                android:textColor="@color/text_gray_common_title"
+                                android:textColorHint="@color/text_gray_common"
+                                android:textSize="16dp"/>
+
+                            <com.v5ent.xiubit.view.MyTextView
+                                android:id="@+id/outIncomeTv2"
+                                style="@style/text_middle16_black6c_style"
+                                android:layout_width="86dp"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="0"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/hideLl"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+                        <View
+                            style="@style/line_horizontal_common"
+                            android:background="@color/line_common"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/text_small12_gray_common6c_style"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="二级推荐理财师出单"/>
+
+                            <EditText
+                                android:id="@+id/inputEt3"
+                                android:layout_width="85dp"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/calcula_input_edit_bg"
+                                android:textCursorDrawable="@drawable/edittext_cursor_shape"
+                                android:cursorVisible="true"
+                                android:focusable="true"
+                                android:gravity="center"
+                                android:hint=""
+                                android:inputType="number"
+                                android:maxLength="5"
+                                android:singleLine="true"
+                                android:textColor="@color/text_gray_common_title"
+                                android:textColorHint="@color/text_gray_common"
+                                android:textSize="16dp"/>
+
+                            <com.v5ent.xiubit.view.MyTextView
+                                android:id="@+id/outIncomeTv3"
+                                style="@style/text_middle16_black6c_style"
+                                android:layout_width="86dp"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="0"/>
+
+                        </LinearLayout>
+
+                        <View
+                            style="@style/line_horizontal_common"
+                            android:background="@color/line_common"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/text_small12_gray_common6c_style"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="三级推荐理财师出单"/>
+
+                            <EditText
+                                android:id="@+id/inputEt4"
+                                android:layout_width="85dp"
+                                android:layout_height="wrap_content"
+                                android:textCursorDrawable="@drawable/edittext_cursor_shape"
+                                android:background="@drawable/calcula_input_edit_bg"
+                                android:cursorVisible="true"
+                                android:focusable="true"
+                                android:gravity="center"
+                                android:hint=""
+                                android:inputType="number"
+                                android:maxLength="5"
+                                android:singleLine="true"
+                                android:textColor="@color/text_gray_common_title"
+                                android:textColorHint="@color/text_gray_common"
+                                android:textSize="16dp"/>
+
+                            <com.v5ent.xiubit.view.MyTextView
+                                android:id="@+id/outIncomeTv4"
+                                style="@style/text_middle16_black6c_style"
+                                android:layout_width="86dp"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:maxLength="7"
+                                android:singleLine="true"
+                                android:text="0"/>
+
+                        </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+
+        <LinearLayout
+            android:id="@+id/bottomLl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <View
+                style="@style/line_horizontal_common"
+                android:background="@color/line_common"/>
+
+            <LinearLayout
+                android:id="@+id/allResultLl"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/WHITE"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="总收入(元): "
+                    android:textColor="@color/text_black_common"
+                    android:textSize="16dp"
+                    android:layout_marginRight="8dp"/>
+
+                <com.v5ent.xiubit.view.MyTextView
+                    android:id="@+id/allResultTv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="0"
+                    android:textColor="@color/text_blue_common"
+                    android:textSize="24dp"/>
+
+            </LinearLayout>
+
+            <android.inputmethodservice.KeyboardView
+                android:id="@+id/keyboardView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="#ff202020"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:keyBackground="@drawable/btn_keyboard_key"
+                android:keyTextColor="@color/BLACK"
+                android:keyTextSize="25sp"
+                android:shadowColor="@color/WHITE"
+                android:shadowRadius="0.0"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

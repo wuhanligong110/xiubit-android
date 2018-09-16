@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+                android:gravity="right"
+              android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:background="@color/WHITE"
+        android:orientation="vertical"
+        >
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:overScrollMode="never">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/WHITE"
+        android:orientation="vertical"
+        >
+
+
+
+        <TextView
+            android:layout_marginLeft="18dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:layout_marginTop="80dp"
+            android:text="年化收益率"
+            android:textColor="@color/text_black_common"
+            android:textSize="19dp"/>
+
+        <GridView
+            android:id="@+id/flowRateGv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:horizontalSpacing="5dp"
+            android:numColumns="3"
+            android:verticalSpacing="8dp"></GridView>
+        <TextView
+            android:layout_marginLeft="18dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:layout_marginTop="20dp"
+            android:text="期限"
+            android:textColor="@color/text_black_common"
+            android:textSize="19dp"/>
+
+        <GridView
+            android:layout_marginLeft="15dp"
+            android:id="@+id/deadlineGv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:horizontalSpacing="5dp"
+            android:numColumns="3"
+            android:verticalSpacing="8dp"></GridView>
+
+
+        <TextView
+            android:layout_marginLeft="18dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:layout_marginTop="20dp"
+            android:text="类型"
+            android:textColor="@color/text_black_common"
+            android:textSize="19dp"/>
+
+        <GridView
+            android:layout_marginLeft="15dp"
+            android:id="@+id/userTypeGv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:horizontalSpacing="5dp"
+            android:numColumns="3"
+            android:verticalSpacing="8dp"></GridView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/WHITE"/>
+
+
+        
+
+    </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_marginLeft="18dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:textColor="@color/text_black_common"
+            android:text="符合筛选条件的结果共"/>
+
+        <TextView
+            android:id="@+id/filterMatchNumTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:textColor="@color/text_blue_common"
+            android:text="0"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:textColor="@color/text_black_common"
+            android:text="个"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <Button
+            android:id="@+id/resetBtn"
+            android:layout_width="0dp"
+            android:layout_weight="0.4"
+            android:layout_height="match_parent"
+            android:background="@drawable/fliter_reset"
+            android:textColor="@color/text_blue_common"
+            android:textSize="18dp"
+            android:text="重置"/>
+
+        <Button
+            android:id="@+id/completeBtn"
+            android:layout_width="0dp"
+            android:layout_weight="0.6"
+            android:layout_height="match_parent"
+            android:background="@drawable/fliter_complete"
+            android:textColor="@color/WHITE"
+            android:textSize="18dp"
+            android:text="完成"/>
+    </LinearLayout>
+
+    </LinearLayout>
+
+        </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginBottom="12dp"
+              android:background="@color/backgroud_common"
+              android:gravity="center_vertical"
+              android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/alais_scort_letter"
+        style="@style/text_small_black_size_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FAFAFA"
+        android:paddingBottom="2dp"
+        android:paddingLeft="12dp"
+        android:paddingTop="2dp"
+        android:text=""
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/invite_cfp_list_item_root"
+        android:layout_width="match_parent"
+        android:layout_height="135dp"
+        android:background="@drawable/item_click_bg"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/img_read_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="25dp"
+            android:src="@drawable/iv_point"/>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="6dp"
+            android:layout_weight="1"
+            android:minHeight="@dimen/custom_list_item_height"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <org.xsl781.ui.view.RoundImageView
+                        android:id="@+id/avatar"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="top"
+                        android:src="@drawable/img_customer_cus"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/text_customer_name"
+                                style="@style/text_middle_black_style"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="张小三"/>
+
+                            <View
+                                android:layout_width="1px"
+                                android:layout_height="12dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:background="@color/line_common"/>
+
+                            <TextView
+                                android:id="@+id/text_customer_phone"
+                                style="@style/text_middle_black_style"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="18898766534"/>
+
+                            <TextView
+                                android:id="@+id/text_customer_type_tag"
+                                style="@style/text_small_blue_size_style"
+                                android:layout_width="50dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:background="@drawable/img_org_tag_blue_text_bg"
+                                android:gravity="center"
+                                android:padding="2dp"
+                                android:text="自由客户"
+                                android:textSize="9sp"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/text_customer_register"
+                                style="@style/text_small_gray_size_style"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="2015-9-30 注册"/>
+
+                            <TextView
+                                android:id="@+id/text_customer_invest_enddate"
+                                style="@style/text_small_blue_size_style"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="24dp"
+                                android:text="2015-9-30 到期"/>
+                        </LinearLayout>
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginTop="20dp"
+                                android:gravity="center_vertical"
+                                android:orientation="vertical"
+                                android:weightSum="4">
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
+                                    android:layout_marginRight="15dp"
+                                    android:gravity="center_vertical|right"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/text_customer_near_invest"
+                                        style="@style/text_small_gray_size_style"
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+
+                                        android:layout_height="wrap_content"
+                                        android:text="最近投资：0.00"/>
+
+                                    <ImageView
+                                        android:id="@+id/img_customer_import"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginRight="5dp"
+                                        android:src="@drawable/img_import_icon"/>
+
+                                    <ImageView
+                                        style="@style/mine_sign_go_right"
+                                        android:layout_gravity="center_vertical|right"/>
+                                </LinearLayout>
+
+                                <TextView
+                                    android:id="@+id/text_customer_invest_total_money"
+                                    style="@style/text_small_gray_size_style"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="6dp"
+                                    android:text="累计投资：100000.00"/>
+
+                                <TextView
+                                    android:id="@+id/text_customer_invest_stroke_count"
+                                    style="@style/text_small_gray_size_style"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="6dp"
+                                    android:text="投资笔数：0"/>
+                            </LinearLayout>
+
+
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="12dp"
+        android:background="@color/backgroud_common"/>
+
+</LinearLayout>

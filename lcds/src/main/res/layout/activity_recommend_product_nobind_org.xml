@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/backgroud_common"
+              android:orientation="vertical">
+
+    <View style="@style/line_horizontal_common"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/backgroud_common"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <org.xsl781.ui.view.ClearEditText
+            android:id="@+id/cedt_invite_name_or_phone_search"
+            style="@style/edit_text_size_style"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="7dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="7dp"
+            android:layout_weight="2"
+            android:background="@drawable/bg_search_box"
+            android:drawableLeft="@drawable/icon_msg_search"
+            android:drawablePadding="10dp"
+            android:hint="@string/input_name_or_phone"
+            android:paddingLeft="15dp"
+            android:singleLine="true"
+            android:textColorHint="@color/hint_text"/>
+
+
+    </LinearLayout>
+
+
+    <View style="@style/line_horizontal_common"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backgroud_common">
+        <!--
+                <Button
+                    android:id="@+id/btn_invest"
+                    style="@style/btn_normal_style"
+                    android:layout_alignParentBottom="true"
+                    android:text="@string/recommend"/>-->
+
+        <LinearLayout
+            android:id="@+id/btn_submitLL"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="-10dp"
+            android:background="@drawable/btn_blue_selector"
+            android:orientation="vertical"
+            android:paddingBottom="-10dp">
+
+            <TextView
+                android:id="@+id/btn_submit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center_horizontal"
+                android:text="@string/recommend"
+                android:textColor="@color/WHITE"
+                android:textSize="17dp"
+                />
+            <!--已经对接的平台：产品信息页、平台信息页底部“推荐”按钮下增加文案“自己购买请移步至T呗微信公众号”
+            未对接的平台：产品信息页、平台信息页底部“推荐”按钮下增加文案“如客户购买请记得报单”-->
+            <TextView
+                style="@style/text_small_light_blue_size10_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:gravity="center_horizontal"
+                android:text="@string/recommend_remind_declaration"
+                android:textSize="10dp"/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/btn_submitLL"
+            android:background="@color/backgroud_common">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/backgroud_common">
+
+
+                <com.toobei.common.view.ListBlankLayout
+                    android:id="@+id/list_blank_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"/>
+
+                <TextView
+                    android:id="@+id/dialog"
+                    android:layout_width="80.0dip"
+                    android:layout_height="80.0dip"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:background="@drawable/v2_gallery_contacts_dialog_background"
+                    android:gravity="center"
+                    android:padding="5dip"
+                    android:textColor="@color/backgroud_common"
+                    android:textSize="35.0dip"
+                    android:visibility="invisible"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="@color/Color_0">
+
+                <org.xsl781.ui.view.EnLetterView
+                    android:id="@+id/right_letter"
+                    android:layout_width="25dip"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/Color_0"/>
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

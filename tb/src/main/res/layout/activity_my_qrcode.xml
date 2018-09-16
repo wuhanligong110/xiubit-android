@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/header_layout" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/WHITE" >
+
+        <TextView
+            android:id="@+id/mobileTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:lineSpacingMultiplier="1.2"
+            android:textColor="@color/BLACK"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+        <com.toobei.common.view.RemoteImageView
+            android:id="@+id/qrIv"
+            android:layout_width="240dp"
+            android:layout_height="240dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="67dp" />
+        <TextView
+            style="@style/text_middle_black_bold_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/qrIv"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:text="邀请朋友一起理财" />
+
+        <TextView
+            style="@style/text_small_gray_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/qrIv"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:gravity="center"
+            android:text="发送二维码或邀请链接给朋友,\n朋友注册即可一起理财" />
+
+        <Button
+            android:id="@+id/shareBtn"
+            android:layout_height="50dp"
+            android:layout_width="fill_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/btn_common_round_selector"
+            android:textColor="@color/WHITE"
+            android:layout_alignParentBottom="true"
+            android:textSize="17sp"
+            android:text="邀请朋友" />
+    </RelativeLayout>
+
+</LinearLayout>

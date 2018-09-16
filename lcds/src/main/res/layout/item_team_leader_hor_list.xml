@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="wrap_content"
+              android:layout_height="match_parent"
+              android:background="@color/WHITE"
+    >
+
+<LinearLayout
+    android:layout_width="84dp"
+    android:layout_height="93dp"
+    android:gravity="center"
+    android:orientation="vertical">
+        <org.xsl781.ui.view.RoundImageView
+            android:id="@+id/headIV"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:src="@drawable/img_direct_cfp_head_big"/>
+
+        <ImageView
+            android:id="@+id/add_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/img_add"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/phoneTv"
+            android:layout_marginTop="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12dp"
+            android:textColor="@color/text_black_common6c"
+            android:text="13666666666"/>
+
+</LinearLayout>
+
+
+</RelativeLayout>

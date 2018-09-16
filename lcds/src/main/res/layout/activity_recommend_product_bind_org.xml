@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/backgroud_common"
+              android:orientation="vertical">
+
+    <View style="@style/line_horizontal_common"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/backgroud_common"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <org.xsl781.ui.view.ClearEditText
+            android:id="@+id/cedt_invite_name_or_phone_search"
+            style="@style/edit_text_size_style"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="7dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="7dp"
+            android:layout_weight="2"
+            android:background="@drawable/btn_while_small_default"
+            android:drawableLeft="@drawable/icon_msg_search"
+            android:drawablePadding="10dp"
+            android:hint="@string/input_name_or_phone"
+            android:paddingLeft="15dp"
+            android:singleLine="true"
+            android:textColorHint="@color/hint_text"/>
+
+
+    </LinearLayout>
+
+    <View style="@style/line_horizontal_common"/>
+
+    <com.v5ent.xiubit.view.MyPagerSlidingTabStrip
+        android:id="@+id/recommend_product_tabs"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/list_viewpager_title_height"
+        android:background="@color/WHITE"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:textColorPrimary="@color/text_black_common"
+        app:pstsIndicatorColor="@color/text_blue_common"
+        app:pstsShouldExpand="true"
+        app:pstsTabPaddingLeftRight="38dp"
+        app:pstsTabTextColor="@color/text_black_common"
+        app:tabTextAppearance="@style/MyCustomTabTextAppearance"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/recommend_product_vPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+</LinearLayout>

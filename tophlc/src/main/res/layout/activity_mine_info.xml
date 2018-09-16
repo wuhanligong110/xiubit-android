@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/backgroud_common"
+              android:orientation="vertical">
+
+    <include layout="@layout/header_layout"/>
+
+    <LinearLayout
+        android:id="@+id/vg_content_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/WHITE"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/mine_info_avatar_rl"
+            style="@style/linearlayout_item_common"
+            android:layout_height="62dp"
+            android:layout_marginRight="0dp">
+
+            <TextView
+                style="@style/text_custom_item_commom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="@string/avatar"/>
+
+            <ImageView
+                android:id="@+id/mine_info_avatar_go_right"
+                style="@style/mine_sign_go_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/app_name"
+                />
+
+            <org.xsl781.ui.view.RoundImageView
+                android:id="@+id/mine_img_user_face"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="12dp"
+                android:layout_toLeftOf="@id/mine_info_avatar_go_right"
+                android:contentDescription="@string/app_name"
+                android:padding="0dp"
+                android:scaleType="fitCenter"/>
+        </RelativeLayout>
+
+        <View
+            style="@style/line_horizontal_common"
+            android:layout_marginLeft="24dp"/>
+
+        <RelativeLayout
+            android:id="@+id/mine_info_bank_card_manage_rl"
+            style="@style/linearlayout_item_common">
+
+            <TextView
+                style="@style/text_custom_item_commom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="@string/bank_card_manage"/>
+
+            <ImageView
+                android:id="@+id/mine_info_bank_card_manage_go_right"
+                style="@style/mine_sign_go_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:contentDescription="@string/app_name"/>
+
+            <TextView
+                android:id="@+id/mine_info_bank_card_manage_content"
+                style="@style/mine_info_content_commom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="未绑定"
+                android:layout_toLeftOf="@id/mine_info_bank_card_manage_go_right"
+                android:textSize="12sp"/>
+        </RelativeLayout>
+
+        <View
+            style="@style/line_horizontal_common"
+            android:layout_marginLeft="24dp"/>
+
+        <RelativeLayout
+            android:id="@+id/mine_info_password_manage_rl"
+            style="@style/linearlayout_item_common">
+
+            <TextView
+                android:id="@+id/password_manage_field"
+                style="@style/text_custom_item_commom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="@string/password_manage"/>
+
+            <ImageView
+                android:id="@+id/mine_info_password_manage_go_right"
+                style="@style/mine_sign_go_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:contentDescription="@string/app_name"/>
+
+            <TextView
+                android:id="@+id/mine_info_password_manage_content"
+                style="@style/mine_info_content_commom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/mine_info_password_manage_go_right"
+                android:text="可修改"
+                android:textSize="12sp"
+
+                />
+        </RelativeLayout>
+
+        <View
+            style="@style/line_horizontal_common"
+            android:layout_marginLeft="24dp"/>
+
+        <RelativeLayout
+            android:id="@+id/msgRe"
+            style="@style/linearlayout_item_common"
+            android:clickable="true">
+
+            <TextView
+                style="@style/text_custom_item_commom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="10dp"
+                android:text="@string/voice_switch"/>
+
+
+            <ImageView
+                android:id="@+id/infoIv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="0dp"
+                android:contentDescription="@string/app_name"
+                android:scaleType="fitCenter"/>
+
+        </RelativeLayout>
+
+        <View style="@style/line_horizontal_common"/>
+
+        <TextView
+            style="@style/text_small_black_size_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/backgroud_common"
+            android:paddingLeft="24dp"
+            android:paddingTop="2dp"
+            android:text="开启后,收到平台通知时您的手机将不会震动与发出提示音"
+            />
+    </LinearLayout>
+
+</LinearLayout>

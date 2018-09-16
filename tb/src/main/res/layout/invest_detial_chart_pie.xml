@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="horizontal">
+
+    <lecho.lib.hellocharts.view.PieChartView
+        android:id="@+id/chart1"
+        android:layout_width="93dp"
+        android:layout_height="93dp"
+        android:layout_centerVertical="true"/>
+
+    <LinearLayout
+        android:layout_centerVertical="true"
+        android:id="@+id/ll_invest_detail_income_sort"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="12dp"
+        android:layout_toRightOf="@id/chart1"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+    </LinearLayout>
+
+</RelativeLayout>

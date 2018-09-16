@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/WHITE"
+
+              android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text_rank"
+                style="@style/text_middle15_black_style"
+                android:layout_width="45dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="11"/>
+
+            <ImageView
+                android:id="@+id/img_rank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+
+        <org.xsl781.ui.view.RoundImageView
+
+            android:id="@+id/img_head"
+            android:layout_width="35dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_rank_head"/>
+<LinearLayout
+    android:layout_width="0dp"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/levelNameTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="10dp"
+        android:layout_marginLeft="12dp"
+        android:textColor="@color/text_gray_common_title"
+        android:text="职级"/>
+
+    <TextView
+        android:id="@+id/text_phone"
+        style="@style/text_small_gray64_size_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:text=""/>
+</LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:layout_marginRight="15dp">
+
+                <TextView
+                    android:id="@+id/amountRemindTv"
+                    style="@style/text_small12_gray_common96_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="本月总收益"
+                    android:textSize="10dp"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.v5ent.xiubit.view.MyTextView
+                        android:id="@+id/text_commission"
+                        style="@style/text_middle_blue_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:text="0.00"/>
+
+                    <TextView
+                        style="@style/text_small_blue_size_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="元"
+                        android:textSize="10dp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+    </LinearLayout>
+
+    <View
+        style="@style/line_horizontal_common"/>
+</LinearLayout>

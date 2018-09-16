@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="WHITE">#FFFFFFFF</color>
+    <color name="WHITE_8">#aaFFFFFF</color>
+    <color name="BLACK">#FF000000</color>
+    <color name="BLACK_4">#66000000</color>
+    <color name="BLACK_02">#22000000</color>
+    <color name="Color_0">#00000000</color>
+
+
+    <!-- 深灰 -->
+    <color name="LIGHT_GRAY">#bababa</color>
+    <!-- 浅灰 -->
+    <color name="common_bg">@color/backgroud_common</color>
+    <!-- 绿色 -->
+    <color name="green">#13a324</color>
+    <!-- 橙色 -->
+    <color name="orange">#ff8933</color>
+
+    <!-- 链接/协议 -->
+    <color name="text_link_blue">#128df5</color>
+
+    <!--颜色调整 todo 787878-->
+    <!--Activity顶部颜色-->
+
+    <!--t呗和猎财通用颜色-->
+    <color name="text_blue_common">#7e99ce</color>
+    <color name="top_title_bg">#6a7a9a</color> <!--menu bar 和部分icon-->
+    <color name="top_title_text">@color/WHITE</color>
+    <color name="viewpager_title_bg">#f6f6f7</color>
+    <!-- 通用listview条目的背景色 -->
+    <color name="item_clicked_bg">#f5f5f5</color>
+    <color name="item_mine_level_default_bg">#f7f6f6</color>
+    <color name="text_share_cancel">#007aff</color>
+    <color name="common_text">#1a1b1c</color>
+    <color name="message_text">#c8c8c8</color>
+    <color name="hint_text">@color/BLACK_4</color>
+    <color name="text_customer_deal_bug">@color/orange</color>
+    <color name="text_customer_deal_redeem">@color/blue_btn_light</color>
+
+
+    <color name="btn_common_orange">#ffb504</color>
+
+
+    <!--红包红色字体-->
+    <color name="text_red_redpackage">#ff4546</color>
+    <color name="text_green_common_06b71a">#06b71a</color>
+    <!--透明蓝色按钮背景-->
+    <!--红包黄色字体-->
+    <color name="text_yellow_redpackage">#f9eed2</color>
+
+    <!--t呗通用按钮颜色-->
+    <color name="blue_btn_common">#7e99ce</color>
+    <color name="blue_btn_pressed">#7089b9</color>
+
+    <!-- 图表饼状图 颜色 -->
+    <color name="chart_pie_color1">#7ccdf8</color>
+    <color name="chart_pie_color2">#f7da94</color>
+    <color name="chart_pie_color3">#a5eea5</color>
+    <color name="chart_pie_color4">#f99186</color>
+    <color name="chart_pie_color5">@color/chart_pie_color1</color>
+    <color name="chart_pie_color6">@color/chart_pie_color2</color>
+    <color name="chart_pie_gray">#dcdcdc</color>
+
+    <!--提示窗确认和取消按钮颜色-->
+    <color name="prompt_btn_postion">@color/text_red_common</color>
+    <color name="prompt_btn_cancle">@color/text_gray_common</color>
+</resources>

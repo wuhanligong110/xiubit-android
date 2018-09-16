@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/backgroud_common"
+              android:gravity="center_vertical"
+              android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/alais_scort_letter"
+        android:layout_width="match_parent"
+        android:textColor="@color/text_black_common"
+        android:textSize="14dp"
+        android:layout_height="28dp"
+        android:background="@color/black_level_6"
+        android:paddingLeft="16dp"
+        android:gravity="center_vertical"
+        android:text=""
+        android:visibility="gone"/>
+
+    <View
+        style="@style/line_horizontal_common"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="71dp"
+        android:background="@drawable/item_click_bg"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_marginLeft="15dp"
+            android:id="@+id/avatar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            tools:src="@drawable/img_customer_cus"/>
+
+        <LinearLayout
+            android:layout_marginLeft="8dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text_customer_name"
+                android:layout_width="wrap_content"
+                android:textSize="15dp"
+                android:textColor="@color/text_black_common"
+                android:layout_height="wrap_content"
+                tools:text="张小三"/>
+
+
+            <TextView
+                android:id="@+id/text_customer_phone"
+                android:layout_width="wrap_content"
+                android:textColor="@color/text_gray_common"
+                android:textSize="12dp"
+                android:layout_height="wrap_content"
+                tools:text="18898766534"/>
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/checkbox"
+            android:layout_width="31dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="30dp"
+            android:paddingLeft="15dp"
+            android:src="@drawable/checkbox_selecter"
+            android:gravity="center"
+            />
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

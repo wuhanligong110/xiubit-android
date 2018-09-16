@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:id="@+id/rootView"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/WHITE"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/WHITE"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/w10"
+            android:layout_marginLeft="@dimen/w10"
+            android:layout_marginRight="@dimen/w30"
+            android:layout_marginTop="@dimen/w10"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/titleTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="如何搭建你的团队"
+                android:maxLines="2"
+                android:textColor="@color/text_black_common"
+                android:layout_marginBottom="@dimen/w18"
+                android:textSize="@dimen/w16"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/dateTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:textColor="@color/text_gray_common"
+                    android:textSize="@dimen/w12"
+                    tools:text="2017"/>
+
+                <TextView
+                    android:layout_marginLeft="@dimen/w8"
+                    android:id="@+id/sourceTv"
+                    android:layout_toRightOf="@id/dateTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:textColor="@color/text_gray_common"
+                    android:textSize="@dimen/w12"
+                    tools:text="貅比特"/>
+
+                <TextView
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/readNumTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:textColor="@color/text_gray_common"
+                    android:textSize="@dimen/w12"
+                    tools:text="1111人浏览"/>
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_marginTop="@dimen/w5"
+            android:layout_marginBottom="@dimen/w5"
+            android:id="@+id/imageIv"
+            android:layout_width="@dimen/w68"
+            android:layout_height="@dimen/w68"
+            android:layout_marginRight="@dimen/hor_margin_common"
+            android:scaleType="fitXY"/>
+
+    </LinearLayout>
+
+    <View
+        style="@style/line_horizontal_common"/>
+    
+    <View
+        android:id="@+id/footDividView"
+        android:background="@color/backgroud_common"
+        android:layout_width="match_parent"
+        android:layout_height="12dp"/>
+
+</LinearLayout>

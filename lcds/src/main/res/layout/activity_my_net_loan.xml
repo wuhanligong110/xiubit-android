@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.scwang.smartrefresh.layout.SmartRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/refreshViewSrl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroud_common"
+    app:srlPrimaryColor="@color/top_title_bg"
+    tools:context="com.v5ent.xiubit.activity.MyNetLoanActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="135dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:background="@color/text_blue_common">
+
+                <com.v5ent.xiubit.view.MyTextView
+                    android:id="@+id/investBaseMoneyTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="43dp"
+                    android:textColor="@color/text_white_common"
+                    android:text="0.00"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13dp"
+                    android:textColor="@color/text_blue_common_light"
+                    android:text="在投本金(元)"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:background="@color/blue_bg_deep"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal">
+                    <com.toobei.common.view.MyTextView
+                        android:id="@+id/investProfitTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="22dp"
+                        android:textColor="@color/text_white_common"
+                        android:text="0.00"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12dp"
+                        android:textColor="@color/text_blue_common_light"
+                        android:text="在投收益(元)"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1px"
+                    android:background="#44000000"
+                    android:layout_height="30dp"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal">
+                    <com.toobei.common.view.MyTextView
+                        android:id="@+id/totalProfitTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="22dp"
+                        android:textColor="@color/text_white_common"
+                        android:text="0.00"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12dp"
+                        android:textColor="@color/text_blue_common_light"
+                        android:text="累计收益(元)"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                style="@style/line_horizontal_common"
+                android:layout_marginBottom="12dp"/>
+
+            <View
+                style="@style/line_horizontal_common"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="33dp"
+                android:background="@color/title_gray_bg"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="平台"
+                    android:textColor="@color/text_gray_common"
+                    android:textSize="12dp"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_weight="1"
+                    android:text="在投本金(元)"
+                    android:textColor="@color/text_gray_common"
+                    android:textSize="12dp"/>
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="在投收益(元)"
+                    android:textColor="@color/text_gray_common"
+                    android:textSize="12dp"/>
+
+
+            </LinearLayout>
+
+            <View
+                style="@style/line_horizontal_common"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.toobei.common.view.listView.MyRecyclerView
+                    android:id="@+id/investOrgRv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/WHITE">
+
+
+                </com.toobei.common.view.listView.MyRecyclerView>
+
+                <LinearLayout
+                    android:id="@+id/blankLl"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:background="@color/WHITE"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/text_blank"
+                        style="@style/text_small_gray_size_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:lineSpacingExtra="3sp"
+                        android:text="还没有投资~"/>
+
+                    <Button
+                        android:id="@+id/btn_blank"
+                        style="@style/btn_login_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:width="160dp"
+                        android:height="45dp"
+                        android:text="去看看有啥"
+                        android:visibility="visible"
+
+                        />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+            
+            <View
+                style="@style/line_horizontal_common"
+                android:layout_marginBottom="12dp"/>
+
+            <View
+                style="@style/line_horizontal_common"/>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/WHITE"
+                android:paddingTop="15dp" 
+                android:paddingBottom="20dp"
+                android:gravity="center_horizontal|center_vertical">
+                
+                <TextView
+                    android:id="@+id/orgNumInfoTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14dp"
+                    android:textColor="@color/text_gray_common"/>
+                
+                <TextView
+                    android:layout_marginLeft="15dp"
+                    android:id="@+id/orgYearProfitTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14dp"
+                    android:textColor="@color/text_gray_common"/>
+
+                <ImageView
+                    android:id="@+id/questIv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/img_question"
+                    android:padding="@dimen/w10"/>
+                
+            </LinearLayout>
+            
+            <com.v5ent.xiubit.view.OrgListChartPieLayout
+                android:id="@+id/chartPieCp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/WHITE">
+                
+                
+            </com.v5ent.xiubit.view.OrgListChartPieLayout>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:background="#f9f9f9"
+                android:visibility="visible">
+                
+                <TextView
+                    android:id="@+id/shareTv"
+                    android:padding="10dp"
+                    android:gravity="center"
+                    android:drawablePadding="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14dp"
+                    android:textColor="@color/text_blue_common"
+                    android:drawableLeft="@drawable/ic_share_tag"
+                    android:text="分享我的投资组合"/>
+            </LinearLayout>
+
+
+            <View
+                style="@style/line_horizontal_common"
+                android:layout_marginBottom="30dp"/>
+            
+        </LinearLayout>
+       
+        
+        
+    </ScrollView>
+</com.scwang.smartrefresh.layout.SmartRefreshLayout>

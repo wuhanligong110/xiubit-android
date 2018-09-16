@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:background="@color/backgroud_common"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="43dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/WHITE" >
+
+        <TextView
+            android:id="@+id/dateTv"
+            style="@style/text_middle_black_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+           />
+
+        <TextView
+            android:id="@+id/profitTv"
+            style="@style/text_middle_blue_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:textColor="@color/btn_common_orange"
+            />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="@color/line_common" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/line_common" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="25dp"
+        android:background="@color/WHITE" >
+        <TextView
+            android:id="@+id/contentTv"
+            style="@style/text_small_black_size_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+             />
+    </RelativeLayout>
+
+</LinearLayout>

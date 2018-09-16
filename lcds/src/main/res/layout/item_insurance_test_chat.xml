@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/backgroud_common"
+    android:paddingBottom="@dimen/w8"
+    android:paddingLeft="@dimen/w10"
+    android:paddingRight="@dimen/w10"
+    android:paddingTop="@dimen/w8">
+
+    <com.toobei.common.view.ShapedImageView
+        android:id="@+id/headIv"
+        android:layout_width="@dimen/w35"
+        android:layout_height="@dimen/w35"
+        app:shape_mode="circle"
+        android:src="@drawable/test_robort_head_icon" />
+
+    <TextView
+        android:id="@+id/leftTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/w12"
+        android:layout_marginRight="@dimen/w60"
+        android:layout_toRightOf="@id/headIv"
+        android:background="@drawable/icon_message_robort_bg"
+        android:gravity="center_vertical"
+        android:paddingBottom="@dimen/w8"
+        android:paddingLeft="@dimen/w12"
+        android:paddingRight="@dimen/w10"
+        android:paddingTop="@dimen/w8"
+        android:textColor="@color/text_black_common" />
+
+    <TextView
+        android:id="@+id/rightTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="@dimen/w60"
+        android:background="@drawable/icon_message_people_bg"
+        android:gravity="right|center_vertical"
+        android:paddingBottom="@dimen/w8"
+        android:paddingLeft="@dimen/w10"
+        android:paddingRight="@dimen/w12"
+        android:paddingTop="@dimen/w8"
+        android:textColor="@color/text_white_common" />
+
+</RelativeLayout>

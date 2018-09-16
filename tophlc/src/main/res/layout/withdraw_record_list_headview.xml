@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_centerVertical="true"
+        android:background="@color/WHITE"
+        android:orientation="vertical"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp">
+
+        <TextView
+            style="@style/text_middle_gray96_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="累计提现(元)"/>
+
+        <com.toobei.common.view.MyTextView
+            android:id="@+id/text_withdraw_total_count"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="0.00"
+            android:textColor="@color/red_ef4a3b"
+            android:textSize="24dp"/>
+
+    </LinearLayout>
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="12dp"/>
+
+</LinearLayout>

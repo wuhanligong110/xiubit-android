@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/invite_cfp_list_item_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/backgroud_common"
+    android:gravity="center_vertical"
+    android:orientation="vertical" >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="8dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/item_click_bg" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <View style="@style/line_horizontal_common" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="12dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/text_customer_name"
+                        style="@style/text_middle_black_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="张小三" />
+
+                    <TextView
+                        android:id="@+id/text_time"
+                        style="@style/text_small_gray_size_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2015-10-21 10:21:34" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="12dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|right"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/text_account_count"
+                        style="@style/text_middle_black_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="+888.88"
+                        android:textColor="@color/green" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                style="@style/line_horizontal_common"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:gravity="center_vertical|left"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/text_account_content"
+                    style="@style/text_middle_black_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="客户王XX购买天天牛A90天 20000元"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <View style="@style/line_horizontal_common" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

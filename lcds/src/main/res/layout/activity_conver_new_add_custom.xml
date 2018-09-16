@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroud_common"
+    android:orientation="vertical" >
+
+    <View style="@style/line_horizontal_common" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_viewpager_title_height"
+        android:background="@color/text_white_common"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <org.xsl781.ui.view.ClearEditText
+            android:id="@+id/cedt_invite_name_or_phone_search"
+            style="@style/edit_text_size_style"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="7dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="7dp"
+            android:layout_weight="2"
+            android:background="@drawable/bg_search_box"
+            android:drawableLeft="@drawable/icon_msg_search"
+            android:drawablePadding="10dp"
+            android:hint="@string/input_name_or_phone"
+            android:paddingLeft="15dp"
+            android:singleLine="true"
+            android:textColorHint="@color/hint_text" />
+
+        <LinearLayout
+            android:layout_width="118dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginRight="12dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="0dp" >
+
+            <TextView
+                style="@style/text_small_black_size_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/selected" />
+
+            <TextView
+                android:id="@+id/text_customer_selected_count"
+                android:layout_width="33dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:background="@drawable/img_number_bg"
+                android:gravity="center"
+                android:padding="0dp"
+                android:text="0"
+                android:textColor="@color/WHITE"
+                android:textSize="12sp" />
+
+            <TextView
+                style="@style/text_small_black_size_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="位客户" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View style="@style/line_horizontal_common" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:id="@+id/invite_cfp_bottom_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btn_confirm"
+                style="@style/btn_login_style"
+                android:text="@string/confirm" />
+        </LinearLayout>
+
+        <com.toobei.common.view.ListBlankLayout
+            android:id="@+id/list_blank_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@id/invite_cfp_bottom_ll" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/backgroud_common"
+    android:paddingLeft="@dimen/w10"
+    android:paddingRight="@dimen/w10"
+    android:paddingBottom="@dimen/w15">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/w134"
+        android:orientation="horizontal"
+        android:background="@drawable/bg_add_fee_coupon">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="100"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <com.toobei.common.view.AutoResizeTextView
+                android:id="@+id/rateTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:singleLine="true"
+                android:textSize="@dimen/w36"
+                android:textColor="@color/text_red_common"
+                app:fontfit_typeface="dinot_medium"
+                android:layout_marginLeft="@dimen/w4"
+                android:layout_marginRight="@dimen/w4"
+                tools:text="10.00%"/>
+
+            <TextView
+                android:id="@+id/typeTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/w13"
+                android:textColor="@color/text_gray_common"
+                tools:text="加佣"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="243"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/w15"
+            android:orientation="vertical"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/sourceTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/w14"
+                android:textColor="@color/text_black_common"
+                android:singleLine="true"
+                tools:text="了箱包家用"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:id="@+id/contentInfoCantainer"
+                android:layout_marginTop="@dimen/w5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/platformLimitTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/w12"
+                    android:textColor="@color/text_gray_common_title"
+                    android:layout_marginBottom="@dimen/w3"
+                    tools:text="适用平台：了箱包"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/w3"
+                    android:layout_marginRight="@dimen/w8">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/w12"
+                        android:textColor="@color/text_gray_common_title"
+                        android:text="适用产品："/>
+
+                    <TextView
+                        android:id="@+id/productLimitTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/w12"
+                        android:textColor="@color/text_gray_common_title"
+                        tools:text=""/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/fristInvestLimitTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/w12"
+                    android:textColor="@color/text_gray_common_title"
+                    android:layout_marginBottom="@dimen/w3"
+                    tools:text="首投限制：不限"/>
+
+                <TextView
+                    android:id="@+id/validEndTimeTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/w12"
+                    android:textColor="@color/text_gray_common_title"
+                    tools:text="过期时间：0000-00-00 00:00:00"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/usedSignIv"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/w23"
+        android:layout_width="@dimen/w76"
+        android:layout_height="@dimen/w62"
+        android:src="@drawable/img_redpack_has_use"/>
+
+</RelativeLayout>

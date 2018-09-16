@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/black_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/backgroud_common"
+        android:paddingBottom="@dimen/w8"
+        android:paddingLeft="@dimen/w10"
+        android:paddingRight="@dimen/w10"
+        android:paddingTop="@dimen/w8">
+
+        <com.toobei.common.view.ShapedImageView
+            android:layout_width="@dimen/w35"
+            android:layout_height="@dimen/w35"
+            app:shape_mode="circle"
+            android:src="@drawable/test_robort_head_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/w12"
+            android:layout_marginRight="@dimen/w60"
+            android:layout_toRightOf="@id/headIv"
+            android:background="@drawable/icon_message_robort_bg"
+            android:gravity="center_vertical"
+            android:paddingBottom="@dimen/w8"
+            android:paddingLeft="@dimen/w12"
+            android:paddingRight="@dimen/w10"
+            android:paddingTop="@dimen/w8"
+            android:text="你的家庭情况我已经大致了解了哦，快来查看你的家庭保障评测结果吧！"
+            android:textColor="@color/text_black_common" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/backgroud_common"
+        android:paddingBottom="@dimen/w8"
+        android:paddingLeft="@dimen/w10"
+        android:paddingRight="@dimen/w10"
+        android:paddingTop="@dimen/w8">
+
+        <com.toobei.common.view.ShapedImageView
+            android:layout_width="@dimen/w35"
+            android:layout_height="@dimen/w35"
+            app:shape_mode="circle"
+            android:src="@drawable/test_robort_head_icon" />
+
+        <TextView
+            android:id="@+id/endTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/w12"
+            android:layout_marginRight="@dimen/w60"
+            android:layout_toRightOf="@id/headIv"
+            android:background="@drawable/icon_message_robort_bg"
+            android:gravity="center_vertical"
+            android:paddingBottom="@dimen/w8"
+            android:paddingLeft="@dimen/w12"
+            android:paddingRight="@dimen/w10"
+            android:paddingTop="@dimen/w8"
+            android:textColor="@color/text_blue_common"
+            android:text="查看评测结果 >>"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>

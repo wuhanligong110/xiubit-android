@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="@color/WHITE"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="17dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="17dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/orgNameTV"
+                style="@style/text_middle18_black_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="60dp"
+                android:singleLine="true"
+                android:text="账户名"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp">
+
+                <TextView
+                    style="@style/text_small12_gray_common96_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="账户名："/>
+
+                <TextView
+                    android:id="@+id/orgAccountTv"
+                    style="@style/text_small12_gray_common96_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="xn2555555"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp">
+
+                <TextView
+                    style="@style/text_small12_gray_common96_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="绑定时间："/>
+
+                <TextView
+                    android:id="@+id/bindDateTv"
+                    style="@style/text_small12_gray_common96_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2016-12-56"
+                    />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/gotoRightLi"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                style="@style/text_small12_gray_common96_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="投资、赎回、提现"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:src="@drawable/img_arrow_right"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <View
+        style="@style/line_horizontal_common_mine"
+        android:layout_alignParentBottom="true"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                style="@style/text_small12_gray_common96_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="投资总额(元)"/>
+
+            <TextView
+                android:id="@+id/investAmountTv"
+                style="@style/text_middle18_black_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="100000"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                style="@style/text_small12_gray_common96_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="投资次数"/>
+
+            <TextView
+                android:id="@+id/investCountTv"
+                style="@style/text_middle18_black_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="1"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                style="@style/text_small12_gray_common96_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="累计收益(元)"/>
+
+            <TextView
+                android:id="@+id/totalProfixTv"
+                style="@style/text_middle18_black_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="1.00"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

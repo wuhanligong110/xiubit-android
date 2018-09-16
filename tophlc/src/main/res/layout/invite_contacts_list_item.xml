@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/WHITE"
+              android:descendantFocusability="blocksDescendants"
+              android:gravity="center_vertical"
+              android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/alais_scort_letter"
+        style="@style/text_small_black_size_style"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:background="@color/backgroud_common"
+        android:paddingBottom="2dp"
+        android:paddingLeft="12dp"
+        android:paddingTop="2dp"
+        android:text=""/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="6dp"
+        android:descendantFocusability="blocksDescendants"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="12dp"
+            android:button="@drawable/checkbox"
+            android:gravity="center"
+            android:paddingBottom="12dp"
+            android:paddingRight="12dp"
+            android:paddingTop="12dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/username"
+                style="@style/text_middle_black_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="14dp"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="name"/>
+
+            <TextView
+                android:id="@+id/user_phone"
+                style="@style/text_small_gray_size_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="13800000000"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/text_invite_list_Recommend"
+            style="@style/text_small_gray96_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="14dp"
+            android:text="已推荐"/>
+    </LinearLayout>
+
+    <View
+        style="@style/line_horizontal_common"
+        android:layout_marginLeft="12dp"/>
+
+</LinearLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/WHITE"
+            android:gravity="center_vertical"
+            android:padding="@dimen/w15">
+
+            <TextView
+                android:id="@+id/nameTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                tools:text="我的投资"
+                android:textColor="@color/text_black_common"
+                android:textSize="@dimen/w15"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/numTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/w12"
+                android:textColor="@color/text_gray_common"/>
+
+            <ImageView
+                android:id="@+id/arrowIv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/img_arrow_right" />
+        </LinearLayout>
+
+        <View
+            android:layout_alignParentBottom="true"
+            style="@style/line_horizontal_common"
+            />
+</RelativeLayout>

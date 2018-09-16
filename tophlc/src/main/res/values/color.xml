@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="WHITE">#FFFFFFFF</color>
+    <color name="BLACK">#FF000000</color>
+    <color name="BLACK_4">#66000000</color>
+    <color name="BLACK_02">#22000000</color>
+    <color name="Color_0">#00000000</color>
+    <color name="Color_60">#66000000</color>
+    <color name="red_07">#77FF0000</color>
+    <color name="red_ef4a3b">#ef4a3b</color>
+    <color name="DARK_GRAYC8">#dcdcdc</color><!-- 深灰 -->
+    <color name="LIGHT_GRAY">#bababa</color><!-- 浅灰 -->
+    <color name="yellow_bar_bg">#33efd64e</color>
+
+    <color name="green">#13a324</color><!-- 绿色 -->
+    <color name="orange">#ffb504</color><!-- 橙色 -->
+    <color name="blue_btn_light">#40bcde</color><!-- 天蓝色 -->
+    <color name="text_link_blue">#007aff</color><!-- 链接蓝色 -->
+    <color name="dark_blue_text">#128df5</color><!-- 深蓝色字体 -->
+
+    <color name="text_my_green">#19ca2d</color>
+
+
+    <!-- 未读  todo 字体颜色-->
+    <color name="text_white_common">#FFFFFF</color>
+    <color name="text_black_common6c">#6c6e6d</color><!-- 用于二级文字信息-->
+    <color name="text_black_common3e">#3e4446</color>
+
+    <color name="line_common">#e9e9e9</color>    <!-- 通用线条颜色 -->
+    <color name="backgroud_common">#f6f6f6</color>  <!--App 统一背景底色-->
+    
+    <color name="backgroud_transparent">#00000000</color>
+    <color name="backgroud_transparent_shape">#66000000</color>
+    <color name="text_color_hint_common">#dcdcdc</color>
+
+
+    <!--t呗和猎财通用颜色-->
+    <color name="text_red_common">#fd5353</color>
+
+    <color name="text_blue_common">#4e8cef</color>
+    <color name="text_black_common_deep">#313131</color>
+    <color name="text_black_common">#4f5960</color> <!--用于一级文字颜色--><!--比如年化收益 产品总标题-->
+    <color name="text_gray_common_title">#666666</color>    <!--用于二级文字颜色-->
+    <color name="text_gray_common">#999999</color>    <!-- 用于说明文字 ->小字 -->
+    <color name="text_gray_commona2">#a2a2a2</color>    <!--用于说明文字->小字-猎财-->
+
+    <color name="text_gray_commonDC">#dcdcdc</color>   <!--线的颜色 进度条的灰色-->
+    <color name="text_light_blue">#9cbdf4</color><!--产品和机构标题切换颜色-->
+
+
+    <!--Activity顶部颜色-->
+    <color name="top_title_bg">@color/text_blue_common</color>
+    <color name="top_title_text">@color/WHITE</color>
+
+    <!-- 通用listview条目的背景色 -->
+    <color name="item_clicked_bg">#f5f5f5</color>
+    <color name="item_mine_level_default_bg">#f7f6f6</color>
+    <color name="text_share_cancel">#007aff</color>
+    <color name="common_text">#1a1b1c</color>
+    <color name="message_text">#c8c8c8</color>
+    <color name="hint_text">@color/BLACK_4</color>
+
+    <color name="text_customer_deal_bug">@color/orange</color>
+    <color name="text_customer_deal_redeem">@color/blue_btn_light</color>
+
+
+   
+    
+    //提示窗确认和取消按钮颜色
+    <color name="prompt_btn_postion">@color/text_blue_common</color>
+    <color name="prompt_btn_cancle">@color/text_gray_common</color>
+
+    <color name="psts_background_tab_pressed">#1AFFFFFF</color>
+    <color name="psts_background_tab_pressed_ripple">#AAFFFFFF</color>
+    
+</resources>

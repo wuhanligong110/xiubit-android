@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:gravity="center"
+              android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:background="@color/backgroud_transparent"
+        android:layout_width="270dp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_marginRight="15dp"
+            android:id="@+id/closedIv"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/home_page_dialog_close_btn"/>
+
+
+    <LinearLayout
+        android:layout_below="@id/closedIv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/WHITE"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:id="@+id/bannerIv"
+            android:layout_width="match_parent"
+            android:layout_height="145dp"
+            android:scaleType="fitXY"
+            tools:src="@drawable/redpacket_home_dialog_bg"
+            />
+
+
+        <TextView
+            android:id="@+id/contentTv"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_gray_common_title"
+            android:textSize="14dp"
+            tools:text="加佣总收益将于次月15日统一发放"
+            />
+
+        <TextView
+            android:id="@+id/remindTv"
+            android:gravity="center"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_gray_common"
+            android:textSize="12dp"
+            tools:text="加佣总收益将于次月15日统一发放"
+            android:visibility="visible"/>
+
+        <TextView
+            android:layout_marginTop="15dp"
+            android:id="@+id/btn"
+            android:layout_width="221dp"
+            android:layout_height="45dp"
+            android:layout_marginBottom="20dp"
+            android:textSize="18dp"
+            android:textColor="@color/WHITE"
+            tools:text="查看详情"
+            android:gravity="center"
+            android:background="@drawable/btn_blue_corner5_selector"
+         />
+
+    </LinearLayout>
+
+
+
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroud_common"
+    android:orientation="vertical" >
+
+    <include layout="@layout/header_layout" />
+
+    <View style="@style/line_horizontal_common" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/mine_sign_above_space_height" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/WHITE"
+        android:orientation="vertical" >
+
+        <View style="@style/line_horizontal_common" />
+
+        <RelativeLayout
+            android:id="@+id/alter_login_pwd_rl"
+            style="@style/linearlayout_item_common" >
+
+            <TextView
+                style="@style/text_custom_item_commom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="@string/alter_login_pwd" />
+
+            <ImageView
+                style="@style/mine_sign_go_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:contentDescription="@string/app_name" />
+        </RelativeLayout>
+
+        <View
+            style="@style/line_horizontal_common"
+            android:layout_marginLeft="12dp" />
+
+        <RelativeLayout
+            android:id="@+id/alter_pay_pwd_rl"
+            style="@style/linearlayout_item_common" >
+
+            <TextView
+                style="@style/text_custom_item_commom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="@string/alter_pay_pwd" />
+
+            <ImageView
+                style="@style/mine_sign_go_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:contentDescription="@string/app_name" />
+        </RelativeLayout>
+
+        <View
+            style="@style/line_horizontal_common"
+            android:layout_marginLeft="12dp" />
+
+        <RelativeLayout
+            android:id="@+id/alter_gesture_pwd_rl"
+            style="@style/linearlayout_item_common" >
+
+            <TextView
+                style="@style/text_custom_item_commom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="@string/alter_gesture_pwd" />
+
+            <ImageView
+                style="@style/mine_sign_go_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:contentDescription="@string/app_name" />
+        </RelativeLayout>
+
+        <View style="@style/line_horizontal_common" />
+    </LinearLayout>
+
+</LinearLayout>

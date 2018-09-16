@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@color/backgroud_common">
+    
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/no_net_statue_img"
+        />
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:textColor="@color/text_gray_common"
+        android:text="网络加载失败"
+        android:layout_marginBottom="8dp"/>
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="13dp"
+        android:textColor="#c1c0c0"
+        android:text="请再次刷新或检查网络"
+        android:layout_marginBottom="20dp"/>
+    
+    <TextView
+        android:id="@+id/refreshNetTv"
+        android:layout_width="82dp"
+        android:layout_height="27dp"
+        android:background="@drawable/blank_refresh_btn_bg"
+        android:textSize="13dp"
+        android:gravity="center"
+        android:text="刷新"
+        android:textColor="@color/text_blue_common"
+        />
+
+    
+</LinearLayout>

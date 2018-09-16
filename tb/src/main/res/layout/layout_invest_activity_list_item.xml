@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="0dp"
+    android:background="@color/backgroud_common"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:padding="0dp" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/invest_activity_list_item_bg_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/img_invest_activity_bg"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/text_invest_date"
+                style="@style/text_small_black_size_style"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical|left"
+                android:text="2015-10-21" />
+
+            <ImageView
+                android:id="@+id/img_invest_activity_pic"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_margin="0dp"
+                android:padding="0dp"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:id="@+id/text_invest_name"
+                style="@style/text_small_black_size_style"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center_vertical|right"
+                android:text="新手福利 送688元现金" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="12dp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/img_invest_activity_outdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="0dp"
+        android:padding="0dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/img_invest_activity_outdate"
+        android:visibility="invisible" />
+
+</RelativeLayout>

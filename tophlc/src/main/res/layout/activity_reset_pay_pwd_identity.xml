@@ -1,0 +1,102 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroud_common"
+    android:orientation="vertical" >
+
+    <include layout="@layout/header_layout" />
+
+    <View style="@style/line_horizontal_common" />
+
+    <TextView
+        android:id="@+id/text_bank_info"
+        android:textSize="@dimen/w12"
+        android:textColor="@color/text_gray_common"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical|left"
+        android:paddingBottom="6dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="6dp"
+        android:text="重置交易密码前，请验证身份" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/WHITE"
+        android:orientation="vertical"
+        android:paddingLeft="12dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/edit_text_size_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="left|center_vertical"
+                android:text="姓名" />
+
+            <org.xsl781.ui.view.ClearEditText
+                android:id="@+id/cedt_real_name"
+                style="@style/edit_text_size_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical|left"
+                android:layout_weight="3"
+                android:background="@android:color/transparent"
+                android:hint="请输入您的姓名"
+                android:paddingLeft="6dp"
+                android:paddingRight="12dp" />
+        </LinearLayout>
+
+        <!-- android:inputType="mobile" -->
+
+        <View style="@style/line_horizontal_common" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/edit_text_size_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="left|center_vertical"
+                android:text="@string/identity_card" />
+
+            <org.xsl781.ui.view.ClearEditText
+                android:id="@+id/cedt_identity_card"
+                style="@style/edit_text_size_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical|left"
+                android:layout_weight="3"
+                android:background="@android:color/transparent"
+                android:hint="@string/hint_input_identity_card"
+                android:paddingLeft="6dp"
+                android:paddingRight="12dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View style="@style/line_horizontal_common" />
+
+    <Button
+        android:layout_marginTop="@dimen/w20"
+        android:id="@+id/btn_next"
+        style="@style/btn_login_style"
+        android:text="@string/next" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="30dp" />
+
+</LinearLayout>

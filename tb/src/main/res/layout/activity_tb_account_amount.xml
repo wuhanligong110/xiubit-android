@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+    android:background="@color/WHITE">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="95dp"
+        android:background="@color/WHITE"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/linearlayout1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="T呗账户余额(元)"
+                    android:textColor="@color/text_gray_common"
+                    android:textSize="12dp"/>
+
+                <ImageView
+                    android:id="@+id/quesIv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:src="@drawable/iv_mine_questions"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/rewardBalanceTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/linearlayout1"
+                android:text="0.00"
+                android:textColor="@color/text_red_common"
+                android:textSize="45dp"/>
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/Withdraw"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/btn_big_blue_selector"
+            android:text="提现"
+            android:textColor="@color/WHITE"
+            android:textSize="14dp"/>
+    </RelativeLayout>
+
+    <View
+        style="@style/line_horizontal_dotted_line"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/WHITE"
+        android:orientation="horizontal"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="账户收入(元)"
+                android:textColor="@color/text_gray_common"
+                android:textSize="12dp"/>
+
+            <TextView
+                android:id="@+id/rewardIncomeTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="0.00"
+                android:textColor="@color/text_red_common"
+                android:textSize="24dp"/>
+        </LinearLayout>
+
+        <View
+            style="@style/line_vertical_common"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingLeft="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="账户支出(元)"
+                android:textColor="@color/text_gray_common"
+                android:textSize="12dp"/>
+
+            <TextView
+                android:id="@+id/rewardOutTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="0.00"
+                android:textColor="@color/text_red_common"
+                android:textSize="24dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        style="@style/line_horizontal_common"/>
+
+    <com.toobei.tb.view.MyPagerSlidingTabStrip
+        android:id="@+id/pagerSlidingTabs"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/list_viewpager_title_height"
+        android:background="@color/text_white_common"
+        android:textColorPrimary="@color/text_black_common"
+        app:pstsIndicatorColor="@color/text_blue_common"
+        app:pstsShouldExpand="true"
+        app:pstsTabPaddingLeftRight="0dp"
+        app:pstsTabTextColor="@color/text_blue_common"
+        app:tabTextAppearance="@style/MyCustomTabTextAppearance"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v4.view.ViewPager>
+
+</LinearLayout>

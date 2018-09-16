@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/search_box_height"
+    android:background="@color/backgroud_common"
+    android:paddingBottom="7dp"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:paddingTop="7dp" >
+
+    <Button
+        android:id="@+id/btn_search"
+        android:layout_width="54dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="center|right"
+        android:layout_margin="0dp"
+        android:background="@drawable/btn_blue_corner5_selector"
+        android:padding="0dp"
+        android:text="@string/search"
+        android:textColor="@color/WHITE"
+        android:textSize="12sp" />
+
+    <org.xsl781.ui.view.ClearEditText
+        android:id="@+id/cedt_search"
+        style="@style/edit_text_size_style"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical|left"
+        android:layout_marginRight="12dp"
+        android:layout_toLeftOf="@id/btn_search"
+        android:background="@drawable/btn_while_small_default"
+        android:drawableLeft="@drawable/icon_msg_search"
+        android:drawablePadding="10dp"
+        android:hint="@string/input_name_or_phone"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:singleLine="true"
+        android:textSize="16sp" />
+
+</RelativeLayout>

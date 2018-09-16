@@ -1,0 +1,297 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+    android:background="@color/backgroud_common">
+
+    <include layout="@layout/header_layout"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/backgroud_common"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/backgroud_common">
+
+            <LinearLayout
+                android:id="@+id/bound_bank_card_success_ll"
+                android:layout_width="match_parent"
+                android:layout_height="145dp"
+                android:background="@color/WHITE"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/bind_bank_card"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/img_bound_bank_card_success"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/bound_bank_card_success"
+                    android:textColor="@color/text_black_common"
+                    android:textSize="18dp"/>
+            </LinearLayout>
+
+            <View
+                style="@style/line_horizontal_common"
+                android:layout_marginBottom="12dp"/>
+
+            <View style="@style/line_horizontal_common"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/WHITE"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="51dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:gravity="center|left"
+                        android:text="银行卡"
+                        android:textColor="@color/text_gray_common_title"
+                        android:textSize="16dp"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="4"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/text_bank_info"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center|left"
+                            android:textColor="@color/text_black_common"
+                            android:textSize="16dp"/>
+
+                        <View
+                            style="@style/line_horizontal_common"
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="51dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:gravity="center|left"
+                        android:text="@string/bank_card_number"
+                        android:textColor="@color/text_gray_common_title"
+                        android:textSize="16dp"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="4"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/text_bank_card_number"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center|left"
+                            android:textColor="@color/text_black_common"
+                            android:textSize="16dp"/>
+
+                        <View
+                            style="@style/line_horizontal_common"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="51dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:gravity="center|left"
+                        android:text="预留手机"
+                        android:textColor="@color/text_gray_common_title"
+                        android:textSize="16dp"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="4"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/phoneNumTv"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center|left"
+                            android:textColor="@color/text_black_common"
+                            android:textSize="16dp"/>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    style="@style/line_horizontal_common"
+                    />
+
+                <View
+                    style="@style/line_horizontal_common"
+                    android:layout_height="12dp"
+                    android:background="@color/backgroud_common"/>
+
+                <View
+                    style="@style/line_horizontal_common"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="51dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp">
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:gravity="center|left"
+                        android:text="@string/name"
+                        android:textColor="@color/text_gray_common_title"
+                        android:textSize="16dp"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="4"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/text_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center|left"
+                            android:textColor="@color/text_black_common"
+                            android:textSize="16dp"/>
+
+                        <View
+                            style="@style/line_horizontal_common"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="51dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp">
+
+                    <TextView
+                        android:id="@+id/textView"
+                        style="@style/edit_text_size_style"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:gravity="center|left"
+                        android:text="@string/identity_card"
+                        android:textColor="@color/text_gray_common_title"
+                        android:textSize="16dp"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="4"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/text_identity_card"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center|left"
+                            android:textColor="@color/text_black_common"
+                            android:textSize="16dp"/>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <View
+                style="@style/line_horizontal_common"
+                android:layout_marginBottom="12dp"/>
+
+            <Button
+                android:id="@+id/btn_setting_pay_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_ll_height"
+                android:layout_margin="12dp"
+                android:background="@drawable/btn_login_selector"
+                android:scaleType="fitCenter"
+                style="?android:attr/borderlessButtonStyle"
+                android:text="@string/setting_pay_pwd"
+                android:textColor="@color/top_title_text"
+                android:textSize="@dimen/top_title_text_size"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/text_warm_prompt_bank_add"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:gravity="center"
+                    android:text="@string/warm_prompt_bank_add"
+                    android:textColor="@color/text_gray_common"
+                    android:textSize="12dp"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

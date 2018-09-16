@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroud_common">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/w8"
+        android:textSize="@dimen/w14"
+        android:textColor="@color/text_gray_common"
+        android:text="请选择开户行"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/w15"
+        android:background="@color/WHITE"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/w16"
+            android:textColor="@color/text_gray_common_title"
+            android:text="开户行"
+            android:layout_marginRight="@dimen/w15"/>
+
+        <TextView
+            android:id="@+id/bankNameTv"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/w16"
+            android:textColor="@color/text_blue_common"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="246dp"
+        android:layout_marginRight="246dp"
+        android:layout_marginTop="18dp"
+        android:padding="@dimen/w8"
+        android:text="填写个人信息"
+        android:textColor="@color/text_gray_common"
+        android:textSize="@dimen/w14" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/w15"
+        android:background="@color/WHITE"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/w16"
+            android:textColor="@color/text_gray_common_title"
+            android:layout_marginRight="@dimen/w15"
+            android:text="地区    "/>
+
+
+            <TextView
+                android:id="@+id/selectCityTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/w16"
+                android:textColor="@color/text_blue_common"
+                android:text="请选择地区"
+                />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/phoneNumInputLl"
+        android:layout_marginTop="@dimen/w15"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/w15"
+        android:background="@color/WHITE"
+        android:visibility="visible">
+
+        <TextView
+            android:layout_marginTop="@dimen/w15"
+            android:layout_marginBottom="@dimen/w15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/w16"
+            android:textColor="@color/text_gray_common_title"
+            android:text="手机号"
+            android:layout_marginRight="@dimen/w15"/>
+
+        <org.xsl781.ui.view.ClearEditText
+            android:id="@+id/phoneInputEt"
+            style="@style/edit_text_size_style"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:textCursorDrawable="@drawable/edittext_cursor_shape"
+            android:background="@android:color/transparent"
+            android:hint="请输入银行卡预留手机号"
+            android:maxLength="11"
+            android:inputType="number"
+            android:paddingLeft="6dp"
+            android:paddingRight="12dp"/>
+
+
+        <ImageView
+            android:id="@+id/remindInfoIv"
+            android:paddingLeft="@dimen/w15"
+            android:paddingRight="@dimen/w15"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/set_info_remind_ico"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/phoneNumRemindTv"
+        android:layout_marginTop="@dimen/w8"
+        android:layout_marginLeft="@dimen/w15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/w12"
+        android:text="使用银行预留手机号绑定"
+        android:textColor="@color/text_gray_common"/>
+
+
+    <TextView
+        android:layout_marginTop="@dimen/w35"
+        android:id="@+id/completeBtn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/w55"
+        android:text="下一步"
+        android:gravity="center"
+        android:textSize="@dimen/w18"
+        android:textColor="@color/text_white_common"
+        android:background="@drawable/btn_blue_corner5_selector"
+        android:layout_marginLeft="@dimen/w15"
+        android:layout_marginRight="@dimen/w15"
+        android:enabled="false"/>
+
+</LinearLayout>

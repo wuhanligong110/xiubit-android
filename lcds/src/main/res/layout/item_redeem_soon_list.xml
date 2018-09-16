@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/backgroud_common"
+              android:orientation="vertical"
+    >
+
+    <include layout="@layout/item_redeem_soon_list_head"
+        />
+
+    <include layout="@layout/item_redeem_soon_list_head02"
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="42dp"
+                android:layout_height="30dp">
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="22dp"
+                    android:background="#D1E1EF"/>
+
+                <ImageView
+                    android:id="@+id/img_redeem_time_tag"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12dp"
+                    android:src="@drawable/img_redeem_01"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/text_customer_invest_enddate"
+                style="@style/text_small_blue_size_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="02月12日"
+                android:textSize="13dp"
+                />
+
+            <TextView
+                android:id="@+id/text_redeem_state"
+                style="@style/text_small_blue_size_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:background="@drawable/img_text_blue_bg"
+                android:gravity="center"
+                android:minWidth="55dp"
+                android:text="可转让"
+                android:textSize="10dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="42dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <View
+                    style="@style/line_vertical_common_no_margin"
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="22dp"
+                    android:background="#D1E1EF"/>
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/item_bg_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/btn_while_big_default"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="62dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <org.xsl781.ui.view.RoundImageView
+                        android:id="@+id/avatar"
+                        style="@style/avatar_customer_list"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/img_customer_cus"
+                        android:visibility="gone"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="0dp"
+                        android:layout_weight="1"
+
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/text_customer_name"
+                                style="@style/text_middle_black_style"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="张小三"
+                                android:textSize="14dp"/>
+
+                            <View
+                                android:layout_width="1px"
+                                android:layout_height="12dp"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginRight="8dp"
+                                android:background="@color/line_common"/>
+
+                            <TextView
+                                android:id="@+id/text_customer_phone"
+                                style="@style/text_middle_black_style"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:singleLine="true"
+                                android:text="18898766534"
+                                android:textSize="14dp"/>
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/text_customer_product_name"
+                            style="@style/text_small_black_size_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:singleLine="true"
+                            android:text="天天牛A90天"/>
+
+                    </LinearLayout>
+                    <!--可转让/到期-->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/text_customer_invest_date"
+                            style="@style/text_small_common64_size_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2015-9-30"/>
+
+                        <TextView
+                            android:id="@+id/text_customer_invest_date_time"
+                            style="@style/text_small_common64_size_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="9:30"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    style="@style/line_horizontal_common"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="18dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/text_customer_invest_field"
+                            style="@style/text_small_common64_size_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:text="购买额(元)"/>
+
+                        <com.v5ent.xiubit.view.MyTextView
+                            android:id="@+id/text_customer_invest_money"
+                            style="@style/text_middle_blue_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:textSize="17dp"
+                            android:layout_marginTop="2dp"
+                            android:text="8888.80"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        >
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/text_customer_product_year_rate"
+                                style="@style/text_small_common64_size_style"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="年化 8.5%"/>
+
+                            <TextView
+                                android:id="@+id/text_customer_product_commission_rate"
+                                style="@style/text_small_common64_size_style"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:text="佣金率 1.5%"/>
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/text_customer_income"
+                            style="@style/text_small_common64_size_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="客户收益 "/>
+
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <include layout="@layout/item_redeem_soon_list_head02"
+        />
+
+    <!---->
+
+
+</LinearLayout>

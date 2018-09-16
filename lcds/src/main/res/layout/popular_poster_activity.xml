@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:background="@color/backgroud_common"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <LinearLayout
+        android:id="@+id/group1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/WHITE"
+        android:gravity="center_horizontal">
+
+        <com.flyco.tablayout.SlidingTabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/w43"
+            android:overScrollMode="never"
+            android:background="@color/WHITE"
+            app:tl_divider_padding="0dp"
+            app:tl_tab_padding="0dp"
+            app:tl_divider_color="@color/line_common"
+            app:tl_indicator_bounce_enable="false"
+            app:tl_indicator_color="@color/text_blue_common"
+            app:tl_indicator_width_equal_title="true"
+            app:tl_textSelectColor="@color/text_blue_common"
+            app:tl_textUnselectColor="@color/text_black_common"
+            app:tl_textsize="@dimen/w14" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line1"
+        android:layout_below="@id/group1"
+        style="@style/line_horizontal_common"/>
+
+
+    <android.support.v4.view.ViewPager
+        android:layout_below="@id/line1"
+        android:id="@+id/vPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backgroud_common"
+        android:layout_weight="1"
+        android:overScrollMode="never">
+
+
+    </android.support.v4.view.ViewPager>
+
+    <LinearLayout
+        android:id="@+id/shareView"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/w110"
+        android:gravity="center_vertical"
+        android:background="#F2FFFFFF"
+        android:visibility="gone"
+        android:focusable="true">
+
+
+        <TextView
+            android:id="@+id/shareWXfriendEntry"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/icon_share_wxfriend"
+            android:textColor="@color/text_gray_common_title"
+            android:textSize="@dimen/w14"
+            android:drawablePadding="@dimen/w8"
+            android:text="分享到微信好友"
+            />
+
+        <TextView
+            android:id="@+id/shareWXcircleEntry"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/w14"
+            android:textColor="@color/text_gray_common_title"
+            android:drawableTop="@drawable/icon_share_wxcircle"
+            android:drawablePadding="@dimen/w8"
+            android:text="分享到微信朋友圈"
+            />
+    </LinearLayout>
+
+</RelativeLayout>

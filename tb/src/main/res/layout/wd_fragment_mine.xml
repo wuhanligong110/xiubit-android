@@ -1,0 +1,639 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+    <com.handmark.pulltorefresh.library.PullToRefreshScrollView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/pull_refresh_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backgroud_common"
+        android:orientation="vertical"
+        ptr:ptrAnimationStyle="flip">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/backgroud_common"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="70dp"
+                android:background="@color/WHITE">
+
+                <org.xsl781.ui.view.RoundImageView
+                    android:id="@+id/userIv"
+                    android:layout_width="@dimen/mine_face_height"
+                    android:layout_height="@dimen/mine_face_height"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12dp"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_customer_face_default"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="13dp"
+                    android:layout_toRightOf="@+id/userIv"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/nameTv"
+                        style="@style/text_middle_black_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15dp"
+                        android:visibility="gone"
+                        />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginTop="8dp">
+
+                        <TextView
+                            android:id="@+id/mobileTv"
+                            style="@style/text_small_gray_size_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="——"/>
+
+                        <TextView
+                            android:id="@+id/authenticationTv"
+                            style="@style/text_small_white_size_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@+id/mobileTv"
+                            android:background="@drawable/iv_smrz_bg_gray"
+                            android:gravity="center"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="未认证"/>
+
+                        <ImageView
+                            android:id="@+id/torightIv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignRight="@+id/authenticationTv"
+                            android:layout_centerVertical="true"
+                            android:layout_marginTop="4dp"
+                            android:background="@drawable/img_toright_white"
+                            />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    style="@style/line_horizontal_common_mine"
+                    android:layout_alignParentBottom="true"
+                    />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/WHITE"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/totalProfitRl"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="12dp"
+                                android:text="累计收益(元)"
+                                android:textColor="@color/text_gray_common"
+                                android:textSize="15dp"/>
+
+                            <ImageView
+                                android:id="@+id/eyeIv"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginLeft="6dp"
+                                android:background="@drawable/img_login_pwd_eye_open"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            >
+
+                            <TextView
+                                android:id="@+id/totalProfitTv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="12dp"
+                                android:gravity="center_vertical"
+                                android:text="———"
+                                android:textColor="@color/text_red_common"
+                                android:textSize="45dp"/>
+
+                            <ImageView
+                                android:id="@+id/totalProfitQuesIv"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginLeft="8dp"
+                                android:src="@drawable/iv_mine_questions"
+                                android:visibility="invisible"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/gotoMyInvestLi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@color/WHITE"
+                        android:paddingLeft="12dp"
+                        android:clickable="true"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:text="我的投资"
+                            android:textColor="@color/text_gray_common"
+                            android:textSize="12dp"/>
+
+                        <ImageView
+                            android:id="@+id/arrowMyInvestIv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="12dp"
+                            android:background="@drawable/img_go_right"/>
+                    </LinearLayout>
+                    <!--虚线-->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/dotted_line"
+                        android:layerType="software"
+                        />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/accountBalanceRl"
+                    android:layout_width="fill_parent"
+                    android:layout_height="80dp"
+                    android:background="@drawable/item_click_bg"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:text="T呗账户余额(元)"
+                            android:textColor="@color/text_gray_common"
+                            android:textSize="15dp"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            >
+
+                            <TextView
+                                android:id="@+id/accountBalanceTv"
+                                style="@style/text_middle_white_style"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="12dp"
+                                android:text="———"
+                                android:textColor="@color/text_red_common"
+                                android:textSize="24dp"/>
+
+                            <ImageView
+                                android:id="@+id/accountBalanceQuesIv"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginLeft="10dp"
+                                android:src="@drawable/iv_mine_questions"
+                                android:visibility="invisible"/>
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/gotoWithDrawAmount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@color/WHITE"
+                        android:paddingLeft="12dp"
+                        android:clickable="true"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:text="提现"
+                            android:textColor="@color/text_gray_common"
+                            android:textSize="12dp"/>
+
+                        <ImageView
+                            android:id="@+id/accountBalanceArrawIv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="12dp"
+                            android:background="@drawable/img_go_right"/>
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/line_common"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:layout_marginTop="11dp"
+                android:background="@color/line_common"/>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/WHITE"
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:id="@+id/MyInvestOrgRl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="44dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/item_click_bg"
+                    android:clickable="true">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="12dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/iv_my_invest_org"/>
+
+                        <TextView
+                            style="@style/text_middle_black_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="我的投资平台"
+                            android:textSize="15dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true">
+
+                        <TextView
+                            style="@style/text_small_gray_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:text="投资平台管理"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="12dp"
+                            android:background="@drawable/img_go_right"/>
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/line_common"/>
+
+                <RelativeLayout
+                    android:id="@+id/mycfpRe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="44dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/item_click_bg"
+                    android:clickable="true">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="12dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/iv_mycfp"/>
+
+                        <TextView
+                            style="@style/text_middle_black_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="我的理财师"
+                            android:textSize="15dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true">
+
+                        <TextView
+                            style="@style/text_small_gray_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:text="理财规划"/>
+
+                        <ImageView
+                            android:id="@+id/mycfpArrawIv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="12dp"
+                            android:background="@drawable/img_go_right"/>
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/line_common"/>
+
+                <RelativeLayout
+                    android:id="@+id/redpacketRe"
+                    android:layout_width="fill_parent"
+                    android:layout_height="44dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/item_click_bg"
+                    android:clickable="true">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="12dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/iv_mine_redpacket"/>
+
+                        <TextView
+                            style="@style/text_middle_black_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="我的红包"
+                            android:textSize="15dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/redpacketTv"
+                            style="@style/text_small_gray_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                       />
+                        <ImageView
+                            android:id="@+id/redpacketArrowIv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="12dp"
+                            android:background="@drawable/img_go_right"/>
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/line_common"/>
+
+                <RelativeLayout
+                    android:id="@+id/inviteFriendRe"
+                    android:layout_width="fill_parent"
+                    android:layout_height="44dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/item_click_bg"
+                    android:clickable="true">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="12dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/iv_mine_invite"/>
+
+                        <TextView
+                            style="@style/text_middle_black_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="邀请朋友"
+                            android:textSize="15dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true">
+
+                        <TextView
+                            android:id="@+id/inviteFriendTv"
+                            style="@style/text_small_gray_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:layout_toRightOf="@+id/institutionIv"
+                            android:text="邀请朋友一起理财"/>
+
+                        <ImageView
+                            android:id="@+id/inviteFriendArrowIv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="12dp"
+                            android:background="@drawable/img_go_right"/>
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/line_common"/>
+
+                <RelativeLayout
+                    android:id="@+id/comQuestionRe"
+                    android:layout_width="fill_parent"
+                    android:layout_height="44dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/item_click_bg"
+                    android:clickable="true">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="12dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/iv_mine_com_question"/>
+
+                        <TextView
+                            style="@style/text_middle_black_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="常见问题"
+                            android:textSize="15dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true">
+
+                        <TextView
+                            android:id="@+id/comQuestionTv"
+                            style="@style/text_small_gray_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:layout_toRightOf="@+id/institutionIv"
+                            android:text="有疑问点这里"/>
+
+                        <ImageView
+                            android:id="@+id/comQuestionIv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="12dp"
+                            android:background="@drawable/img_go_right"/>
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/line_common"/>
+
+                <RelativeLayout
+                    android:id="@+id/moreRe"
+                    android:layout_width="fill_parent"
+                    android:layout_height="44dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/item_click_bg"
+                    android:clickable="true">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="12dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/iv_mine_more"/>
+
+                        <TextView
+                            style="@style/text_middle_black_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="更多"
+                            android:textSize="15dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true">
+
+                        <TextView
+                            android:id="@+id/moreTv"
+                            style="@style/text_small_gray_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:layout_toRightOf="@+id/institutionIv"
+                            android:text="客服电话、邮箱"/>
+
+                        <ImageView
+                            android:id="@+id/moreIv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="12dp"
+                            android:background="@drawable/img_go_right"/>
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </com.handmark.pulltorefresh.library.PullToRefreshScrollView>
+</RelativeLayout>

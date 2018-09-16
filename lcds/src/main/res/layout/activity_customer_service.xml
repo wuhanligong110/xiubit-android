@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/backgroud_common"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@color/WHITE"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp">
+
+        <View
+            android:layout_width="4dp"
+            android:layout_height="12dp"
+            android:background="@color/text_blue_common"/>
+
+        <TextView
+            style="@style/text_small_common64_size_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:text="常见问题"/>
+    </LinearLayout>
+
+    <View style="@style/line_horizontal_common"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/bottomLl"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/w50"
+            android:background="@color/WHITE">
+            <LinearLayout
+                android:id="@+id/onlineConsultTv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textColor="@color/text_black_common"
+                    android:textSize="@dimen/w18"
+                    android:drawablePadding="@dimen/w8"
+                    android:drawableLeft="@drawable/help_ico1"
+                    android:text="在线咨询"/>
+
+            </LinearLayout>
+
+            <View
+                style="@style/line_vertical_common"/>
+        <LinearLayout
+            android:id="@+id/customerServiceTv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="@color/text_black_common"
+                android:drawablePadding="@dimen/w8"
+                android:drawableLeft="@drawable/help_ico2"
+                android:textSize="@dimen/w18"
+                android:text="致电客服"/>
+        </LinearLayout>
+
+            <View
+                style="@style/line_vertical_common"/>
+
+        <LinearLayout
+            android:id="@+id/quesBackTv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:drawablePadding="@dimen/w8"
+                android:drawableLeft="@drawable/help_ico3"
+                android:textColor="@color/text_black_common"
+                android:textSize="@dimen/w18"
+                android:text="问题反馈"/>
+
+        </LinearLayout>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_above="@id/bottomLl"
+            style="@style/line_horizontal_common"/>
+
+        <com.toobei.common.view.MyWebView
+            android:id="@+id/webview"
+            android:overScrollMode="never"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/bottomLl"/>
+
+    </RelativeLayout>
+</LinearLayout>

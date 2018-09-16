@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:orientation="vertical" android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@color/backgroud_common">
+
+<RelativeLayout
+    android:layout_marginBottom="@dimen/w15"
+    android:layout_marginTop="@dimen/w15"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/w15"
+    android:paddingRight="@dimen/w15"
+    android:paddingTop="@dimen/w10"
+    android:paddingBottom="@dimen/w10"
+    android:background="@color/WHITE">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/w16"
+        android:textColor="@color/text_gray_common"
+        android:text="已认证手机号"
+        />
+
+    <TextView
+        android:layout_alignParentRight="true"
+        android:id="@+id/phoneNumTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/w16"
+        android:textColor="@color/text_gray_common"
+        android:text=""
+        />
+</RelativeLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_marginLeft="@dimen/w15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_gray_common"
+        android:text="修改手机号请联系客服"
+        android:textSize="@dimen/w14"
+        android:layout_marginRight="@dimen/w8"/>
+
+    <TextView
+        android:id="@+id/callPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_blue_common"
+        android:text="400-888-6987"
+        android:textSize="@dimen/w14"
+        android:layout_marginRight="@dimen/w8"/>
+</LinearLayout>
+
+
+
+
+</LinearLayout>

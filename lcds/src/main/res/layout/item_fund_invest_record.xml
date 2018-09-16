@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/backgroud_common"
+              android:paddingLeft="15dp"
+              android:paddingRight="15dp"
+              android:paddingBottom="15dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:background="@drawable/shape_item_card_bg">
+
+        <TextView
+            android:singleLine="true"
+            android:id="@+id/fundNameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="43dp"
+            android:textSize="15dp"
+            android:gravity="center"
+            android:textColor="@color/text_black_common"
+            tools:text="签收就看得见啊好的"/>
+
+        <View
+            style="@style/line_horizontal_common"
+            android:layout_marginBottom="12dp"/>
+
+        <LinearLayout
+            android:layout_marginBottom="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:textColor="@color/text_gray_common"
+                android:text="交易日期"/>
+
+            <com.v5ent.xiubit.view.MyTextView
+                android:id="@+id/transactionDateTv"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:text="00.00"
+                android:textColor="@color/text_black_common"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginBottom="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:textColor="@color/text_gray_common"
+                android:text="交易金额(元)"/>
+
+            <com.v5ent.xiubit.view.MyTextView
+                android:id="@+id/transactionAmounTv"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:text="00.00"
+                android:textColor="@color/text_black_common"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginBottom="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:textColor="@color/text_gray_common"
+                android:text="交易状态"/>
+
+            <com.v5ent.xiubit.view.MyTextView
+                android:id="@+id/transactionStatusTv"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:text="00.00"
+                android:textColor="@color/text_black_common"/>
+        </LinearLayout>
+    </LinearLayout>
+    
+</LinearLayout>

@@ -1,0 +1,103 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/backgroud_common" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+
+        <TextView
+            android:id="@+id/textTitle"
+            android:layout_width="match_parent"
+            android:textSize="@dimen/w12"
+            android:textColor="@color/text_gray_common"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="12dp"
+            android:gravity="center|left"
+            android:text="验证交易密码" />
+
+        <com.jungly.gridpasswordview.GridPasswordView
+            android:id="@+id/gridPwd"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mine_info_common_ll_height"
+            android:layout_margin="12dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/errorTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="4dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="4dp"
+                android:textSize="12dp"
+                android:textColor="@color/text_red_common"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/textForget"
+                style="@style/text_small_black_size_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:paddingBottom="4dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="4dp"
+                android:textColor="@color/text_link_blue"
+                android:text="忘记密码?" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/pay_pwd_warm_prompt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:layout_marginBottom="20dp"
+            android:visibility="gone"
+            android:orientation="vertical" >
+
+            <TextView
+                style="@style/text_small_black_size_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/warm_prompt"
+                android:textColor="@color/text_blue_common" />
+
+            <TextView
+                style="@style/text_small_black_size_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/reset_pay_pwd_identity_prompt2"
+                android:textColor="@color/text_gray_common" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <android.inputmethodservice.KeyboardView
+        android:id="@+id/keyboard_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#ff202020"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:keyBackground="@drawable/btn_keyboard_key"
+        android:keyTextColor="@color/BLACK"
+        android:keyTextSize="25sp"
+        android:shadowColor="@color/WHITE"
+        android:shadowRadius="0.0" />
+
+</RelativeLayout>

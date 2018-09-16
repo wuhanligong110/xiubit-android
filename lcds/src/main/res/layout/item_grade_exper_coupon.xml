@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/backgroud_common"
+                android:paddingBottom="@dimen/w10"
+                android:paddingLeft="@dimen/w10"
+                android:paddingRight="@dimen/w10"
+    android:id="@+id/rootView">
+
+
+    <LinearLayout
+        android:id="@+id/contentLl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/w194"
+        android:background="@drawable/bg_grade_exper_coupon"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/w23">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="70"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/gradeTagIv"
+                android:layout_width="@dimen/w57"
+                android:layout_height="@dimen/w57"
+                android:scaleType="fitXY"
+                tools:src="@drawable/coupon_grade_level1_light"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/voucherName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/w6"
+                    android:textColor="@color/text_red_common"
+                    android:textSize="@dimen/w21"
+                    tools:text="总监职级"/>
+
+                <TextView
+                    android:id="@+id/expertextTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/w6"
+                    android:text="体验券"
+                    android:textColor="@color/text_gray_common_title"
+                    android:textSize="@dimen/w13"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/contentInfoCantainer"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="124"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/w6"
+                android:paddingRight="@dimen/w23">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="职级福利："
+                        android:textColor="@color/text_gray_common_title"
+                        android:textSize="@dimen/w12"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+
+                        <TextView
+                            android:id="@+id/jobGradeWelfare1Tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            tools:text="销售佣金100%+"
+                            android:textColor="@color/text_gray_common_title"
+                            android:textSize="@dimen/w12"
+                            android:layout_marginBottom="@dimen/w6"/>
+
+                        <TextView
+                            android:id="@+id/jobGradeWelfare2Tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="直接管理记录贴+"
+                            android:textColor="@color/text_gray_common_title"
+                            android:textSize="@dimen/w12"
+                            android:textStyle="bold"
+                            />
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+            <TextView
+                android:id="@+id/validBeginTimeTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/w6"
+                android:textColor="@color/text_gray_common_title"
+                android:textSize="@dimen/w12"
+                tools:text="生效时间：0000-00-00 00:00:00"/>
+
+            <TextView
+                android:id="@+id/validEndTimeTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_gray_common_title"
+                android:textSize="@dimen/w12"
+                tools:text="结束时间：0000-00-00 00:00:00"
+                />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/activityNameTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/bg_coupon_rit_top"
+        android:gravity="center"
+        android:paddingLeft="@dimen/w8"
+        android:paddingRight="@dimen/w8"
+        android:singleLine="true"
+        android:textColor="@color/text_gray_common_title"
+        android:textSize="@dimen/w12"
+        tools:text="小兵快跑"/>
+
+    <ImageView
+        android:id="@+id/usedSignIv"
+        android:layout_width="@dimen/w76"
+        android:layout_height="@dimen/w62"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/w23"
+        android:src="@drawable/img_redpack_has_use"
+        />
+
+</RelativeLayout>

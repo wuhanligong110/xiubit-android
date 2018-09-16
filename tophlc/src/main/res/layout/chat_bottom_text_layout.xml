@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/chatTextLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/WHITE"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:id="@+id/chatBottomLeftLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        android:gravity="top"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_send_img"
+            style="@style/text_small_white_size_style"
+            android:layout_width="50dp"
+            android:layout_height="36dp"
+            android:layout_margin="0dp"
+            android:background="@drawable/btn_chat_img"
+            android:gravity="center"
+            android:padding="0dp"
+            android:textColor="@color/WHITE" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/textEdit"
+        
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        android:paddingLeft="12dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginTop="6dp"
+        android:layout_weight="1"
+         android:textColorHint="#969696"
+        android:background="@drawable/login_edit_normal"
+        android:gravity="left|center_vertical"
+        android:textColor="@color/text_black_common"
+        android:minHeight="@dimen/chatBottomHeight"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:id="@+id/chatBottomRightLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        android:gravity="top"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/sendBtn"
+            style="@style/text_small_white_size_style"
+            android:layout_width="50dp"
+            android:layout_height="36dp"
+            android:layout_margin="0dp"
+            android:background="@drawable/btn_chart_send_small"
+            android:gravity="center"
+            android:padding="0dp"
+
+            android:textColor="@color/WHITE" />
+    </LinearLayout>
+
+</LinearLayout>

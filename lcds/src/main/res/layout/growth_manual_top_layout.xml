@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+    android:background="@color/backgroud_common">
+    
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:background="@color/WHITE"
+        android:paddingTop="@dimen/w15"
+        android:paddingLeft="@dimen/w15"
+        android:paddingRight="@dimen/w15"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        
+    </android.support.v7.widget.RecyclerView>
+
+    <View
+        style="@style/line_horizontal_common"
+        android:layout_marginBottom="12dp"/>
+
+    <View
+        style="@style/line_horizontal_common"/>
+
+    <TextView
+        android:background="@color/WHITE"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/w46"
+        android:paddingLeft="@dimen/hor_margin_common"
+        android:gravity="center_vertical"
+        android:textColor="@color/text_black_common"
+        android:textSize="@dimen/w18"
+        android:text="为您推荐">
+
+
+    </TextView>
+
+    <View
+        style="@style/line_horizontal_common"/>
+</LinearLayout>

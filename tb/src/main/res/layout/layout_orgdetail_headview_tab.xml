@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/orginfo_detail_tab_root"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/WHITE"
+              android:orientation="vertical">
+
+    <View style="@style/line_horizontal_common"/>
+    <!--平台动态-->
+    <com.toobei.common.view.listView.MyListView
+        android:id="@+id/orginfor_detail_tab_news_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/WHITE"
+        android:dividerHeight="0dp"
+        android:footerDividersEnabled="false"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+    </com.toobei.common.view.listView.MyListView>
+
+    <!--平台实力-->
+    <LinearLayout
+        android:id="@+id/orginfo_detail_strengthLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!--平台简介-->
+        <include layout="@layout/layout_orgdetail_headview_tab_des"/>
+        <!--基本信息-->
+        <include layout="@layout/layout_orgdetail_headview_tab_file"/>
+        <!--管理团队-->
+        <include layout="@layout/layout_orgdetail_headview_tab_team"/>
+        <!--平台简介-->
+        <include layout="@layout/layout_orgdetail_headview_tab_honor"/>
+
+    </LinearLayout>
+    <!--安全保障-->
+    <TextView
+        android:id="@+id/text_orginfor_detail_tab_safe"
+        style="@style/text_small_gray_size_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:background="@color/WHITE"
+        android:lineSpacingExtra="6sp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="10dp"
+        android:visibility="gone"/>
+
+
+</LinearLayout>
+

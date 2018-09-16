@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/WHITE"
+    android:orientation="vertical" >
+
+    <include layout="@layout/header_layout" />
+
+    <View style="@style/line_horizontal_common" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/WHITE"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/w14"
+            android:textColor="@color/text_gray_common"
+            android:text="问题和意见"
+            android:layout_marginTop="@dimen/w15"
+            android:layout_marginLeft="@dimen/w15"
+           />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/w15"
+            android:background="@drawable/feed_edit_back_corner_shape"
+            android:padding="@dimen/w15"
+            android:orientation="vertical"
+           >
+
+            <EditText
+                android:id="@+id/feedback_edit"
+                android:textColor="@color/text_gray_common_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/w100"
+                android:textSize="@dimen/w12"
+                android:gravity="left|top"
+                android:textCursorDrawable="@drawable/edittext_cursor_shape"
+                android:background="#f3f3f3"
+                android:hint="输入10个字以上的问题描述，以便我们提供更好的帮助"
+                android:textColorHint="#b7bcc8"
+                 />
+
+            <TextView
+                android:id="@+id/text_feedback_remain_count"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/w12"
+                android:textColor="#b7bcc8"
+                android:text="0/200"
+                android:gravity="right"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/errorTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/w12"
+            android:textColor="@color/text_red_common"
+            android:layout_marginLeft="@dimen/w15"
+            />
+
+
+        <TextView
+            android:layout_marginTop="@dimen/w35"
+            android:id="@+id/completeBtn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/w55"
+            android:text="提交反馈"
+            android:gravity="center"
+            android:textSize="@dimen/w18"
+            android:textColor="@color/text_white_common"
+            android:background="@drawable/btn_blue_corner5_selector"
+            android:layout_marginLeft="@dimen/w15"
+            android:layout_marginRight="@dimen/w15"
+            android:enabled="false"/>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+    android:background="@color/WHITE"
+    android:clickable="true">
+    
+    <LinearLayout
+        android:background="@color/WHITE"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="57dp">
+    <LinearLayout
+        android:layout_marginLeft="15dp"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="37dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:background="@drawable/fund_search_input_bg">
+        
+        <ImageView
+            android:layout_marginRight="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_search_edit_in"/>
+        
+        <EditText
+            android:id="@+id/editSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:singleLine="true"
+            android:textSize="16dp"
+            android:hint="请输入基金名称、代码"
+            android:textColorHint="@color/text_gray_common"
+            android:textColor="@color/text_black_common"
+            android:gravity="left"
+            android:textCursorDrawable="@drawable/edittext_cursor_shape"
+            android:background="@color/backgroud_transparent"
+            />
+        
+    </LinearLayout>
+        
+        <TextView
+            android:id="@+id/cancelTv"
+            android:textSize="16dp"
+            android:textColor="@color/text_black_common"
+            android:text="取消"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+    
+    <View
+        style="@style/line_horizontal_common"/>
+    
+    <android.support.v7.widget.RecyclerView
+        android:id="@id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/WHITE"
+        android:overScrollMode="never">
+        
+    </android.support.v7.widget.RecyclerView>
+</LinearLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroud_common"
+    android:overScrollMode="never"
+    android:scrollbars="none">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+   <ViewStub
+       android:id="@+id/startVs"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout="@layout/activity_sign_in_start"/>
+
+    <ViewStub
+        android:id="@+id/successVs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout="@layout/activity_sign_in_success"/>
+
+        <View
+            android:id="@+id/statueBarView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            />
+
+    <RelativeLayout
+        android:layout_below="@id/statueBarView"
+        android:id="@+id/rl1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/w60">
+
+        <ImageView
+            android:id="@+id/backIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/w15"
+            android:src="@drawable/btn_back"/>
+
+        <ImageView
+            android:layout_alignParentRight="true"
+            android:id="@+id/calendarIv"
+            android:layout_width="@dimen/w55"
+            android:layout_height="@dimen/w52"
+            android:padding="@dimen/w15"
+            android:src="@drawable/sign_in_left_top_icon"/>
+
+    </RelativeLayout>
+
+        <TextView
+            android:layout_below="@id/rl1"
+            android:layout_alignParentRight="true"
+            android:id="@+id/ruleTv"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/w15"
+            android:paddingRight="@dimen/w15"
+            android:paddingLeft="@dimen/w10"
+            android:background="@drawable/sign_rule_bg"
+            android:textColor="@color/text_white_common"
+            android:text="活动规则"
+            />
+
+    </RelativeLayout>
+</ScrollView>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?><!--公告-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:id="@+id/mine_msg_notice_item_ll"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/WHITE"
+              android:gravity="center_vertical"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/item_click_bg"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:paddingLeft="24dp"
+        android:paddingRight="12dp">
+
+        <ImageView
+            android:id="@+id/img_read_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="12dp"
+            android:src="@drawable/icon_msg_unread"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="18dp"
+            android:layout_marginTop="18dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text_time"
+                style="@style/text_small_gray_size_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2015-8-18 19:22"/>
+
+            <TextView
+                android:id="@+id/text_content"
+                style="@style/text_small_black_size_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:lineSpacingMultiplier="1.3"
+                android:singleLine="true"
+                android:text="平台将于8月31日0点进行系统升级"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical|right"
+            android:orientation="horizontal">
+
+            <ImageView
+                style="@style/mine_sign_go_right"
+                android:layout_gravity="center_vertical|right"
+                android:layout_marginRight="3dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/img_bottom_line"
+        style="@style/line_horizontal_common"
+        android:layout_marginLeft="24dp"/>
+
+</LinearLayout>

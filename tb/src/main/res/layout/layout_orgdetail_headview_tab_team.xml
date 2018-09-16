@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--机构详情  平台实力->基本信息 -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/instituion_teamLL"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:visibility="gone"
+    >
+
+    <TextView
+        style="@style/text_middle15_gray_common64_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:height="40dp"
+        android:gravity="center_vertical"
+        android:paddingTop="10dp"
+        android:text="管理团队"
+        android:textStyle="bold"/>
+
+    <com.toobei.common.view.listView.MyListView
+        android:id="@+id/orginfor_detail_tab_team_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/WHITE"
+        android:dividerHeight="0dp"
+        android:footerDividersEnabled="false"
+        android:orientation="vertical"
+        >
+
+    </com.toobei.common.view.listView.MyListView>
+</LinearLayout>
+
+
+
+

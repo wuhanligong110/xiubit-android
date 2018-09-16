@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.scwang.smartrefresh.layout.SmartRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/refreshViewSrl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroud_common"
+    android:orientation="vertical"
+    app:srlPrimaryColor="@color/top_title_bg">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backgroud_common"
+        android:elevation="0dp">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/backgroud_common"
+            app:elevation="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_scrollFlags="scroll">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/w90"
+                    android:background="@drawable/payment_calendar_top_bg"
+                    android:orientation="horizontal">
+
+                    <android.support.constraint.ConstraintLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+
+                        <com.toobei.common.view.MyTextView
+                            android:id="@+id/investAmtTotalTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0.00"
+                            android:singleLine="true"
+                            android:textColor="@color/text_white_common"
+                            android:textSize="@dimen/w20"
+                            app:layout_constraintBottom_toTopOf="@id/investAmtTotalExplainTv"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_chainStyle="packed" />
+
+                        <TextView
+                            android:id="@+id/investAmtTotalExplainTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="团队累计业绩(元)"
+                            android:textColor="@color/text_white_light"
+                            android:textSize="@dimen/w10"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/investAmtTotalTv" />
+
+                        <ImageView
+                            android:id="@+id/questIv"
+                            android:paddingLeft="@dimen/w6"
+                            android:paddingRight="@dimen/w10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/img_question_white"
+                            app:layout_constraintLeft_toRightOf="@id/investAmtTotalExplainTv"
+                            app:layout_constraintTop_toTopOf="@id/investAmtTotalExplainTv"
+                            app:layout_constraintBottom_toBottomOf="@id/investAmtTotalExplainTv"
+                            />
+                    </android.support.constraint.ConstraintLayout>
+
+                    <View
+                        style="@style/line_vertical_common"
+                        android:layout_marginBottom="@dimen/w15"
+                        android:layout_marginTop="@dimen/w15"
+                        android:background="@color/text_white_light"/>
+
+                    <android.support.constraint.ConstraintLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+
+                        <com.toobei.common.view.MyTextView
+                            android:id="@+id/feeAmountSumTotalTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0.00"
+                            android:singleLine="true"
+                            android:textColor="@color/text_white_common"
+                            android:textSize="@dimen/w20"
+                            app:layout_constraintBottom_toTopOf="@id/feeAmountSumTotalExplainTv"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintVertical_chainStyle="packed" />
+
+                        <TextView
+                            android:id="@+id/feeAmountSumTotalExplainTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="累计佣金(元)"
+                            android:textColor="@color/text_white_light"
+                            android:textSize="@dimen/w10"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/feeAmountSumTotalTv" />
+
+                    </android.support.constraint.ConstraintLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/w47"
+                    android:background="@color/black_level_6"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/yearTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/w15"
+                        android:textColor="@color/text_black_common"
+                        android:textSize="@dimen/w16"
+                        tools:text="2017年" />
+
+                    <View
+                        android:layout_width="1px"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/w10"
+                        android:background="#b2b2b2" />
+
+                    <com.toobei.common.view.CalendarSlidingTabLayout
+                        android:id="@+id/calendarTabLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/w47"
+                        android:background="@color/black_level_6"
+                        android:overScrollMode="never"
+                        app:tl_tab_width="@dimen/w50"
+                        app:tl_textSelectColor="@color/text_blue_common"
+                        app:tl_textUnselectColor="@color/text_black_common"
+                        app:tl_textsize="@dimen/w16">
+
+                    </com.toobei.common.view.CalendarSlidingTabLayout>
+
+                </LinearLayout>
+
+
+                <com.haibin.calendarview.CalendarView
+                    android:id="@+id/calendarView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#fff"
+                    app:calendar_card_view="com.v5ent.xiubit.view.calendar.PaymentCalendarCardView"
+                    app:calendar_height="@dimen/w40"
+                    app:current_day_text_color="#b2b2b2"
+                    app:current_month_text_color="#b2b2b2"
+                    app:other_month_text_color="#e3e3e3"
+                    app:scheme_text_color="#b2b2b2"
+                    app:selected_text_color="@color/text_white_common"
+                    app:week_background="#fff"
+                    app:week_text_color="#b2b2b2" />
+
+                <View style="@style/line_horizontal_common" />
+
+                <View
+                    style="@style/line_horizontal_common"
+                    android:layout_marginTop="@dimen/w12" />
+            </LinearLayout>
+
+            <com.flyco.tablayout.SlidingTabLayout
+                android:id="@+id/listTabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/w43"
+                android:layout_centerHorizontal="true"
+                android:background="@color/WHITE"
+                app:tl_divider_color="@color/line_common"
+                app:tl_indicator_color="@color/text_blue_common"
+                app:tl_indicator_width="55dp"
+                app:tl_tab_padding="@dimen/w15"
+                app:tl_tab_space_equal="true"
+                app:tl_textSelectColor="@color/text_blue_common"
+                app:tl_textUnselectColor="@color/text_black_common"
+                app:tl_textsize="16dp" />
+
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+        </android.support.v4.view.ViewPager>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+</com.scwang.smartrefresh.layout.SmartRefreshLayout>

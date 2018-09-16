@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/headRl"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@color/top_title_bg"
+                android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:id="@+id/leftContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:minWidth="@dimen/w80"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/backBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/btn_back"
+                android:paddingLeft="@dimen/w15"
+                android:paddingRight="@dimen/w12"
+                android:visibility="visible"/>
+
+            <TextView
+                android:id="@+id/leftTv"
+                android:textSize="@dimen/w14"
+                android:textColor="@color/text_white_common"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:singleLine="true"
+                />
+        </LinearLayout>
+
+       
+
+        <LinearLayout
+            android:id="@+id/centerContainer"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp">
+
+            <TextView
+                android:id="@+id/titleView"
+                android:textSize="@dimen/w16"
+                android:textColor="@color/text_white_common"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="shareTitle"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:id="@+id/img_title_down"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="2dp"
+                android:src="@drawable/img_headlayout_title_down"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:id="@+id/img_title_question"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:paddingLeft="5dp"
+                android:paddingRight="10dp"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rightContainer"
+            android:layout_width="wrap_content"
+            android:minWidth="@dimen/w80"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="right|center_vertical"
+            android:clickable="true"
+            android:focusable="true"
+            android:orientation="horizontal">
+           
+            
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

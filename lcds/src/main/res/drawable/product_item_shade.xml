@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 阴影部分 -->
+
+    <item
+        >
+
+        <shape android:shape="rectangle">
+            <gradient
+                android:endColor="#e1e1e1"
+                android:startColor="#e1e1e1"
+                />
+
+            <corners
+                android:bottomLeftRadius="5px"
+                android:bottomRightRadius="5px"
+                android:topLeftRadius="5px"
+                android:topRightRadius="5px"/>
+        </shape>
+    </item>
+
+     背景部分
+     形象的表达：left,top,right,bottom代表各方向阴影超出的宽度
+    <item
+        android:left="3px"
+        android:top="3px"
+        android:right="3px"
+        android:bottom="3px">
+
+        <shape android:shape="rectangle">
+            <gradient
+                android:endColor="@color/WHITE"
+                android:startColor="@color/WHITE"/>
+
+            <corners
+                android:bottomLeftRadius="5px"
+                android:bottomRightRadius="5px"
+                android:topLeftRadius="5px"
+                android:topRightRadius="5px"/>
+        </shape>
+    </item>
+
+</layer-list>

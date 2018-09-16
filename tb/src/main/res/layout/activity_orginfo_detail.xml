@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backgroud_common"
+        android:orientation="vertical">
+
+        <org.xsl781.ui.xlist.XListView
+            android:id="@+id/org_detail_xlistView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+        </org.xsl781.ui.xlist.XListView>
+
+
+        <Button
+            android:id="@+id/img_financial_guild"
+            style="@style/btn_bottom_blue_style"
+            android:text="查看投资攻略"
+            android:textColor="@color/WHITE"
+            android:textSize="17dp"/>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ff000000"/>
+
+        <com.toobei.common.view.photoview.PhotoView
+            android:id="@+id/img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </FrameLayout>
+</FrameLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backgroud_common"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:id="@+id/tipsLL"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:background="#f87661"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <TextView
+                android:id="@+id/text_tips"
+                style="@style/text_small_white_size_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/ativity_rank_leader_red_tips_01"/>
+
+            <ImageView
+                android:id="@+id/img_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:src="@drawable/img_close_small"/>
+        </LinearLayout>
+
+
+        <org.xsl781.ui.xlist.XListView
+            android:id="@+id/listView"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:divider="@null"/>
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.scwang.smartrefresh.layout.SmartRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/refreshView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroud_common"
+    >
+    <!--app:srlPrimaryColor="@color/text_blue_common"-->
+
+        <android.support.design.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/backgroud_common"
+            android:elevation="0dp">
+
+            <android.support.design.widget.AppBarLayout
+                android:id="@+id/appBarLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:elevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_scrollFlags="scroll">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="83dp"
+                        android:background="@color/top_title_bg"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:paddingLeft="15dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            style="@style/text_small12_white_size_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="理财余额(元)"/>
+
+                        <com.v5ent.xiubit.view.MyTextView
+                            android:id="@+id/accountBalanceTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:text="00.00"
+                            android:textColor="@color/WHITE"
+                            android:textSize="30dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="67dp"
+                        android:background="@color/WHITE"
+                        android:gravity="center">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/text_small12_gray_commona2_style"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="累计收入(元)"/>
+
+                            <com.v5ent.xiubit.view.MyTextView
+                                android:id="@+id/incomeSummaryTv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:singleLine="true"
+                                android:text="0.00"
+                                android:textColor="@color/text_black_common3e"
+                                android:textSize="24dp"/>
+
+
+                        </LinearLayout>
+
+                        <View
+                            style="@style/line_vertical_common"
+                            android:layout_height="24dp"/>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/text_small12_gray_commona2_style"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="累计支出(元)"/>
+
+                            <com.v5ent.xiubit.view.MyTextView
+                                android:id="@+id/outSummaryTv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:singleLine="true"
+                                android:text="0.00"
+                                android:textColor="@color/text_black_common3e"
+                                android:textSize="24dp"/>
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        style="@style/line_horizontal_common"
+                        android:layout_height="10dp"
+                        android:background="@color/backgroud_common"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:background="@color/backgroud_common"
+                        android:gravity="bottom"
+                        android:paddingBottom="4dp"
+                        android:paddingLeft="15dp"
+                        android:visibility="gone">
+
+                        <View
+                            android:layout_width="3dp"
+                            android:layout_height="13dp"
+                            android:layout_marginRight="6dp"
+                            android:background="@color/text_blue_common"/>
+
+                        <TextView
+                            style="@style/text_small12_black_common3e_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="收支明细"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <com.v5ent.xiubit.view.MyPagerSlidingTabStrip
+                    android:id="@+id/tabLayout"
+                    style="@style/MyCustomTabLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/list_viewpager_title_height"
+                    android:background="@color/WHITE"
+                    app:pstsDividerColor="@color/backgroud_transparent"
+                    app:pstsIndicatorColor="@color/text_blue_common"
+                    app:pstsShouldExpand="true"
+                    app:pstsTabPaddingLeftRight="8dp"
+                    app:pstsTabTextColor="@color/text_blue_common"
+                    app:tabTextAppearance="@style/MyCustomTabTextAppearance"
+                    />
+
+                <View
+                    style="@style/line_horizontal_common"/>
+
+            </android.support.design.widget.AppBarLayout>
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            </android.support.v4.view.ViewPager>
+        </android.support.design.widget.CoordinatorLayout>
+        <!--</ScrollView>-->
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>

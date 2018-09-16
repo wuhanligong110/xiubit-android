@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+    <com.toobei.common.view.RCRelativeLayout
+        android:layout_marginTop="@dimen/w160"
+        android:id="@+id/mainView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:round_corner="@dimen/w5"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/WHITE">
+
+
+            <ImageView
+                android:id="@+id/closedIv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:padding="15dp"
+                android:src="@drawable/signin_dialog_close_icon" />
+
+
+            <LinearLayout
+                android:id="@+id/contantView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/w70"
+                android:layout_below="@id/closedIv"
+                android:background="@color/WHITE"
+                android:gravity="bottom|center_horizontal"
+                android:orientation="vertical">
+
+
+                <com.toobei.common.view.MyTextView
+                    android:id="@+id/contentTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/sign_share_window_text1"
+                    android:textColor="@color/text_gray_common_title"
+                    android:textSize="@dimen/w21"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/w8"
+                    android:id="@+id/tv2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="请到我的-优惠券-红包查看"
+                    android:textColor="@color/text_gray_common_title"
+                    android:textSize="@dimen/w12"
+                    />
+
+                <TextView
+
+                    android:id="@+id/lookAwardMoneyEntry"
+                    android:paddingBottom="@dimen/w12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/w12"
+                    android:gravity="center"
+                    android:text="查看累计奖励金>>"
+                    android:textColor="@color/text_gray_common_title"
+                    android:textSize="@dimen/w12" />
+
+            </LinearLayout>
+            <TextView
+                android:layout_below="@id/contantView"
+                android:id="@+id/btn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/w45"
+                android:background="@color/text_red_common"
+                android:gravity="center"
+                android:text="点击领取"
+                android:textColor="@color/WHITE"
+                android:textSize="18dp" />
+
+        </RelativeLayout>
+    </com.toobei.common.view.RCRelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/w244"
+        >
+
+        <ImageView
+            android:layout_alignParentBottom="true"
+            android:id="@+id/awardBoxIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:scaleType="fitEnd"
+            android:src="@drawable/img_share_awardbox"/>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

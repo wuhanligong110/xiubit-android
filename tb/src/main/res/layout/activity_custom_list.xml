@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical" >
+
+    <include layout="@layout/customer_list_headview" />
+
+    <View style="@style/line_horizontal_common" />
+
+    <!--<View-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="20dp"-->
+    <!--android:background="@color/backgroud_common"/>-->
+
+    <com.toobei.common.view.ListBlankLayout
+        android:id="@+id/list_blank_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"/>
+
+    <Button
+        android:id="@+id/invite"
+        android:text="立即邀请"
+        android:textColor="@color/WHITE"
+        android:textSize="18dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/btn_common_square_selector"/>
+
+</LinearLayout>

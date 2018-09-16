@@ -1,0 +1,76 @@
+<RelativeLayout android:id="@+id/activity_launch_root"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/lunch_advRL"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/WHITE">
+
+        <ImageView
+            android:id="@+id/lunch_advertiseIV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:scaleType="fitXY"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_lunch_TimeTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/lunch_TimeTV"
+                style="@style/text_middle_white_style"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/btn_adv"
+                android:gravity="center"
+                android:text="跳过(3s)"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/lunch_logoRL"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/img_launch_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"/>
+        <!-- 设置logo -->
+
+        <ImageView
+            android:id="@+id/img_launch"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text_version"
+                style="@style/text_small_gray_size_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:text="版本 "/>
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

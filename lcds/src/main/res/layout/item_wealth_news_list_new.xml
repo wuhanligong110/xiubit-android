@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:id="@+id/invite_cfp_list_item_root"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/item_click_bg"
+              android:gravity="center_vertical"
+              android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="12dp"
+        android:background="@color/backgroud_common"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="140dp">
+
+        <ImageView
+            android:id="@+id/img_pic"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_gravity="center_vertical"
+            android:scaleType="fitXY"/>
+
+        <TextView
+            android:id="@+id/text_news_tag"
+            style="@style/text_small_white_size_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/img_news_tag_left_bg"
+            android:gravity="center_vertical|left"
+            android:paddingLeft="12dp"
+            android:paddingRight="18dp"
+            android:text="newsTag"
+            android:textSize="10dp"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+
+    <View style="@style/line_horizontal_common"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="20dp"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/text_title"
+                style="@style/text_middle_black_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="0dp"
+                android:singleLine="true"
+                android:text="标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/text_content"
+                style="@style/text_small_gray_size_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="50dp"
+                android:layout_marginTop="1dp"
+                android:singleLine="true"
+                android:text="內容內容內容內容內容內容內容內容內容內容內容內容內容"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:id="@+id/text_time"
+                style="@style/text_small_gray_size_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginTop="1dp"
+                android:text="2015-10-1"
+                android:textSize="12sp"
+                android:visibility="visible"/>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

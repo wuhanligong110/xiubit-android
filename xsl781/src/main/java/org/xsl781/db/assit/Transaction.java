@@ -1,0 +1,43 @@
+package org.xsl781.db.assit;
+
+import org.xsl781.utils.Log;
+
+import android.database.sqlite.SQLiteDatabase;
+
+/**
+ * 辅助事务
+ * 
+ * @date 2013-6-15下午11:09:15
+ */
+public class Transaction {
+	private static final String TAG = Transaction.class.getSimpleName();
+
+	/**
+	 * 因为每个具体事物都不一样，但又有相同的结构，既要维持代码的统一性，也要可以个性化解析。
+	 * 
+	 * @param db
+	 * @param worker
+	 * @return
+	 */
+	public static <T> T execute(SQLiteDatabase db, Worker<T> worker) {
+		db.beginTransaction();
+		if (Log.isDBPrint) Log.getLog(Querier.class).i("----> BeginTransaction");
+		T data = null;
+		try {
+			data = worker.doTransaction(db);
+			db.setTransactionSuccessful();
+			if (Log.isDBPrint) Log.getLog(Querier.class).i("----> Transaction Successful");
+		} catch (Exception e) {
+			if (Log.isDBPrint) Log.getLog(Querier.class).e("----> Transaction Failling");
+			e.printStackTrace();
+		} finally {
+			db.endTransaction();
+		}
+		return data;
+	}
+
+	public interface Worker<T> {
+		T doTransaction(SQLiteDatabase db) throws Exception;
+	}
+
+}

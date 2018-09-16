@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.scwang.smartrefresh.layout.SmartRefreshLayout
+    android:id="@+id/refreshView"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroud_common"
+    >
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backgroud_common"
+        android:elevation="0dp">
+        <!-- todo 2017_02_21 去掉appbarLayout的阴影  app:elevation="0dp" 而不是   android:elevation="0dp"
+     -->
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/WHITE"
+            app:elevation="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/text_red_common"
+                android:orientation="vertical"
+                app:layout_scrollFlags="scroll">
+
+                <LinearLayout
+                    android:id="@+id/top_red_remind_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="4dp"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="8dp"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:lineSpacingExtra="4dp"
+                        android:text="@string/myincomedetailactivity_top_tag"
+                        android:textColor="@color/text_white_common"
+                        android:textSize="12dp"/>
+
+                    <ImageView
+                        android:id="@+id/img_close_top"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="15dp"
+                        android:src="@drawable/img_white_close_btn"/>
+                </LinearLayout>
+
+                <include layout="@layout/myincome_detail_list_headview"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:background="@color/WHITE">
+
+                <RelativeLayout
+                    android:id="@+id/grantedLi"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true">
+
+                        <TextView
+                            android:id="@+id/grantedTextTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="已发放"
+                            android:textColor="@color/text_blue_common"
+                            android:textSize="14dp"/>
+
+                        <TextView
+                            android:id="@+id/grantedAmountTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@id/grantedTextTv"
+                            android:text="(0.00元)"
+                            android:textColor="@color/text_gray_commona2"
+                            android:textSize="12dp"/>
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/grantedCursor"
+                        android:layout_width="100dp"
+                        android:layout_height="3dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:background="@color/text_blue_common"
+                        android:visibility="visible"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/waitGrantLi"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true">
+
+                        <TextView
+                            android:id="@+id/waitGrantTextTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="待发放"
+                            android:textColor="@color/text_black_common6c"
+                            android:textSize="14dp"/>
+
+                        <TextView
+                            android:id="@+id/waitGrantAmountTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@id/waitGrantTextTv"
+                            android:text="(0.00元)"
+                            android:textColor="@color/text_gray_commona2"
+                            android:textSize="12dp"/>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/waitGrantAmountQuestIv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="12dp"
+                        android:padding="3dp"
+                        android:src="@drawable/img_question"/>
+
+                    <View
+                        android:id="@+id/waitGrantCursor"
+                        android:layout_width="100dp"
+                        android:layout_height="3dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:background="@color/top_title_bg"
+                        android:visibility="invisible"/>
+                </RelativeLayout>
+            </LinearLayout>
+        </android.support.design.widget.AppBarLayout>
+
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        </android.support.v4.view.ViewPager>
+</android.support.design.widget.CoordinatorLayout>
+</com.scwang.smartrefresh.layout.SmartRefreshLayout>

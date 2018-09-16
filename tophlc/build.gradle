@@ -1,0 +1,93 @@
+apply plugin: 'com.android.library'
+//apply plugin: 'com.neenbedankt.android-apt'
+apply plugin: 'com.jakewharton.butterknife'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'  //一些扩展功能，比如自动findview
+apply plugin: 'kotlin-kapt' //注解
+dependencies {
+    api fileTree(include: '*.jar', dir: 'libs')
+    api project(':PullToRefreshlibrary')
+    api project(':xsl781')
+    api project(':hellocharts-library')
+    api project(':calendarview')
+    api project(':keyboardlibrary')
+    //ButterKnife
+    api 'com.jakewharton:butterknife:8.2.1'
+    kapt  'com.jakewharton:butterknife-compiler:8.2.1'
+    api "com.android.support:support-v4:$SUPPORT_VERSION"
+    api "com.android.support:appcompat-v7:$SUPPORT_VERSION"
+    api "com.android.support:design:$SUPPORT_VERSION"
+    api "com.android.support:recyclerview-v7:$SUPPORT_VERSION"
+    api "com.android.support:cardview-v7:$SUPPORT_VERSION"
+    api "com.android.support:gridlayout-v7:$SUPPORT_VERSION"
+    //圖片加载框架
+    api 'com.github.bumptech.glide:glide:3.7.0'
+    //eventBus 事件总线
+    api 'org.greenrobot:eventbus:3.0.0'
+    //个推
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    api 'com.getui:sdk:2.9.5.0'
+    //https://github.com/H07000223/FlycoTabLayout
+    api 'com.nineoldandroids:library:2.4.0'
+    api 'com.flyco.roundview:FlycoRoundView_Lib:1.1.2@aar'
+    api 'com.flyco.tablayout:FlycoTabLayout_Lib:2.0.0@aar'
+    api 'com.android.support:multidex:1.0.1'
+    //图片放大预览
+//    api 'ch.ielse:imagewatcher:1.0.2'
+    api 'com.github.chrisbanes:PhotoView:2.1.2'
+//    compile project(':xrecyclerview')
+    //recycleView
+    api 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.22'  //adapter
+    api 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.2'  //上拉刷新，下拉加载
+    //友盟
+    api 'com.umeng.analytics:analytics:latest.integration'
+    api 'me.relex:circleindicator:1.2.2@aar' //指示器
+    api 'com.github.florent37:viewanimator:1.0.5' //动画操作库
+    //RXjava-RXandroid
+    api 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    api 'io.reactivex.rxjava2:rxjava:2.1.2'
+    api 'com.trello.rxlifecycle2:rxlifecycle-components:2.2.1'
+    //retrofit2 //本体和插件版本号保持一致
+    api 'com.squareup.retrofit2:retrofit:2.3.0'
+    api 'com.squareup.retrofit2:converter-gson:2.3.0'   //版本号与
+    api 'com.squareup.retrofit2:converter-scalars:2.3.0'   //版本号
+    api 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'  //
+    //okhttp拦截器
+    api 'com.squareup.okhttp3:logging-interceptor:3.8.1'
+    //权限申请
+    api 'com.yanzhenjie:permission:1.1.0'
+    //轮播图
+    api 'com.youth.banner:banner:1.4.10'
+    api 'com.nex3z:flow-layout:1.0.0'  //流式布局 https://github.com/nex3z/FlowLayout
+    api "org.jetbrains.kotlin:kotlin-stdlib-jre7:$KOTLIN_VERSION"
+//    api 'com.squareup.picasso:picasso:2.5.2'
+    api 'com.android.support.constraint:constraint-layout:1.1.+'
+//    api 'com.github.addappcn:android-pickers:1.0.1' //各种选择器
+    api 'com.contrarywind:Android-PickerView:4.1.3'
+    api 'com.isseiaoki:simplecropview:1.1.7'  //图片裁剪
+    api 'com.github.nanchen2251:CompressHelper:1.0.5' //图片压缩
+    api 'com.kyleduo.switchbutton:library:2.0.0'  //switchButtom
+    api 'com.github.maning0303:MNCrashMonitor:V1.0.5'//崩溃日志手机端弹出页面显示 https://github.com/maning0303/MNCrashMonitor
+    //UI，网络可视化调试框架
+    debugApi 'com.github.whataa:pandora:v1.0.2'
+    releaseApi 'com.github.whataa:pandora-no-op:v1.0.3'
+}
+
+
+android {
+    compileSdkVersion COMPILE_SDK_VERSION
+//    buildToolsVersion '26.0.2'
+//    todo   useLibrary ‘org.apache.http.legacy‘
+    useLibrary 'org.apache.http.legacy'
+
+
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+}
+repositories {
+    mavenCentral()
+    google()
+}

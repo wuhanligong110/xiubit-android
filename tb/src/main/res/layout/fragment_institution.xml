@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backgroud_common"
+        android:orientation="vertical">
+
+        <com.toobei.tb.view.OrgListClickHeadLayout
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="@dimen/list_viewpager_title_height"
+            android:orientation="vertical"
+           />
+
+        <!--V2.0新增加banner-->
+
+
+
+        <org.xsl781.ui.xlist.XListView
+            android:id="@+id/pinterHeadLV"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            />
+    </LinearLayout>
+
+    <View
+        android:visibility="gone"
+        style="@style/line_horizontal_common"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="@dimen/list_viewpager_title_height"></View>
+
+    <ImageButton
+
+        android:id="@+id/org_iv_back_to_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="12dp"
+        android:layout_marginRight="12dp"
+        android:background="@null"
+        android:src="@drawable/img_product_back_to_top"/>
+
+</RelativeLayout>

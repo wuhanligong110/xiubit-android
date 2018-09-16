@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="3dp" >
+
+    <include layout="@layout/chat_item_time_layout" />
+
+    <LinearLayout style="@style/chat_item_layout" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:gravity="center_vertical" >
+
+            <org.xsl781.ui.view.RoundImageView
+                android:id="@+id/avatar"
+                style="@style/ChatAvatar"
+                android:layout_gravity="top" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginLeft="5dp" >
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/marginToUsername"
+                    android:maxHeight="@dimen/chatImgMaxHight"
+                    android:maxWidth="@dimen/chatImgMaxWidth"
+                    android:scaleType="fitCenter"
+                    android:src="@null" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/imageView"
+                    android:layout_alignLeft="@id/imageView"
+                    android:layout_alignRight="@id/imageView"
+                    android:layout_alignTop="@id/imageView"
+                    android:background="@drawable/img_chat_img_left_bg"
+                    android:src="@null" />
+
+                <TextView
+                    android:id="@+id/topic_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:maxWidth="@dimen/chatImgMaxWidth"
+                    android:shadowColor="@color/BLACK"
+                    android:shadowDx="0"
+                    android:shadowDy="0"
+                    android:shadowRadius="1"
+                    android:singleLine="true"
+                    android:paddingLeft="15dp"
+                    android:paddingBottom="2dp"
+                    android:ellipsize="end"
+                    android:text=""
+                    android:textColor="@color/WHITE"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="发送中"
+            android:textSize="12sp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</LinearLayout>

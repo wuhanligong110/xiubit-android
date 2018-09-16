@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string name="card_bind_bottom_remind">绑卡过程中遇到任何问题，请联系客服:\n400-888-6987</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="set_success">设置成功</string>
+    <string name="pleaseCheckNetwork">网络不给力哦，请检查网络设置</string>
+    <string name="emptyStr"></string>
+    <string name="cancel">取消</string>
+    <string name="jump">跳转</string>
+    <string name="name">姓名</string>
+
+
+    <string name="service_work_time">工作时间：工作日9:00—18:00</string>
+
+    <string name="commit">提交</string>
+    <string name="reset_gesture_passwd">修改手势密码</string>
+    <string name="set_gesture_passwd">设置手势密码</string>
+    <string name="set_gesture_toast1">为了您的账户安全，请绘制解锁图案</string>
+    <string name="set_gesture_toast2">请重复上次绘制的图案</string>
+    <string name="set_gesture_toast3">两次绘制不一致，请重新绘制</string>
+    <string name="hint_input_login_password">请输入您账号的登录密码</string>
+    <string name="password">密码</string>
+    <string name="hint_input_password">请输入您的密码</string>
+    <string name="next">下一步</string>
+    <string name="alter_gesture_pwd">修改手势密码</string>
+    <string name="passwd_error">密码错误,请重新输入</string>
+    <string name="init_pay_pwd">设置交易密码</string>
+    <string name="old_password">原密码</string>
+    <string name="setting_success">设置成功</string>
+    <string name="hint_input_old_password">请输入旧密码</string>
+    <string name="start">开始</string>
+    <string name="alter_login_pwd">修改登录密码</string>
+    <string name="alter_pay_pwd">修改交易密码</string>
+    <string name="comfirm_password">确认密码</string>
+    <string name="new_password">新密码</string>
+    <string name="login_password">登录密码</string>
+    <string name="login">登  录</string>
+    <string name="reset_login_pwd">找回密码</string>
+    <string name="set_new_login_pwd">设置新密码</string>
+    <string name="sended_sms_vcode">已发送短信验证码到</string>
+    <string name="input_sms_vcode">请输入收到的验证码</string>
+    <string name="vcode">验证码</string>
+    <string name="complete">完成</string>
+    <string name="delete_all">全部设为已读</string>
+    <string name="login_hint_text">请输入您的手机号码</string>
+    <string name="login_pwd_hint_text">请输入您的登录密码</string>
+    <string name="register_new_pwd_hint_text">6~20位数字、字母和符号组合</string>
+    <string name="register_new_pwd_confirm_hint_text">请再次输入密码</string>
+    <string name="register_new_again_pwd_hint_text">再次输入新密码</string>
+    <string name="login_pwd_reset_hint_text">请设置6~20位新密码</string>
+    <string name="login_pwd_reset_prompt_text">请使用6~20位数字、字母、符号组合</string>
+    <string name="authlogin">授权登录</string>
+    <string name="share">分享</string>
+    <string name="mobile">手机号码</string>
+    <string name="input_phone">请输入手机号码</string>
+    <string name="person_setting">个人设置</string>
+    <string name="person_info">个人信息</string>
+    <string name="certification">实名认证</string>
+    <string name="bank_card_manage">银行卡管理</string>
+    <string name="add_bank_card">银行卡绑定</string>
+    <string name="bank_card_number">银行卡号</string>
+    <string name="bank">银行</string>
+    <string name="bank_card">银行卡号</string>
+    <string name="bank_name">开户银行</string>
+    <string name="their_branch">所属支行</string>
+    <string name="hint_input_bank_card_number">请输入您本人的银行卡号</string>
+    <string name="real_name">真实姓名</string>
+    <string name="hint_input_real_name">请输入您的真实姓名</string>
+    <string name="identity_card">身份证号</string>
+    <string name="hint_input_identity_card">请输入您的身份证号</string>
+    <string name="support_bank">支持银行</string>
+    <string name="warm_prompt">温馨提示</string>
+    <string name="warm_prompt_bank_add">为保障资金安全，仅支持绑定一张银行卡进行猎财余额的提现，如需解绑银行卡，请联系客服电话</string>
+    <string name="prompt_bank_add2">首次绑卡需充值1.00元用于校验银行卡有效性</string>
+    <string name="prompt_bank_add3">充值后的资金进入您的领会账户，您可通过提现转出</string>
+    <string name="send_sms_vcode">发送验证码</string>
+    <string name="hint_input_phnoe">请输入银行预留手机号码</string>
+    <string name="i_agree">我同意</string>
+    <string name="pay_agreement">《支付服务协议》</string>
+    <string name="input_bank_reserved_phone">请输入银行预留手机号</string>
+    <string name="bound_bank_card_success">认证及绑卡成功</string>
+    <string name="input_pay_pwd_verity">修改密码前需验证原密码，请输入</string>
+    <string name="input_pay_pwd_init_prompt1">请设置您的6位数字交易密码，用于提现</string>
+    <string name="input_pay_pwd_init_prompt2">请再次输入交易密码</string>
+    <string name="twice_pwd_different">两次输入不一致，请重新设置</string>
+    <string name="input_new_pay_first">请设置新的交易密码</string>
+    <string name="input_new_pay_second">请再次输入新的交易密码</string>
+    <string name="reset_pay_pwd">重置交易密码</string>
+    <string name="reset_pay_pwd_verify_idcard">身份认证失败</string>
+    <string name="reset_pay_pwd_identity_title">为保障资金安全，重置密码前需验证您的身份信息</string>
+    <string name="reset_pay_pwd_identity_prompt">为保障资金安全，理财师必须通过实名认证才可绑定银行卡和设置交易密码，请使用本人身份证件进行认证。\n如有疑问，请联系客服</string>
+    <string name="reset_pay_pwd_identity_prompt2">交易密码将用于账户提现操作，请妥善设置和保管。</string>
+    <string name="setting_pay_pwd">设置交易密码</string>
+    <string name="withdraw">提现</string>
+    <string name="can_withdraw_money_yuan">可提金额(元)</string>
+    <string name="withdraw_money">提现金额</string>
+    <string name="input_money">请输入金额</string>
+    <string name="to_account_time">到账时间</string>
+    <string name="can_withdraw_cost">提现费用</string>
+    <string name="withdraw_record">提现记录</string>
+    <string name="withdraw_prompt">@string/warm_prompt_bank_add</string>
+    <string name="withdraw_apply_success">您的提现申请已提交</string>
+    <string name="checking">审核中</string>
+    <string name="uncertifiaction">未认证</string>
+    <string name="unbound">未绑定</string>
+    <string name="bounded">已绑定</string>
+    <string name="finished">完成</string>
+    <string name="text_image_select_titile">选择图片</string>
+    <string name="hardLoading">请稍候...</string>
+    <string name="today_income">今日收益</string>
+    <string name="month_income">本月收益</string>
+    <string name="total_income">累计收益</string>
+    <string name="unit_yuan">(元)</string>
+    <string name="unit_yuan_1">元</string>
+    <string name="blank_list_text_dealdynamic">暂无动态</string>
+    <string name="blank_list_text_no_data">暂无数据</string>
+    <string name="blank_list_text_my_msg">暂无消息记录</string>
+    <string name="blank_list_text_bulletin">暂无公告消息</string>
+    <string name="blank_list_text_myaccount">暂无明细</string>
+    <string name="blank_list_text_withdraw_list">暂无记录</string>
+    <string name="blank_list_text_customer_list">暂无投资客户</string>
+    <string name="blank_list_text_customer_detail_list_deal">暂无交易记录</string>
+    <string name="blank_list_text_customer_detail_list_end">暂无投资到期</string>
+    <string name="blank_list_text_customer_import_list">暂无重要投资客户</string>
+    <string name="blank_list_text_invest_activity">暂无投资者活动</string>
+    <string name="blank_list_text_invite_cutomer_list">暂无被邀客户注册</string>
+    <string name="blank_list_text_invite_cfp_list">暂无推荐记录</string>
+    <string name="blank_list_text_team">暂无团队成员\n快邀请理财师加入你的团队一起赚佣金</string>
+    <string name="blank_list_text_team_detail">该理财师暂无下级成员</string>
+    <string name="blank_list_text_cfp_activity">暂无理财师活动</string>
+    <string name="blank_list_text_recommend_cfp_in">暂无可推荐的客户</string>
+    <string name="blank_list_text_no_custom">暂无客户</string>
+    <string name="blank_list_text_no_converation">暂无会话</string>
+    <string name="blank_list_text_no_contacts">无法读取通讯录，请在系统设置中修改权限。</string>
+    <string name="conver_list">互动列表</string>
+    <string name="cant_chat_with_yourself">不能和自己聊天</string>
+    <string name="new_conver">新建互动</string>
+    <string name="select_custom">选择客户</string>
+    <string name="confirm">确定</string>
+    <string name="i_know">知道了</string>
+    <string name="prompt_select_custom">请先选择客户</string>
+    <string name="prompt_sended">已发送</string>
+    <string name="input_name_or_phone"> 输入姓名或手机号搜索</string>
+    <string name="search">搜索</string>
+    <string name="selected">已选中</string>
+    <string name="recommend_cfp_contacts_prompt">以下好友尚未注册，快推荐他们加入你的团队吧</string>
+    <string name="invite_customer_contacts_prompt">以下好友尚未注册，快邀请他们成为你的客户吧</string>
+    <string name="invite">邀请</string>
+    <string name="recommend">推荐</string>
+    <string name="activity_recommend_cfp">推荐理财师</string>
+    <string name="recommend_cfp_desc">组建你的理财师团队</string>
+    <string name="msg">消息</string>
+    <string name="msg_center">消息中心</string>
+    <string name="bulletin">公告</string>
+    <string name="my_msg">通知</string>
+    <string name="edit">编辑</string>
+    <string name="avatar">头像</string>
+    <string name="password_manage">密码管理</string>
+    <string name="voice_switch">消息免打扰</string>
+    <string name="reset_pay_pwd_info">为保障账户资金安全，请填写本账号已认证的身份信息进行重置密码验证。如有疑问请咨询客服</string>
+
+    <!--productFragment-->
+    <string name="product_list_tab_recommend">推荐排序</string>
+    <string name="product_list_tab_income">收益排序</string>
+    <string name="product_list_tab_date">期限排序</string>
+    <string name="institution_list_tab_rank">安全评级</string>
+    <string name="institution_list_tab_income">年化收益</string>
+    <string name="institution_list_tab_date">产品期限</string>
+    <string name="institution_list_item_ratio">佣金率</string>
+
+    <!--AboutUs 更多  关于我们-->
+
+    <string name="feedback">意见反馈</string>
+    <string name="service_tel">客服电话</string>
+    <string name="wechat_we">官方微信公众号</string>
+    <string name="mail_we">客服邮箱</string>
+    <string name="about_we">关于我们</string>
+    <string name="version_update">版本更新</string>
+    <string name="version_update_info">更新日志</string>
+
+    <!--todo transitionName activity 或者控件转场动画name-->
+    <string name="transition_scale_photoview">transition_scale_photoview</string>
+    <!-- 貅比特友盟埋点统计-->
+
+    <!--全局->消息-->
+    <string name="umeng_global_msg_key">全局</string>
+    <string name="umeng_global_msg_notice">消息-通知</string>
+    <string name="umeng_global_msg_gonggao">消息-公告</string>
+    <string name="umeng_global_msg_edit">消息-编辑</string>
+    <string name="umeng_global_msg_all_read">消息-标记全部已读</string>
+    <!-- 我的模块 my_module -->
+    <string name="umeng_my_module">my_module</string>
+    <!-- 个人设置-->
+    <string name="umeng_my_setting_key">我的</string>
+    <string name="umeng_my_setting_upload_headicon">个人设置-上传头像</string>
+    <string name="umeng_my_setting_card_manage">个人设置-银行卡管理</string>
+    <string name="umeng_my_setting_password_magage">个人设置-密码管理</string>
+    <string name="umeng_my_setting_message_switch">个人设置-消息免打扰</string>
+    <!--提现-->
+    <string name="umeng_my_withdraw_key">我的</string>
+    <string name="umeng_my_withdraw_history">提现-点击提现记录</string>
+
+    <!--手机号验证-->
+    <string name="vcode_ques_str">1.请确认当前手机号是否为该银行卡预留手机号\n\n2.检查短信是否被手机安全软件拦截\n\n3.预留手机号停用,联系银行客服咨询\n\n更多帮助致电猎财客服 400-888-6987</string>
+</resources>

@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="bottom"
+    android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:overScrollMode="never">
+
+
+            <com.toobei.common.view.RCRelativeLayout
+                android:id="@+id/cardView"
+                android:layout_marginLeft="@dimen/w25"
+                android:layout_marginRight="@dimen/w25"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:round_corner="@dimen/w5">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/WHITE"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal"
+                    android:paddingTop="@dimen/w12">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/w16"
+                        android:textColor="@color/text_black_common"
+                        android:layout_centerHorizontal="true"
+                        android:text="我的投资组合"/>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/WHITE"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:gravity="center_horizontal">
+
+                        <TextView
+                            android:id="@+id/orgNumInfoTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/w12"
+                            android:textColor="@color/text_gray_common"
+                            android:text="在投平台："/>
+
+                        <TextView
+                            android:layout_marginLeft="15dp"
+                            android:id="@+id/orgYearProfitTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/w12"
+                            android:text="综合年化收益"
+                            android:textColor="@color/text_gray_common"/>
+
+                    </LinearLayout>
+
+                    <com.v5ent.xiubit.view.OrgListChartPieLayout
+                        android:id="@+id/chartPieCp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/WHITE">
+
+
+                    </com.v5ent.xiubit.view.OrgListChartPieLayout>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_lcds_logn_botton_popu"/>
+
+
+                    <View
+                        android:layout_marginTop="@dimen/w10"
+                        style="@style/line_horizontal_common"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/title_gray_bg"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/w12"
+                            android:textColor="@color/text_gray_common"
+                            android:text="@string/net_invest_compose_popu_remind"/>
+
+                        <ImageView
+                            android:id="@+id/logoIv"
+                            android:layout_marginTop="@dimen/w10"
+                            android:layout_marginBottom="@dimen/w10"
+                            android:layout_marginLeft="@dimen/w15"
+                            android:layout_width="@dimen/w60"
+                            android:layout_height="@dimen/w60"
+                            android:src="@drawable/ic_launcher"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.toobei.common.view.RCRelativeLayout>
+            </ScrollView>
+        </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/w90"
+        android:background="@color/WHITE"
+        android:orientation="horizontal" >
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:id="@+id/btn_save_to_photo_album"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_save_photo_album" />
+
+            <TextView
+                android:textSize="12dp"
+                android:textColor="@color/text_gray_common"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="4dp"
+                android:text="保存到相册" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/btn_wechat_friend"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:src="@drawable/img_share_wechat" />
+
+            <TextView
+                android:textSize="12dp"
+                android:textColor="@color/text_gray_common"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="4dp"
+                android:text="微信好友" />
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/btn_wechat_cricle"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:src="@drawable/img_share_wechat_friends" />
+
+            <TextView
+                android:textSize="12dp"
+                android:textColor="@color/text_gray_common"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="4dp"
+                android:text="微信朋友圈" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:id="@+id/btn_share_qq"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:src="@drawable/img_share_qq"/>
+
+            <TextView
+                android:textSize="12dp"
+                android:textColor="@color/text_gray_common"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="4dp"
+                android:text="QQ"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        style="@style/line_horizontal_common"/>
+    <TextView
+        android:id="@+id/text_share_name"
+        style="@style/text_small_black_size_style"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/w40"
+        android:background="@color/WHITE"
+        android:gravity="center"
+        android:text="取消" >
+    </TextView>
+
+</LinearLayout>

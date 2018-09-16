@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroud_common"
+    android:focusableInTouchMode="true">
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshViewSrl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <View
+                        style="@style/line_horizontal_common"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingTop="@dimen/w15"
+                        android:paddingLeft="@dimen/w15"
+                        android:background="@color/WHITE">
+
+                        <View
+                            android:layout_width="4dp"
+                            android:layout_height="16dp"
+                            android:layout_marginRight="6dp"
+                            android:background="@color/blue_level_2" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="快速投资"
+                            android:textColor="@color/text_black_common"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/WHITE"
+                        android:overScrollMode="never"
+                        android:scrollbars="none">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/w6">
+
+
+                            <LinearLayout
+                            android:id="@+id/shortProductLl"
+                            android:layout_width="@dimen/w155"
+                            android:layout_height="@dimen/w90"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                                android:background="@drawable/shadow_product_item"
+                                >
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="left"
+                                    android:orientation="vertical">
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content">
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textSize="@dimen/w14"
+                                            android:textColor="@color/text_black_common"
+                                            android:text="短期"/>
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textSize="@dimen/w12"
+                                            android:textColor="@color/text_black_common"
+                                            android:text="(3个月以内)"/>
+                                    </LinearLayout>
+
+                                    <com.v5ent.xiubit.view.MyTextView
+                                        android:id="@+id/shortRateTv"
+                                        android:layout_marginTop="@dimen/w6"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="@color/text_red_common"
+                                        android:textSize="@dimen/w16"
+                                        tools:text="0.00~0.00"/>
+                                </LinearLayout>
+
+                        </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/midProductLl"
+                                android:layout_width="@dimen/w155"
+                                android:layout_height="@dimen/w90"
+                                android:orientation="vertical"
+                                android:gravity="center"
+                                android:background="@drawable/shadow_product_item">
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="left"
+                                    android:orientation="vertical">
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="@dimen/w14"
+                                        android:textColor="@color/text_black_common"
+                                        android:text="中期"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="@dimen/w12"
+                                        android:textColor="@color/text_black_common"
+                                        android:text="(4-6个月)"/>
+
+                                </LinearLayout>
+
+
+                                <com.v5ent.xiubit.view.MyTextView
+                                    android:id="@+id/midRateTv"
+                                    android:layout_marginTop="@dimen/w6"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/text_red_common"
+                                    android:textSize="@dimen/w16"
+                                    tools:text="0.00~0.00"/>
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/longProductLl"
+                                android:layout_width="@dimen/w155"
+                                android:layout_height="@dimen/w90"
+                                android:orientation="vertical"
+                                android:gravity="center"
+                                android:background="@drawable/shadow_product_item">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="left"
+                                    android:orientation="vertical">
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="@dimen/w14"
+                                        android:textColor="@color/text_black_common"
+                                        android:text="长期"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="@dimen/w12"
+                                        android:textColor="@color/text_black_common"
+                                        android:text="(7个月以上)"/>
+                                </LinearLayout>
+                                <com.v5ent.xiubit.view.MyTextView
+                                    android:id="@+id/longRateTv"
+                                    android:layout_marginTop="@dimen/w6"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/text_red_common"
+                                    android:textSize="@dimen/w16"
+                                    tools:text="0.00~0.00"/>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/allProductLl"
+                                android:layout_width="@dimen/w155"
+                                android:layout_height="@dimen/w90"
+                                android:orientation="vertical"
+                                android:gravity="center"
+                                android:background="@drawable/shadow_product_item">
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="@dimen/w14"
+                                        android:textColor="@color/text_black_common"
+                                        android:text="全部产品"/>
+
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </HorizontalScrollView>
+
+                    <View
+                        style="@style/line_horizontal_common"/>
+
+                    <View
+                        android:layout_marginTop="@dimen/w12"
+                        style="@style/line_horizontal_common"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/w15"
+                        android:paddingTop="@dimen/w15"
+                        android:paddingBottom="0dp"
+                        android:background="@color/WHITE">
+
+                        <View
+                            android:layout_width="4dp"
+                            android:layout_height="16dp"
+                            android:layout_marginRight="6dp"
+                            android:background="@color/blue_level_2" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="精选平台"
+                            android:textColor="@color/text_black_common"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/orgRv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:overScrollMode="never"
+                        android:background="@color/WHITE">
+
+
+                    </android.support.v7.widget.RecyclerView>
+
+                    <View
+                        style="@style/line_horizontal_common"/>
+
+                    <View
+                        android:layout_marginTop="@dimen/w12"
+                       style="@style/line_horizontal_common"/>
+
+                    <LinearLayout
+                        android:id="@+id/bottomTabLl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/WHITE"
+                        android:paddingTop="@dimen/w15"
+                        >
+                    
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/w13"
+                            android:textColor="@color/text_black_common"
+                            android:drawablePadding="@dimen/w4"
+                            android:text="专业风控"
+                            android:drawableTop="@drawable/natlon_bottom_ic1"
+                            />
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/w13"
+                            android:drawablePadding="@dimen/w4"
+                            android:textColor="@color/text_black_common"
+                            android:text="律盾计划"
+                            android:drawableTop="@drawable/natlon_bottom_ic2"
+                            />
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/w13"
+                            android:drawablePadding="@dimen/w4"
+                            android:textColor="@color/text_black_common"
+                            android:text="技术保障"
+                            android:drawableTop="@drawable/natlon_bottom_ic3"
+                            />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/safeProdectTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/w11"
+                        android:textColor="@color/text_gray_common"
+                        android:text="了解更多貅比特保障措施>>"
+                        android:gravity="center_horizontal"
+                        android:background="@color/WHITE"
+                        android:padding="@dimen/w15"/>
+
+                    <View
+                       style="@style/line_horizontal_common"
+                        android:layout_marginBottom="@dimen/w12"/>
+
+
+
+                </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+
+
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+</LinearLayout>

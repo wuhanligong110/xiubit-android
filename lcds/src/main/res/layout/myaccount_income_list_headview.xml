@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/WHITE"
+              android:gravity="center"
+              android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="83dp"
+        android:background="@color/top_title_bg"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    style="@style/text_small12_white_size_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/myaccount_income_remain"/>
+
+                <ImageView
+                    android:id="@+id/myaccountQuestionTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="16dp"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp"
+                    android:src="@drawable/img_question_white"
+                    android:visibility="visible"/>
+
+            </LinearLayout>
+
+
+            <com.v5ent.xiubit.view.MyTextView
+                android:id="@+id/text_account_balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="6dp"
+                android:text="0.00"
+                android:textColor="@color/text_white_common"
+                android:textSize="33dp"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/goto_account_detial_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:paddingRight="15dp">
+
+            <TextView
+                style="@style/text_small12_white_size_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="6dp"
+                android:text="资金明细"/>
+
+            <ImageView
+                style="@style/white_mine_sign_go_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:background="@color/top_title_bg"
+        android:gravity="center_vertical|right"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/btn_withdraw"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="12dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="7dp"
+            android:layout_marginTop="7dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_withdraw_img"
+            android:text="@string/withdraw"
+            android:textColor="@color/text_blue_common"
+            android:textSize="16dp"/>
+
+        <!--<View-->
+        <!--style="@style/line_vertical_common"></View>-->
+
+        <Button
+            android:id="@+id/btn_withdraw_list"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="12dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="7dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_withdraw_list_img"
+            android:text="@string/withdraw_record"
+            android:textColor="@color/WHITE"
+            android:textSize="16dp"/>
+    </LinearLayout>
+
+    <View
+        style="@style/line_horizontal_common"/>
+    <!--<RelativeLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="52dp">-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:orientation="horizontal">-->
+
+    <!--<TextView-->
+    <!--style="@style/text_middle_gray96_style"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_marginLeft="20dp"-->
+    <!--android:gravity="center_vertical"-->
+    <!--android:text="@string/myaccount_income_total"/>-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/text_myaccount_income_total"-->
+    <!--style="@style/text_middle15_gray_common64_style"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_marginLeft="12dp"-->
+    <!--android:gravity="center_vertical"-->
+    <!--android:text="0.00"/>-->
+
+    <!--</LinearLayout>-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/img_myaccount_income_total_question"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:padding="12dp"-->
+    <!--android:src="@drawable/img_question_red"/>-->
+    <!--</RelativeLayout>-->
+
+
+    <!--<ImageView-->
+    <!--android:layout_width="fill_parent"-->
+    <!--android:layout_height="1dp"-->
+    <!--android:layout_marginLeft="15dp"-->
+    <!--android:layerType="software"-->
+    <!--android:src="@drawable/bg_line_dash_gray"/>-->
+
+    <!--<RelativeLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="93dp"-->
+    <!--android:orientation="horizontal">-->
+
+
+    <!--<com.v5ent.xiubit.view.IncomeChartPieLayout-->
+    <!--android:id="@+id/my_income_chart_pie"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_marginLeft="20dp"-->
+    <!--/>-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/img_myaccount_income_combination_question"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:padding="12dp"-->
+    <!--android:src="@drawable/img_question_red"/>-->
+
+    <!--</RelativeLayout>-->
+
+
+    <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="12dp"-->
+        <!--android:background="@color/backgroud_common"/>-->
+
+</LinearLayout>

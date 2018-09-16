@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/WHITE">
+
+
+    <LinearLayout
+        android:id="@+id/bound_bank_card_success_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/WHITE"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_marginTop="@dimen/w25"
+            android:id="@+id/bind_bank_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/img_bound_bank_card_success"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            android:text="绑定成功"
+            android:textColor="@color/text_black_common"
+            android:textSize="18dp"/>
+
+
+        <TextView
+            android:layout_marginTop="@dimen/w55"
+            android:id="@+id/goWithDraw"
+            style="@style/btn_common_style"
+            android:text="继续提现"/>
+
+
+    </LinearLayout>
+
+    <View
+        style="@style/line_horizontal_common"
+        android:layout_marginBottom="12dp"/>
+
+    <View
+        style="@style/line_horizontal_common"/>
+
+
+
+
+</LinearLayout>

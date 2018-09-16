@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center" >
+
+    <TextView
+        android:id="@+id/text_item"
+        style="@style/text_middle_black_style"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="全部明细"
+        android:textSize="14sp" />
+
+</RelativeLayout>

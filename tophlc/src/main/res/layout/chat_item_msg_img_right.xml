@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="3dp" >
+
+    <include layout="@layout/chat_item_time_layout" />
+
+    <LinearLayout
+        style="@style/chat_item_layout"
+        android:gravity="right" >
+
+        <LinearLayout
+            style="@style/chat_item_inner_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <include layout="@layout/chat_item_status_layout" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginRight="5dp" >
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/marginToUsername"
+                    android:maxHeight="@dimen/chatImgMaxHight"
+                    android:maxWidth="@dimen/chatImgMaxWidth"
+                    android:scaleType="fitCenter"
+                    android:src="@null" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/imageView"
+                    android:layout_alignLeft="@id/imageView"
+                    android:layout_alignRight="@id/imageView"
+                    android:layout_alignTop="@id/imageView"
+                    android:background="@drawable/img_chat_img_right_bg"
+                    android:src="@null" />
+            </RelativeLayout>
+
+            <org.xsl781.ui.view.RoundImageView
+                android:id="@+id/avatar"
+                style="@style/ChatAvatar"
+                android:layout_gravity="top" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

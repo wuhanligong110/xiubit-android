@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+       android:shape="line">
+    <stroke
+        android:width="1px"
+        android:color="#e9e9e9"
+        android:dashGap="2dp"
+        android:dashWidth="5dp"/>
+
+</shape>
+
+    <!--关于只显示一条实线的问题：
+     http://blog.csdn.net/u012846783/article/details/52037511
+    你只要在你要用到虚线dash的控件中加上如下一行代码就好：
+
+     style="white-space:pre"   可不加
+     android:layerType="software" 必须加
+    -->
+
+    <!--View控件的height要比dash中的width要高才行-->

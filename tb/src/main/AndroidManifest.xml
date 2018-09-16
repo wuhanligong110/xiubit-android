@@ -1,0 +1,627 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.toobei.tb"
+          android:allowBackup="false">
+<!--build.gradle里已经配置-->
+    <!--<uses-sdk-->
+        <!--android:minSdkVersion="14"-->
+        <!--android:targetSdkVersion="21"/>-->
+
+    <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <!-- 以上为百度需要权限 -->
+
+
+    <!-- 以下环信 需要权限 -->
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.BROADCAST_STICKY"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.ACCESS_GPS"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.READ_SETTINGS"/>
+
+
+    <!--  个推  版本号：2.9.5.0        -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    
+    <!-- 支持iBeancon 需要蓝牙权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <!-- 支持个推3.0 电子围栏功能 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <!-- 浮动通知权限 -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <!-- 自定义权限 -->
+    <uses-permission android:name="getui.permission.GetuiService.${applicationId}"/>
+
+    <permission
+        android:name="getui.permission.GetuiService.${applicationId}"
+        android:protectionLevel="normal">
+    </permission>
+    <!--3.9 配置可选权限
+        上述接入方式已包含个推服务所需的所有必备权限。在此之外，
+        您还可以配置以下可选权限，以便使用个推3.0提供的电子围栏功能。
+        请在AndroidManifest.xml的<manifest>根标签下添加如下配置：
+    -->
+    <!-- iBeancon功能所需权限 -->;
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <!-- 个推3.0电子围栏功能所需权限 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+
+
+    <!-- 自定义权限 -->
+    <uses-permission android:name="getui.permission.GetuiService.com.toobei.tb"/>
+
+    <!-- 读联系人权限 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <!-- <uses-permission android:name="android.permission.SEND_SMS" /> -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+
+    <permission
+        android:name="getui.permission.GetuiService.com.toobei.tb"
+        android:protectionLevel="normal">
+    </permission>
+
+    
+
+
+    <application
+        android:name="com.toobei.tb.MyApp"
+        android:allowBackup="false"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        tools:replace="android:allowBackup">
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.1" />
+        <!--原因：
+               AS的Gradle插件默认会启用Manifest Merger Tool，若Library项目中也定义了与主项目相同的属性
+               （例如默认生成的android:icon和android:theme），则此时会合并失败，并报上面的错误。
+               解决方法有以下2种：
+               方法1：在Manifest.xml的application标签下添加tools:replace="android:icon, android:theme"
+               （多个属性用,隔开，并且记住在manifest根标签上加入xmlns:tools="http://schemas.android.com/tools"，否则会找不到namespace哦）
+               方法2：在build.gradle根标签上加上useOldManifestMerger true 这方法有的版本不适用-->
+
+
+
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="${UMENG_APP_KEY}">
+        </meta-data>
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="tophlc"/>
+
+        <!--todo 设置环信应用的appkey
+        	测试环境 ：linghuilicai#lhlcs
+        	正事环境：linghuilicai#tophlc  -->
+        <meta-data
+            android:name="EASEMOB_APPKEY"
+            android:value="linghuilicai#toobei"/>
+
+        <!-- 声明sdk所需的service SDK核心功能 -->
+        <service android:name="com.easemob.chat.EMChatService"/>
+
+
+        <!--todo  个推SDK配置开始 zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz -->
+        <!-- 配置的第三方参数属性 -->
+        <meta-data
+            android:name="GETUI_APP_ID"
+            android:value="${GETUI_APP_ID}"/>
+        <meta-data
+            android:name="GETUI_APP_KEY"
+            android:value="${GETUI_APP_KEY}"/>
+        <meta-data
+            android:name="GETUI_APP_SECRET"
+            android:value="${GETUI_APP_SECRET}"/>
+
+        <!-- 配置第三方Receiver -->
+        <receiver
+            android:name="com.toobei.tb.PushGetReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.igexin.sdk.action.${GETUI_APP_ID}"/>
+            </intent-filter>
+        </receiver>
+
+
+        <!-- 从2.9.5.0版本开始，为了解决小概率发生的Android广播丢失问题，
+        我们推荐应用开发者使用新的IntentService方式来接收推送服务事件（包括CID获取通知、透传消息通知等）
+            在项目源码中添加一个继承自com.igexin.sdk.GTIntentService的类，用于接收CID、透传消息以及其他推送服务事件。请参考下列代码实现各个事件回调方法： -->
+        <service
+            android:name="com.toobei.common.service.TooBeiPushService"
+            android:exported="true"
+            android:label="PushService"
+            android:process="${GETUI_PUSH_PROCESS_NAME}"
+            tools:replace="android:process">
+        </service>
+
+        <service android:name="com.toobei.common.service.ToobeiIntentService"/>
+
+        <!-- 配置SDK核心服务 -->
+        <service
+            android:name="com.igexin.sdk.PushService"
+            android:exported="true"
+            android:label="NotificationCenter"
+            android:process="${GETUI_PUSH_PROCESS_NAME}"
+            tools:replace="android:process">
+            <intent-filter>
+                <action android:name="com.igexin.sdk.action.service.message"/>
+            </intent-filter>
+        </service>
+
+        <receiver android:name="com.igexin.sdk.PushReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+                <action android:name="android.intent.action.USER_PRESENT"/>
+                <action android:name="com.igexin.sdk.action.refreshls"/>
+                <!-- 以下三项为可选的action声明，可大大提高service存活率和消息到达速度 -->
+                <action android:name="android.intent.action.MEDIA_MOUNTED"/>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.igexin.sdk.PushActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:process="${GETUI_PUSH_PROCESS_NAME}"
+            android:taskAffinity="com.igexin.sdk.PushActivityTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            tools:replace="android:process">
+        </activity>
+
+        <service
+            android:name="com.igexin.download.DownloadService"
+            android:process="${GETUI_PUSH_PROCESS_NAME}"
+            tools:replace="android:process"/>
+
+        <receiver android:name="com.igexin.download.DownloadReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+
+        <provider
+            android:name="com.igexin.download.DownloadProvider"
+            android:authorities="downloads.${applicationId}"
+            android:exported="true"
+            android:process="${GETUI_PUSH_PROCESS_NAME}"
+            tools:replace="android:process"/>
+
+        <activity
+            android:name="com.igexin.sdk.GActivity"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:process="${GETUI_PUSH_PROCESS_NAME}"
+            android:taskAffinity="com.igexin.sdk.PushActivityTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            tools:replace="android:process"/>
+
+        <!-- 个推SDK配置结束 zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz -->
+
+
+        <!-- todo 微信分享回调 -->
+        <activity
+            android:name="com.toobei.common.activity.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+
+       
+        <!--TODO ShareSDKUIShell-->
+        <activity
+            android:name="cn.sharesdk.framework.ShareSDKUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <data android:scheme="tencent100371282"/>
+
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activity.LaunchActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activity.MyInvestmentActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme">
+        </activity>
+        <activity
+            android:name=".activity.MyAssetActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme">
+        </activity>
+        <activity
+            android:name=".activity.MineHelpActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme">
+        </activity>
+        <activity
+            android:name=".activity.MyQRCodeActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme">
+        </activity>
+        <activity
+            android:name=".activity.MyProfitActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme">
+        </activity>
+        <activity
+            android:name=".activity.MyProfitDetailedActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme">
+        </activity>
+        <activity
+            android:name=".activity.ProlductListActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme">
+        </activity>
+        <activity
+            android:name=".activity.ProtocalWebViewActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme">
+        </activity>
+        <activity
+            android:name=".activity.MineRedPacketsActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme">
+        </activity>
+        <activity
+            android:name=".activity.MyCfpActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme">
+        </activity>
+        <activity
+            android:name=".activity.MsgManagerActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme">
+        </activity>
+        <!-- wangdong -->
+        <activity
+            android:name=".activity.WelcomeActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme">
+        </activity>
+        <activity
+            android:name=".activity.LoginActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme">
+        </activity>
+        <activity
+            android:name=".activity.RegisterPhone"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme">
+        </activity>
+        <activity
+            android:name=".activity.RegisterPwdNew"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme">
+        </activity>
+        <activity
+            android:name=".activity.ResetLoginPwdPhone"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme">
+        </activity>
+        <activity
+            android:name=".activity.ResetLoginPwdNew"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme">
+        </activity>
+        <activity
+            android:name=".activity.ResetPayPwdIdentity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme">
+        </activity>
+        <activity
+            android:name=".activity.ResetPayPwdVcode"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme">
+        </activity>
+        <!--手势登录-->
+        <activity
+            android:name=".activity.GestureActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme">
+        </activity>
+        <activity
+            android:name=".activity.GestureSetActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme">
+        </activity>
+        <activity
+            android:name=".activity.MainActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityThemeNew"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+            <intent-filter>
+                <action android:name="com.toobei.tb.activity.MAIN"/>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+
+            <!--
+            todo // 2017-02-24 短信打开app
+            <a href="toobei://android.app/Linehttp://www.baidu.comLinexnkj123LinexxxLine123Line15013434725Line322323232323">
+                猎才
+            </a>
+            <data
+                android:host="productDetail"
+                android:pathPrefix="/Line"
+                android:scheme="toobei"/>
+            -->
+            <!--  短信网页跳机构详情 toobei://productDetailLine%@Line%@Line%@Line%@Line%@Line%@-->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data
+                    android:scheme="toobei"/>
+            </intent-filter>
+            <!-- url 链接跳转打开 intent-->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data
+                    android:host="toobeiApp"
+                    android:pathPrefix="/LINE"
+                    android:scheme="toobei"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.InviteRecommendContacts"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme"/>
+        <activity
+            android:name=".activity.MyInviteHistoryListActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme"/>
+        <activity
+            android:name=".activity.ChatActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityThemeNew"/>
+        <activity
+            android:name=".activity.MineSetttingActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme"/>
+        <activity
+            android:name=".activity.ImageSelectActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme"/>
+        <activity
+            android:name=".activity.PopuImgViewActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme"/>
+
+        <activity
+            android:name=".activity.Withdraw"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme"
+            />
+        <activity
+            android:name=".activity.WithdrawSuccess"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme"/>
+        <activity
+            android:name=".activity.FreshStrategyWebActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme">
+        </activity>
+        <activity
+            android:name=".activity.WithdrawList"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme"/>
+        <activity
+            android:name=".activity.MineMsgCenter"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme"/>
+        <activity
+            android:name=".activity.WebActivityCommon"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme"/>
+        <activity
+            android:name=".activity.Feedback"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme"
+            android:windowSoftInputMode="stateVisible|adjustPan"/>
+        <activity
+            android:name=".activity.CardManagerAdd"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme"
+            android:windowSoftInputMode="stateVisible|adjustPan"/>
+        <activity
+            android:name=".activity.CardManagerAddSuccess"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme"/>
+        <activity
+            android:name=".activity.PwdManager"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme"/>
+        <activity
+            android:name=".activity.PwdManagerLogin"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme"
+            android:windowSoftInputMode="stateVisible|adjustPan"/>
+        <activity
+            android:name=".activity.PwdManagerPay"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden"
+            />
+        <activity
+            android:name=".activity.PwdManagerInitPay"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme"
+            />
+        <activity
+            android:name=".activity.PwdManagerGestureVerify"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme"
+            android:windowSoftInputMode="stateVisible|adjustPan"/>
+        <activity
+            android:name=".activity.ProductInfoWebActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme"/>
+        <activity
+            android:name=".activity.ActivityWebCommon"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme"/>
+        <activity
+            android:name=".activity.ProductViewPagerActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme"/>
+        <activity
+            android:name=".activity.ViewPagerActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme"/>
+        <activity
+            android:name=".activity.OrgInfoDetailActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme"/>
+
+
+        <activity
+            android:name="com.toobei.tb.activity.MyInvestOrgActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme"/>
+        <activity
+            android:name=".activity.OrgUserCenterWebActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme"/>
+
+        <activity
+            android:name=".activity.OrgProductWebActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme"/>
+        <activity
+            android:name=".activity.MyInvestDetailActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme">
+        </activity>
+        <activity
+            android:name=".activity.MyAccountAmountActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme"/>
+
+        <activity
+            android:name=".activity.CropImgActivity"
+            android:theme="@style/ActivityTheme"/>
+        <activity
+            android:name=".activity.CardScanActivity"
+            android:theme="@style/ActivityTheme"/>
+
+    </application>
+
+</manifest>

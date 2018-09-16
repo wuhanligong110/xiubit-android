@@ -1,0 +1,15 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.xsl781"
+    android:versionCode="3"
+    android:versionName="1.0.2" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="21" />
+
+    <!--<application-->
+        <!--android:allowBackup="false"-->
+        <!--android:label="@string/app_name">-->
+    <!--</application>-->
+
+</manifest>

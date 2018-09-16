@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/WHITE"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        >
+
+        <org.xsl781.ui.view.RoundImageView
+            android:id="@+id/mycfp_headIV"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="24dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_mine_cfp_face"
+            />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/mycfp_nameTV"
+                style="@style/text_middle_black_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/name"
+                />
+
+            <TextView
+                android:id="@+id/cfpLevelName"
+                style="@style/text_small_gray64_size_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="理财师"/>
+
+        </LinearLayout>
+
+        <ImageView
+
+            android:id="@+id/mycfp_call_phoneIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="12dp"
+            android:src="@drawable/iv_phone"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="12dp"
+        android:background="@color/backgroud_common"/>
+
+    <com.toobei.tb.view.MyPagerSlidingTabStrip
+        android:id="@+id/tabs"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/list_viewpager_title_height"
+        android:background="@color/WHITE"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:textColorPrimary="@color/text_black_common"
+        app:pstsIndicatorColor="@color/text_blue_common"
+        app:pstsShouldExpand="true"
+        app:pstsTabPaddingLeftRight="38dp"
+        app:pstsTabTextColor="@color/text_blue_common"
+        app:tabTextAppearance="@style/MyCustomTabTextAppearance"/>
+
+    <View style="@style/line_horizontal_common"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

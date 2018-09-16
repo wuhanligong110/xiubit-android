@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/redeem_list_head02_ll"
+              android:layout_width="match_parent"
+              android:layout_height="15dp"
+              android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="42dp"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <View
+            style="@style/line_vertical_common_no_margin"
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="22dp"
+            android:background="#D1E1EF"
+            />
+
+    </RelativeLayout>
+
+    <ViewStub
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

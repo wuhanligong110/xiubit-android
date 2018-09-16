@@ -1,0 +1,141 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroud_common"
+    android:orientation="vertical" >
+
+    <include layout="@layout/header_layout" />
+
+    <View style="@style/line_horizontal_common" />
+
+    <TextView
+        android:id="@+id/reset_login_pwd_title"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginLeft="12dp"
+        android:gravity="center_vertical"
+        android:text="@string/register_active_prompt"
+        android:textColor="@color/text_black_common"
+        android:textSize="12sp" />
+
+    <View style="@style/line_horizontal_common" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/WHITE"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginLeft="12dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/edit_text_size_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center|left"
+                android:text="@string/mobile" />
+
+            <org.xsl781.ui.view.ClearEditText
+                android:id="@+id/cedt_phone"
+                style="@style/edit_text_size_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical|left"
+                android:layout_weight="3"
+                android:background="@android:color/transparent"
+                android:hint="@string/input_phone"
+                android:inputType="number"
+                android:paddingLeft="6dp"
+                android:paddingRight="12dp" />
+        </LinearLayout>
+
+        <!-- android:inputType="mobile" -->
+
+        <View style="@style/line_horizontal_common" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginLeft="12dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/edit_text_size_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center|left"
+                android:text="@string/comfirm_password" />
+
+            <org.xsl781.ui.view.ClearEditText
+                android:id="@+id/cedt_passwd"
+                style="@style/edit_text_size_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="3"
+                android:background="@android:color/transparent"
+                android:hint="@string/login_pwd_hint_text"
+                android:inputType="textPassword"
+                android:paddingLeft="6dp"
+                android:paddingRight="12dp" />
+
+            
+        </LinearLayout>
+    </LinearLayout>
+
+    <View style="@style/line_horizontal_common" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+         <ImageView
+            android:id="@+id/img_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:padding="4dp"
+            android:src="@drawable/img_checkbox_checked" />
+
+
+        <TextView
+            style="@style/text_small_black_size_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/i_agree" />
+
+        <TextView
+            android:id="@+id/text_pay_agreement"
+            style="@style/text_small_black_size_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/user_agreement"
+            android:textColor="#007aff" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_complete"
+        style="@style/top_text_color_size_style"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_ll_height"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:background="@drawable/btn_login_selector"
+        android:scaleType="fitCenter"
+        android:text="激活貅比特账户" />
+
+</LinearLayout>

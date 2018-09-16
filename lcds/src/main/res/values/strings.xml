@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="frame_sign_gold_down_resArrayId">
+
+        <item>@drawable/frame_sign_gold_down1</item>
+        <item>@drawable/frame_sign_gold_down2</item>
+        <item>@drawable/frame_sign_gold_down3</item>
+        <item>@drawable/frame_sign_gold_down4</item>
+        <item>@drawable/frame_sign_gold_down5</item>
+        <item>@drawable/frame_sign_gold_down6</item>
+        <item>@drawable/frame_sign_gold_down7</item>
+        <item>@drawable/frame_sign_gold_down8</item>
+        <item>@drawable/frame_sign_gold_down9</item>
+        <item>@drawable/frame_sign_gold_down10</item>
+        <item>@drawable/frame_sign_gold_down11</item>
+        <item>@drawable/frame_sign_gold_down12</item>
+        <item>@drawable/frame_sign_gold_down13</item>
+        <item>@drawable/frame_sign_gold_down14</item>
+        <item>@drawable/frame_sign_gold_down15</item>
+        <item>@drawable/frame_sign_gold_down16</item>
+        <item>@drawable/frame_sign_gold_down17</item>
+        <item>@drawable/frame_sign_gold_down18</item>
+        <item>@drawable/frame_sign_gold_down19</item>
+        <item>@drawable/frame_sign_gold_down20</item>
+        <item>@drawable/frame_sign_gold_down21</item>
+        <item>@drawable/frame_sign_gold_down22</item>
+        <item>@drawable/frame_sign_gold_down23</item>
+        <item>@drawable/frame_sign_gold_down24</item>
+        <item>@drawable/frame_sign_gold_down25</item>
+        <item>@drawable/frame_sign_gold_down26</item>
+        <item>@drawable/frame_sign_gold_down27</item>
+        <item>@drawable/frame_sign_gold_down28</item>
+        <item>@drawable/frame_sign_gold_down29</item>
+        <item>@drawable/frame_sign_gold_down30</item>
+        <item>@drawable/frame_sign_gold_down31</item>
+        <item>@drawable/frame_sign_gold_down32</item>
+
+    </array>
+
+
+    <array name="lcds_pullrefresh_downing_resArrayId">
+        <item>@drawable/lcds_pull_refresh_downing_1</item>
+        <item>@drawable/lcds_pull_refresh_downing_2</item>
+        <item>@drawable/lcds_pull_refresh_downing_3</item>
+        <item>@drawable/lcds_pull_refresh_downing_4</item>
+        <item>@drawable/lcds_pull_refresh_downing_5</item>
+        <item>@drawable/lcds_pull_refresh_downing_6</item>
+        <item>@drawable/lcds_pull_refresh_downing_7</item>
+        <item>@drawable/lcds_pull_refresh_downing_8</item>
+        <item>@drawable/lcds_pull_refresh_downing_9</item>
+        <item>@drawable/lcds_pull_refresh_downing_10</item>
+        <item>@drawable/lcds_pull_refresh_downing_11</item>
+        <item>@drawable/lcds_pull_refresh_downing_12</item>
+        <item>@drawable/lcds_pull_refresh_downing_13</item>
+        <item>@drawable/lcds_pull_refresh_downing_14</item>
+        <item>@drawable/lcds_pull_refresh_downing_15</item>
+        <item>@drawable/lcds_pull_refresh_downing_16</item>
+        <item>@drawable/lcds_pull_refresh_downing_17</item>
+        <item>@drawable/lcds_pull_refresh_downing_18</item>
+        <item>@drawable/lcds_pull_refresh_downing_19</item>
+
+    </array>
+
+    <!-- activity name -->
+    <string name="activity_calculator">收益计算器</string>
+    <string name="activity_capture">扫描</string>
+    <string name="activity_customlist">全部客户</string>
+    <string name="activity_customlist_invest">已投资客户</string>
+    <string name="activity_customlist_noinvest">未投资客户</string>
+    <string name="activity_dealdynamic_msg_total">最新消息</string>
+    <string name="activity_redeemlist">客户回款</string>
+    <string name="activity_recommend_cfp">推荐理财师</string>
+    <string name="activity_redpackage_send">选择客户</string>
+    <string name="activity_rell_declaration">报单记录</string>
+    <string name="activity_help_center">帮助中心</string>
+
+
+    <!--Mainactivity-->
+    <string name="app_name">貅比特</string>
+    <string name="main_btn_home">首页</string>
+    <string name="main_btn_liecai">理财</string>
+    <string name="main_btn_mine">我的</string>
+    <!--<string name="main_title_pop_declaration">我要报单</string>-->
+    <!--<string name="main_title_pop_contact_service">联系客服</string>-->
+    <!--<string name="main_title_pop_question">常见问题</string>-->
+
+
+    <string name="recommend_cfp">推荐理财师</string>
+    <string name="search">搜索</string>
+    <string name="selected">已选中</string>
+    <string name="register">注册</string>
+
+
+    <string name="invite">邀请</string>
+    <string name="recommend">推荐</string>
+    <string name="submit">提交</string>
+    <string name="invite_customer">邀请客户</string>
+    <string name="text_scan_bq_register">扫描二维码注册</string>
+    <string name="commission_rate">年化佣金</string>
+
+
+    <!--客户投资统计 客户本月投资  InvestStatisticsCustomer-->
+    <string name="invest_stroke_count">总计投资笔数:</string>
+    <string name="invest_person_count">投资人数:</string>
+    <string name="invest_total_money">投资金额(元)</string>
+    <string name="invest_list">投资明细</string>
+    <string name="invest_fee_amt">赚取佣金(元)</string>
+    <string name="invest_list_blank_prompt">木有销售明细\n快推荐理财师加入吧!</string>
+    <string name="invest_customer_list_blank_prompt">木有客户投资\n快推荐产品给客户吧!</string>
+    <string name="invest_list_blank_btn_text">去推荐产品</string>
+    <string name="invest_cfp_list_blank_btn_text">去推荐理财师</string>
+
+
+    <string name="team_sale_stat_income">总收益(元)</string>
+    <string name="team_sale_stat_money">销售总额(元)</string>
+    <string name="team_sale_stat_recommend">推荐奖励(元): </string>
+    <string name="team_sale_stat_list">销售明细</string>
+
+    <string name="buy_dynamic">申购动态</string>
+    <string name="redeem_dynamic">赎回动态</string>
+
+    <string name="customer_refund">客户回款</string>
+    <string name="investment">投资额</string>
+    <string name="invest_time">投资时间</string>
+    <string name="register_time">注册时间</string>
+    <string name="expire_time">到期时间</string>
+    <string name="customer_detail">客户详情</string>
+
+    <string name="user_agreement">《貅比特用户服务协议》</string>
+    <string name="register_active_prompt">您是钱罐子用户，输入登录密码可直接激活</string>
+    <string name="name">姓名</string>
+
+    <string name="my_rank">我的职级</string>
+
+    <string name="about_we">关于我们</string>
+
+
+    <string name="direct_manager_allowance">直接管理津贴(元):</string>
+    <string name="team_manager_allowance">团队管理津贴(元):</string>
+    <string name="person_setting">设置</string>
+    <string name="certification">实名认证</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="custom_list_noinvest_blank">挺棒哦! 客户都已经投资了,去邀请新客户吧!</string>
+    <string name="custom_list_invite_new_btn_des">去邀请客户</string>
+
+
+    <!--FragmentHome 首页-->
+    <string name="home_head_invite_customer">邀请客户</string>
+    <string name="home_head_recommend_cfp">推荐理财师</string>
+    <string name="home_deal_dynamic_blew_text">掌握客户申购、赎回情况</string>
+    <string name="home_customer_refund_blew_text">实时跟踪每笔回款情况</string>
+    <string name="home_empty_customer_hint_text">邀请客户加入T呗理财</string>
+    <string name="home_empty_team_hint_text">推荐小伙伴们加入貅比特，一起赚佣金</string>
+
+
+    <!--productFragment-->
+    <string name="product_list_tab_recommend">佣金率</string>
+    <string name="product_list_tab_income">年化收益</string>
+    <string name="product_list_tab_date">产品期限</string>
+    <!--fragmentMine-->
+
+
+    <!--Fragmentcustomer 客户-->
+    <string name="customer_deal_dynamic">交易动态</string>
+    <string name="customer_month_invest">本月投资(元)</string>
+    <string name="customer_month_commmission">本月佣金(元)</string>
+    <string name="customer_month_team_sale">本月销售(元)</string>
+    <string name="customer_month_reward">本月奖励(元)</string>
+    <string name="redeem_list_blank_prompt">你的客户还没购买产品，购买后就会有回款信息\n推荐产品给客户吧</string>
+
+
+    <!--交易动态 -->
+    <string name="deal_dynamic_no_buylist">推荐产品给客户购买后就有申购动态了!</string>
+    <string name="deal_dynamic_no_redeem">客户购买了您推荐的产品\n赎回的时候就有赎回动态了!</string>
+
+    <!-- FragmentLiecai理财-->
+    <string name="liecai_news">资讯</string>
+    <string name="liecai_teach">课堂</string>
+    <string name="liecai_activity">活动</string>
+    <!--机构列表 FragmentInstitution->OrgInfoAdapter-->
+    <string name="institution_list_tab_rank">安全评级</string>
+    <string name="institution_list_tab_income">年化收益</string>
+    <string name="institution_list_tab_date">产品期限</string>
+    <string name="institution_list_item_ratio">年化佣金: </string>
+
+    <!--新手任务 新手教学FreshMissionActivity-->
+    <string name="fresh_mission_dialog_name">完成新手教学----%1$s</string>
+
+    <!--MyTeamActivity 我的团队-->
+    <string name="my_team">我的理财师团队</string>
+    <string name="my_team_account_type_direct">按直接收益</string>
+    <string name="my_team_account_type_indirect">按间接收益</string>
+    <string name="my_team_account_type_regist_date">按注册时间</string>
+    <string name="my_team_invite_now">立即邀请</string>
+    <string name="my_team_adapter_des03">注册</string>
+    <string name="my_team_adapter_new_member">下下级理财师：</string>
+    <string name="my_team_adapter_member">"下级理财师：%1$s人</string>
+
+    <!--TeamLeaderAwardActivity 团队leader奖励-->
+    <string name="team_leader_award">团队leader奖励</string>
+    <string name="team_leader_contribution_award">间接理财师贡献奖励(元):</string>
+    <string name="direct_cfp">直接理财师</string>
+    <string name="invite_friend_comein_team">邀请朋友加入我的理财师团队</string>
+    <string name="direct_cfp_contribution_detail">直接理财师贡献奖励明细</string>
+    <string name="remind_teamer_num_not_account_whith_award">人数不符奖励条件</string>
+    <string name="remind__teamer_num_account_whith_award">人数符合奖励条件</string>
+    <string name="team_leader_data_remind">暂无贡献奖励明细</string>
+    <string name="item_direct_award_remind">说明：该成员满足leader奖励独立核算条件，不再贡献leader奖励</string>
+    <string name="team_leader_award_top_red_remind">您当前已不符合leader奖励条件，点击\"我要leader奖励\"邀请更多理财师，就可以再次享受leader奖励啦。</string>
+    <!--
+%1$s，这表示第一个；%2$s，这表示第二个，依次类推
+使用String.format(format, args)进行格式话，第一个参数引用R.string.xxx，第二个参数（参数可为多个，一次对应占位符位置）代表占位符要填充的数值
+-->
+    <string name="my_team_invite_num_des">共%1$s名成员: 直接下级理财师%2$s人、 直接下级理财师的下级%3$s人、直接下级理财师的下下级%4$s人</string>
+    <!--  MyTeamDetail 团队成员详情-->
+    <string name="team_detail">奖励明细</string>
+    <string name="team_detail_dail">确认拨打团队成员电话?</string>
+
+    <!--邀请理财师 邀请客户-->
+    <string name="invite_cfp_des01">点击“立即推荐”按钮将推荐链接发送给理财师或将二维码给理财师用微信扫描。</string>
+    <string name="invite_cfp_des02">理财师通过推荐链接或扫描二维码注册即可加入你的团队。</string>
+    <string name="invite_cfp_des0301">你邀请的理财师出单拿佣金时，你可拿到推荐奖励。点击查看</string>
+    <string name="invite_cfp_des0302">《推荐奖励说明》</string>
+    <string name="invite_cfp_des0401">当您本身职级达到经理或总监时还可享受直接管理津贴和团队管理津贴。点击查看</string>
+    <string name="invite_cfp_des0402">《管理津贴》</string>
+
+    <string name="invite_customer_sendqr_des01">点击“立即邀请”按钮，将邀请链接分享给亲朋好友。</string>
+    <string name="invite_customer_sendqr_des02">亲朋好友通过邀请链接注册，即可成为你的客户。</string>
+    <string name="invite_customer_sendqr_des0301">若客户在T呗投资，你将获得销售佣金，点击查看</string>
+    <string name="invite_customer_sendqr_des0302">《销售佣金说明》</string>
+
+
+    <!--declarationActivity 报单表单-->
+
+    <!--declarationRecordList 报单List-->
+    <string name="declaration_list_no_records">如果客户已经购买,交易动态中却无购买记录,\n请点击下方按钮把购买信息报给理财,\n客户电话: 400-888-6987</string>
+
+    <!--Calculator 佣金计算器-->
+
+    <!--客户列表 CustomList-->
+    <string name="customlist_add">加入成功</string>
+    <string name="customlist_remove">移出成功</string>
+    <string name="customer_add_import">加入重要客户列表</string>
+    <string name="customer_remove_import">移出重要客户列表</string>
+    <string name="customer_add_important_group">加入重要客户组</string>
+    <string name="customer_contacts">手机通讯录</string>
+    <string name="customer_text_invite">邀请</string>
+    <string name="customer_has_invest">已投资客户</string>
+    <string name="customer_no_invest">未投资客户</string>
+    <string name="customer_important_cus">重要客户</string>
+    <string name="customer_no_important_des">暂无重要客户\n在客户详情中点击</string>
+    <string name="customer_no_important_des02">即可将该客户标记为重要客户</string>
+    <string name="customer_register">注册</string>
+    <string name="customer_invest_recently">最近投资：</string>
+    <string name="customer_invest_counts">投资笔数：</string>
+    <string name="customer_invest_total">累计投资：</string>
+    <string name="customer_have_no_invest_expire">无投资到期</string>
+    <string name="customer_has_expire">有投资到期</string>
+    <!--CustomerListInvest 投资客客户列表-->
+    <string name="customer_sorttype_invest">按投资额</string>
+    <string name="customer_sorttype_date">按投资时间</string>
+    <string name="customer_sorttype_end_date">按到期时间</string>
+    <string name="custom_list_invest_blank">还没有客户投资 \n推荐产品给客户投资吧!</string>
+    <string name="custom_list_search_blank">sorry,没有找到你搜索的内容</string>
+    <!--CustomerListNoInvest 未投资客户列表-->
+    <string name="customer_sorttype_regist_date">按注册时间</string>
+    <string name="customer_sorttype_name">按姓名A-Z</string>
+
+    <!--redpacket 红包列表-->
+    <string name="red_packet_use_rule_title">红包说明</string>
+
+    <!--派发红包-->
+    <string name="sendredPack_send">派发</string>
+    <string name="sendredPack_send_des01">每人派发</string>
+    <string name="sendredPack_send_des02">元红包,客户可在T呗使用</string>
+    <string name="sendredPack_send_des03">所选红包数量只有</string>
+    <string name="sendredPack_send_des04">个,请减少发放人数</string>
+    <string name="sendredPack_send_no_selected">请先选择发放红包的客户</string>
+
+
+    <!--questionWebCommon 常见问题-->
+    <string name="question_service_mm">在线客服</string>
+
+
+    <!--推荐产品 推荐机构RecommendProductOrOrgActivity -->
+    <string name="activity_recommend_product">推荐产品</string>
+    <string name="activity_recommend_org">推荐平台</string>
+    <string name="recommend_product_select_all">       全选</string>
+    <string name="recommend_product_select_all_cancel">取消全选</string>
+    <string name="recommend_product_success">推荐成功</string>
+    <string name="recommend_product_prompt">以下用户投资后,理财师没有佣金</string>
+    <string name="recommend_product_haveno_cus">暂时没有客户哦</string>
+    <string name="recommend_product_havefee">有佣金</string>
+    <string name="recommend_product_nofee">无佣金</string>
+    <string name="recommend_org_has_customer">推荐后客户将收到你推荐的平台，且\n可能收到电话回访</string>
+    <string name="recommend_pro_has_customer">推荐后客户将收到你推荐的产品，且\n可能收到电话回访</string>
+    <string name="recommend_no_customer">您未选择任何客户,确认不做推荐</string>
+    <string name="recommend_org_no_bind_question">该机构尚未完成数据对接，无法自动判断客户购买后理财师是否能够获得佣金。客户购买后，请理财师通过我的-报单记录-报单进行报单。我们会根据理财师的报单记录判断该客户是否为首投，为首投则有佣金，非首投则无佣金</string>
+
+
+    <!--机构详情  Orginfo_Detail-->
+    <string name="recommend_remind_buy_self">自己购买请移步至T呗微信公众号</string>
+    <string name="recommend_remind_declaration">如客户购买请记得报单</string>
+    <!--fragmentLiecai 理财界面-->
+    <string name="liecai_no_activities">暂无活动</string>
+    <string name="liecai_no_class">还没开学,课堂暂无内容哦</string>
+    <string name="liecai_no_news">暂无资讯</string>
+
+    <!--账号余额 我的收益 -->
+    <string name="myaccount_income_remain">理财余额(元)</string>
+    <string name="myaccount_income_remain_title">理财余额</string>
+    <!--  <string name="myaccount_income_total_request">账户总收益为已发放的收益总计月度佣金、推荐奖励需等次月15号发放时才计入总收益；团队leader奖励为每季度次月15号发放时计入总收益</string>-->
+    <string name="myaccount_income_accout">理财余额可以提现，但不能直接用于入驻平台的投资。</string>
+    <string name="myaccount_income_combination_request">总收益=销售佣金+推荐奖励+直接管理津贴+团队管理津贴+活动奖励+投资返现红包</string>
+
+    <!--invite_coutom invate_cfp_history 邀请记录-->
+    <string name="invite_cfp_titile">推荐记录</string>
+    <string name="invite_custom_his_titile">邀请记录</string>
+    <string name="invite_cfp_his_empty_des">暂无推荐理财师记录\n推荐理财师加入你的团队，躺着拿推荐奖励。\n快快点击下方按钮推荐吧！</string>
+    <string name="invite_customer_his_empty_des">暂无邀请客户记录\n邀请客户,对方投资即可获得销售佣金,\n快快点击下方按钮邀请吧</string>
+
+
+    <!--团队详情-->
+    <string name="transition_team_detail_face_ll">transition_team_detail_face_ll</string>
+    <string name="transition_team_detail_face">transition_team_detail_face</string>
+    <string name="transition_team_detail_name">transition_team_detail_name</string>
+    <string name="transition_team_detail_phone">transition_team_detail_phone</string>
+
+    <!-- 猎才排行榜-->
+    <string name="ativity_rank_leader_tips_01">你有成员本月满足leader奖条件，其本月奖励将单独核算不计入你的团队leader奖励中。</string>
+    <string name="ativity_rank_leader_tips_02">您还不满足leader奖励条件！快邀请理财师加入吧！</string>
+    <string name="ativity_rank_leader_red_tips_01">"总收益=销售佣金+推荐奖励+直接管理津贴+团队管理津贴+活动奖励+红包奖励"</string>
+
+
+    <string name="wait_grant_amount_request">销售佣金、推荐奖励、直接管理津贴、团队管理津贴在次月15日发放，活动奖励发放时间详见各个活动详情，投资返现红包将在产品募集完成后发放。</string>
+
+    <string name="new_comer_fuli">新手福利</string>
+
+    <!--资金明细-->
+    <string name="blank_list_text_no_data_account_detail">暂无收支记录，快去发展客户或理财师赚取收益吧</string>
+    <string name="blank_list_text_no_data_account_detail_income">暂无收入记录，快去发展客户或理财师赚取收益吧</string>
+    <string name="blank_list_text_no_data_account_detail_out">暂无支出记录</string>
+
+    <!--月度收益-->
+    <string name="myincomedetailactivity_top_tag">销售佣金、推荐奖励、直接管理津贴和团队管理津贴在次月15日发放，活动奖励发放时间详见各个活动详情，投资返现红包将在产品募集完成后发放。</string>
+
+    <!--leader奖励规则介绍-->
+    <string name="leader_award_introduce">leader奖励介绍</string>
+
+    <!--计算器-->
+    <string name="calculate_introduce">说明</string>
+    <string name="calculate_title">职级收入计算器</string>
+    <string name="calculate_select_level_title">请选择职级类型</string>
+    <string name="calculate_select_Fee_title">请选择佣金率</string>
+
+    <!--跳转第三方-->
+    <string name="dialog_title_boundCard_remind"></string>
+    <string name="dialog_content_boundCard_remind">为了您的资金安全,请先绑定银行卡</string>
+    <string name="dialog_content_boundOrg_remind">开通后,将同步个人身份信息和联系方式</string>
+
+
+    <string name="headImage">头像</string>
+    <string name="go_setting">去设置</string>
+    <string name="phone_num">手机号码</string>
+    <string name="name_authentication">实名认证</string>
+    <string name="no_authent">未认证</string>
+    <string name="bank_card">银行卡</string>
+    <string name="more">更多</string>
+    <string name="customer_service_phone_num">客服电话</string>
+    <string name="customer_service_num">400-888-6987</string>
+    <string name="weixin_commution_qun">微信交流群</string>
+    <string name="person_center">个人中心</string>
+    <string name="konw_us">了解我们</string>
+    <string name="safe_protect">安全保障</string>
+    <string name="liecai_strategy">理财攻略</string>
+    <string name="cfg_dynamic">理财师动态</string>
+
+    <string name="home_bottom_company_info_1">赋格集团亿元投资\n中国最具价值投资集团公司</string>
+    <string name="home_bottom_company_info_2">中国国际电子商务中心\n“重点认证信用企业”</string>
+    <string name="time_limit">期限</string>
+    <string name="confirm_call_custom_servier_num">确认拨打客服电话？</string>
+
+
+    <string name="blank_not_find_filter_result">没有找到筛选结果\n可以减少筛选条件试试</string>
+    <string name="peison_popu_edit_hint">\t\t\t2003年有一群人错过了淘宝的财富梦！现在错过总监招募政策，不用13年，1年你就将后悔没有把握百万富翁的成功之路！</string>
+
+    <string name="good_report_empty">团队成员还没有出单记录\n赶紧邀请好友去出单吧</string>
+    <string name="fund_exception_text">该页面已经飞到外太空,\n请稍后再试</string>
+    <string name="no_fund_trade_record">暂无基金交易明细,\n赶紧看看！</string>
+
+    //首页
+    <string name="home_page_lcds_simple_indroduce">貅比特 | 中国国际电子商务中心“重点认证信用企业”</string>
+    <string name="home_page_safe_title">至今为止交易无风险</string>
+    <string name="home_page_fund_mod_title">随存随取，最快5分钟到账</string>
+
+    //签到
+    <string name="sign_share_window_text1">恭喜你分享成功 \n获得一次奖励金翻倍机会！</string>
+    <string name="sign_award_out_remind">奖励金必须满足一定期限的投资额才能转出，若提现每月仅有三次免费机会，多出将收取提现服务费</string>
+
+    <string name="net_invest_compose_popu_remind">长按二维码注册【貅比特】\n开始创建你的投资组合</string>
+    //出单喜报底部文案
+    <string name="report_text_bottom">闲余时间、闲余资金、财富多次增长\n 貅比特帮你记录每一小步</string>
+    //保险首页文案
+    <string name="insureance_home_question_text1">\“保险犹豫期是什么意思?\”</string>
+    <string name="insureance_home_question_text2">\“网上买保险靠谱吗?\”</string>
+    <string name="insureance_home_question_text3">\“重疾险越早买越好?\”</string>
+    <string name="net_load_profie_indroduce">综合年化收益率 = 所有在投产品累计收益（包括：投资收益+理财佣金+理财返现红包+平台奖励） ／ 所有在投产品累计年化金额</string>
+
+    <string name="home_bottext1">诚信中国\n标杆企业</string>
+    <string name="home_bottext2">改革创新\n先锋企业</string>
+    <string name="home_bottext3">重点认证\n信用企业</string>
+
+    <string name="fix_Success">修复成功</string>
+    <string name="user_phone_explain">预留手机号是办理该银行卡时填写的手机号\n\n没有预留手机号、忘记或已停用，请联系银行客服更新</string>
+</resources>

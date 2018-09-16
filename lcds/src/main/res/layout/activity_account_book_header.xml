@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/backgroud_common"
+    android:layout_height="match_parent"
+    tools:context="com.v5ent.xiubit.activity.AccountBookActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="136dp"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:background="@color/text_top_remind_bg"
+            android:gravity="center"
+            android:textSize="@dimen/w13"
+            android:textColor="@color/text_black_common"
+            android:text="方便您记录、统计非貅比特产生的投资去向"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/blue_level_2"
+            android:orientation="vertical"
+            android:gravity="center">
+
+           <com.v5ent.xiubit.view.MyTextView
+               android:id="@+id/totalMoneyTv"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:textSize="33dp"
+               android:textColor="@color/text_white_common"
+               android:text="0.00"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:textColor="@color/text_white_light"
+                android:text="待收本金(元)"/>
+
+        </LinearLayout>
+
+        <View
+            style="@style/line_horizontal_common"/>
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="@color/blue_bg_deep"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.v5ent.xiubit.view.MyTextView
+                android:id="@+id/investProfitTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:textColor="@color/text_white_common"
+                android:text="0.00"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:textColor="@color/text_blue_common_light"
+                android:text="待收收益(元)"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="1px"
+            android:background="#44000000"
+            android:layout_height="33dp"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/totalProfitTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:textColor="@color/text_white_common"
+                android:text="0.00"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:textColor="@color/text_blue_common_light"
+                android:text="待收总额(元)"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+       style="@style/line_horizontal_common"/>
+
+    <View
+        style="@style/line_horizontal_common"
+        android:layout_marginTop="12dp"/>
+
+    <TextView
+        android:background="@color/WHITE"
+        android:layout_width="match_parent"
+        android:layout_height="37dp"
+        android:textSize="16dp"
+        android:textColor="@color/text_black_common"
+        android:textStyle="bold"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:text="在投项目"/>
+
+
+    <View
+        style="@style/line_horizontal_common"/>
+
+
+
+
+</LinearLayout>

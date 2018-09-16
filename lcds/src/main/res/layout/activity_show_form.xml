@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/WHITE"
+    android:gravity="center_horizontal">
+
+
+    <TextView
+        android:id="@+id/titleTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/w15"
+        android:textSize="@dimen/w15"
+        android:textColor="@color/text_black_common"
+        tools:text="我在1018-05-08投资网投网60天标10000元获得"/>
+
+    <FrameLayout
+        android:id="@+id/webViewLl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+
+        <com.toobei.common.view.MyWebView
+            android:id="@+id/webView"
+            android:layout_width="@dimen/w250"
+            android:layout_height="@dimen/w250"
+            android:scrollbars="none"
+            />
+
+        <View
+            android:id="@+id/clickV"
+            android:layout_width="@dimen/w250"
+            android:layout_height="@dimen/w250"
+            android:clickable="true"/>
+    </FrameLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/showBtn"
+                android:layout_width="@dimen/w240"
+                android:layout_height="@dimen/w40"
+                android:gravity="center"
+                android:text="晒单"
+                android:textSize="@dimen/w16"
+                android:textColor="@color/text_white_common"
+                android:background="@drawable/btn_blue_big_cirside_corner_bg"/>
+
+            <TextView
+                android:layout_marginTop="@dimen/w5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/w12"
+                android:textColor="@color/text_gray_common"
+                android:text="立即晒单，得到0.2元奖励金"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

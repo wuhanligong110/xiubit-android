@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@color/LIGHT_GRAY"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/myincome_field_text1"
+            style="@style/text_custom_item_commom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/today_income" />
+
+        <TextView
+            style="@style/text_custom_item_commom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/myincome_field_text1"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/myincome_field_text1"
+            android:text="@string/unit_yuan" />
+
+        <TextView
+            style="@style/text_custom_item_commom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="888.88" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_chart"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:background="@color/WHITE" >
+    </RelativeLayout>
+
+</LinearLayout>

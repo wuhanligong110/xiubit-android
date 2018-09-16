@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:gravity="center"
+              android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/cfp_level_warning_bg"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:background="@drawable/cfp_level_warningbanner"
+            android:gravity="center"
+            android:text="加把劲儿\n保住经理"
+            android:textColor="@color/WHITE"
+            android:textSize="33dp"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/WHITE"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingBottom="15dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="15dp">
+
+            <TextView
+                android:id="@+id/cfpLevelContentTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text=""
+                android:textColor="@color/text_black_common"
+                android:textSize="14dp"
+                android:lineSpacingExtra="4dp"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/cfpLevelDetail1Tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text=""
+                android:textColor="@color/text_black_common6c"
+                android:textSize="14dp"
+                android:lineSpacingExtra="4dp"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/cfpLevelDetail2Tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/text_black_common6c"
+                android:textSize="14dp"
+                android:visibility="gone"/>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/lookTv"
+            android:layout_width="161dp"
+            android:layout_height="34dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/cfp_level_warning_click_btn"
+            android:gravity="center"
+            android:text="点击查看"
+            android:textColor="@color/WHITE"
+            android:textSize="16dp"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/closedIv"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/warning_white_close_btn"/>
+
+
+</LinearLayout>

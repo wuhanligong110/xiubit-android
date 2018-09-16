@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+<com.handmark.pulltorefresh.library.PullToRefreshScrollView
+    xmlns:ptr="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/pull_refresh_scrollview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroud_common"
+    android:orientation="vertical"
+    ptr:ptrAnimationStyle="flip">
+    <!--<ScrollView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content">-->
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/WHITE"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="97dp"
+            android:background="@color/WHITE"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        style="@style/text_small12_gray_common96_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="在投资金(元)"/>
+
+                    <ImageView
+                        android:id="@+id/totalInvestQuesIv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:src="@drawable/iv_mine_questions"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/totalInvestTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:text="0.00"
+                    android:singleLine="true"
+                    android:textColor="#fd5353"
+                    android:textSize="45dp">
+
+                </TextView>
+
+                <!--<LinearLayout-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:gravity="center_vertical">-->
+
+                    <!--<TextView-->
+                        <!--style="@style/text_small12_gray_common96_style"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="累计收益(元)"/>-->
+
+                    <!--<TextView-->
+                        <!--android:layout_marginLeft="3dp"-->
+                        <!--android:id="@+id/totalProfitTv"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="———"-->
+                        <!--android:textColor="#fd5353"-->
+                        <!--android:textSize="16dp"/>-->
+
+                    <!--<ImageView-->
+                        <!--android:id="@+id/totalProfitQuesIv"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginLeft="8dp"-->
+                        <!--android:src="@drawable/iv_mine_questions"/>-->
+
+                <!--</LinearLayout>-->
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/invest_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="12dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/text_small12_gray_common96_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="投资明细"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7dp"
+                    android:src="@drawable/img_go_right"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/bindOrgNumTv"
+            style="@style/text_small12_gray_common64_style"
+            android:layout_width="match_parent"
+            android:layout_height="28dp"
+            android:background="@color/backgroud_common"
+            android:gravity="bottom"
+            android:paddingBottom="4dp"
+            android:paddingLeft="12dp"
+            android:text="已开通账户"
+            />
+
+        <TextView
+            android:id="@+id/remindHasNoBindTv"
+            style="@style/text_middle18_black_style"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="center"
+            android:text="暂无已开通账户的平台"
+            android:visibility="gone"/>
+
+        <org.xsl781.ui.xlist.ListViewForScrollView
+            android:id="@+id/bindOrgLv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:divider="@color/backgroud_common"
+            android:background="@color/backgroud_common"
+            android:dividerHeight="20dp"
+            >
+        </org.xsl781.ui.xlist.ListViewForScrollView>
+
+        <TextView
+            android:id="@+id/unbindOrgNumTv"
+            style="@style/text_small12_gray_common64_style"
+            android:layout_width="match_parent"
+            android:layout_height="28dp"
+            android:background="@color/backgroud_common"
+            android:gravity="bottom"
+            android:paddingBottom="4dp"
+            android:paddingLeft="12dp"
+            android:text="未开通账户"
+            />
+
+        <org.xsl781.ui.xlist.ListViewForScrollView
+            android:id="@+id/unbindOrgLv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/backgroud_common"
+            android:divider="@color/backgroud_common"
+            android:dividerHeight="1px"
+            >
+
+        </org.xsl781.ui.xlist.ListViewForScrollView>
+
+        <TextView
+            android:id="@+id/remindHasAllBindTv"
+            style="@style/text_middle18_black_style"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="center"
+            android:text="恭喜您已开通所有合作平台账户"
+            android:visibility="gone"
+            />
+
+    </LinearLayout>
+
+    <!--</ScrollView>-->
+</com.handmark.pulltorefresh.library.PullToRefreshScrollView>
+</RelativeLayout>

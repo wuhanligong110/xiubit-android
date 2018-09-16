@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroud_common"
+    android:orientation="vertical" >
+
+    <include layout="@layout/header_layout" />
+
+    <View style="@style/line_horizontal_common" />
+
+    <RelativeLayout
+        style="@style/linearlayout_item_common"
+        android:background="@color/WHITE" >
+
+        <TextView
+            style="@style/text_custom_item_commom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="平台通知免打扰" />
+
+        <ImageView
+            android:id="@+id/pushIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/btn_notification_unselected"
+             />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="44dp" >
+
+        <TextView
+            style="@style/text_small_black_size_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="5dp"
+            android:text="开启后，平台发送通知时您的手机不会震动与发出提示音" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        style="@style/linearlayout_item_common"
+        android:background="@color/WHITE" >
+
+        <TextView
+            style="@style/text_custom_item_commom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="互动消息免打扰" />
+
+        <ImageView
+            android:id="@+id/infoIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/btn_notification_unselected"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="44dp" >
+
+        <TextView
+            style="@style/text_small_black_size_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="12dp"
+            android:text="开启后，客户发送互动消息时您的手机不会震动与发出提示音" />
+    </RelativeLayout>
+
+</LinearLayout>

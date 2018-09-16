@@ -1,0 +1,311 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    android:background="@color/backgroud_common">
+
+    <LinearLayout
+        android:id="@+id/activity_calculator_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:id="@+id/scrollV"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:overScrollMode="never"
+            android:layout_weight="1">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <View style="@style/line_horizontal_common" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@color/WHITE"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/w15"
+                    android:paddingRight="@dimen/w15">
+
+                    <TextView
+                        android:id="@+id/text_profilt_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="投资金额(元):"
+                        android:textColor="@color/text_gray_common_title"
+                        android:textSize="@dimen/w15" />
+
+
+                    <EditText
+                        android:id="@+id/investMoneyEt"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/WHITE"
+                        android:cursorVisible="true"
+                        android:focusable="true"
+                        android:gravity="right|center_vertical"
+                        android:inputType="number"
+                        android:maxLength="7"
+                        android:paddingRight="4dp"
+                        android:singleLine="true"
+                        android:textColor="@color/text_black_common"
+                        android:textColorHint="@color/text_black_common"
+                        android:textCursorDrawable="@drawable/edittext_cursor_shape"
+                        android:textSize="@dimen/w15"
+                        android:hint="10000"/>
+
+                </LinearLayout>
+
+                <View
+                    style="@style/line_horizontal_common"
+                    android:paddingLeft="@dimen/w15"
+                    android:paddingRight="@dimen/w15" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@color/WHITE"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/w15"
+                    android:paddingRight="@dimen/w15">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="产品期限(天):"
+                        android:textColor="@color/text_gray_common_title"
+                        android:textSize="@dimen/w15" />
+
+                    <TextView
+                        android:id="@+id/productDateTv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/text_gray_common"
+                        android:textSize="@dimen/w15"
+                        android:gravity="right|center_vertical"
+                        android:visibility="visible"/>
+
+
+
+                </LinearLayout>
+
+                <View
+                    style="@style/line_horizontal_common"
+                    android:paddingLeft="@dimen/w15"
+                    android:paddingRight="@dimen/w15" />
+
+
+                <LinearLayout
+                    android:id="@+id/productDateLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@color/WHITE"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/w15"
+                    android:paddingRight="@dimen/w15">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="平台奖励(元):"
+                        android:textColor="@color/text_gray_common_title"
+                        android:textSize="@dimen/w15" />
+
+                    <EditText
+                        android:id="@+id/platformAwardEt"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/WHITE"
+                        android:cursorVisible="true"
+                        android:focusable="true"
+                        android:gravity="right|center_vertical"
+                        android:hint="平台奖励金额(选填)"
+                        android:inputType="number"
+                        android:maxLength="7"
+                        android:paddingRight="4dp"
+                        android:singleLine="true"
+                        android:textColor="@color/text_black_common"
+                        android:textColorHint="#d3d2d2"
+                        android:textCursorDrawable="@drawable/edittext_cursor_shape"
+                        android:textSize="@dimen/w15" />
+
+                </LinearLayout>
+
+
+                <View
+                    style="@style/line_horizontal_common"
+                    android:paddingLeft="@dimen/w15"
+                    android:paddingRight="@dimen/w15" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@color/WHITE"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/w15"
+                    android:paddingRight="@dimen/w15">
+
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="理财红包(元):"
+                        android:textColor="@color/text_gray_common_title"
+                        android:textSize="@dimen/w15" />
+
+
+                    <TextView
+                        android:id="@+id/liecaiRedPacketTv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/WHITE"
+                        android:gravity="right|center_vertical"
+                        tools:text="投资≥20,000元,最高奖励30.00"
+                        android:paddingRight="4dp"
+                        android:singleLine="true"
+                        android:textColor="@color/text_gray_common"
+                        android:textSize="@dimen/w15" />
+
+                </LinearLayout>
+
+
+                <View style="@style/line_horizontal_common" />
+
+                <View
+                    style="@style/line_horizontal_common"
+                    android:layout_marginTop="@dimen/w10" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@color/WHITE"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/w15"
+                    android:paddingRight="@dimen/w15">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="理财收益(元):"
+                        android:textColor="@color/text_gray_common_title"
+                        android:textSize="@dimen/w15" />
+
+                    <TextView
+                        android:id="@+id/liecaiProfitTv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/WHITE"
+                        android:gravity="right|center_vertical"
+                        android:paddingRight="4dp"
+                        android:singleLine="true"
+                        android:textColor="@color/text_black_common"
+                        android:textSize="@dimen/w15"
+                        tools:text="2500.00" />
+
+                </LinearLayout>
+
+                <View
+                    style="@style/line_horizontal_common"
+                    android:layout_marginLeft="@dimen/w15"
+                    android:layout_marginRight="@dimen/w15" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@color/WHITE"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/w15"
+                    android:paddingRight="@dimen/w15">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="产品收益(元):"
+                        android:textColor="@color/text_gray_common_title"
+                        android:textSize="@dimen/w15" />
+
+                    <TextView
+                        android:id="@+id/productProfitTv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/WHITE"
+                        android:gravity="right|center_vertical"
+                        android:paddingRight="4dp"
+                        android:singleLine="true"
+                        android:textColor="@color/text_black_common"
+                        android:textSize="@dimen/w15"
+                        tools:text="2500.00" />
+
+                </LinearLayout>
+
+
+                <View style="@style/line_horizontal_common" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+        <LinearLayout
+            android:id="@+id/bottomV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+           >
+            <View style="@style/line_horizontal_common" />
+
+            <com.toobei.common.view.AutoResizeTextView
+                android:id="@+id/totalDataTv"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/w45"
+                android:background="@color/WHITE"
+                android:gravity="center_vertical|left"
+                android:paddingRight="@dimen/w15"
+                android:paddingLeft="@dimen/w15"
+                android:singleLine="true"
+                android:textColor="@color/text_red_common"
+                android:textSize="@dimen/w16"
+               />
+
+            <android.inputmethodservice.KeyboardView
+                android:id="@+id/keyboardV"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#ff202020"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:keyBackground="@drawable/btn_keyboard_key"
+                android:keyTextColor="@color/BLACK"
+                android:keyTextSize="25sp"
+                android:shadowColor="@color/WHITE"
+                android:shadowRadius="0.0"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

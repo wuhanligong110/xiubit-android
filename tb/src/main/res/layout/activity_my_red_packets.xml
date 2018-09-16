@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroud_common" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/text_white_common"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/list_viewpager_title_height" >
+
+            <TextView
+                android:id="@+id/text1"
+                style="@style/list_viewpager_title"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:text="可用红包" />
+
+            <TextView
+                android:id="@+id/text2"
+                style="@style/list_viewpager_title"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:text="已用红包" />
+
+            <TextView
+                android:id="@+id/text3"
+                style="@style/list_viewpager_title"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:text="过期红包" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/cursor"
+            android:layout_width="80dp"
+            android:layout_height="2dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@color/text_blue_common"/>
+
+        <View style="@style/line_horizontal_common" />
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vPager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/linearLayout1"
+        android:layout_gravity="center"
+        android:layout_weight="1.0"
+        android:flipInterval="30"
+        android:layout_above="@+id/askForRedPacketBtn"
+        android:persistentDrawingCache="animation" />
+    
+    <!--<Button -->
+        <!--android:id="@+id/askForRedPacketBtn"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:background="@drawable/btn_common_square_selector"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:text="找理财师要红包"-->
+        <!--android:textColor="@color/WHITE"-->
+        <!--android:textSize="16sp"-->
+        <!--/>-->
+
+</RelativeLayout>

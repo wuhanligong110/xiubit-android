@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/backgroud_common"
+              android:gravity="center_vertical"
+              android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/alais_scort_letter"
+        android:layout_width="match_parent"
+        android:textColor="@color/text_black_common"
+        android:textSize="14dp"
+        android:layout_height="28dp"
+        android:background="@color/black_level_6"
+        android:paddingLeft="16dp"
+        android:gravity="center_vertical"
+        android:text=""
+        android:visibility="gone"/>
+
+    <View
+        style="@style/line_horizontal_common"/>
+
+    <LinearLayout
+        android:id="@+id/invite_cfp_list_item_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/item_click_bg"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="15dp"
+            android:paddingLeft="15dp"
+            android:paddingBottom="15dp"
+            android:paddingTop="24dp"
+            android:src="@drawable/checkbox_selecter"
+            android:gravity="center"
+            />
+
+        <RelativeLayout
+            android:id="@+id/itemRL"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/avatar"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        tools:src="@drawable/img_customer_cus"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/text_customer_name"
+                                style="@style/text_middle_black_style"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                tools:text="张小三"/>
+
+                            <View
+                                android:layout_width="1px"
+                                android:layout_height="12dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:background="@color/line_common"/>
+
+                            <TextView
+                                android:id="@+id/text_customer_phone"
+                                style="@style/text_middle_black_style"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                tools:text="18898766534"/>
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View style="@style/line_horizontal_common"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="12dp"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:weightSum="4">
+
+                        <TextView
+                            android:id="@+id/registTimeTv"
+                            style="@style/text_small_gray_size_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="最近投资：0.00"/>
+
+                        <TextView
+                            android:id="@+id/cfgMemberCountTv"
+                            style="@style/text_small_gray_size_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:text="累计投资：100000.00"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="12dp"
+                        android:gravity="center_vertical|right"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/img_customer_import"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|right"
+                            android:layout_marginRight="5dp"
+                            tools:src="@drawable/img_import_icon"/>
+
+                        <ImageView
+                            style="@style/mine_sign_go_right"
+                            android:layout_gravity="center_vertical|right"/>
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+
+
+</LinearLayout>

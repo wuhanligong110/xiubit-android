@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="@dimen/w86"
+              android:background="@color/WHITE"
+              android:id="@+id/rootView">
+    
+    <LinearLayout
+        android:paddingLeft="@dimen/w15"
+        android:paddingRight="@dimen/w15"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/fundFullNameTv"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/w14"
+                android:textColor="@color/text_black_common"
+                android:singleLine="true"
+                tools:text="工行货币工行货币001236554484"
+                />
+
+            <com.v5ent.xiubit.view.MyTextView
+                android:id="@+id/month3Tv"
+                android:layout_width="@dimen/w90"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/w22"
+                android:singleLine="true"
+                android:textColor="@color/text_red_common"
+                tools:text="4.1200%"
+                />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/w6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+
+            <TextView
+                android:id="@+id/typeTv"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/w12"
+                android:textColor="@color/text_gray_common"
+                tools:text="货币型"/>
+
+            <TextView
+                android:id="@+id/periodTv"
+                android:layout_width="@dimen/w90"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/w12"
+                android:textColor="@color/text_gray_common"
+                android:text="近3月收益率"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    
+    
+    <View
+        android:layout_alignParentBottom="true"
+        style="@style/line_horizontal_common"/>
+
+</RelativeLayout>

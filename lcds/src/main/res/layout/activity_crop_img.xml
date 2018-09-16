@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroud_common"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.isseiaoki.simplecropview.CropImageView
+        custom:layout_constraintBottom_toTopOf="@id/bottomLl"
+        xmlns:custom="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/cropImageView"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        custom:scv_crop_mode="circle_square"
+        custom:scv_background_color="#1C1C1C"
+        custom:scv_handle_color="@color/top_title_bg"
+        custom:scv_guide_color="@color/top_title_bg"
+        custom:scv_overlay_color="#AA1C1C1C"
+        custom:scv_frame_color="@color/top_title_bg"
+        custom:scv_handle_size="14dp"
+        custom:scv_touch_padding="8dp"
+        custom:scv_handle_show_mode="show_always"
+        custom:scv_guide_show_mode="show_on_touch"
+        custom:scv_min_frame_size="50dp"
+        custom:scv_frame_stroke_weight="1dp"
+        custom:scv_guide_stroke_weight="1dp"/>
+
+    <LinearLayout
+        android:id="@+id/bottomLl"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/w60"
+        android:background="@color/top_title_bg"
+        >
+
+        <TextView
+            android:id="@+id/cancelTv"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:textColor="@color/WHITE"
+            android:text="取消"
+            android:gravity="center"/>
+
+        <View
+            style="@style/line_vertical_common"/>
+
+        <TextView
+            android:id="@+id/confirmTv"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:textColor="@color/WHITE"
+            android:text="确定"
+            android:gravity="center"/>
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>

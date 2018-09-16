@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/WHITE"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/registered_total_person_count"
+                style="@style/text_small_gray_size_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/customer_customerlist_registered" />
+
+            <!--<TextView-->
+            <!--android:id="@+id/registered_total_person_count"-->
+            <!--style="@style/text_middle18_black_bold_style"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="3dp"-->
+            <!--android:gravity="center" />-->
+        </LinearLayout>
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="40dp"
+            android:background="@color/line_common" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/invest_total_person_count"
+                style="@style/text_small_gray_size_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/customer_customerlist_invested" />
+
+            <!--<TextView-->
+            <!--android:id="@+id/invest_total_person_count"-->
+            <!--style="@style/text_middle18_red_bold_style"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="3dp"-->
+            <!--android:gravity="center"-->
+            <!--/>-->
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--<View style="@style/line_horizontal_common" />-->
+
+</LinearLayout>

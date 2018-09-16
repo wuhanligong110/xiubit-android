@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/backgroud_common">
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/addBankCardLl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/w160"
+        android:layout_margin="@dimen/w15"
+        android:background="@color/WHITE"
+        android:gravity="center"
+        android:orientation="vertical"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/card_add_ico"
+            android:layout_marginBottom="@dimen/w12"/>
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/w16"
+            android:textColor="@color/text_black_common"
+            android:text="添加银行卡"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/cardInfoLl"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/WHITE">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/w12"
+            android:layout_marginLeft="@dimen/w15"
+            android:layout_marginRight="@dimen/w15"
+            android:layout_marginBottom="@dimen/w12"
+           >
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/bgIv"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintDimensionRatio="690:240"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/bank_card_bg"/>
+            </android.support.constraint.ConstraintLayout>
+
+            <ImageView
+                android:id="@+id/logoIv"
+                android:layout_margin="@dimen/w12"
+                android:layout_width="@dimen/w40"
+                android:layout_height="@dimen/w40"
+                android:scaleType="fitXY"
+                android:src="@drawable/bank_card_logo" />
+
+
+            <LinearLayout
+                android:layout_toRightOf="@id/logoIv"
+                android:layout_marginTop="@dimen/w15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/bankNameTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/w14"
+                    android:textColor="@color/text_white_common"
+                    tools:text="巴拉巴拉银行"
+                    android:layout_marginBottom="@dimen/w5"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/w14"
+                    android:textColor="@color/text_white_common"
+                    android:text="储蓄卡"
+                    android:layout_marginBottom="@dimen/w15"/>
+
+
+                <TextView
+                    android:id="@+id/bankId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_white_common"
+                    android:textSize="@dimen/w21"
+                    tools:text="**** **** **** 8888"/>
+            </LinearLayout>
+
+
+
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_marginLeft="@dimen/w15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_gray_common"
+                android:text="更换银行卡请联系客服"
+                android:textSize="@dimen/w14"
+                android:layout_marginRight="@dimen/w8"/>
+
+            <TextView
+                android:id="@+id/callPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_blue_common"
+                android:text="400-888-6987"
+                android:textSize="@dimen/w14"
+                android:layout_marginRight="@dimen/w8"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

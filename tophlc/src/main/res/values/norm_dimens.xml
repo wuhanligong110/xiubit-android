@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    //弹出窗规范
+    <dimen name="prompt_with">@dimen/w270</dimen>
+    <dimen name="prompt_window_margin_left_and_right">@dimen/w15</dimen>
+    <dimen name="prompt_content_margin_left_and_right">@dimen/w12</dimen>
+    <dimen name="prompt_content_margin_top_and_bottom">@dimen/w15</dimen>
+    <dimen name="prompt_title_text_size">@dimen/w18</dimen>
+    <dimen name="prompt_contant_text_size">@dimen/w16</dimen>
+    <dimen name="prompt_btn_text_size">@dimen/w18</dimen>
+    
+</resources>

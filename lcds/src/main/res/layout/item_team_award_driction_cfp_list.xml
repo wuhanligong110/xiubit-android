@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <View
+        style="@style/line_horizontal_common"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@color/WHITE"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp">
+
+            <org.xsl781.ui.view.RoundImageView
+                android:id="@+id/headIV"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/img_customer_cfp"/>
+
+            <TextView
+                android:id="@+id/userNameTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="13dp"
+                android:text="王某某"
+                android:textColor="@color/text_black_common3e"
+                android:textSize="14dp"/>
+        </LinearLayout>
+
+        <View
+            style="@style/line_vertical_common"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingLeft="15dp">
+
+            <TextView
+                android:id="@+id/saleAmountTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:text="销售额(元): 0000.00"
+                android:textColor="@color/text_black_common6c"
+                android:textSize="12dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="贡献奖励(元): "
+                    android:textColor="@color/text_black_common6c"
+                    android:textSize="12dp"
+                    />
+
+                <com.v5ent.xiubit.view.MyTextView
+                    android:id="@+id/contrProfitTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00.00"
+                    android:textColor="@color/text_blue_common"
+                    android:textSize="18dp"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        style="@style/line_horizontal_common"/>
+
+    <TextView
+        android:id="@+id/remarkTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/backgroud_common"
+        android:gravity="center_vertical"
+        android:paddingBottom="10dp"
+        android:paddingLeft="15dp"
+        android:paddingTop="10dp"
+        android:text="@string/item_direct_award_remind"
+        android:textColor="@color/text_black_common6c"
+        android:textSize="12dp"
+        android:visibility="gone"/>
+
+    <View
+        style="@style/line_horizontal_common"
+        android:layout_height="10dp"/>
+
+</LinearLayout>

@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:scrollbars="none"
+    android:fillViewport="true">
+
+   
+
+    <LinearLayout
+        android:id="@+id/vg_content_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backgroud_common"
+        android:orientation="vertical">
+
+
+
+        <View
+            style="@style/line_horizontal_common"
+            android:layout_marginTop="12dp"/>
+        <LinearLayout
+            android:id="@+id/jobGradeEntry"
+            style="@style/linearlayout_item_common"
+            >
+
+            <TextView
+                style="@style/text_custom_item_commom"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="职级特权"/>
+
+
+
+            <TextView
+                android:id="@+id/jobGradeTv"
+                style="@style/mine_info_content_commom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text=""
+                android:textSize="12dp"/>
+
+            <ImageView
+                style="@style/mine_sign_go_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:contentDescription="@string/app_name"/>
+
+        </LinearLayout>
+
+        <View
+            style="@style/line_horizontal_common"
+            android:layout_marginBottom="12dp"/>
+
+        <View
+            style="@style/line_horizontal_common"
+            />
+
+
+        <RelativeLayout
+            android:id="@+id/headImageRl"
+            style="@style/linearlayout_item_common">
+
+            <TextView
+                style="@style/text_custom_item_commom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="@string/headImage"/>
+
+            <ImageView
+                android:id="@+id/headImageGoRIv"
+                style="@style/mine_sign_go_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:contentDescription="@string/app_name"/>
+
+            <TextView
+                android:id="@+id/headImageTv"
+                style="@style/mine_info_content_commom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/headImageGoRIv"
+                android:text="@string/go_setting"
+                android:textSize="12dp"/>
+
+        </RelativeLayout>
+
+        <View
+            style="@style/line_horizontal_common"
+            android:layout_marginLeft="24dp"/>
+
+        <RelativeLayout
+            android:id="@+id/phoneNumRl"
+            style="@style/linearlayout_item_common">
+
+            <TextView
+                style="@style/text_custom_item_commom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="手机号"/>
+
+            <ImageView
+                android:id="@+id/phoneNumGoRIv"
+                style="@style/mine_sign_go_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:contentDescription="@string/app_name"
+                android:visibility="visible"/>
+
+            <TextView
+                android:id="@+id/phoneNumTv"
+                style="@style/mine_info_content_commom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/phoneNumGoRIv"
+                android:text=""
+                android:textSize="12dp"/>
+        </RelativeLayout>
+
+        <View
+            style="@style/line_horizontal_common"
+            android:layout_marginBottom="12dp"/>
+        
+        <View
+            style="@style/line_horizontal_common"
+            />
+
+        <RelativeLayout
+            android:id="@+id/nameAuthenticationRl"
+            style="@style/linearlayout_item_common">
+
+            <TextView
+                style="@style/text_custom_item_commom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="@string/name_authentication"/>
+
+            <ImageView
+                android:id="@+id/nameAuthenticationGoRIv"
+                style="@style/mine_sign_go_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:contentDescription="@string/app_name"/>
+
+            <TextView
+                android:id="@+id/nameAuthentStatuTv"
+                style="@style/mine_info_content_commom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/nameAuthenticationGoRIv"
+                android:text="@string/no_authent"
+                android:textSize="12dp"/>
+        </RelativeLayout>
+
+        <View
+            style="@style/line_horizontal_common"
+            android:layout_marginLeft="24dp"/>
+
+
+        <View
+            style="@style/line_horizontal_common"
+            android:layout_marginLeft="24dp"/>
+
+        <RelativeLayout
+            android:id="@+id/mine_info_bank_card_manage_rl"
+            style="@style/linearlayout_item_common">
+
+            <TextView
+                style="@style/text_custom_item_commom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="@string/bank_card"/>
+
+            <ImageView
+                android:id="@+id/mine_info_bank_card_manage_go_right"
+                style="@style/mine_sign_go_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:contentDescription="@string/app_name"/>
+
+            <TextView
+                android:id="@+id/mine_info_bank_card_manage_content"
+                style="@style/mine_info_content_commom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/mine_info_bank_card_manage_go_right"
+                android:text="未绑定"
+                android:textSize="12dp"/>
+        </RelativeLayout>
+
+        <View
+            style="@style/line_horizontal_common"
+            android:layout_marginLeft="24dp"/>
+
+        <RelativeLayout
+            android:id="@+id/mine_info_password_manage_rl"
+            style="@style/linearlayout_item_common">
+
+            <TextView
+                android:id="@+id/password_manage_field"
+                style="@style/text_custom_item_commom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="@string/password_manage"/>
+
+            <ImageView
+                android:id="@+id/mine_info_password_manage_go_right"
+                style="@style/mine_sign_go_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:contentDescription="@string/app_name"/>
+
+            <TextView
+                android:id="@+id/mine_info_password_manage_content"
+                style="@style/mine_info_content_commom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/mine_info_password_manage_go_right"
+                android:text=""
+                android:textSize="12dp"
+
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="@dimen/w12"
+            style="@style/linearlayout_item_common">
+
+            <TextView
+                style="@style/text_custom_item_commom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="签到推送"/>
+
+            <com.kyleduo.switchbutton.SwitchButton
+                android:id="@+id/signPushSV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/w8"
+                android:layout_marginBottom="@dimen/w8"
+                android:checked="true"
+                app:kswThumbColor="@color/WHITE"
+                app:kswBackDrawable="@drawable/btn_switch_back_color_selector"/>
+
+
+        </RelativeLayout>
+
+
+
+        <View
+            style="@style/line_horizontal_common"
+            android:layout_marginBottom="12dp"/>
+        
+        <View
+            style="@style/line_horizontal_common"/>
+        
+        <TextView
+            android:id="@+id/loginOutTv"
+            android:background="@color/WHITE"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textColor="@color/text_blue_common"
+            android:textSize="16dp"
+            android:text="退出登录"
+            android:gravity="center"/>
+        
+        <View
+            style="@style/line_horizontal_common"/>
+
+
+    </LinearLayout>
+    
+
+</ScrollView>

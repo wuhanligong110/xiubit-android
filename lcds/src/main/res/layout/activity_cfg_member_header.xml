@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroud_common"
+    android:orientation="vertical"
+    >
+
+
+
+    <View
+        style="@style/line_horizontal_common"/>
+
+    <LinearLayout
+        android:id="@+id/phoneAddressEntry"
+        android:background="@color/WHITE"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:paddingLeft="15dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_phone_address"
+            android:layout_marginRight="15dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:text="手机通讯录"
+            android:textColor="@color/text_black_common"/>
+    </LinearLayout>
+
+
+    <View
+        style="@style/line_horizontal_common"/>
+
+    <LinearLayout
+        android:id="@+id/noInvestCfgEntry"
+        android:background="@color/WHITE"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:paddingLeft="15dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_no_invest_customer"
+            android:layout_marginRight="15dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="未出单的直推理财师 "
+            android:textSize="15dp"
+            android:textColor="@color/text_black_common"/>
+
+        <TextView
+            android:id="@+id/noInvestCfgNumTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:textColor="@color/text_black_common"/>
+    </LinearLayout>
+
+    <View
+        style="@style/line_horizontal_common"/>
+
+    <LinearLayout
+        android:id="@+id/iAttentetCfgEntry"
+        android:background="@color/WHITE"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:paddingLeft="15dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_attention_customer"
+            android:layout_marginRight="15dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:text="我关注的直推理财师 "
+            android:textColor="@color/text_black_common"/>
+
+        <TextView
+            android:id="@+id/iAttentetCfgTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:textColor="@color/text_black_common"/>
+    </LinearLayout>
+
+    <View
+        style="@style/line_horizontal_common"
+        android:layout_marginBottom="12dp"/>
+
+    <View
+        style="@style/line_horizontal_common"/>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="37dp"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:background="@color/title_gray_bg"
+    android:paddingRight="15dp">
+    <TextView
+        android:id="@+id/myDirCfgTitleTv"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:textColor="@color/text_black_common"
+        android:text="直推理财师"
+       />
+
+    <TextView
+        android:id="@+id/mySecCfgTitleTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="13dp"
+        android:textColor="@color/text_gray_common"
+        tools:text="二级(0人)"/>
+
+    <View
+        android:layout_width="2px"
+        android:layout_height="15dp"
+        android:background="@color/line_common"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"/>
+    <TextView
+        android:id="@+id/myThirdCfgTitleTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="13dp"
+        android:textColor="@color/text_gray_common"
+        tools:text="三级(0人)"/>
+
+</LinearLayout>
+
+
+    <View
+        style="@style/line_horizontal_common"/>
+
+
+</LinearLayout>

@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/backgroud_common"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="180dp">
+
+
+        <TextView
+            android:id="@+id/text_org_rank"
+            style="@style/text_small_white_size_style"
+            android:layout_width="31dp"
+            android:layout_height="16dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/text_blue_background"
+            android:gravity="center"
+            android:text="AAA"
+            android:visibility="gone"/>
+
+        <ImageView
+
+            android:id="@+id/orgLogoIV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:scaleType="fitXY"/>
+    </RelativeLayout>
+    <!-- 标签-->
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/WHITE"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/text_orginfo_detail_name"
+            style="@style/text_middle_black_style"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:gravity="center_horizontal|bottom"
+            android:text="平台动态"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/text_orginfor_detail_orgAdvantage"
+            style="@style/text_middle15_gray_common64_style"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="22dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal|top"
+            android:maxLines="1"
+            android:text="中国xxxx"
+            android:textSize="11dp"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="12dp"
+            android:layout_marginTop="6dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:id="@+id/orgingo_detail_tag01"
+                    style="@style/text_small_blue_size_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:drawableLeft="@drawable/img_text_checked"
+                    android:drawablePadding="6dp"
+                    android:maxLines="1"
+                    android:text="       "
+                    />
+
+                <TextView
+                    android:id="@+id/orgingo_detail_tag05"
+                    style="@style/text_small_blue_size_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="4dp"
+                    android:drawableLeft="@drawable/img_text_checked"
+                    android:drawablePadding="6dp"
+                    android:maxLines="1"
+                    android:text="资金托管"
+                    android:visibility="gone"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/orgingo_detail_tag02"
+                    style="@style/text_small_blue_size_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:drawableLeft="@drawable/img_text_checked"
+                    android:drawablePadding="6dp"
+                    android:maxLines="1"
+                    android:visibility="gone"
+                    />
+
+                <TextView
+                    android:id="@+id/orgingo_detail_tag06"
+                    style="@style/text_small_blue_size_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="4dp"
+                    android:drawableLeft="@drawable/img_text_checked"
+                    android:drawablePadding="6dp"
+                    android:maxLines="1"
+                    android:text="安全等级:aaa"
+                    android:visibility="gone"
+                    />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/orgingo_detail_tag04"
+                style="@style/text_small_blue_size_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:drawableLeft="@drawable/img_text_checked"
+                android:drawablePadding="6dp"
+                android:maxLines="1"
+                android:text="安全等级:aaa"
+                android:visibility="gone"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="12dp"/>
+
+    <!--tab 头部-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_viewpager_title_height"
+        android:background="@color/WHITE"
+        android:orientation="vertical">
+
+        <RadioGroup
+            android:id="@+id/orginfo_detail_radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+
+            <RadioButton
+                android:id="@+id/radiobtn_orginfo_des"
+                style="@style/OrginfoTab_MyRadioButton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="平台动态"
+                android:textSize="14dp"/>
+
+
+            <RadioButton
+                android:id="@+id/radiobtn_orginfo_team"
+                style="@style/OrginfoTab_MyRadioButton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="平台实力"
+                android:textSize="14dp"/>
+
+            <RadioButton
+                android:id="@+id/radiobtn_orginfo_safe"
+                style="@style/OrginfoTab_MyRadioButton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="安全保障"
+                android:textSize="14dp"/>
+
+        </RadioGroup>
+
+        <ImageView
+            android:id="@+id/orginfo_detail_cursor"
+            android:layout_width="60dp"
+            android:layout_height="2dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/text_blue_common"/>
+    </LinearLayout>
+    <!--机构简介内容-->
+    <include layout="@layout/layout_orgdetail_headview_tab"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:background="@color/WHITE">
+
+        <ImageView
+            android:id="@+id/orginfo_detail_tab_hide"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:background="@color/WHITE"
+            android:scaleType="center"
+            android:src="@drawable/img_arrow_up"/>
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="12dp"
+        android:background="@color/backgroud_common"/>
+
+    <LinearLayout
+        android:id="@+id/org_detail_bannderLL"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="vertical"
+        android:visibility="gone"
+        >
+
+
+        <RelativeLayout
+            android:id="@+id/headRe"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:background="#f0f0f0">
+
+            <com.toobei.common.view.loopviewpager.LoopViewPager
+                android:id="@+id/orginfo_detail_vpager"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"/>
+
+            <com.toobei.common.view.loopviewpager.indicator.CirclePageIndicator
+                android:id="@+id/orginfo_detail_indicator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="4dp"
+                android:paddingBottom="4dp"
+                />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/orginfo_detail_productLL"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:background="@color/WHITE"
+        android:orientation="vertical"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/text_small13_black_size_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="在售产品"
+                android:textSize="13sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                style="@style/text_small_white_size_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="条"
+                android:visibility="invisible"/>
+        </LinearLayout>
+
+        <View
+            style="@style/line_horizontal_common"/>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
+

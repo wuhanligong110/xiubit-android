@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="0dp" >
+
+    <ImageView
+        android:id="@+id/closedIv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/iv_close" />
+
+    <ImageView
+        android:id="@+id/lineIv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/iv_vertical_line" />
+
+    <LinearLayout
+        android:id="@+id/mainLl"
+        android:layout_width="315dp"
+        android:layout_height="344dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/qrcode_bg"
+        android:orientation="vertical"
+        android:padding="0dp" >
+
+        <TextView
+            android:id="@+id/phoneTv"
+            style="@style/text_middle_gray96_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:text="实名认证理财师"
+            android:textSize="18sp" />
+
+        <com.toobei.common.view.RemoteImageView
+            android:id="@+id/qrIv"
+            android:layout_width="match_parent"
+            android:layout_height="175dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:background="@color/WHITE"
+            android:padding="10dp"
+            android:src="@drawable/img_remind_verify_bankcard" />
+
+        <Button
+            android:id="@+id/saveBtn"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/btn_login_selector"
+            android:text="立即认证"
+            android:textColor="@color/WHITE"
+            android:textSize="17sp" />
+    </LinearLayout>
+
+</LinearLayout>

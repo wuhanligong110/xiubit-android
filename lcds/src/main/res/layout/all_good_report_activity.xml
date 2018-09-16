@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:paddingLeft="15dp"
+        android:gravity="center_vertical"
+        android:text="提示：5000元 以上的出单才会生成喜报"
+        android:textSize="12dp"
+        android:textColor="@color/text_gray_common_title"
+        android:background="@color/yellow_bar_bg"
+        />
+    
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        
+    </android.support.v7.widget.RecyclerView>
+    
+    <TextView
+        android:id="@+id/createGoodReportTv"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textColor="@color/WHITE"
+        android:background="@color/text_blue_common"
+        android:textSize="18dp"
+        android:gravity="center"
+        android:text="生成喜报"/>
+</LinearLayout>

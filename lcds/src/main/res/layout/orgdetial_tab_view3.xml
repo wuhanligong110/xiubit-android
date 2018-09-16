@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/WHITE"
+              android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/honorTitleTv"
+        style="@style/orgdetial_tabcontant_title_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:gravity="center_vertical"
+        android:text="公司荣誉"
+        android:textStyle="bold"/>
+    <TextView
+        android:id="@+id/honorTv"
+        style="@style/text_small_gray_size_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/WHITE"
+        android:lineSpacingExtra="6sp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        />
+
+
+    <TextView
+        android:id="@+id/certifTitleTv"
+        style="@style/orgdetial_tabcontant_title_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:gravity="center_vertical"
+        android:text="公司证件及证书"
+        android:textStyle="bold"/>
+
+    <ImageView
+
+        android:id="@+id/certifImageSingleIv"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:scaleType="fitXY"
+        android:visibility="gone"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/certifImagesListRv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    </android.support.v7.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/baseInfoTitleTv"
+        style="@style/orgdetial_tabcontant_title_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:gravity="center_vertical"
+        android:text="基本信息"
+        android:textStyle="bold"/>
+
+    <LinearLayout
+        android:id="@+id/capitalLl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="注册资本"
+            android:textColor="@color/text_gray_common_title"
+            android:textSize="12dp"
+            />
+
+        <TextView
+            android:id="@+id/capitalTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3.8"
+            android:textColor="@color/text_gray_common"
+            android:textSize="12dp"
+            tools:text="5000万"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/upTimeLl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="上线时间"
+            android:textColor="@color/text_gray_common_title"
+            android:textSize="12dp"
+            />
+
+        <TextView
+            android:id="@+id/upTimeTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3.8"
+            android:textColor="@color/text_gray_common"
+            android:textSize="12dp"
+            tools:text="2100年9月9日"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/cityLl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="所在城市"
+            android:textColor="@color/text_gray_common_title"
+            android:textSize="12dp"
+            />
+
+        <TextView
+            android:id="@+id/cityTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3.8"
+            android:textColor="@color/text_gray_common"
+            android:textSize="12dp"
+            tools:text="长沙市"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/deadLineLl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="产品期限"
+            android:textColor="@color/text_gray_common_title"
+            android:textSize="12dp"/>
+
+        <TextView
+            android:id="@+id/deadLineTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3.8"
+            android:textColor="@color/text_gray_common"
+            android:textSize="12dp"
+            tools:text="1天~2年"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/orgLevelLl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="安全评级"
+            android:textColor="@color/text_gray_common_title"
+            android:textSize="12dp"/>
+
+        <TextView
+            android:id="@+id/orgLevelTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3.8"
+            android:textColor="@color/text_gray_common"
+            android:textSize="12dp"
+            tools:text="AAA"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/icpLl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="IPC备案"
+            android:textColor="@color/text_gray_common_title"
+            android:textSize="12dp"/>
+
+        <TextView
+            android:id="@+id/icpTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3.8"
+            android:textColor="@color/text_gray_common"
+            android:textSize="12dp"
+            tools:text="京ICP14202352"/>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/contactLl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="客服电话"
+            android:textColor="@color/text_gray_common_title"
+            android:textSize="12dp"
+            />
+
+        <TextView
+            android:id="@+id/contactTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3.8"
+            android:autoLink="all"
+            android:textColor="@color/text_blue_common"
+            android:textColorLink="@color/text_blue_common"
+            android:textSize="12dp"
+            tools:text="400-004-6000"/>
+
+
+    </LinearLayout>
+    
+    <View
+        android:layout_marginTop="20dp"
+        style="@style/line_horizontal_common"/>
+
+    <TextView
+        android:id="@+id/hightTeamAndEviShootTv"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:gravity="center"
+        android:text="高管团队及现场实拍 >"
+        android:textColor="@color/text_blue_common"
+        android:textSize="14dp"/>
+
+
+</LinearLayout>

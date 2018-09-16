@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/WHITE"
+              android:gravity="center"
+              android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="83dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:gravity="center_vertical|left"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/text_small_gray_size_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="本月总收益(元)"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal">
+
+                <com.v5ent.xiubit.view.MyTextView
+                    android:id="@+id/text_income_total"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="0.00"
+                    android:textColor="@color/text_blue_common"
+                    android:textSize="30dp"/>
+
+                <!--<TextView-->
+                    <!--android:id="@+id/text_income_grantDesc"-->
+                    <!--style="@style/text_small_gray_size_style"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="8dp"-->
+                    <!--android:gravity="center"-->
+                    <!--android:text="(已发放)"/>-->
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/img_myaccount_detail_total_question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="15dp"
+            android:src="@drawable/img_question"/>
+    </RelativeLayout>
+
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="15dp"
+        android:layerType="software"
+        android:src="@drawable/bg_line_dash_gray"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="128dp"
+        android:orientation="horizontal">
+
+
+        <com.v5ent.xiubit.view.IncomeChartPieLayout
+            android:id="@+id/my_income_chart_pie"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            />
+
+        <ImageView
+            android:id="@+id/img_myaccount_detail_combination_question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:padding="15dp"
+            android:src="@drawable/img_question"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/backgroud_common"
+        android:layout_height="10dp"/>
+
+    <!--<com.v5ent.xiubit.view.MyPagerSlidingTabStrip-->
+        <!--android:id="@+id/tabLayout"-->
+        <!--style="@style/MyCustomTabLayout"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="@dimen/list_viewpager_title_height"-->
+        <!--android:background="@color/WHITE"-->
+        <!--app:pstsDividerColor="@color/backgroud_transparent"-->
+        <!--app:pstsIndicatorColor="@color/text_blue_common"-->
+        <!--app:pstsTabPaddingLeftRight="8dp"-->
+        <!--app:pstsTabTextColor="@color/text_black_common"-->
+        <!--app:tabTextAppearance="@style/MyCustomTabTextAppearance"-->
+        <!--app:pstsShouldExpand="true"-->
+        <!--/>-->
+
+
+
+    <View style="@style/line_horizontal_common"/>
+</LinearLayout>

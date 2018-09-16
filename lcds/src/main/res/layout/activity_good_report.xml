@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+
+
+
+
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/contantV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/reportBg"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:src="@drawable/good_report_bg_2"
+                app:layout_constraintDimensionRatio="375:608"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guideline1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.25" />
+
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/good_report_text_color"
+                android:textSize="@dimen/w22"
+                android:text="恭喜"
+                app:layout_constraintBottom_toBottomOf="@id/guideline1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+
+            <TextView
+                android:layout_marginTop="@dimen/w10"
+                android:id="@+id/nameTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/good_report_text_color"
+                android:textSize="@dimen/w36"
+                tools:text="何XX"
+                app:layout_constraintTop_toBottomOf="@id/tv1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+            <TextView
+                android:layout_marginTop="@dimen/w25"
+                android:id="@+id/introduceTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/good_report_text_color"
+                android:textSize="@dimen/w22"
+                tools:text="名下李XX用户出单"
+                app:layout_constraintTop_toBottomOf="@id/nameTv"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+
+
+            <TextView
+                android:id="@+id/moneyTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/good_report_text_color"
+                android:textSize="@dimen/w50"
+                tools:text="10000000元"
+                app:layout_constraintTop_toBottomOf="@id/introduceTv"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+
+            <TextView
+                android:layout_marginTop="@dimen/w50"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/good_report_text_color"
+                android:textSize="@dimen/w12"
+                android:text="@string/report_text_bottom"
+                android:gravity="center"
+                app:layout_constraintTop_toBottomOf="@id/moneyTv"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+
+        </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_below="@id/contantV"
+        android:id="@+id/contantBottomV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/reportBgbottom"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/good_report_bg_bottom2"
+            app:layout_constraintDimensionRatio="360:147"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/bottomRl"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/h50">
+
+
+        <LinearLayout
+            android:id="@+id/notEmptyBottomLl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/allReportTv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/WHITE"
+                android:drawableTop="@drawable/all_good_report_icon"
+                android:gravity="center"
+                android:paddingTop="@dimen/h6"
+                android:text="全部喜报"
+                android:textColor="@color/text_gray_common"
+                android:textSize="@dimen/w10" />
+
+            <TextView
+                android:id="@+id/oneKeyShareTv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:background="@color/text_blue_common"
+                android:gravity="center"
+                android:text="一键分享"
+                android:textColor="@color/WHITE"
+                android:textSize="@dimen/w18" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/inviteFrendTV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/text_blue_common"
+            android:gravity="center"
+            android:text="邀请好友"
+            android:textColor="@color/WHITE"
+            android:textSize="@dimen/w18"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_above="@id/bottomRl"
+        style="@style/line_horizontal_common" />
+
+    <LinearLayout
+        android:layout_above="@id/bottomRl"
+        android:id="@+id/emptyView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/img_report_empty"/>
+
+        <TextView
+            android:layout_marginTop="@dimen/w8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/w18"
+            android:textColor="@color/text_gray_common_title"
+            android:text="团队成员还没有出单"/>
+
+        <TextView
+            android:layout_marginTop="@dimen/w4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/w18"
+            android:textColor="@color/text_gray_common_title"
+            android:text="赶紧邀请好友去出单吧"/>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/topRemindTv"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:paddingLeft="15dp"
+        android:gravity="center_vertical"
+        android:text="提示：5000元 以上的出单才会生成喜报"
+        android:textSize="12dp"
+        android:textColor="@color/text_gray_common_title"
+        android:background="@color/yellow_bar_bg"
+        />
+
+</RelativeLayout>

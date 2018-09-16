@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/WHITE"
+              android:orientation="vertical"
+    >
+
+    <View
+        style="@style/line_horizontal_common"
+        android:layout_height="1px"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <TextView
+            android:id="@+id/text_customer_product_name"
+            style="@style/text_middle_black_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:maxWidth="230dp"
+            android:singleLine="true"
+            android:text="天天牛A90天"
+            android:textSize="14dp"/>
+
+        <ImageView
+            android:id="@+id/text_customer_deal_tag"
+            style="@style/text_small_red_size_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/img_customer_deal_bug_tag"/>
+    </LinearLayout>
+
+    <View
+        style="@style/line_horizontal_dash_gray"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"/>
+
+    <LinearLayout
+        android:id="@+id/item_bg_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/WHITE"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/text_customer_product_year_rate"
+                style="@style/text_small_common64_size_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="年化收益: 8.5%"/>
+
+
+            <TextView
+                android:id="@+id/text_customer_product_commission_rate"
+                style="@style/text_small_common64_size_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="年化佣金: 1.5%"/>
+
+            <TextView
+                android:id="@+id/text_profit"
+                style="@style/text_small_common64_size_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="客户收益:0.00"/>
+
+
+            <TextView
+                android:id="@+id/text_fee"
+                style="@style/text_small_common64_size_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="我的佣金:0.00"/>
+
+        </LinearLayout>
+
+        <View
+            style="@style/line_vertical_common"/>
+
+        <LinearLayout
+            android:layout_width="156dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/text_customer_invest_field"
+                style="@style/text_small_common64_size_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="投资额(元)"/>
+
+            <com.v5ent.xiubit.view.MyTextView
+                android:id="@+id/text_customer_invest_money"
+                style="@style/text_middle_blue_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="8888.80"
+                android:textSize="17dp"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <View
+        style="@style/line_horizontal_common"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"/>
+
+    <LinearLayout
+        android:background="@color/bg_tab_layout_fafafa"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <TextView
+            android:id="@+id/text_start_date"
+            style="@style/text_small_common64_size_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="起息 2015-9-30"/>
+
+
+        <TextView
+            android:layout_marginLeft="12dp"
+            android:id="@+id/text_customer_invest_enddate"
+            style="@style/text_small_common64_size_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:layout_marginTop="4dp"
+            android:text="到期 2015-9-30"/>
+
+
+    </LinearLayout>
+
+    <View
+        style="@style/line_horizontal_common"
+        android:layout_height="10dp"
+        android:background="@color/backgroud_common"
+        />
+
+</LinearLayout>

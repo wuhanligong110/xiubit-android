@@ -1,0 +1,174 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/root_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="0dp"
+                android:background="@color/backgroud_common"
+                android:padding="0dp"
+                >
+
+    <!-- 核心内容区域 -->
+
+    <FrameLayout
+        android:id="@+id/fragment_box"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomRe"
+       > </FrameLayout>
+    
+    <RelativeLayout
+        android:id="@+id/loginRL"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomRe"
+        android:background="#B3000000"
+        android:gravity="center"
+        android:clickable="true"
+        android:visibility="visible">
+        
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/login_red_big_pocket_img"
+                android:layout_marginBottom="15dp"/>
+            
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+                
+                <ImageView
+                    android:id="@+id/registerTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/regist_bottom_icon_selector"/>
+                
+                <ImageView
+                    android:id="@+id/loginTv"
+                    android:layout_marginLeft="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/login_bottom_icon_selector"/>
+            </LinearLayout>
+        </LinearLayout>
+        
+        
+    </RelativeLayout>
+    
+    <!--顶部标题栏加状态栏-->
+<!--<include layout="@layout/layout_main_header"/>-->
+   
+
+    <!-- 底部工具栏 -->
+
+    <View
+        style="@style/line_horizontal_common"
+        android:layout_above="@+id/bottomRe"/>
+
+    <RelativeLayout
+        android:id="@+id/bottomRe"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/w55"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:paddingBottom="@dimen/w2"
+        android:background="@color/WHITE">
+
+        <RadioGroup
+            android:id="@+id/mainActivity_RadioGroup"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/main_btn_home"
+                style="@style/GuideButton_MyRadioButton"
+                android:drawableTop="@drawable/main_bottom_btn1"
+                android:drawablePadding="@dimen/w4"
+                android:text="@string/main_btn_home"/>
+
+            <RadioButton
+                android:id="@+id/main_btn_product"
+                style="@style/GuideButton_MyRadioButton"
+                android:drawableTop="@drawable/main_bottom_btn2"
+                android:drawablePadding="@dimen/w4"
+                android:text="投资"/>
+
+            <RadioButton
+                android:id="@+id/main_btn_liecai"
+                style="@style/GuideButton_MyRadioButton"
+                android:drawableTop="@drawable/main_bottom_btn3"
+                android:drawablePadding="@dimen/w4"
+                android:text="发现"/>
+
+            <!--<RadioButton-->
+            <!--android:id="@+id/main_btn_customer"-->
+            <!--style="@style/GuideButton_MyRadioButton"-->
+            <!--android:drawableTop="@drawable/btn_customer"-->
+            <!--android:text="@string/main_btn_customer"></RadioButton>-->
+
+            <RadioButton
+                android:id="@+id/main_btn_mine"
+                style="@style/GuideButton_MyRadioButton"
+                android:drawableTop="@drawable/main_bottom_btn4"
+                android:drawablePadding="@dimen/w4"
+                android:text="@string/main_btn_mine"/>
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"/>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"/>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1">
+
+                <View
+                    android:id="@+id/v1"
+                    android:layout_width="1px"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    />
+
+
+                <ImageView
+                    android:id="@+id/hasNoSignIv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                   android:layout_toRightOf="@id/v1"
+                    android:layout_marginTop="@dimen/w5"
+                    android:background="@drawable/ic_hasno_sign"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

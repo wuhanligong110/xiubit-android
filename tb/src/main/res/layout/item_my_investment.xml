@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/backgroud_common"
+    android:gravity="center_vertical"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="116dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/WHITE"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40dp" >
+
+            <TextView
+                android:id="@+id/nameTv"
+                style="@style/text_middle_black_bold_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/img_arrow_right" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:background="@color/line_common" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/tzjeTv"
+                    style="@style/text_small_gray_size_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="15dp"
+                    android:text="投资金额(元)" />
+
+                <TextView
+                    android:id="@+id/investAmountTv"
+                    style="@style/text_middle_blue_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_below="@+id/tzjeTv"
+                    android:layout_marginTop="3dp"
+                    android:textSize="18sp"
+                    android:singleLine="true"
+                    android:textColor="@color/btn_common_orange"
+                    />
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/line_common" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/ljsrTv"
+                    style="@style/text_small_gray_size_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="15dp"
+                    android:text="累计收入(元)" />
+
+                <TextView
+                    android:id="@+id/profitTv"
+                    style="@style/text_middle_blue_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_below="@+id/ljsrTv"
+                    android:layout_marginTop="3dp"
+                    android:textSize="18sp"
+                    android:textColor="@color/btn_common_orange"
+                    android:singleLine="true"
+                    />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

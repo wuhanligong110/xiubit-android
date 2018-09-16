@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/backgroud_common"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="@color/WHITE"
+        android:paddingLeft="20dp">
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:id="@+id/text_ljsy"
+            android:textSize="15dp"
+            android:textColor="@color/text_gray_common"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="累计收益(元):"
+            android:layout_marginRight="8dp"/>
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/text_ljsy"
+            android:id="@+id/totalProfitTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:text="———"
+            android:textColor="@color/text_gray_common_title"
+            android:textSize="16dp"/>
+
+        <!--<ImageView-->
+            <!--android:id="@+id/totalProfitQuesIv"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="8dp"-->
+            <!--android:src="@drawable/iv_mine_questions"/>-->
+
+        <LinearLayout
+            android:id="@+id/investOrgLl"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="12dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/text_small12_gray_common96_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="投资平台"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:src="@drawable/img_arrow_right"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <View
+        style="@style/line_horizontal_common_mine"/>
+    
+    <com.toobei.tb.view.InvestDetialChartPieLayout
+        android:id="@+id/investDetialChartPie"
+        android:layout_width="match_parent"
+        android:layout_height="93dp"
+        android:paddingLeft="15dp"
+        android:background="@color/WHITE"
+        >
+
+    </com.toobei.tb.view.InvestDetialChartPieLayout>
+
+    <com.toobei.tb.view.MyPagerSlidingTabStrip
+        android:id="@+id/pagerSlidingTabs"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/list_viewpager_title_height"
+        android:background="@color/text_white_common"
+        android:textColorPrimary="@color/text_black_common"
+        app:pstsShouldExpand="true"
+        app:pstsIndicatorColor="@color/text_blue_common"
+        app:pstsTabTextColor="@color/text_blue_common"
+        app:pstsTabPaddingLeftRight="0dp"
+        app:tabTextAppearance="@style/MyCustomTabTextAppearance"/>
+
+    <View
+        style="@style/line_horizontal_common_mine"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vPager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/askForRedPacketBtn"
+        android:layout_gravity="center"
+        android:layout_weight="1.0"
+        android:flipInterval="30"
+        android:persistentDrawingCache="animation"/>
+
+    <TextView
+        style="@style/text_small12_gray_common96_style"
+        android:id="@+id/bottomTextTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="@string/my_invite_detial_bottom_remind"/>
+
+</LinearLayout>

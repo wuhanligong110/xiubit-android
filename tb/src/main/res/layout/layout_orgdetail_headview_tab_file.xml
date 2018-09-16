@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--机构详情  平台实力->基本信息 -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/instituion_fileLL"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        style="@style/text_middle15_gray_common64_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:height="40dp"
+        android:gravity="center_vertical"
+        android:paddingTop="10dp"
+        android:text="基本信息"
+        android:textStyle="bold"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/text_small_gray_size_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:text="年化收益:"
+
+                    />
+
+                <TextView
+                    android:id="@+id/textRate"
+                    style="@style/text_small_black_size_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="73dp"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/text_small_gray_size_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:text="产品期限:"
+
+                    />
+
+                <TextView
+                    android:id="@+id/textDays"
+                    style="@style/text_small_black_size_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="73dp"
+                    android:text=""/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/text_small_gray_size_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:text="注册资本:"
+
+                    />
+
+                <TextView
+                    android:id="@+id/textCapital"
+                    style="@style/text_small_black_size_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="73dp"
+                    android:text=""/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/text_small_gray_size_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:text="上市时间:"
+
+                    />
+
+                <TextView
+                    android:id="@+id/textUpTime"
+                    style="@style/text_small_black_size_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="73dp"
+
+                    />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-32dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/text_small_gray_size_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:text="所在城市:"
+
+                    />
+
+                <TextView
+                    android:id="@+id/textCity"
+                    style="@style/text_small_black_size_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="73dp"
+
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/text_small_gray_size_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:text="平台背景:"
+
+                    />
+
+                <TextView
+                    android:id="@+id/textOrgBack"
+                    style="@style/text_small_black_size_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="73dp"
+
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/text_small_gray_size_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:text="资金托管:"
+
+                    />
+
+                <TextView
+                    android:id="@+id/textTrusteeship"
+                    style="@style/text_small_black_size_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="73dp"
+
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+
+                    style="@style/text_small_gray_size_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:text="ICP备案:"
+
+                    />
+
+                <TextView
+                    android:id="@+id/textICP"
+                    style="@style/text_small_black_size_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="73dp"
+
+                    />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+    <!--间隔-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="12dp"/>
+    <!--平台基本信息 file 图片-->
+    <ImageView
+
+        android:id="@+id/orginfor_detail_file_img"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:scaleType="fitXY"
+        android:visibility="gone"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/orginfor_detail_file_recycleView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"/>
+</LinearLayout>
+
+
+
+

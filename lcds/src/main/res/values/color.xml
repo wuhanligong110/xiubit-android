@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--色值 level由深到浅定义-->
+    
+    <color name="WHITE">#FFFFFFFF</color>
+    <color name="WHITE_8">#aaFFFFFF</color>
+    <color name="BLACK">#FF000000</color>
+    <color name="Color_0">#00000000</color>
+    
+    <!--blue-->
+    <color name="blue_level_1">#4987eb</color>
+    <color name="blue_level_2">#4e8cef</color>
+    <color name="blue_level_3">#9cbdf4</color>
+    <color name="blue_level_4">#d8e3f5</color>
+    
+    <!--black-->
+    <color name="black_level_7">#ff313131</color>
+    <color name="black_level_1">#ff3b4257</color>
+    <color name="black_level_2">#ff5f6678</color>
+    <color name="black_level_3">#ff9197a6</color>
+
+    <color name="black_level_4">#f0eff4</color>
+    <color name="black_level_5">#eeeeee</color>
+    <color name="black_level_6">#f9f9f9</color>
+
+
+    <!--red-->
+    <color name="red_level_1">#fd5d5d</color>
+
+    <color name="text_black_common_deep">@color/black_level_7</color>
+    <color name="text_black_common">@color/black_level_1</color> <!--用于一级文字颜色--><!--比如年化收益 产品总标题-->
+    <color name="text_gray_common_title">@color/black_level_2</color>    <!--用于二级文字颜色-->
+    <color name="text_gray_common">@color/black_level_3</color>   <!-- 用于二级文字颜色 用于说明文字 ->小字 -->
+    <color name="line_common">@color/black_level_5</color>  <!--通用线条颜色-->
+    <color name="text_blue_common">@color/blue_level_2</color>  <!--文字，背景  十进制 78, 140, 239-->
+    <color name="text_blue_common_light">@color/blue_level_3</color>  <!-- 浅蓝色文字-->
+    <color name="text_blue_common_light_bg">@color/blue_level_4</color>  <!-- 标签背景-->
+    <color name="backgroud_common">@color/black_level_4</color> <!--大面积灰色背景-->
+    <color name="text_red_common">@color/red_level_1</color>
+    <color name="top_title_bg">@color/blue_level_2</color> <!--app顶部颜色-->
+    <color name="blue_bg_deep">@color/blue_level_1</color>
+    <color name="text_white_common">@color/WHITE</color>
+    <color name="text_white_light">#99ffffff</color> <!--暗白色-->
+
+
+    <!--tag背景色-->
+    <color name="yellow_bar_bg">#FFF9D9</color>
+    <color name="text_color_hint_common">#c7c7cd</color> <!--输入文字提示-->
+    <color name="text_yellow_common">#ffa10c</color>
+    <color name="bg_tab_layout_fafafa">#FAFAFA</color><!-- 时间或者某些条的背景色-->
+    <color name="red_color_circle_defult">#dedede</color><!-- 圆圈进度条默认颜色-->
+
+
+    <!-- 按钮颜色 -->
+    <color name="btn_color_common">@color/text_blue_common</color>
+
+    <!--页面顶端提示颜色-->
+    <color name="text_top_remind_bg">@color/yellow_bar_bg</color>  //前三次进入页面顶端显示红色字体
+    <!--浅色标题背景-->
+    <color name="title_gray_bg">@color/black_level_6</color>
+
+    <!--红包黄色字体-->
+    <color name="text_yellow_redpackage">#f9eed2</color>
+
+
+
+    <!-- 自定义view用到的颜色 -->
+    <color name="DARK_GRAYC8">#8C8C8C</color>
+    <!-- 月度收益图表饼状图 颜色 -->
+    <color name="chart_pie_color1">#ec7962</color>
+    <color name="chart_pie_color2">#efaa4a</color>
+    <color name="chart_pie_color3">#f7e65e</color>
+    <color name="chart_pie_color4">#68d5e2</color>
+    <color name="chart_pie_color5">#6493f7</color>
+    <color name="chart_pie_color6">#4375c1</color>
+    <color name="chart_pie_color7">#655cd9</color>
+    <color name="chart_pie_color8">#cf5cd9</color>
+    <color name="chart_pie_color9">#b91d75</color>
+    <color name="chart_pie_color10">#ea4801</color>
+    <color name="chart_pie_color11">#ffd200</color>
+    <color name="chart_pie_color12">#e6f31c</color>
+    <color name="chart_pie_color13">#a1eb13</color>
+    <color name="chart_pie_color14">#4ba153</color>
+    <color name="chart_pie_color15">#43bba9</color>
+    <color name="chart_pie_color16">#00878c</color>
+    <color name="chart_pie_color17">#003f8c</color>
+    <color name="chart_pie_color18">#712ca6</color>
+    <color name="chart_pie_color19">#ff43fd</color>
+    <color name="chart_pie_gray">#dcdcdc</color>
+    <color name="chart_pie_no_data">#d9e8ff</color>
+
+    <!--已使用和过期红包灰色字体颜色-->
+    <color name="text_redPacket_unUsed">#80666666</color>
+    
+   
+
+    <!--提示窗确认和取消按钮颜色-->
+    <color name="prompt_btn_postion">@color/text_blue_common</color>
+    <color name="prompt_btn_cancle">@color/text_gray_common</color>
+
+    <color name="fix_color">@color/chart_pie_color8</color>
+</resources>

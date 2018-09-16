@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.scwang.smartrefresh.layout.SmartRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/refreshView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroud_common">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical"
+       android:gravity="center_horizontal">
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical"
+           >
+
+
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+           >
+
+            <com.youth.banner.Banner
+                android:id="@+id/banner"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:banner_layout="@layout/layout_org_list_banner"
+                app:delay_time="3000"
+                app:image_scale_type="fit_xy"
+                app:indicator_drawable_selected="@drawable/shape_banner_indicator_squar_selected"
+                app:indicator_drawable_unselected="@drawable/shape_banner_indicator_squar_unselected"
+                app:indicator_height="4dp"
+                app:indicator_width="14dp"
+                app:layout_constraintDimensionRatio="750:250"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+            </com.youth.banner.Banner>
+
+        </android.support.constraint.ConstraintLayout>
+
+            <View style="@style/line_horizontal_common"/>
+
+            <LinearLayout
+                android:id="@+id/tabContainer"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/w80"
+                android:background="@color/WHITE"
+                app:layout_constraintTop_toBottomOf="@id/line1">
+
+                <TextView
+                    android:id="@+id/insuranceTypeEntry1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:drawableTop="@drawable/icon_insurance_type1"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/w10"
+                    android:paddingTop="@dimen/w10"
+                    android:text="重疾险"
+                    android:textColor="@color/text_black_common"
+                    android:textSize="@dimen/w13" />
+
+                <TextView
+                    android:id="@+id/insuranceTypeEntry2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:drawableTop="@drawable/icon_insurance_type2"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/w10"
+                    android:paddingTop="@dimen/w10"
+                    android:text="意外险"
+                    android:textColor="@color/text_black_common"
+                    android:textSize="@dimen/w13" />
+
+                <TextView
+                    android:id="@+id/insuranceTypeEntry3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:drawableTop="@drawable/icon_insurance_type3"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/w10"
+                    android:paddingTop="@dimen/w10"
+                    android:text="少儿险"
+                    android:textColor="@color/text_black_common"
+                    android:textSize="@dimen/w13" />
+
+                <TextView
+                    android:id="@+id/insuranceTypeEntry4"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:drawableTop="@drawable/icon_insurance_type4"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/w10"
+                    android:paddingTop="@dimen/w10"
+                    android:text="查看更多"
+                    android:textColor="@color/text_black_common"
+                    android:textSize="@dimen/w13" />
+            </LinearLayout>
+
+           <View style="@style/line_horizontal_common"/>
+
+           <View style="@style/line_horizontal_common"
+                android:layout_marginTop="@dimen/w12"
+                 />
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/smartTestTab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/WHITE"
+                android:minHeight="@dimen/w150"
+                android:paddingBottom="@dimen/w10"
+                android:paddingTop="@dimen/w10"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/robotIv"
+                    android:layout_width="@dimen/w82"
+                    android:layout_height="@dimen/w67"
+                    android:layout_marginLeft="@dimen/w15"
+                    android:src="@drawable/img_robot"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/w25"
+                    android:paddingRight="@dimen/w10"
+                    android:background="@drawable/insurance_message_bg"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/w25"
+                    android:text="我是人工智能小保，可以推荐最适合你的保险..."
+                    android:textColor="@color/text_gray_common_title"
+                    android:textSize="@dimen/w12"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/robotIv" />
+
+                <TextView
+                    android:id="@+id/tv2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/w25"
+                    android:layout_marginTop="@dimen/w8"
+                    android:background="@drawable/insurance_message_bg"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/w25"
+                    android:paddingRight="@dimen/w10"
+                    android:text="我可是很聪明的哦^__^"
+                    android:textColor="@color/text_gray_common_title"
+                    android:textSize="@dimen/w12"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/robotIv"
+                    app:layout_constraintTop_toBottomOf="@id/tv1" />
+
+                <Button
+                    android:id="@+id/smartTestEntry"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="@dimen/w150"
+                    android:layout_height="@dimen/w30"
+                    android:layout_marginTop="@dimen/w10"
+                    android:background="@drawable/btn_blue_big_cirside_corner_bg"
+                    android:text="立即评测"
+                    android:textColor="@color/text_white_common"
+                    android:textSize="@dimen/w15"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv2" />
+
+            </android.support.constraint.ConstraintLayout>
+
+           <LinearLayout
+               android:id="@+id/smartTestResultTab"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="vertical"
+               android:visibility="gone">
+
+               <android.support.constraint.ConstraintLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:background="@drawable/smart_test_result_bg"
+                   android:paddingTop="@dimen/w10"
+                   android:paddingBottom="@dimen/w10"
+                   >
+
+                <ImageView
+                    android:id="@+id/robotResultIv"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginLeft="@dimen/w15"
+                    android:layout_width="@dimen/w85"
+                    android:layout_height="@dimen/w84"
+                    android:src="@drawable/img_robot_test_result"
+                    />
+
+                   <TextView
+                       android:id="@+id/resultTv1"
+                       android:layout_marginTop="@dimen/w15"
+                       android:layout_marginLeft="@dimen/w20"
+                       app:layout_constraintTop_toTopOf="parent"
+                       app:layout_constraintLeft_toRightOf="@id/robotResultIv"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:textSize="@dimen/w15"
+                       android:textColor="@color/text_black_common"
+                       android:textStyle="bold"
+                       tools:text="家庭保障指数100分"/>
+
+                   <TextView
+                       android:id="@+id/resultTv2"
+                       android:singleLine="true"
+                       android:layout_marginTop="@dimen/w4"
+                       android:layout_marginLeft="@dimen/w20"
+                       app:layout_constraintTop_toBottomOf="@id/resultTv1"
+                       app:layout_constraintLeft_toRightOf="@id/robotResultIv"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:textSize="@dimen/w15"
+                       android:textColor="@color/text_black_common"
+                       android:textStyle="bold"
+                       tools:text="风险较高"/>
+
+
+
+                   <Button
+                       android:id="@+id/smartTestResultEntry"
+                       style="?android:attr/borderlessButtonStyle"
+                       android:layout_width="@dimen/w150"
+                       android:layout_height="@dimen/w30"
+                       android:layout_marginTop="@dimen/w5"
+                       android:background="@drawable/btn_blue_big_cirside_corner_bg"
+                       android:text="查看报告"
+                       android:textColor="@color/text_white_common"
+                       android:textSize="@dimen/w15"
+                       app:layout_constraintEnd_toEndOf="parent"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintTop_toBottomOf="@id/robotResultIv" />
+
+               </android.support.constraint.ConstraintLayout>
+               <View style="@style/line_horizontal_common"/>
+
+
+               <View style="@style/line_horizontal_common"
+                   android:layout_marginTop="@dimen/w12"
+                   />
+
+               <RelativeLayout
+                   android:id="@+id/resultRecomendTitle"
+                   android:layout_width="match_parent"
+                   android:layout_height="33dp"
+                   android:background="@color/WHITE"
+                   android:paddingLeft="15dp"
+                   android:paddingRight="15dp"
+                   android:visibility="gone">
+
+                   <LinearLayout
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_centerVertical="true"
+                       android:gravity="center_vertical"
+                       android:orientation="horizontal"
+                       >
+
+                       <View
+                           android:layout_width="4dp"
+                           android:layout_height="16dp"
+                           android:layout_marginRight="6dp"
+                           android:background="@color/blue_level_2" />
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_centerVertical="true"
+                           android:text="为您推荐"
+                           android:textColor="@color/text_black_common"
+                           android:textSize="16dp"
+                           android:textStyle="bold" />
+
+
+                   </LinearLayout>
+
+               </RelativeLayout>
+
+               <android.support.v7.widget.RecyclerView
+                   android:id="@+id/testResultRecomendRv"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:overScrollMode="never"
+                   android:background="@color/WHITE"
+                   android:paddingBottom="@dimen/w10"
+                   android:visibility="gone">
+
+               </android.support.v7.widget.RecyclerView>
+
+
+           </LinearLayout>
+
+           <View style="@style/line_horizontal_common"/>
+
+
+           <View style="@style/line_horizontal_common"
+                android:layout_marginTop="@dimen/w12"
+                 />
+
+            <RelativeLayout
+                android:id="@+id/tab1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/w115"
+                android:background="@drawable/insurance_knowlodge_bg"
+                >
+                <View
+                    android:id="@+id/centerLine"
+                    android:layout_centerInParent="true"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"/>
+
+
+                <TextView
+                    android:id="@+id/questTv1"
+
+                    android:layout_marginTop="@dimen/w15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/centerLine"
+                    android:text="@string/insureance_home_question_text1"
+                    android:textColor="#4e8cef"
+                    android:textSize="@dimen/w14" />
+
+                <TextView
+                    android:layout_marginLeft="@dimen/w15"
+                    android:layout_toRightOf="@id/centerLine"
+                    android:id="@+id/questTv2"
+                    android:layout_marginTop="@dimen/w22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/insureance_home_question_text2"
+                    android:textColor="#fd9b01"
+                    android:textSize="@dimen/w11" />
+
+                <TextView
+                    android:id="@+id/questTv3"
+                    android:layout_centerHorizontal="true"
+                    android:paddingRight="@dimen/w30"
+                    android:layout_marginTop="@dimen/w10"
+                    android:layout_below="@id/questTv2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/insureance_home_question_text3"
+                    android:textColor="#ff5c5c"
+                    android:textSize="@dimen/w13" />
+
+                <Button
+                    android:id="@+id/insuranceKnowledgeEntry"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_below="@id/questTv3"
+                    android:layout_width="@dimen/w150"
+                    android:layout_height="@dimen/w30"
+                    android:layout_marginTop="@dimen/w10"
+                    android:layout_marginBottom="@dimen/w10"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/btn_white_big_bluecirside_corner_bg"
+                    android:text="保险知识库"
+                    android:textColor="@color/text_blue_common"
+                    android:textSize="@dimen/w15"
+                     />
+
+
+            </RelativeLayout>
+
+           <View style="@style/line_horizontal_common"/>
+
+
+           <View style="@style/line_horizontal_common"
+                android:layout_marginTop="@dimen/w12"
+                />
+
+            <RelativeLayout
+                android:id="@+id/choiceProductRl"
+                android:layout_width="match_parent"
+                android:layout_height="33dp"
+                android:background="@color/WHITE"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="4dp"
+                        android:layout_height="16dp"
+                        android:layout_marginRight="6dp"
+                        android:background="@color/blue_level_2" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="甄选保险"
+                        android:textColor="@color/text_black_common"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+       </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+           >
+
+
+        </android.support.v7.widget.RecyclerView>
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:gravity="center"
+           android:paddingTop="@dimen/w25"
+           android:paddingBottom="@dimen/w25"
+           android:textColor="#bebebe"
+           android:textSize="@dimen/w12"
+           android:drawableLeft="@drawable/insurance_bottom_arrow_left"
+           android:drawableRight="@drawable/insurance_bottom_arrow_right"
+           android:text="不把爱挂嘴边,行动才是保护自己和Ta的最好方式"
+           />
+   </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</com.scwang.smartrefresh.layout.SmartRefreshLayout>

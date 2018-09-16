@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroud_common"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/w90"
+        android:background="@drawable/payment_calendar_top_bg"
+        android:orientation="horizontal">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <com.toobei.common.view.MyTextView
+                android:id="@+id/backMoneyTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.00"
+                android:textColor="@color/text_white_common"
+                android:textSize="@dimen/w20"
+                android:singleLine="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/backMontyExplainTv"
+                app:layout_constraintVertical_chainStyle="packed"/>
+
+            <TextView
+                android:id="@+id/backMontyExplainTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="已回款金额(元)"
+                android:textColor="@color/text_white_light"
+                android:textSize="@dimen/w10"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/backMoneyTv"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
+
+
+        </android.support.constraint.ConstraintLayout>
+
+        <View
+            style="@style/line_vertical_common"
+            android:layout_marginBottom="@dimen/w15"
+            android:layout_marginTop="@dimen/w15"
+            android:background="@color/text_white_light"/>
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.toobei.common.view.MyTextView
+                android:id="@+id/waitbackMoneyTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.00"
+                android:textColor="@color/text_white_common"
+                android:textSize="@dimen/w20"
+                android:singleLine="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/waitbackMontyExplainTv"
+                app:layout_constraintVertical_chainStyle="packed"/>
+
+            <TextView
+                android:id="@+id/waitbackMontyExplainTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="待已回款金额(元)"
+                android:textColor="@color/text_white_light"
+                android:textSize="@dimen/w10"
+                android:singleLine="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/waitbackMoneyTv"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/w47"
+        android:background="@color/black_level_6"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/yearTv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingLeft="@dimen/w15"
+            android:textColor="@color/text_black_common"
+            android:textSize="@dimen/w16"
+            tools:text="2017年" />
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/w10"
+            android:background="#b2b2b2" />
+
+        <com.toobei.common.view.CalendarSlidingTabLayout
+            android:id="@+id/calendarTabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/w47"
+            android:background="@color/black_level_6"
+            android:overScrollMode="never"
+            app:tl_tab_width="@dimen/w50"
+            app:tl_textSelectColor="@color/text_blue_common"
+            app:tl_textUnselectColor="@color/text_black_common"
+            app:tl_textsize="@dimen/w16">
+
+        </com.toobei.common.view.CalendarSlidingTabLayout>
+
+    </LinearLayout>
+
+
+    <com.haibin.calendarview.CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        app:calendar_card_view="com.v5ent.xiubit.view.calendar.PaymentCalendarCardView"
+        app:calendar_height="@dimen/w40"
+        app:current_day_text_color="#b2b2b2"
+        app:current_month_text_color="#b2b2b2"
+        app:other_month_text_color="#e3e3e3"
+        app:scheme_text_color="#b2b2b2"
+        app:selected_text_color="@color/text_white_common"
+        app:week_background="#fff"
+        app:week_text_color="#b2b2b2" />
+
+    <View style="@style/line_horizontal_common" />
+
+    <View
+        style="@style/line_horizontal_common"
+        android:layout_marginTop="@dimen/w12" />
+
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.youth.banner.Banner
+        android:id="@+id/banner_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:indicator_width="14dp"
+        app:indicator_height="4dp"
+        app:image_scale_type="fit_xy"
+        app:delay_time="3000"
+        app:banner_layout="@layout/layout_org_list_banner"
+        app:indicator_drawable_selected="@drawable/shape_banner_indicator_squar_selected"
+        app:indicator_drawable_unselected="@drawable/shape_banner_indicator_squar_unselected">
+
+    </com.youth.banner.Banner>
+
+    </RelativeLayout>

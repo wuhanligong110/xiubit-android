@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+    android:gravity="center">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:background="@color/WHITE"
+        app:cardCornerRadius="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/WHITE"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textTitleTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="24dp"
+                android:gravity="center"
+                android:textColor="@color/text_black_common3e"
+                android:textSize="16sp"
+                android:layout_marginBottom="10dp"
+                android:text="当前环境是："
+                />
+
+            <TextView
+                android:id="@+id/textEnvTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:lineSpacingMultiplier="1.2"
+                android:textColor="@color/text_gray_common_title"
+                android:textSize="16sp"
+                android:text="预发布环境"/>
+
+
+            <View style="@style/line_horizontal_common"/>
+
+
+                <Button
+                    android:id="@+id/negativeBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:background="@drawable/item_click_bg"
+                    android:gravity="center"
+                    android:text="@string/i_know"
+                    android:textColor="@color/text_black_common3e"
+                    android:textSize="17sp"/>
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

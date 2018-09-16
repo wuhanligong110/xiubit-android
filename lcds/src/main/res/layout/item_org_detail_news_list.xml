@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginBottom="12dp"
+              android:background="@drawable/item_click_bg"
+              android:gravity="center_vertical"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:gravity="center_vertical">
+        <LinearLayout
+            android:paddingBottom="12dp"
+            android:paddingTop="12dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text_org_detail_news_name"
+               android:textColor="@color/text_gray_common_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="8dp"
+                android:layout_weight="1"
+                android:text="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+                android:textSize="12dp"/>
+
+            <TextView
+                android:id="@+id/text_org_detail_news_time"
+                android:textColor="@color/text_gray_common"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                tools:text="2017年5月48日"
+                android:textSize="12dp"/>
+        </LinearLayout>
+        
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/img_arrow_right"/>
+
+    </LinearLayout>
+    
+    <View
+        style="@style/line_horizontal_common"/>
+
+    <!--<View-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="1px"-->
+        <!--android:layout_marginLeft="12dp"-->
+        <!--android:background="@drawable/img_invite_line_dash_horizontal"/>-->
+
+</LinearLayout>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/backgroud_common"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="140dp">
+
+        <com.toobei.common.view.loopviewpager.AutoScrollViewPager
+            android:id="@+id/home_image_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginRight="12dp">
+
+            <com.toobei.common.view.loopviewpager.indicator.LinePageIndicator
+                android:id="@+id/home_indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        style="@style/line_horizontal_common"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="76dp"
+        android:background="@color/WHITE"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/home_head_learn_about_us_productLL"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/img_home_head_learn_about_us"/>
+
+                <TextView
+                    style="@style/text_small_common64_size_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:text="了解我们"
+                    />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/home_head_fresh_strategyLL"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/img_home_head_fresh_strategy"/>
+
+                <TextView
+                    android:id="@+id/textView"
+                    style="@style/text_small_common64_size_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:text="新手攻略"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/home_head_invite_friendLL"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/img_home_head_invite_friend"/>
+
+                <TextView
+                    style="@style/text_small_common64_size_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:text="邀请朋友"
+                    />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="12dp"/>
+
+</LinearLayout>
+

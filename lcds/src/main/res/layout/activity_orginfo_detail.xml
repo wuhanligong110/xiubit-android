@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ff000000"/>
+
+        <com.toobei.common.view.photoview.PhotoView
+            android:id="@+id/img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </FrameLayout>
+
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/refreshView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/orgDetialRv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:overScrollMode="never"
+                        >
+
+                    </android.support.v7.widget.RecyclerView>
+                        
+
+
+            <!--todo V1.2.1-->
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+
+
+
+</FrameLayout>
+

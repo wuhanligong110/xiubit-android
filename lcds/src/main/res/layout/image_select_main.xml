@@ -1,0 +1,60 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+
+        <GridView
+            android:id="@+id/id_gridView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:cacheColorHint="@android:color/transparent"
+            android:clipChildren="true"
+            android:gravity="center"
+            android:horizontalSpacing="3dip"
+            android:listSelector="@android:color/transparent"
+            android:numColumns="3"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="3dip" >
+        </GridView>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/id_bottom_ly"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:layout_alignParentBottom="true"
+        android:background="#80000000"
+        android:clickable="true" >
+
+        <TextView
+            android:id="@+id/id_choose_dir"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:drawableRight="@drawable/img_image_choose_dir_icon"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="所有图片"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/id_total_count"
+            android:layout_width="50dip"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="0张"
+            android:textColor="@android:color/white"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

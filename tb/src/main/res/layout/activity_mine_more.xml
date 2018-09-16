@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xsl781="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroud_common"
+    android:orientation="vertical" >
+
+    <include layout="@layout/header_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@color/WHITE"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <org.xsl781.ui.view.RoundImageViewAdvance
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/iv_mine_more_icon"
+            xsl781:borderRadius="8dp"
+            xsl781:riv_type="round" />
+
+        <TextView
+            style="@style/text_small_black_size_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_margin="6dp"
+            android:text="@string/app_name" />
+
+        <TextView
+            android:layout_marginTop="12dp"
+            android:id="@+id/text_version"
+            style="@style/text_small_gray_size_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="version"
+            android:textSize="8sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/WHITE"
+        android:orientation="vertical" >
+
+        <View style="@style/line_horizontal_common" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/mine_about_rl"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/mine_common_ll_height"
+                android:background="@drawable/item_click_bg"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp" >
+
+                <TextView
+                    style="@style/text_custom_item_commom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="@string/about_we" />
+
+                <ImageView
+                    android:id="@+id/mine_about_go_right"
+                    style="@style/mine_sign_go_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:contentDescription="@string/app_name" />
+
+                <TextView
+                    style="@style/text_small_gray_size_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@id/mine_about_go_right"
+                    android:text="0"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+
+            <View
+                style="@style/line_horizontal_common"
+                android:layout_marginLeft="12dp" />
+
+            <RelativeLayout
+                android:id="@+id/mine_service_tel_rl"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/mine_common_ll_height"
+                android:background="@drawable/item_click_bg"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp" >
+
+                <TextView
+                    style="@style/text_custom_item_commom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="@string/service_tel" />
+
+                <ImageView
+                    android:id="@+id/mine_service_tel_go_right"
+                    style="@style/mine_sign_go_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:contentDescription="@string/app_name" />
+
+                <TextView
+                    android:id="@+id/text_mine_service_tel_content"
+                    style="@style/text_small_gray_size_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@id/mine_service_tel_go_right" />
+            </RelativeLayout>
+
+            <View
+                style="@style/line_horizontal_common"
+                android:layout_marginLeft="12dp" />
+
+            <RelativeLayout
+                android:id="@+id/mine_wechat_we_rl"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/mine_common_ll_height"
+                android:background="@drawable/item_click_bg"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp" >
+
+                <TextView
+                    style="@style/text_custom_item_commom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="@string/wechat_we" />
+
+                <ImageView
+                    android:id="@+id/mine_wechat_we_go_right"
+                    style="@style/mine_sign_go_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:contentDescription="@string/app_name" />
+
+                <TextView
+                    android:id="@+id/text_mine_wechat_we_content"
+                    style="@style/text_small_gray_size_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@id/mine_wechat_we_go_right" />
+            </RelativeLayout>
+
+            <View
+                style="@style/line_horizontal_common"
+                android:layout_marginLeft="12dp" />
+
+            <RelativeLayout
+                android:id="@+id/mine_email_rl"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/mine_common_ll_height"
+                android:background="@drawable/item_click_bg"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp" >
+
+                <TextView
+                    style="@style/text_custom_item_commom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="@string/email" />
+
+                <ImageView
+                    style="@style/mine_sign_go_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:contentDescription="@string/app_name" />
+
+                <TextView
+                     android:id="@+id/text_service_mail"
+                    style="@style/text_small_gray_size_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:text="" />
+            </RelativeLayout>
+
+            <View
+                style="@style/line_horizontal_common"
+                android:layout_marginLeft="12dp" />
+
+            <RelativeLayout
+                android:id="@+id/mine_feedback_rl"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/mine_common_ll_height"
+                android:background="@drawable/item_click_bg"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp" >
+
+                <TextView
+                    style="@style/text_custom_item_commom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="@string/feedback" />
+
+                <ImageView
+                    android:id="@+id/mine_feedback_go_right"
+                    style="@style/mine_sign_go_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:contentDescription="@string/app_name" />
+
+                <TextView
+                    style="@style/text_small_gray_size_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@id/mine_feedback_go_right"
+                    android:text="0"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View style="@style/line_horizontal_common" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_setting_logout"
+        style="@style/btn_login_style"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="25dp"
+        android:text="@string/logOut" />
+
+</LinearLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/w44"
+        android:paddingLeft="@dimen/w15"
+        android:paddingRight="@dimen/w15"
+        android:gravity="center_vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/topnews_tag_ic"
+        android:layout_marginRight="@dimen/w8"/>
+
+    <TextView
+        android:id="@+id/newsTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:textSize="@dimen/w16"
+        android:textColor="@color/text_black_common"
+        />
+    </LinearLayout>
+
+    <View
+        android:layout_alignParentBottom="true"
+        style="@style/line_horizontal_common"/>
+</RelativeLayout>

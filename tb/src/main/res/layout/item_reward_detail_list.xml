@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:background="@color/WHITE"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/linearLayout1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tranNameTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="销售佣金"
+                    android:textColor="@color/text_black_common"
+                    android:textSize="16dp"/>
+
+                <TextView
+                    android:id="@+id/userTypeTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="()"
+                    android:textColor="@color/text_gray_common"
+                    android:textSize="16dp"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tranTimeTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/linearLayout1"
+                android:text="0.00"
+                android:textColor="@color/text_gray_common"
+                android:textSize="12dp"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/amountTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="6dp"
+                android:text="0.00"
+                android:textColor="@color/text_red_common"
+                android:textSize="16dp"/>
+
+            <!--<ImageView-->
+                <!--android:id="@+id/amountQuesIv"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:src="@drawable/iv_mine_questions"/>-->
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        style="@style/line_horizontal_common"/>
+
+    <RelativeLayout
+        android:background="@color/WHITE"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:orientation="vertical"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/remarkTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="备注说明"
+                android:textColor="@color/text_gray_common"
+                android:textSize="12dp"/>
+
+            <ImageView
+
+                android:id="@+id/remarkQuesIv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="6dp"
+                android:src="@drawable/iv_mine_questions"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/withdrawRemarkTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="预计1111111到账"
+            android:textColor="@color/text_gray_common"
+            android:textSize="12dp"
+            />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="12dp"
+        android:background="@color/backgroud_common"/>
+
+</LinearLayout>

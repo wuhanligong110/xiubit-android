@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.toobei.common.view.InPutLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroud_common"
+    android:orientation="vertical"
+    tools:context="com.v5ent.xiubit.activity.AccountBookEditActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none"
+        android:overScrollMode="never">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+    <View
+        style="@style/line_horizontal_common"
+        android:layout_marginTop="12dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:background="@color/WHITE">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:textColor="@color/text_gray_common_title"
+            android:text="投资去向"
+            android:layout_marginRight="15dp"/>
+
+        <EditText
+            android:id="@+id/investDirectionEt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/WHITE"
+            android:textCursorDrawable="@drawable/edittext_cursor_shape"
+            android:hint="输入投入去向(必填)"
+            android:textSize="13dp"
+            android:textColorHint="@color/text_color_hint_common"
+            android:textColor="@color/text_black_common"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:background="@color/WHITE">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:textColor="@color/text_gray_common_title"
+            android:text="投资本金"
+            android:layout_marginRight="15dp"/>
+
+        <EditText
+            android:id="@+id/investAmtEt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/WHITE"
+            android:textCursorDrawable="@drawable/edittext_cursor_shape"
+            android:hint="不包含抵扣金额及收益 (必填)"
+            android:textSize="13dp"
+            android:inputType="number|numberDecimal"
+            android:textColorHint="@color/text_color_hint_common"
+            android:textColor="@color/text_black_common"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:background="@color/WHITE">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:textColor="@color/text_gray_common_title"
+            android:text="待收收益"
+            android:layout_marginRight="15dp"/>
+
+        <EditText
+            android:id="@+id/waitProfitEt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/WHITE"
+            android:inputType="number|numberDecimal"
+            android:textCursorDrawable="@drawable/edittext_cursor_shape"
+            android:hint="包含奖励/红包/投资收益等 (选填)"
+            android:textSize="13dp"
+            android:textColorHint="@color/text_color_hint_common"
+            android:textColor="@color/text_black_common"/>
+    </LinearLayout>
+
+    <View
+        style="@style/line_horizontal_common"/>
+
+
+    <View
+        android:layout_marginTop="12dp"
+        style="@style/line_horizontal_common"/>
+
+    <EditText
+        android:id="@+id/remarkEt"
+        android:layout_width="match_parent"
+        android:layout_height="149dp"
+        android:background="@color/WHITE"
+        android:textCursorDrawable="@drawable/edittext_cursor_shape"
+        android:hint="备注：字数不超过120字 (选填)"
+        android:textSize="13dp"
+        android:gravity="start"
+        android:paddingTop="12dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:maxLength="120"
+        android:textColorHint="@color/text_color_hint_common"
+        android:textColor="@color/text_black_common"/>
+    </LinearLayout>
+
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/completeBtn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/text_blue_common"
+        android:textSize="16dp"
+        android:textColor="@color/text_white_common"
+        android:text="完成记账"/>
+
+
+</com.toobei.common.view.InPutLinearLayout>

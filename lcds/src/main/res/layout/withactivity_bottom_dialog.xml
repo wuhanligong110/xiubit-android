@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white">
+    <View
+        style="@style/line_horizontal_common"/>
+
+    <TextView
+        android:id="@+id/withdrawRecordTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="提现记录"
+        android:textSize="@dimen/w16"
+        android:textColor="@color/text_blue_common"
+        android:padding="@dimen/w12"/>
+
+    <View
+        style="@style/line_horizontal_common"/>
+
+    <TextView
+        android:id="@+id/withdrawQuseTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="@dimen/w16"
+        android:textColor="@color/text_blue_common"
+        android:text="提现常用问题"
+        android:padding="@dimen/w12"/>
+    <View
+        style="@style/line_horizontal_common"/>
+
+    <TextView
+        android:id="@+id/cancleTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="@dimen/w16"
+        android:textColor="@color/text_gray_common"
+        android:text="取消"
+        android:padding="@dimen/w12"/>
+
+</LinearLayout>

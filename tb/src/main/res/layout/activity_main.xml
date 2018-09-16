@@ -1,0 +1,166 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:id="@+id/root_view"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_margin="0dp"
+              android:background="@color/backgroud_common"
+              android:orientation="vertical"
+              android:padding="0dp">
+
+    <RelativeLayout
+        android:id="@+id/headRe"
+        android:layout_width="fill_parent"
+        android:layout_height="44dp"
+        android:background="@color/top_title_bg">
+
+        <ImageView
+            android:id="@+id/moreIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="7dp"
+            android:layout_marginRight="6dp"
+            android:padding="6dp"
+            android:src="@drawable/img_mine_add_icon"/>
+
+        <ImageView
+            android:id="@+id/infoIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="7dp"
+            android:layout_marginRight="14dp"
+            android:layout_toLeftOf="@id/moreIv"
+            android:padding="7dp"
+            android:src="@drawable/img_mine_msg_icon"/>
+
+        <TextView
+            android:id="@+id/msgCountTv"
+            style="@style/text_small_white_size_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="23dp"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/moreIv"
+            android:background="@drawable/img_mine_msg_bg"
+            android:gravity="center"
+            android:text="0"
+            android:visibility="invisible"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="32dp"
+            android:layout_marginRight="9dp"
+            android:src="@drawable/iv_point"
+            android:visibility="invisible"/>
+
+        <TextView
+            android:id="@+id/titleTv"
+            style="@style/top_text_color_size_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="18dp"
+            android:text="shareTitle"/>
+
+
+    </RelativeLayout>
+
+    <!-- 核心内容区域 -->
+    <View style="@style/line_horizontal_common"></View>
+
+    <FrameLayout
+        android:id="@+id/fragment_box"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_weight="1"
+        android:padding="0dp">
+    </FrameLayout>
+    <!-- 底部工具栏 -->
+    <View style="@style/line_horizontal_common"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/WHITE">
+
+        <RadioGroup
+            android:id="@+id/mainActivity_RadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/main_btn_home"
+                style="@style/GuideButton_MyRadioButton"
+                android:drawableTop="@drawable/home_selector"
+                android:text="@string/main_btn_recommend"/>
+
+            <RadioButton
+                android:id="@+id/main_btn_financing"
+                style="@style/GuideButton_MyRadioButton"
+                android:drawableTop="@drawable/financing_selector"
+                android:text="@string/main_btn_product"/>
+
+            <RadioButton
+                android:id="@+id/main_btn_interaction"
+                style="@style/GuideButton_MyRadioButton"
+                android:drawableTop="@drawable/interaction_selector"
+                android:text="@string/main_btn_institution"/>
+
+            <RadioButton
+                android:id="@+id/main_btn_mine"
+                style="@style/GuideButton_MyRadioButton"
+                android:drawableTop="@drawable/mine_selector"
+                android:text="@string/main_btn_mine"/>
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"/>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"/>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/iv_point"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"/>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

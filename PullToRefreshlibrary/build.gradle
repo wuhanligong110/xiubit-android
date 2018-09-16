@@ -1,0 +1,20 @@
+apply plugin: 'com.android.library'
+
+dependencies {
+    api fileTree(include: '*.jar', dir: 'libs')
+}
+
+android {
+    compileSdkVersion 23
+//    buildToolsVersion '26.0.2'
+
+
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+}
+repositories {
+    mavenCentral()
+}

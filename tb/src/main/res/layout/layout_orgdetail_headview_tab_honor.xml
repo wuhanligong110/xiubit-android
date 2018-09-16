@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--机构详情  平台实力->平台荣誉 -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/instituion_honorLL"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+
+    <TextView
+        style="@style/text_middle15_gray_common64_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:height="40dp"
+        android:gravity="center_vertical"
+        android:paddingTop="10dp"
+        android:text="平台荣誉"
+        android:textStyle="bold"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
+
+    <TextView
+        android:id="@+id/text_orginfor_detail_tab_honor"
+        style="@style/text_small_gray_size_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/WHITE"
+        android:lineSpacingExtra="6sp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+
+        />
+    <!--间隔-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="12dp"/>
+    <!--平台证书图片-->
+    <ImageView
+
+        android:id="@+id/orginfor_detail_honor_img"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:scaleType="fitXY"
+        android:visibility="gone"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/orginfor_detail_honor_recycleView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"/>
+</LinearLayout>
+
+
+
+

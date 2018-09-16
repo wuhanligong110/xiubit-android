@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="roundedimageview">
+        <attr name="border_thickness" format="dimension" />
+		<attr name="border_inside_color" format="color" />
+		<attr name="border_outside_color" format="color" />
+		<attr name="user_praise_flag" format="boolean" />
+    </declare-styleable>
+    
+    <declare-styleable name="ImgListView">
+        <attr name="headimage" format="reference|color" />
+    </declare-styleable>
+    
+    <declare-styleable name="PlayBtn">
+        <attr name="left" format="boolean" />
+    </declare-styleable>
+    
+    <declare-styleable name="swipelistviewstyle">    
+        <attr name="right_width" format="dimension"></attr>  
+    </declare-styleable>
+    
+    <attr name="borderRadius" format="dimension" />
+    <attr name="riv_type">
+        <enum name="circle" value="0" />
+        <enum name="round" value="1" />
+    </attr>
+
+    <declare-styleable name="RoundImageViewAdvance">
+        <attr name="borderRadius" />
+        <attr name="riv_type" />
+    </declare-styleable>
+</resources>

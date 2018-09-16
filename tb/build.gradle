@@ -1,0 +1,160 @@
+apply plugin: 'com.android.application'
+//apply plugin: 'com.neenbedankt.android-apt'
+apply plugin: 'com.jakewharton.butterknife'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'  //一些扩展功能，比如自动findview
+apply plugin: 'kotlin-kapt' //注解
+dependencies {
+    implementation fileTree(include: '*.jar', dir: 'libs')
+    implementation project(':tophlc')
+    implementation 'com.jakewharton:butterknife:8.2.1'
+    kapt 'com.jakewharton:butterknife-compiler:8.2.1'
+}
+
+android {
+    signingConfigs {
+        releaseKey {
+            keyAlias 'tophlcToobei'
+            keyPassword 'toobei@2016'
+            storeFile file('tophlc_toobei.jks')
+            storePassword 'toobei@2016'
+        }
+    }
+    compileSdkVersion COMPILE_SDK_VERSION
+//    buildToolsVersion '26.0.2'
+//    todo  只需在主Module的gradle中配置 useLibrary ‘org.apache.http.legacy‘
+
+    useLibrary 'org.apache.http.legacy'
+    defaultConfig {
+        targetSdkVersion TARGET_SDK_VERSION
+        minSdkVersion MIN_SDK_VERSION  //4.1
+        //gradle 的配置会覆盖清单文件中的配置
+        applicationId "com.toobei.tb"
+        multiDexEnabled true
+        versionName "1.1.4"
+        versionCode 260
+        flavorDimensions "1024"
+        ndk {
+            abiFilters "armeabi", "armeabi-v7a", "x86_64"
+        }
+    }
+
+    //打包(带版本号 和版本名)
+    applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            outputFileName = ( /*  defaultConfig.applicationId*/ "toobei" + "_V" +
+                    defaultConfig.versionName + "_" + defaultConfig.versionCode + "_"
+                    + "${variant.buildType.name}" + "_" + "${variant.productFlavors[0].name}" +
+                    ".apk")
+
+        }
+    }
+    //  "HelloWord-${variant.buildType.name}-v${variant.versionName}-${variant.productFlavors[0].name}-${releaseTime()}.apk".toLowerCase()
+
+    // 显示警告和错误详情
+    /* 注: 某些输入文件使用或覆盖了已过时的 API。
+     注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+     注: 某些输入文件使用了未经检查或不安全的操作。
+     注: 有关详细信息, 请使用 -Xlint:unchecked 重新编译*/
+    allprojects {
+        gradle.projectsEvaluated {
+            tasks.withType(JavaCompile) {
+                options.compilerArgs << "-Xlint:unchecked" << "-Xlint:deprecation"
+            }
+        }
+    }
+
+    // 构建类型
+    buildTypes {
+        release { //正式环境
+
+//            minifyEnabled true  //minifyEnabled主要用来控制是否运行混淆的。
+//            shrinkResources true //去掉无用的资源
+            zipAlignEnabled true //zip优化
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-project.txt'
+            buildConfigField "boolean", "IS_DEBUG", "Boolean.parseBoolean(\"false\")"
+            buildConfigField "boolean", "LogOpen", "true"   //todo 上线后改为false
+            signingConfig signingConfigs.releaseKey
+        }
+        debug {
+            zipAlignEnabled true //zip优化
+            buildConfigField "boolean", "IS_DEBUG", "Boolean.parseBoolean(\"true\")"
+            buildConfigField "boolean", "LogOpen", "true"
+        }
+    }
+    //防止打包时 项目用了系统应用才可以使用的权限报错
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+    productFlavors {
+        //android studio调试时使用               android studio instantRun 在多进程下无法使用 动态替换推送的进程名
+        instant {
+            flavorDimensions "1024"
+            //t呗H5地址
+            buildConfigField "String", "TOOBEI_H5_BASE_URL", "\"https://pre.bethye.top/app\""
+            //api地址
+            buildConfigField "String", "BASE_URL_HTTPS", "\"https://premarket.bethye.top/rest/api\""
+            buildConfigField "boolean", "LogOpen", "true"
+            manifestPlaceholders = [GETUI_PUSH_SERVICE     : "",
+                                    GETUI_APP_ID           : "HtrAzGw2P9A6Di9ju1JPe4",
+                                    GETUI_APP_KEY          : "Uly3gAY5RE9MpAjPTd0SF",
+                                    GETUI_APP_SECRET       : "KCx3IBFfJMAIFpXDx6bg7A",
+                                    UMENG_APP_KEY          : "585244eac62dca4b1b000baa",
+                                    GETUI_PUSH_PROCESS_NAME: ""]
+
+        }
+        // 预发布环境
+        pre {
+            flavorDimensions "1024"
+            buildConfigField "String", "BASE_URL_HTTPS", "\"https://premarket.bethye.top/rest/api\""
+            //H5地址
+            //  buildConfigField "String", "LCDS_SERVER_DOMAIN_URL", "\"http://preliecai.tophlc.com\""
+            buildConfigField "String", "TOOBEI_H5_BASE_URL", "\"https://pre.bethye.top/app\""
+            buildConfigField "boolean", "LogOpen", "true"
+            manifestPlaceholders = [GETUI_PUSH_SERVICE     : ":tb_pushservice",
+                                    GETUI_APP_ID           : "HtrAzGw2P9A6Di9ju1JPe4",
+                                    GETUI_APP_KEY          : "Uly3gAY5RE9MpAjPTd0SF",
+                                    GETUI_APP_SECRET       : "KCx3IBFfJMAIFpXDx6bg7A",
+                                    UMENG_APP_KEY          : "585244eac62dca4b1b000baa",
+                                    GETUI_PUSH_PROCESS_NAME: ":pushservice"]
+        }
+        //开发环境
+        dev {
+            flavorDimensions "1024"
+            buildConfigField "String", "BASE_URL_HTTPS", "\"https://10.16.0.205:6810/rest/api\""
+            //H5地址
+            buildConfigField "String", "TOOBEI_H5_BASE_URL", "\"https://pre.bethye.top/app\""
+            buildConfigField "boolean", "LogOpen", "true"
+            manifestPlaceholders = [GETUI_PUSH_SERVICE     : "",
+                                    GETUI_APP_ID           : "HtrAzGw2P9A6Di9ju1JPe4",
+                                    GETUI_APP_KEY          : "Uly3gAY5RE9MpAjPTd0SF",
+                                    GETUI_APP_SECRET       : "KCx3IBFfJMAIFpXDx6bg7A",
+                                    UMENG_APP_KEY          : "585244eac62dca4b1b000baa",
+                                    GETUI_PUSH_PROCESS_NAME: ":pushservice"]
+        }
+        //正式环境  正式打包时选择这个
+        rel {
+            flavorDimensions "1024"
+            buildConfigField "String", "BASE_URL_HTTPS", "\"http://market.bethye.top/rest/api\""
+            //H5地址
+            buildConfigField "String", "TOOBEI_H5_BASE_URL", "\"http://bethye.top/app\""
+            buildConfigField "boolean", "LogOpen", "false"
+            manifestPlaceholders = [GETUI_PUSH_SERVICE     : ":pushservice",
+                                    GETUI_APP_ID           : "lFO1GPmpwq9ARt2AnPOPS3",
+                                    GETUI_APP_KEY          : "hDVp8R0mop5PMpCqBZrCc1",
+                                    GETUI_APP_SECRET       : "p3hELA3thk6ptOxQTMQcn",
+                                    UMENG_APP_KEY          : "5852456f677baa38e3001398",
+//                                    UMENG_APP_KEY          : "585244eac62dca4b1b000baa", //todo 上线前改回来
+                                    GETUI_PUSH_PROCESS_NAME: ":pushservice"]
+
+
+        }
+
+    }
+}
+
+repositories {
+    google()
+    mavenCentral()
+}

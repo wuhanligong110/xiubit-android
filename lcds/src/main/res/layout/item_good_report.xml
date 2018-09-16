@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/rootView"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:paddingLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="67dp"
+            android:background="@drawable/good_report_item_bg"
+            android:orientation="vertical"
+            android:gravity="center_vertical">
+            
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/WHITE"
+                android:text="出单"
+                android:textSize="9dp"/>
+            
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <com.v5ent.xiubit.view.MyTextView
+                    android:id="@+id/amountTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/WHITE"
+                    android:text=""
+                    android:textSize="16dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/WHITE"
+                    android:text="元"
+                    android:textSize="9dp"/>
+            </LinearLayout>
+
+            
+
+        </LinearLayout>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@color/WHITE"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp">
+
+            <TextView
+                android:id="@+id/nameTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:text=""
+                android:textColor="@color/text_black_common"
+                android:textSize="12dp"
+                />
+
+            <TextView
+                android:id="@+id/dataTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/text_black_common"
+                android:textSize="10dp"
+                />
+        </LinearLayout>
+
+
+    </LinearLayout>
+    
+    <ImageView
+        android:id="@+id/alphabgIv"
+        android:background="#66000000"
+        android:layout_width="match_parent"
+        android:layout_height="97dp"/>
+
+    <ImageView
+        android:id="@+id/selectIv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="6dp"
+        android:layout_marginRight="6dp"
+        android:src="@drawable/unselect_image_box"/>
+    
+</RelativeLayout>

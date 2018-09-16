@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/text_01"
+        style="@style/text_middle16_black6c_style"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/item_click_bg"
+        android:gravity="center"
+        android:text="邀请理财师"
+        />
+
+    <View style="@style/line_horizontal_common" />
+
+    <TextView
+        android:id="@+id/text_02"
+        style="@style/text_middle16_black6c_style"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/item_click_bg"
+        android:gravity="center"
+        android:text="邀请客户" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp" />
+
+    <TextView
+        android:id="@+id/text_cancel"
+        style="@style/text_middle16_black6c_style"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/item_click_bg"
+        android:gravity="center"
+        android:text="取消" />
+</LinearLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/backgroud_common"
+              android:orientation="vertical">
+
+    <com.flyco.tablayout.CommonTabLayout
+        android:background="@color/WHITE"
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        app:tl_indicator_color="@color/text_blue_common"
+        app:tl_indicator_width="100dp"
+        app:tl_textsize="16dp"
+        app:tl_textSelectColor="@color/text_blue_common"
+        app:tl_textUnselectColor="@color/text_black_common"
+        app:tl_divider_color="@color/line_common"
+        app:tl_divider_width="1px"
+        app:tl_divider_padding="6dp"/>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1">
+
+
+    <com.toobei.common.view.MyWebView
+        android:id="@+id/webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+
+
+</RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        >
+        <ImageView
+            android:text="下一页"
+            android:textColor="@color/text_black_common"
+            android:id="@+id/nextIv"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:scaleType="center"
+            android:src="@drawable/next_page"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:id="@+id/shareTv"
+            android:background="@color/text_blue_common"
+            android:textColor="@color/WHITE"
+            android:gravity="center"
+            android:text="一键分享"
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+</LinearLayout>

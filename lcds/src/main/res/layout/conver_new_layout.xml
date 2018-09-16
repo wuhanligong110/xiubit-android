@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootview"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/backgroud_common"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="138dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/WHITE"
+            android:orientation="horizontal"
+            android:paddingLeft="12dp" >
+
+            <TextView
+                android:id="@+id/text_customer_names"
+                style="@style/text_middle_black_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="6dp"
+                android:layout_weight="1"
+                android:text="客户:" />
+
+            <ImageView
+                android:id="@+id/btn_add_customer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:src="@drawable/img_conver_new_add_customer" />
+        </LinearLayout>
+    </ScrollView>
+    <!-- 輸入框 -->
+
+    <include layout="@layout/chat_input" />
+
+</RelativeLayout><!-- </com.tophlc.lhlcs.view.CustomInsetsRelativeLayout> -->

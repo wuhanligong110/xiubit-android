@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="278dp"
+              android:layout_margin="0dp"
+              android:background="@color/WHITE"
+              android:gravity="center"
+              android:orientation="vertical"
+              android:padding="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/text_cancel"
+            style="@style/text_middle_black_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="12dp"
+            android:text="@string/cancel"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/text_title"
+            style="@style/text_middle_black_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/text_complete"
+            style="@style/text_middle_black_style"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:layout_gravity="right"
+            android:layout_marginRight="12dp"
+            android:gravity="center_vertical"
+            android:text="@string/confirm"/>
+    </LinearLayout>
+
+
+    <View style="@style/line_horizontal_common"/>
+
+    <com.toobei.common.view.wheel.WheelView
+        android:id="@+id/wheelview"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/WHITE"/>
+
+</LinearLayout>

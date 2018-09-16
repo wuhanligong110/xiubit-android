@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <TextView
+        android:id="@+id/titleTv"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/WHITE"
+        android:textSize="16dp"
+        android:textColor="@color/text_black_common"
+        android:gravity="center"/>
+
+    <LinearLayout
+        android:background="@color/WHITE"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/yearTv"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:textSize="16dp"
+            android:text="2099"
+            android:gravity="center"
+            android:textColor="@color/text_black_common"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/monthTitleRv"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:overScrollMode="never">
+
+        </android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal"
+        android:background="@color/WHITE">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textSize="16dp"
+            android:textColor="@color/text_black_common"
+            android:text="日"
+            android:gravity="center"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textSize="16dp"
+            android:textColor="@color/text_black_common"
+            android:text="一"
+            android:gravity="center"
+            android:layout_height="match_parent" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textSize="16dp"
+            android:textColor="@color/text_black_common"
+            android:text="二"
+            android:gravity="center"
+            android:layout_height="match_parent" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textSize="16dp"
+            android:textColor="@color/text_black_common"
+            android:text="三"
+            android:gravity="center"
+            android:layout_height="match_parent" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textSize="16dp"
+            android:textColor="@color/text_black_common"
+            android:text="四"
+            android:gravity="center"
+            android:layout_height="match_parent" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textSize="16dp"
+            android:textColor="@color/text_black_common"
+            android:text="五"
+            android:gravity="center"
+            android:layout_height="match_parent" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textSize="16dp"
+            android:textColor="@color/text_black_common"
+            android:text="六"
+            android:gravity="center"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <com.view.calendar.CalendarRecyclerView
+        android:id="@+id/calendarRv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never">
+
+    </com.view.calendar.CalendarRecyclerView>
+
+</LinearLayout>

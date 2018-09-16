@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+
+  <item type="id" name="msg_notice_refresh_view"/>
+  <item type="id" name="msg_person_refresh_view"/>
+  <item type="id" name="msg_person_delete_refresh_view"/>
+  
+  <item type="id" name="provinceSelectWheelPopup"/>
+  <item type="id" name="citySelectWheelPopup"/>
+</resources>

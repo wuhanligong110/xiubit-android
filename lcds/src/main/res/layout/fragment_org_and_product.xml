@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tl="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <View
+        android:id="@+id/status_bar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/text_blue_common"
+        android:visibility="visible"/>
+    
+    <RelativeLayout
+        android:id="@+id/headViewLi"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:background="@color/text_blue_common"
+        android:orientation="vertical">
+
+
+            <com.flyco.tablayout.SlidingTabLayout
+                android:layout_centerHorizontal="true"
+                android:id="@+id/tabLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                tl:tl_indicator_color="@color/WHITE"
+                tl:tl_indicator_width="35dp"
+                tl:tl_textSelectColor="@color/text_white_common"
+                tl:tl_textUnselectColor="#cbdfff"
+                tl:tl_indicator_margin_bottom="4dp"
+                tl:tl_tab_space_equal="true"
+                tl:tl_tab_padding="@dimen/w15"
+                tl:tl_textsize="18dp"/>
+        
+        <ImageView
+            android:id="@+id/searchIv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:paddingRight="15dp"
+            android:paddingLeft="15dp"
+            android:src="@drawable/icon_search_righttop"
+            android:visibility="gone"/>
+
+
+    </RelativeLayout>
+    
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vPager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center"
+        android:layout_weight="1.0"
+        android:flipInterval="30"
+        android:persistentDrawingCache="animation"
+        android:overScrollMode="never"
+        />
+    
+
+</LinearLayout>

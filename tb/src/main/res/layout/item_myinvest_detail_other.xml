@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/WHITE"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:paddingLeft="12dp"
+        android:paddingTop="12dp"
+        >
+
+        <TextView
+            android:id="@+id/productNameTv"
+            style="@style/text_middle18_black_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="95dp"
+            android:singleLine="true"
+            android:text="郑州华南城资产收益项目"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/productNameTv"
+            android:layout_marginTop="4dp">
+
+            <TextView
+                style="@style/text_small12_gray_common96_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="购买日期:"/>
+
+            <TextView
+                android:id="@+id/timeTv"
+                style="@style/text_small12_gray_common96_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="2999-01-30"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/goto_invest_detail_Li"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/text_small12_gray_common96_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="查看，赎回"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:src="@drawable/img_arrow_right"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        style="@style/line_horizontal_dotted_line"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                style="@style/text_small12_gray_common96_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="投资金额(元)"/>
+
+            <TextView
+                android:id="@+id/investAmountTv"
+                style="@style/text_middle18_black_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="00.00"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                style="@style/text_small12_gray_common96_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="产品期限"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp">
+
+                <TextView
+                    android:id="@+id/deadLineTv"
+                    style="@style/text_middle18_black_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"/>
+
+                <TextView
+                    android:id="@+id/deadLineType"
+                    style="@style/text_small12_black_bold_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:text="天"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <View
+            style="@style/line_horizontal_common_mine"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/divideView"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:background="@color/backgroud_common"/>
+</LinearLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <TextView
+        android:id="@+id/customer_list_popu_textview"
+        android:layout_width="100dp"
+        android:layout_height="36dp"
+        android:background="@drawable/btn_customer_list_poputext"
+        android:text="@string/customer_add_important_group"
+        android:paddingBottom="5dp"
+        android:gravity="center"
+        android:textColor="@color/WHITE"
+        android:textSize="10sp" />
+
+</RelativeLayout>

@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/backgroud_common"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/topRedTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/text_top_remind_bg"
+        android:gravity="center_vertical"
+        android:lineSpacingExtra="4dp"
+        android:paddingBottom="8dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="8dp"
+        android:text=""
+        android:textColor="@color/text_black_common"
+        android:textSize="12dp"
+        android:visibility="gone" />
+
+    <View style="@style/line_horizontal_common" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="177dp"
+        android:background="@drawable/orgdetail_top_bg"
+        android:paddingLeft="@dimen/w15"
+        android:paddingTop="35dp">
+
+        <ImageView
+            android:id="@+id/orgInfoIV"
+            android:layout_width="69dp"
+            android:layout_height="69dp"
+            android:scaleType="fitXY" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/w15"
+            android:layout_toRightOf="@id/orgInfoIV"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/orgNameTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="机构名"
+                    android:textColor="@color/text_black_common"
+                    android:textSize="16dp" />
+
+                <LinearLayout
+                    android:id="@+id/org_tag_contant_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/w6"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="年化收益率："
+                    android:textColor="@color/text_gray_common"
+                    android:textSize="@dimen/w12" />
+
+                <com.v5ent.xiubit.view.MyTextView
+                    android:id="@+id/yearProfitTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0.0%~0.0%"
+                    android:textColor="@color/text_black_common"
+                    android:textSize="@dimen/w12" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/w4"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="年化佣金率："
+                        android:textColor="@color/text_gray_common"
+                        android:textSize="@dimen/w12" />
+
+                    <com.v5ent.xiubit.view.MyTextView
+                        android:id="@+id/orgFeeRatioTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0.0%"
+                        android:textColor="@color/text_red_common"
+                        android:textSize="@dimen/w12" />
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/text_orginfor_detail_orgAdvantage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/orgInfoIV"
+            android:layout_marginRight="@dimen/w15"
+            android:layout_marginTop="25dp"
+            android:gravity="left"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/text_black_common"
+            android:textSize="14dp" />
+
+    </RelativeLayout>
+
+    <View style="@style/line_horizontal_common" />
+
+    <View
+        style="@style/line_horizontal_common"
+        android:layout_marginTop="15dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/WHITE"
+       >
+
+
+        <LinearLayout
+            android:id="@+id/safeLevelEntry"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/w15"
+                android:src="@drawable/org_pj_icon" />
+
+            <TextView
+                android:id="@+id/orgSafeLevelTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="4dp"
+                android:text="综合评级"
+                android:textColor="@color/text_black_common"
+                android:textSize="14dp" />
+        </LinearLayout>
+
+        <View style="@style/line_vertical_common"/>
+
+
+        <LinearLayout
+            android:id="@+id/accountCentreEntry"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/w15"
+                android:src="@drawable/icon_orgdetial_account" />
+
+            <TextView
+                android:id="@+id/myAccountTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="4dp"
+                android:text="我的账户"
+                android:textColor="@color/text_black_common"
+                android:textSize="14dp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <!-- 标签-->
+
+    <View style="@style/line_horizontal_common" />
+
+    <View
+        style="@style/line_horizontal_common"
+        android:layout_marginTop="15dp" />
+
+    <!--tab 头部-->
+    <com.flyco.tablayout.CommonTabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_viewpager_title_height"
+        android:background="@color/WHITE"
+        app:tl_indicator_bounce_enable="false"
+        app:tl_indicator_color="@color/text_blue_common"
+        app:tl_indicator_width="60dp"
+        app:tl_textSelectColor="@color/text_blue_common"
+        app:tl_textUnselectColor="@color/text_black_common"
+        app:tl_textsize="14dp">
+
+    </com.flyco.tablayout.CommonTabLayout>
+
+    <View style="@style/line_horizontal_common" />
+
+
+    <!--&lt;!&ndash;机构简介内容&ndash;&gt;-->
+    <!--<include layout="@layout/layout_orgdetail_headview_tab"/>-->
+
+    <LinearLayout
+        android:id="@+id/tabContentLl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    </LinearLayout>
+
+
+    <View style="@style/line_horizontal_common" />
+
+    <ImageView
+        android:id="@+id/orginfo_detail_tab_hide"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:background="@color/WHITE"
+        android:scaleType="center"
+        android:src="@drawable/img_arrow_up" />
+
+    <RelativeLayout
+        android:id="@+id/bannerRl"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/w85"
+        android:background="@color/backgroud_common"
+        android:visibility="gone">
+
+        <com.toobei.common.view.loopviewpager.AutoScrollViewPager
+            android:id="@+id/bannerVp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.toobei.common.view.loopviewpager.indicator.CirclePageIndicator
+            android:id="@+id/bannerIndicator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="4dp"
+            app:fillColor="@color/text_blue_common"
+            app:pageColor="#edf3fa" />
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="12dp"
+        android:background="@color/backgroud_common" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:background="@color/WHITE"
+        android:orientation="vertical"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="在售产品"
+                android:textColor="@color/text_black_common"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/productSoldNumTv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="4dp"
+                android:gravity="center"
+                android:text="(0)"
+                android:textColor="@color/text_black_common"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <View style="@style/line_horizontal_common" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
+

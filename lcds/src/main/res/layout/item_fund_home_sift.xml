@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="155dp"
+    android:background="@color/WHITE"
+    android:id="@+id/rootView">
+
+    <LinearLayout
+        android:layout_margin="15dp"
+        android:id="@+id/fund_product_ll"
+        android:background="@drawable/hp_fund_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13dp"
+            android:textColor="@color/text_black_common"
+            android:text="@string/home_page_fund_mod_title"/>
+
+
+        <com.v5ent.xiubit.view.MyTextView
+            android:id="@+id/fund_yield_tv"
+            android:layout_marginTop="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="22dp"
+            android:textColor="@color/text_red_common"
+            tools:text="4.7221%"/>
+
+        <TextView
+            android:id="@+id/fund_description_tv"
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12dp"
+            android:textColor="@color/text_gray_common"
+            tools:text="近7日年化 (工银如意货币003752)"/>
+
+        <LinearLayout
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/text_org_detial_top_tag"
+                android:text="低风险"/>
+
+            <TextView
+                style="@style/text_org_detial_top_tag"
+                android:text="1元起购"/>
+            <TextView
+                style="@style/text_org_detial_top_tag"
+                android:text="货币基金"/>
+        </LinearLayout>
+    </LinearLayout>
+    
+    <View
+        android:layout_alignParentBottom="true"
+       style="@style/line_horizontal_common"/>
+
+</RelativeLayout>

@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/backgroud_common">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="164dp"
+        android:orientation="vertical"
+        android:background="@color/WHITE">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <LinearLayout
+                android:id="@+id/guideViewGr1"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:id="@+id/activityPartEntry"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="@dimen/w59"
+                        android:layout_height="@dimen/w40"
+                        android:src="@drawable/icon_acticity_party"/>
+
+                    <TextView
+                        android:layout_marginTop="4dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/w12"
+                        android:textColor="@color/text_black_common"
+                        android:text="活动中心"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/morningNewsPaperEntry"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="@dimen/w40"
+                        android:layout_height="@dimen/w40"
+                        android:src="@drawable/icon_morn_newspaper"/>
+
+                    <TextView
+                        android:layout_marginTop="4dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/w12"
+                        android:textColor="@color/text_black_common"
+                        android:text="每日早报"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/growUpLl"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/w40"
+                    android:layout_height="@dimen/w40"
+                    android:src="@drawable/icon_grow_up"/>
+
+                <TextView
+                    android:layout_marginTop="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/w12"
+                    android:textColor="@color/text_black_common"
+                    android:text="成长手册"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/inviteFrientLl"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="@dimen/w59"
+                    android:layout_height="@dimen/w40"
+                    android:src="@drawable/icon_invite_friend"/>
+
+                <TextView
+                    android:layout_marginTop="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/w12"
+                    android:textColor="@color/text_black_common"
+                    android:text="邀请有礼"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <LinearLayout
+                android:id="@+id/expandPosterLl"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/w40"
+                    android:layout_height="@dimen/w40"
+                    android:src="@drawable/icon_popular_poster"/>
+
+                <TextView
+                    android:layout_marginTop="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/w12"
+                    android:textColor="@color/text_black_common"
+                    android:text="推广海报"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/issueReportRl"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/iv"
+                        android:layout_width="@dimen/w40"
+                        android:layout_height="@dimen/w40"
+                        android:src="@drawable/icon_issue_report"/>
+
+                    <TextView
+                        android:layout_below="@id/iv"
+                        android:layout_marginTop="4dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/w12"
+                        android:textColor="@color/text_black_common"
+                        android:text="出单喜报"/>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/reportDotIv"
+                    android:layout_marginTop="@dimen/w12"
+                    android:layout_marginRight="@dimen/w15"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/red_point_mine"
+                    android:visibility="visible"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/peisonCardLl"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="@dimen/w40"
+                    android:layout_height="@dimen/w40"
+                    android:src="@drawable/icon_person_card"/>
+
+                <TextView
+                    android:layout_marginTop="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/w12"
+                    android:textColor="@color/text_black_common"
+                    android:text="个人名片"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/levelCalculatorLi"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/w40"
+                    android:layout_height="@dimen/w40"
+                    android:src="@drawable/icon_jisuanqi"/>
+
+                <TextView
+                    android:layout_marginTop="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/w12"
+                    android:textColor="@color/text_black_common"
+                    android:text="职级计算器"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        style="@style/line_horizontal_common"/>
+
+    <View
+        android:layout_marginTop="12dp"
+        style="@style/line_horizontal_common"/>
+
+    <LinearLayout
+        android:id="@+id/moreActivityEntry"
+        android:layout_width="match_parent"
+        android:layout_height="37dp"
+        android:background="@color/WHITE"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:gravity="center_vertical">
+
+        <View
+            android:layout_width="4dp"
+            android:layout_height="16dp"
+            android:layout_marginRight="6dp"
+            android:background="@color/blue_level_2"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:textColor="@color/text_black_common"
+            android:textStyle="bold"
+            android:text="热门活动"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13dp"
+            android:textColor="@color/text_gray_common"
+            android:text="更多"
+            android:drawablePadding="4dp"
+            android:drawableRight="@drawable/img_arrow_right"/>
+
+
+
+
+    </LinearLayout>
+
+
+    <com.youth.banner.Banner
+        android:id="@+id/activityBanner"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/WHITE"
+        android:paddingBottom="20dp"
+        android:paddingTop="10dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        app:indicator_width="4dp"
+        app:indicator_height="4dp"
+        app:image_scale_type="fit_xy"
+        app:delay_time="3000"
+        app:banner_layout="@layout/layout_org_list_banner"
+        app:indicator_drawable_selected="@drawable/shape_banner_indicator_circle_selected"
+        app:indicator_drawable_unselected="@drawable/shape_banner_indicator_circle_unselected">
+
+    </com.youth.banner.Banner>
+
+    <View
+        style="@style/line_horizontal_common"/>
+
+    <View
+        android:layout_marginTop="12dp"
+        style="@style/line_horizontal_common"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="37dp"
+        android:background="@color/WHITE"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:gravity="center_vertical">
+
+        <View
+            android:layout_width="4dp"
+            android:layout_height="16dp"
+            android:layout_marginRight="6dp"
+            android:background="@color/blue_level_2"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:textColor="@color/text_black_common"
+            android:text="精选推荐"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/selectImgCantainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/WHITE"
+        android:orientation="vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+    </LinearLayout>
+
+    <View
+        style="@style/line_horizontal_common"/>
+
+    <View
+        android:layout_marginTop="12dp"
+        style="@style/line_horizontal_common"/>
+
+    <LinearLayout
+        android:id="@+id/hotReadEntry"
+        android:layout_width="match_parent"
+        android:layout_height="37dp"
+        android:background="@color/WHITE"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:gravity="center_vertical">
+
+        <View
+            android:layout_width="4dp"
+            android:layout_height="16dp"
+            android:layout_marginRight="6dp"
+            android:background="@color/blue_level_2"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:textColor="@color/text_black_common"
+            android:text="最近热读"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="4dp"
+            android:textColor="@color/text_gray_common"
+            android:drawableRight="@drawable/img_arrow_right"
+            android:textSize="13dp"
+            android:text="更多"
+            />
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

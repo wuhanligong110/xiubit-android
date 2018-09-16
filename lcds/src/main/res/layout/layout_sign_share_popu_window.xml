@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:gravity="bottom"
+              android:orientation="vertical" >
+
+    <TextView
+
+        android:id="@+id/text_share_name"
+        style="@style/text_small_black_size_style"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@color/WHITE"
+        android:gravity="center"
+        android:text="选择分享方式" >
+    </TextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@color/WHITE"
+        android:orientation="horizontal" >
+
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/btn_wechat_friend"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:src="@drawable/img_share_wechat" />
+
+            <TextView
+                style="@style/text_small_black_size_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="4dp"
+                android:text="微信好友" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/btn_wechat_cricle"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:src="@drawable/img_share_wechat_friends" />
+
+            <TextView
+                style="@style/text_small_black_size_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="4dp"
+                android:text="微信朋友圈" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/btn_share_qq"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/img_share_qq"/>
+
+            <TextView
+                style="@style/text_small_black_size_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="4dp"
+                android:text="QQ"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/btn_copy_link"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/img_share_copy_link" />
+
+            <TextView
+                android:id="@+id/text_copy_link"
+                style="@style/text_small_black_size_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="4dp"
+                android:text="复制链接" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

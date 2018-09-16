@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroud_common">
+
+
+        <View
+            android:id="@+id/statusBar"
+            android:background="@color/top_title_bg"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@color/top_title_bg"
+            android:textSize="16dp"
+            android:textColor="@color/text_white_common"
+            android:gravity="center"
+            android:text="发现"/>
+
+    <View
+       style="@style/line_horizontal_common"/>
+
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshViewSrl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/backgroud_common"
+            android:elevation="0dp">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/backgroud_common"
+            app:elevation="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_scrollFlags="scroll">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="@color/WHITE"
+                    android:paddingBottom="10dp">
+
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/vPager"
+                        android:layout_width="match_parent"
+                        android:layout_height="78dp">
+
+                    </android.support.v4.view.ViewPager>
+
+
+                    <me.relex.circleindicator.CircleIndicator
+                        android:id="@+id/pageIndicator"
+                        android:layout_width="match_parent"
+                        app:ci_drawable="@drawable/shape_circle_indicator_selected"
+                        app:ci_drawable_unselected="@drawable/shape_circle_indicator_unselected"
+                        android:layout_height="wrap_content"
+                        app:ci_animator="@anim/animal_indicator"/>
+
+                </LinearLayout>
+
+                <View
+                    style="@style/line_horizontal_common"/>
+
+                <View
+                    android:layout_marginTop="@dimen/w12"
+                    style="@style/line_horizontal_common"/>
+
+
+            </LinearLayout>
+
+                <com.flyco.tablayout.CommonTabLayout
+                    android:id="@+id/tabLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/w34"
+                    android:background="@color/WHITE"
+                    app:tl_textsize="@dimen/w15"
+                    app:tl_textSelectColor="@color/text_blue_common"
+                    app:tl_textUnselectColor="@color/text_black_common"
+                    app:tl_indicator_width="@dimen/w50"
+                    app:tl_indicator_margin_top="@dimen/w8"
+                    app:tl_indicator_color="@color/text_blue_common"
+                    app:tl_tab_space_equal="true"
+                    app:tl_indicator_anim_enable="false"/>
+
+
+            <View
+                style="@style/line_horizontal_common"/>
+
+        </android.support.design.widget.AppBarLayout>
+
+
+
+
+
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:overScrollMode="never"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+
+
+                </android.support.v7.widget.RecyclerView>
+
+
+
+
+
+        </android.support.design.widget.CoordinatorLayout>
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+
+
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        style="@style/line_horizontal_common"/>
+    <com.v5ent.xiubit.view.ProductListSortHeadLayout
+        android:id="@+id/headSorTab"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="vertical"
+        android:visibility="visible"/>
+
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshViewSrl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/productListRv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never">
+
+
+        </android.support.v7.widget.RecyclerView>
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+</LinearLayout>

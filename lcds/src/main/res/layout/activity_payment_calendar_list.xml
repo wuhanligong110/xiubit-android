@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.scwang.smartrefresh.layout.SmartRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/refreshViewSrl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroud_common"
+    android:orientation="vertical"
+    app:srlPrimaryColor="@color/text_blue_common"
+    tools:context="com.v5ent.xiubit.activity.CouponActivity">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backgroud_common"
+        android:elevation="0dp">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/backgroud_common"
+            app:elevation="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_scrollFlags="scroll">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/w90"
+                    android:background="@drawable/payment_calendar_top_bg"
+                    android:orientation="horizontal">
+
+                    <android.support.constraint.ConstraintLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+
+                        <com.toobei.common.view.MyTextView
+                            android:id="@+id/backMoneyTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0.00"
+                            android:textColor="@color/text_white_common"
+                            android:textSize="@dimen/w20"
+                            app:layout_constraintBottom_toTopOf="@id/backMontyExplainTv"
+                            android:singleLine="true"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_chainStyle="packed" />
+
+                        <TextView
+                            android:id="@+id/backMontyExplainTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="已回款金额(元)"
+                            android:textColor="@color/text_white_light"
+                            android:textSize="@dimen/w10"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            android:singleLine="true"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/backMoneyTv" />
+
+                    </android.support.constraint.ConstraintLayout>
+
+                    <View
+                        style="@style/line_vertical_common"
+                        android:layout_marginBottom="@dimen/w15"
+                        android:layout_marginTop="@dimen/w15"
+                        android:background="@color/text_white_light"/>
+
+                    <android.support.constraint.ConstraintLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+
+                        <com.toobei.common.view.MyTextView
+                            android:id="@+id/waitbackMoneyTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0.00"
+                            android:textColor="@color/text_white_common"
+                            android:textSize="@dimen/w20"
+                            app:layout_constraintBottom_toTopOf="@id/waitbackMontyExplainTv"
+                            android:singleLine="true"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_chainStyle="packed" />
+
+                        <TextView
+                            android:id="@+id/waitbackMontyExplainTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="待已回款金额(元)"
+                            android:textColor="@color/text_white_light"
+                            android:textSize="@dimen/w10"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            android:singleLine="true"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/waitbackMoneyTv" />
+
+                    </android.support.constraint.ConstraintLayout>
+
+                </LinearLayout>
+
+                <View style="@style/line_horizontal_common" />
+
+                <View
+                    style="@style/line_horizontal_common"
+                    android:layout_marginTop="@dimen/w12" />
+            </LinearLayout>
+
+            <com.flyco.tablayout.SlidingTabLayout
+                android:id="@+id/tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/w43"
+                android:layout_centerHorizontal="true"
+                android:background="@color/WHITE"
+                app:tl_divider_color="@color/line_common"
+                app:tl_indicator_color="@color/text_blue_common"
+                app:tl_indicator_width="55dp"
+                app:tl_tab_padding="@dimen/w15"
+                app:tl_tab_space_equal="true"
+                app:tl_textSelectColor="@color/text_blue_common"
+                app:tl_textUnselectColor="@color/text_black_common"
+                app:tl_textsize="16dp" />
+
+            <View style="@style/line_horizontal_common" />
+
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+        </android.support.v4.view.ViewPager>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+</com.scwang.smartrefresh.layout.SmartRefreshLayout>

@@ -1,0 +1,216 @@
+apply plugin: 'com.android.application'
+//apply plugin: 'com.neenbedankt.android-apt'
+apply plugin: 'com.jakewharton.butterknife'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'  //一些扩展功能，比如自动findview
+apply plugin: 'kotlin-kapt' //注解
+dependencies {
+//    kapt 'com.android.databinding:compiler:3.0.0'
+    implementation fileTree(include: '*.jar', dir: 'libs')
+    implementation project(':tophlc')
+    //ButterKnife 必须添加在项目Module 只在依赖项目添加无效
+    //leakCanary 内存泄漏检测
+//        debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.5.4'
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
+    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
+    //单元测试
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    implementation 'com.jakewharton:butterknife:8.2.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    testImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
+    testImplementation 'junit:junit:4.12'
+    kapt 'com.jakewharton:butterknife-compiler:8.2.1'
+    //一个UI调试工具 https://github.com/eleme/UETool
+//    debugCompile 'me.ele:uetool:1.0.15'
+//    releaseCompile 'me.ele:uetool-no-op:1.0.15'
+    //阿里热修复
+    implementation 'com.aliyun.ams:alicloud-android-hotfix:3.2.0'
+}
+
+android {
+    signingConfigs {
+        releaseKey {
+            keyAlias 'v5ent'
+            keyPassword 'v5entxiubit'
+            storeFile file('v5ent_xiubit.jks')
+            storePassword 'v5entxiubit'
+        }
+    }
+    compileSdkVersion COMPILE_SDK_VERSION
+//    buildToolsVersion '26.0.2'
+    //     只需在主Module的gradle中配置  useLibrary ‘org.apache.http.legacy‘
+    useLibrary 'org.apache.http.legacy'
+    defaultConfig {
+        targetSdkVersion TARGET_SDK_VERSION
+        minSdkVersion MIN_SDK_VERSION //4.0.3
+        //gradle 的配置会覆盖清单文件中的配置
+        applicationId "com.v5ent.xiubit"
+        multiDexEnabled true //Android分包 防止id的数目超过65536报错
+        versionName "4.6.6"
+        versionCode 953
+        flavorDimensions "1024"
+        ndk {
+            abiFilters "armeabi", "armeabi-v7a", "x86"
+//            ,"arm64-v8a" ,"x86_64"
+        }
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    /*dexOptions {
+        preDexLibraries = false
+        //让它不要对Lib做preDexing
+        incremental true
+        //开启incremental dexing,优化编译效率，这个功能android studio默认是关闭的。
+        javaMaxHeapSize "4g"     //增加java堆内存大小
+    }*/
+
+    //打包(带版本号 和版本名)
+    applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            outputFileName = ( /*  defaultConfig.applicationId*/ "xiubit" + "_V" +
+                    defaultConfig.versionName + "_" + defaultConfig.versionCode + "_"
+                    + "${variant.buildType.name}" + "_" + "${variant.productFlavors[0].name}" +
+                    ".apk")
+
+        }
+    }
+    //  "HelloWord-${variant.buildType.name}-v${variant.versionName}-${variant.productFlavors[0].name}-${releaseTime()}.apk".toLowerCase()
+    // 显示警告和错误详情
+    /* 注: 某些输入文件使用或覆盖了已过时的 API。
+     注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+     注: 某些输入文件使用了未经检查或不安全的操作。
+     注: 有关详细信息, 请使用 -Xlint:unchecked 重新编译*/
+    allprojects {
+        gradle.projectsEvaluated {
+            tasks.withType(JavaCompile) {
+                options.compilerArgs << "-Xlint:unchecked" << "-Xlint:deprecation"
+            }
+        }
+    }
+    // 构建类型
+    buildTypes {
+        release { //正式环境
+//            minifyEnabled true  //minifyEnabled主要用来控制是否运行混淆的。
+//            shrinkResources true //去掉无用的资源
+            zipAlignEnabled true //zip优化
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-project.txt'
+            buildConfigField "boolean", "IS_DEBUG", "Boolean.parseBoolean(\"false\")"
+            buildConfigField "boolean", "LogOpen", "true"   //todo 上线后改为false
+            signingConfig signingConfigs.releaseKey
+            //hotfix
+            buildConfigField "String", "hotfix_idSecret", "\"24896128\""
+            buildConfigField "String", "hotfix_appSecret", "\"f9d1755abc1da7e9a3f512ebb3f91f13\""
+            buildConfigField "String", "hotfix_rsaSecret", "\"MIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCMBVskvFv5aKxYHYPOIUjkBtPKnPM//o2S9VnUV3os0GRl0+WWCXxDaaqGYdQ6cB015MQN1wvfS8hhxNJbJsyk48worwUbnDH3XQYw+rPdUJJ26gtDU4W6EwNvWehARHxxrccB+W9gpOO723ZVJ+vBEbnxjPB9ss/j+lR8EHsqen4Gv7jL/+h2EP1SbZHG93qlzVUeogm0vHmaQExaoa1KYppgx69GkuRuRG13yvrHapAlxFQuj/5vGDJ5t2IxkhB59451Oxun+6o9snWdYJx6RBbdaUZP0BVOTJF1LEaIb7dvrSYoYXoP83kmf+sqJXMAQQ/4MvTmv/wzO2wqpQMhAgMBAAECggEAKSzKCJt7UHR/ecn0IIGZNbTsQwC0Z3UrnLOZnt+6hcMiQu907BIOAKTqCGpsRmMBs/95x7gdPaTDYDzIvxVByJtURgJxthTQfLVWRMD0c3hmGaHpffrpsDY3JF+D9KIvFh7MDsCTCBB1B6EZwyDiKvxTebzAW7Zhe+D5RyJxlaPONchwV2TGHcJANDiirVc2V7CeywIjlYhdKg0Zn3c+sDBkP0SXJPqAVzkNrn/CKCdRykCp5nhqOOs5/RsNLi4oAM0VnHr8gUO2q+UGEQNF/nacPoPcsyWgq+x6U9kgI0CDwaPzCivLJHuywezhBTFA/UjbAzUWU3UFEWiESICWAQKBgQDmmUYAWVJid2OOjtQv7oP5bnQSBiG7p8+5RCl5UBWCXbQYkMMr83WLmwgmXVCgJeVOD6xXR42wkpjQH+BWwvY5aaBX4Gqi3GJIGxzDME9B/yo1klzTZgX4TPppcx/QvK+3d5fzpX+T+CaqUfx16USiQXYoT/w1UQbeQXh0RlD4eQKBgQCbcdm0n+FPIHdDUhf2VDp+/8jB7oNMkS0dLr1nb+pzucqb9YTn8JUKYFdPnF8kAqFJgRK5wJ2Nf4v90Ry56HQ56DXChAQa53BCJ1FXKvOBWhjICh4L89qj8fMs/48CwW7uMZPpvhbbJMe3lsbK+/x4IxXR7KY0DCrsVokwabyF6QKBgEo5ld2w4qLNOR9++++9v38/PV872AnWNze0KAFjdLj0vm6V0izIfdKFAXeP287gw9F/nAKwBnyKg2Oijwx+TtEmHbWLh+eKNpxtFbICT9C3eHer9/MXyN4msQfWRaxjv8+3UBLd95XCb3etUi0F+9Cab5UEQfNLdIF/42zR4WhJAoGAb5sIokUAcd1vg6hXiAblkPV5YLQtFTZO29sJJlEWVkyZCez3pcf4WmDdj01IigRRZQMFPNTsygE/s9cF9vzNJh5xKt26TM7KrNSp9Bnkh4T2sfmBpTdKTdeTr0U1mtbjHKX/+xz+MA1yT4Az7t2JYYBfVD/C/S+XSeS/z0C7mLECgYAYTCLHIR6rRcsHui9f4h6ibdKHI1sD2RluOVw0QskXchU2eTqtEwKkAYXUKwa5Q9ONHB1lOA8yr2TyzMIxK5RTsSgcN8JR159aakvQkrclupZJMirCERxpIe2kWZRbDHqpBJRYpe9b2YTv/piv3mRtNZB15rKuWFDaYiWRIVu82w==\""
+        }
+        debug {
+            zipAlignEnabled true //zip优化
+            buildConfigField "boolean", "IS_DEBUG", "Boolean.parseBoolean(\"true\")"
+            buildConfigField "boolean", "LogOpen", "true"
+            //hotfix
+            buildConfigField "String", "hotfix_idSecret", "\"24896127\""
+            buildConfigField "String", "hotfix_appSecret", "\"8945a496468eb9fb15796f6c8b4fe482\""
+            buildConfigField "String", "hotfix_rsaSecret", "\"MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCAXNxeXagKtsMPjcPAkdG8g5GN5CttrS8l7nalQfe70pUNuO/+/67h+BlK/Xse15N5G6JZXbecwvnqP9KDJWwY+p900Yz3DLEvC1uf8vjys+TMbUE3C+JxZsLabFJCLXuNy4jdqmjxuzfeON70SVpH0vpGqkqPD0jPAvsrNaOEAceoDZJ9el8OUqZjaTDQMwgUsbM8cHMyugHjlVba1qcpcK5hxKWhKGOq17MQBfLho3SRqXjb7GruIcosL+UTVOz29/Op7rgzK8+mMuP+at6gU8XPyCcDb0ajti92g6XhgMtF3+GAVjA5ZPkKBKc1HK7jMDGr/Rg11VRDMWyMAwRVAgMBAAECggEAHJaR7eJl/pzdrKUiJ81SLO4QiM18bpzXl1cYzY13ozkvQTMjIGPJi0I6P91cgm34xkxFSCn7Lsqt5mH4fITlIlsPEHFrN8p328ZnzaPLliJCntTmZWAcOq1sUEE3wM1oaxgdj2DYpp3Pv4pi/X0owj5Wx0499MaurIw5bFIx7MA216uSqJwDMIfmpF5nlOnCVlrZ8isySFU3qNYTyrtY2xbT5ddWJ/op3ohrhi4wldxSbQsIJ5ArKyfvMmO1edix9YU0Y5rJ+MvmzErcyvjrSMJTNY8Hkgo+LBzYz+BbrIo2DdBlcAc9ZpwZWFtEf9ErercR1uCr7VHPm4vWX4qNsQKBgQDWcqhXf1fqppIgViZq+f2uBFb6nXqtVl6SmKHhbvFz1+5cxO56RMhoiBZnhq6V3gHGqzuCgICakstLP2KfTofeaDg6W6dSLLFliHP9TK8T2XgyW7os+NdVWtcIp9vzSpSWrxXcSvZNwChhuaTMPs9KU9844eHYQtYV6qlPYeSF+wKBgQCZPBaLY3alS2zFidcDhBok9CF360UclQRe+wM7mTs4Hc86Tx3wcRC+BHpCyqBq53umTJ8e7ppre+f1YMoMNqBe6vLnhkcpERvr1OT6GGmHiac9caFI8sddSK2s3PJIE6CaCNH2DBxejCcNzMAqLz1o12RlN4GO+vbg8bFDD02d7wKBgB55QqTUasjkjMVdmK4BAmSVJ0sLz+AL8vqACBkB6/vbRnsWXREw7w2zsQNbJzoSx0vVD2rXGe9dRthVlI0w2qvnQX5BggBya28TOfBX0lVOxP7a/BTh86+kbgRD3kSvZ3gWP1QDrwaTdOmWOO3xSwGz83eg2bgin0uUAiVOsuu7AoGAEYUKOtObbBisjgVNfQxshM8YyIIwu6zZ/BYM75J8b9UQrWUAUk5LEL6oT9yk7LQcsg3On5W+OA3Jnod7clwIh/Gq5ge3OR3IqHUF3QZPgnydj2vfedywKJ03piz40n7T/OiHQO9viuvRR0WirvAJwGPoCZ6IBJXzBhL8JmOohycCgYEAnhjsbCdEASnzROoqzYe7nhO3FFbV+fW5TjZr5ZGS6d6gHsay3ljaK9aOhyW0P9iH1F5kmEeTTnXY+9oYRIM6Ndj674A/SxFhgcQy7aWZCfd+vufVOAkn44vszGOJaI6H7e4rFQhmzfuk+F9uCIOsm0FSiehcwpQmHOvLBH1IYoA=\""
+        }
+    }
+    //防止打包时 项目用了系统应用才可以使用的权限报错
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+        ignoreWarnings true
+    }
+
+    productFlavors {
+        //android studio调试时使用               android studio instantRun 在多进程下无法使用 动态替换推送的进程名
+        instant {
+            flavorDimensions "1024"
+            //api地址
+            buildConfigField "String", "BASE_URL_HTTPS", "\"https://premarket.toobei.com/rest/api\""
+            //猎财H5地址
+            buildConfigField "String", "LCDS_H5_BASE_URL", "\"https://preliecai.toobei.com\""
+            buildConfigField "String", "LCDS_H5_BASE_URL_WEIXIN", "\"https://prenliecai.toobei.com\"" //微信H5网页，有些分享链接会用到
+//            buildConfigField "String", "LCDS_H5_BASE_URL", "\"http://10.16.2.92:8080\""   //本地联调
+            //t呗H5地址
+            buildConfigField "String", "TOOBEI_H5_BASE_URL", "\"https://pre.toobei.com/app\""
+            manifestPlaceholders = [GETUI_PUSH_SERVICE     : "",
+                                    GETUI_APP_ID           : "HQLGzH3xfp7ludDWdv01e2",
+                                    GETUI_APP_KEY          : "6EYEqFfTgI9gR3uDhADknA",
+                                    GETUI_APP_SECRET       : "5K7cLqYuHw7TZK87MM6it1",
+                                    UMENG_APP_KEY          : "5a31e0daf29d985fbf00013e",
+                                    GETUI_PUSH_PROCESS_NAME: ""]
+        }
+        // 预发布环境
+        pre {
+            flavorDimensions "1024"
+            buildConfigField "String", "BASE_URL_HTTPS", "\"https://premarket.toobei.com/rest/api\""
+            //t呗H5地址
+            buildConfigField "String", "TOOBEI_H5_BASE_URL", "\"https://pre.toobei.com/app\""
+            //猎财H5地址
+            buildConfigField "String", "LCDS_H5_BASE_URL", "\"https://preliecai.toobei.com\""
+            buildConfigField "String", "LCDS_H5_BASE_URL_WEIXIN", "\"https://prenliecai.toobei.com\"" //微信H5网页，有些分享链接会用到
+            manifestPlaceholders = [GETUI_PUSH_SERVICE     : ":pushservice",
+                                    GETUI_APP_ID           : "HQLGzH3xfp7ludDWdv01e2",
+                                    GETUI_APP_KEY          : "6EYEqFfTgI9gR3uDhADknA",
+                                    GETUI_APP_SECRET       : "5K7cLqYuHw7TZK87MM6it1",
+                                    UMENG_APP_KEY          : "5a31e0daf29d985fbf00013e",
+                                    GETUI_PUSH_PROCESS_NAME: ":pushservice"]
+        }
+        //开发环境
+        dev {
+            flavorDimensions "1024"
+            buildConfigField "String", "BASE_URL_HTTPS", "\"http://10.16.0.205:6810/rest/api\""
+            //猎财H5地址
+            buildConfigField "String", "LCDS_H5_BASE_URL", "\"https://preliecai.toobei.com/app\""
+            buildConfigField "String", "LCDS_H5_BASE_URL_WEIXIN", "\"https://prenliecai.toobei.com\"" //微信H5网页，有些分享链接会用到
+            //t呗H5地址
+            buildConfigField "String", "TOOBEI_H5_BASE_URL", "\"https://pre.toobei.com/app\""
+            manifestPlaceholders = [GETUI_PUSH_SERVICE     : "",
+                                    GETUI_APP_ID           : "HQLGzH3xfp7ludDWdv01e2",
+                                    GETUI_APP_KEY          : "6EYEqFfTgI9gR3uDhADknA",
+                                    GETUI_APP_SECRET       : "5K7cLqYuHw7TZK87MM6it1",
+                                    UMENG_APP_KEY          : "5a31e0daf29d985fbf00013e",
+                                    GETUI_PUSH_PROCESS_NAME: ":pushservice"]
+        }
+        //正式环境  正式打包时选择这个
+       /* rel {
+            flavorDimensions "1024"
+            buildConfigField "String", "BASE_URL_HTTPS", "\"https://market.toobei.com/rest/api\""
+            //猎财H5地址 \app是为了区分t呗pc和移动端 猎财没有
+            buildConfigField "String", "LCDS_H5_BASE_URL", "\"https://liecai.toobei.com\""
+            buildConfigField "String", "LCDS_H5_BASE_URL_WEIXIN", "\"https://nliecai.toobei.com\"" //微信H5网页，有些分享链接会用到
+            buildConfigField "String", "TOOBEI_H5_BASE_URL", "\"https://toobei.com/app\"" //t呗H5地址
+            manifestPlaceholders = [GETUI_PUSH_SERVICE     : ":pushservice",
+                                    GETUI_APP_ID           : "QylcbqtCdhAVhRbKu9AHT2",
+                                    GETUI_APP_KEY          : "lMh6JwxKzq5u5QKxl6Dvn3",
+                                    GETUI_APP_SECRET       : "BLy0lqm8Cc7zGM0Hheqj13",
+                                    UMENG_APP_KEY          : "5a31e0daf29d985fbf00013e", //todo 上线前改过来
+//                                    UMENG_APP_KEY          : "59082532a3251174f4001175",
+                                    GETUI_PUSH_PROCESS_NAME: ":pushservice"]
+        }*/
+        //正式环境  正式打包时选择这个
+        rel {
+            flavorDimensions "1024"
+            buildConfigField "String", "BASE_URL_HTTPS", "\"http://market.bethye.top/rest/api\""
+            //猎财H5地址 \app是为了区分t呗pc和移动端 猎财没有
+            buildConfigField "String", "LCDS_H5_BASE_URL", "\"http://liecai.bethye.top\""
+            buildConfigField "String", "LCDS_H5_BASE_URL_WEIXIN", "\"http://nliecai.bethye.top\"" //微信H5网页，有些分享链接会用到
+            buildConfigField "String", "TOOBEI_H5_BASE_URL", "\"http://app.bethye.top\"" //t呗H5地址
+            manifestPlaceholders = [GETUI_PUSH_SERVICE     : ":pushservice",
+                                    GETUI_APP_ID           : "QylcbqtCdhAVhRbKu9AHT2",
+                                    GETUI_APP_KEY          : "lMh6JwxKzq5u5QKxl6Dvn3",
+                                    GETUI_APP_SECRET       : "BLy0lqm8Cc7zGM0Hheqj13",
+//                                    UMENG_APP_KEY          : "5a31e0daf29d985fbf00013e", //todo 上线前改过来
+                                    UMENG_APP_KEY          : "59082532a3251174f4001175",
+                                    GETUI_PUSH_PROCESS_NAME: ":pushservice"]
+        }
+    }
+}
+repositories {
+    mavenCentral()
+    google()
+    maven {
+        url "http://maven.aliyun.com/nexus/content/repositories/releases"
+    }
+}

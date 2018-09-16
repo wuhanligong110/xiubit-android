@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.scwang.smartrefresh.layout.SmartRefreshLayout
+    android:id="@+id/refreshViewSrl"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroud_common">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never">
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/WHITE"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="112dp"
+        android:background="@color/blue_level_2"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <com.v5ent.xiubit.view.MyTextView
+            android:id="@+id/waitBaseMoneyTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="33dp"
+            android:textColor="@color/text_white_common"
+            android:text="0.00"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12dp"
+            android:textColor="@color/text_white_light"
+            android:text="待收本金(元)"/>
+
+    </LinearLayout>
+
+    <View
+        style="@style/line_horizontal_common"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="15dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13dp"
+                android:textColor="@color/text_gray_common"
+                android:text="待收收益:"/>
+
+            <TextView
+                android:id="@+id/waitProfitTv"
+                android:layout_marginLeft="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13dp"
+                android:textColor="@color/text_black_common"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="15dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               android:textSize="13dp"
+                android:textColor="@color/text_gray_common"
+                android:text="投资去向:"/>
+
+            <TextView
+                android:id="@+id/investDirTv"
+                android:layout_marginLeft="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13dp"
+                android:textColor="@color/text_black_common"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="15dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13dp"
+                android:textColor="@color/text_gray_common"
+                android:text="创建时间:"/>
+
+            <TextView
+                android:id="@+id/creatTv"
+                android:layout_marginLeft="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13dp"
+                android:textColor="@color/text_black_common"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="15dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13dp"
+                android:textColor="@color/text_gray_common"
+                android:text="备         注:"/>
+
+            <TextView
+                android:id="@+id/remarkTv"
+                android:layout_marginLeft="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="13dp"
+                android:textColor="@color/text_black_common"
+                />
+        </LinearLayout>
+
+
+    </LinearLayout>
+</LinearLayout>
+    </ScrollView>
+</com.scwang.smartrefresh.layout.SmartRefreshLayout>

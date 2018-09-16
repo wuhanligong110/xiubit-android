@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/WHITE"
+              android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/img_banner"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/img_fresh_list_xiaobai"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:textStyle="bold"
+            android:id="@+id/text_product_name"
+            style="@style/text_middle15_gray_common64_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="新手专区"/>
+
+        <TextView
+            android:layout_marginRight="12dp"
+            android:layout_alignParentRight="true"
+            style="@style/text_small_gray_size_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:text="首投专享  超高收益"/>
+    </RelativeLayout>
+
+    <View
+        style="@style/line_horizontal_common"/>
+</LinearLayout>
+

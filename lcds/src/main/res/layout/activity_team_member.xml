@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.scwang.smartrefresh.layout.SmartRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/refreshViewSrl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroud_common"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    tools:context="com.v5ent.xiubit.activity.CustomerMemberActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/round_search_bg_white"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="12dp"
+                android:src="@drawable/icon_search_edit_in" />
+
+            <EditText
+                android:id="@+id/editSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:background="@color/backgroud_transparent"
+                android:gravity="left"
+                android:hint="搜索"
+                android:singleLine="true"
+                android:textColor="@color/text_black_common"
+                android:textColorHint="@color/text_gray_common"
+                android:textCursorDrawable="@drawable/edittext_cursor_shape"
+                android:textSize="16dp" />
+
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/customerRv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never">
+
+
+        </android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+
+</com.scwang.smartrefresh.layout.SmartRefreshLayout>

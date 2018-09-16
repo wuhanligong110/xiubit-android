@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical">
+
+    <TextView
+        android:id="@+id/investTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/w13"
+        android:textColor="@color/text_black_common"/>
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/w4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/tagIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/tag_wd"
+            android:layout_marginRight="@dimen/w8"/>
+
+        <TextView
+            android:id="@+id/dateTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/w10"
+            android:textColor="@color/text_gray_common"
+            tools:text="1分钟前"/>
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

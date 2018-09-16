@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroud_common"
+    android:orientation="vertical" >
+
+    <ViewStub
+        android:id="@+id/stub_content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+    <ViewStub
+        android:id="@+id/stub_progress"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout="@layout/load_progress" />
+
+    <ViewStub
+        android:id="@+id/stub_fail"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout="@layout/no_net_statue_view" />
+
+</RelativeLayout>

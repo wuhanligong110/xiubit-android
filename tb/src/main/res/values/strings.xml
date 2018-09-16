@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">T呗</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="set_success">设置成功</string>
+    <string name="main_btn_recommend">推荐</string>
+    <string name="main_btn_product">产品</string>
+    <string name="main_btn_institution">平台</string>
+    <string name="main_btn_mine">我的</string>
+    <string name="recommend_cfp_desc">组建你的理财师团队</string>
+    <string name="search">搜索</string>
+    <string name="selected">已选中</string>
+    <string name="register">注册</string>
+    <string name="recommend_cfp_in_no_name">匿名推荐预览</string>
+    <string name="recommend_cfp_in_has_name">签名推荐预览</string>
+    <string name="recommend_cfp_in_send_no_name">确认发送匿名推荐</string>
+    <string name="recommend_cfp_in_send_has_name">确认发送签名推荐</string>
+    <string name="recommend_cfp_contacts_prompt">以下好友尚未注册，快推荐他们加入你的团队吧</string>
+    <string name="invite_customer_contacts_prompt">以下好友尚未注册，快邀请他们一起拿奖励吧</string>
+    <string name="invite">邀请</string>
+    <string name="recommend">推荐</string>
+    <string name="mobile">手机号码</string>
+    <string name="phone">手机号</string>
+    <string name="input_phone">请输入手机号码</string>
+    <string name="my_invite">我的邀请</string>
+    <string name="customer_customerlist_registered">已注册(人)</string>
+    <string name="customer_customerlist_invested">已投资(人)</string>
+    <string name="investment">投资额</string>
+    <string name="invest_time">投资时间</string>
+    <string name="register_time">注册时间</string>
+    <string name="expire_time">到期时间</string>
+    <string name="customer_add_import">加入重要客户列表</string>
+    <string name="customer_remove_import">移出重要客户列表</string>
+
+    <string name="avatar">头像</string>
+    <string name="commit">提交</string>
+    <string name="msg">消息</string>
+    <string name="msg_center">消息中心</string>
+    <string name="bulletin">公告</string>
+    <string name="my_msg">通知</string>
+    <string name="edit">编辑</string>
+    <string name="more">更多</string>
+    <string name="about_we">关于我们</string>
+    <string name="feedback">意见反馈</string>
+    <string name="email">客服邮箱</string>
+    <string name="problem">常见问题</string>
+    <string name="service_tel">客服电话</string>
+    <string name="service_work_time">工作时间：工作日9:00—17:00</string>
+    <string name="wechat_we">官方微信</string>
+    <string name="logOut">退出登录</string>
+    <string name="password_manage">密码管理</string>
+    <string name="mine_qr">我的二维码</string>
+    <string name="mine_redpackage">我的红包</string>
+
+    <!--注册激活账号 RegisterActive-->
+    <string name="user_agreement">《T呗用户服务协议》</string>
+
+    <!--机构列表 FragmentInstitution->OrgListAdapter-->
+    <string name="institution_list_tab_rank">安全评级</string>
+    <string name="institution_list_tab_income">年化收益</string>
+    <string name="institution_list_tab_date">产品期限</string>
+    <string name="institution_list_item_income">预期年化:</string>
+    <string name="institution_list_item_date">产品期限: </string>
+    <string name="institution_list_item_tender_count">可投标数: </string>
+
+
+    <!--产品 PragmentProduct-->
+    <string name="fresh_productlist_activity_name">新手专区</string>
+    <string name="invite_recode">邀请记录</string>
+    <string name="invite_friend">邀请朋友</string>
+
+    <!--我的 FragmentMine-->
+
+    <string name="fragment_mine_redpackage_des">%1$s红包可用</string>
+
+
+    <!--产品列表 ProductListActivity -->
+    <string name="product_list_cfp_recommend_name">理财师们热推产品排行</string>
+
+    <!--我的理财师 MyCfpActivity-->
+    <string name="mycfp_activity">我的理财师</string>
+    <string name="mycfp_dial">确定拨打理财师电话？</string>
+    <string name="mycfp_tab01">推荐产品</string>
+    <string name="mycfp_tab02">推荐平台</string>
+
+    <!--机构详情 OrgInfoDetailActivity-->
+    <string name="recommend_orginfo_detail_orglevel">安全等级:</string>
+
+
+    <!--dialog-->
+    <string name="dialog_mine_totalInvestExplain">在投资金为\"募集中\"、\"回款中\"投资金额之和</string>
+    <string name="dialog_mine_totalProfitExplain">累计收益为\"投资中\"、\"回款中\"、\"已完成\"投资的收益之和</string>
+    <string name="dialog_mine_accountBalanceExplain">T呗奖励是您参与T呗活动、通过T呗投资等所获得活动奖励、红包返现等。</string>
+
+    <!--跳转机构提示 JumpOrgService-->
+    <string name="dialog_title_boundCard_remind">银行卡绑定提示</string>
+    <string name="dialog_content_boundCard_remind">绑卡后购买产品、提示T呗奖励更方便。是否现在绑定银行卡？</string>
+    <string name="dialog_title_boundOrg_remind">账户绑定提示</string>
+    <string name="dialog_content_boundOrg_remind">购买前需要绑定账户，且可能收到合作平台的电话回访，是否继续购买？</string>
+
+    <!--投资明细 MyInvestDetailActivity-->
+    <string name="my_invite_detial_bottom_remind">了解投资记录的更多详情，\n请点击\"查看、赎回\"，进入投资平台查看</string>
+
+
+    <!--T呗奖励余额-->
+    <string name="account_amount_question_remind">T呗奖励是您参与T呗活动、通过T呗投资等所获得活动奖励、红包返现等。</string>
+    <string name="blank_list_text_no_data_all_income">暂无收支明细，快去投资赚取收益吧！</string>
+    <string name="blank_list_text_no_data_Reward_detail_income">暂无收入明细，快去投资赚取收益吧！</string>
+    <string name="blank_list_text_no_data_Reward_detail_out">暂无支出明细，快去投资赚取收益吧！</string>
+
+
+    <!--我的理财师 MyCfpActivity-->
+    <string name="blank_list_text_no_recommend_org">暂无推荐平台</string>
+    <!--跳转绑定机构->个人中心  OrgUserCenterWebActivity-->
+    <string name="go_back_tbei">返回T呗</string>
+</resources>

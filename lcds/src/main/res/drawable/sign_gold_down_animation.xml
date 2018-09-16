@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="true">
+
+    <item android:drawable="@drawable/frame_sign_gold_down1" android:duration="40"></item>
+    <item android:drawable="@drawable/frame_sign_gold_down2" android:duration="40"></item>
+    <item android:drawable="@drawable/frame_sign_gold_down3" android:duration="40"></item>
+    <item android:drawable="@drawable/frame_sign_gold_down4" android:duration="40"></item>
+    <item android:drawable="@drawable/frame_sign_gold_down5" android:duration="40"></item>
+    <item android:drawable="@drawable/frame_sign_gold_down6" android:duration="40"></item>
+
+    <item android:drawable="@drawable/frame_sign_gold_down7" android:duration="40"></item>
+    <item android:drawable="@drawable/frame_sign_gold_down8" android:duration="40"></item>
+    <item android:drawable="@drawable/frame_sign_gold_down9" android:duration="40"></item>
+    <item android:drawable="@drawable/frame_sign_gold_down10" android:duration="40"></item>
+    <item android:drawable="@drawable/frame_sign_gold_down11" android:duration="40"></item>
+    <item android:drawable="@drawable/frame_sign_gold_down12" android:duration="40"></item>
+
+    <item android:drawable="@drawable/frame_sign_gold_down13" android:duration="40"></item>
+    <item android:drawable="@drawable/frame_sign_gold_down14" android:duration="40"></item>
+    <item android:drawable="@drawable/frame_sign_gold_down15" android:duration="40"></item>
+    <item android:drawable="@drawable/frame_sign_gold_down16" android:duration="40"></item>
+    <item android:drawable="@drawable/frame_sign_gold_down17" android:duration="40"></item>
+    <item android:drawable="@drawable/frame_sign_gold_down18" android:duration="40"></item>
+
+    <item android:drawable="@drawable/frame_sign_gold_down19" android:duration="40"></item>
+    <item android:drawable="@drawable/frame_sign_gold_down20" android:duration="40"></item>
+    <item android:drawable="@drawable/frame_sign_gold_down21" android:duration="40"></item>
+    <item android:drawable="@drawable/frame_sign_gold_down22" android:duration="40"></item>
+    <item android:drawable="@drawable/frame_sign_gold_down23" android:duration="40"></item>
+    <item android:drawable="@drawable/frame_sign_gold_down24" android:duration="40"></item>
+
+    <item android:drawable="@drawable/frame_sign_gold_down25" android:duration="40"></item>
+    <item android:drawable="@drawable/frame_sign_gold_down26" android:duration="40"></item>
+    <item android:drawable="@drawable/frame_sign_gold_down27" android:duration="40"></item>
+    <item android:drawable="@drawable/frame_sign_gold_down28" android:duration="40"></item>
+    <item android:drawable="@drawable/frame_sign_gold_down29" android:duration="40"></item>
+    <item android:drawable="@drawable/frame_sign_gold_down30" android:duration="40"></item>
+
+    <item android:drawable="@drawable/frame_sign_gold_down31" android:duration="40"></item>
+    <item android:drawable="@drawable/frame_sign_gold_down32" android:duration="40"></item>
+</animation-list>

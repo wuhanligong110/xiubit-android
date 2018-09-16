@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backgroud_common"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:visibility="gone"
+             android:id="@+id/product_list_hot10"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="4dp"
+              />
+
+            <TextView
+                style="@style/text_small_gray_size_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="热门产品TOP10"
+                android:textSize="14dp"/>
+
+        </LinearLayout>
+
+        <com.toobei.tb.view.ProductListClickHeadLayout
+            android:id="@+id/proccutlist_head_click_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_viewpager_title_height"
+            android:orientation="vertical"/>
+
+        <org.xsl781.ui.xlist.XListView
+            android:id="@+id/pinterHeadLV"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"/>
+
+
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line"
+        style="@style/line_horizontal_common"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="@dimen/list_viewpager_title_height"
+        android:visibility="gone"></View>
+
+    <ImageButton
+
+        android:id="@+id/product_iv_back_to_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="12dp"
+        android:layout_marginRight="12dp"
+        android:background="@null"
+        android:src="@drawable/img_product_back_to_top"/>
+
+</RelativeLayout>

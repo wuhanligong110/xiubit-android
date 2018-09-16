@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@color/WHITE"
+        android:layout_height="45dp">
+
+        <RelativeLayout
+            android:id="@+id/tabRl1"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+            
+            <LinearLayout
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tabTextv1"
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_blue_common"
+                    android:textSize="14dp"
+                    android:text="推荐理财师"
+                    />
+
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp"
+                    android:id="@+id/cfgNumTv"
+                    android:layout_toRightOf="@id/tabTextv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_blue_common"
+                    android:text="(0)"/>
+            </LinearLayout>
+
+            
+
+            <View
+                android:id="@+id/redLine1"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:layout_width="120dp"
+                android:background="@color/text_blue_common"
+                android:layout_height="2dp"/>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="1dp"
+            style="@style/line_vertical_common_no_margin"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"/>
+
+        <RelativeLayout
+            android:id="@+id/tabRl2"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+            
+            <LinearLayout
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                
+          
+
+            <TextView
+                android:id="@+id/tabTextv2"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_black_common"
+                android:textSize="14dp"
+                android:text="邀请客户"
+                />
+
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:id="@+id/customerNumTv"
+                android:layout_toRightOf="@id/tabTextv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_black_common"
+                android:text="(0)"/>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/redLine2"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:layout_width="120dp"
+                android:background="@color/text_blue_common"
+                android:layout_height="2dp"
+                android:visibility="invisible"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <View
+        style="@style/line_horizontal_common"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never">
+
+
+
+
+    </android.support.v4.view.ViewPager>
+
+</LinearLayout>

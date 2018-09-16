@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:ptr="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroud_common"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/statusBar"
+        android:background="@color/top_title_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+   <TextView
+       android:layout_width="match_parent"
+       android:layout_height="44dp"
+       android:background="@color/top_title_bg"
+       android:textSize="16dp"
+       android:textColor="@color/WHITE"
+       android:gravity="center"
+       android:text="理财"/>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshViewSrl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backgroud_common"
+        app:srlPrimaryColor="@color/text_blue_common"
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:overScrollMode="never"
+                >
+
+            </android.support.v7.widget.RecyclerView>
+
+        </LinearLayout>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+</LinearLayout>

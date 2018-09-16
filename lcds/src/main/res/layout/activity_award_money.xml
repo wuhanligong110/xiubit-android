@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.scwang.smartrefresh.layout.SmartRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:ptr="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   >
+    <!--ptr:srlPrimaryColor="@color/text_blue_common"-->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/backgroud_common"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/w145"
+                android:background="@color/top_title_bg"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <com.v5ent.xiubit.view.MyTextView
+                    android:id="@+id/leftBounsTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/w12"
+                    android:text="--"
+                    android:textColor="@color/text_white_common"
+                    android:textSize="@dimen/w33" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/w15"
+                    android:text="我的奖励金(元)"
+                    android:textColor="@color/text_white_light"
+                    android:textSize="@dimen/w12" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical">
+
+                    <android.support.constraint.ConstraintLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.v5ent.xiubit.view.MyTextView
+                            android:id="@+id/canTranTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:text="--"
+                            android:textColor="@color/text_white_common"
+                            android:textSize="@dimen/w18"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+
+                        <TextView
+                            android:id="@+id/tv1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/canTranTV"
+                            android:layout_centerHorizontal="true"
+                            android:text="可转出(元)"
+                            android:textColor="@color/text_white_light"
+                            android:textSize="@dimen/w12"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/canTranTV" />
+
+                        <ImageView
+                            android:id="@+id/questIv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/canTranTV"
+                            android:layout_toRightOf="@id/tv1"
+                            android:paddingLeft="@dimen/w4"
+                            android:paddingRight="@dimen/w8"
+                            android:src="@drawable/img_question_white"
+                            app:layout_constraintBottom_toBottomOf="@id/tv1"
+                            app:layout_constraintLeft_toRightOf="@id/tv1"
+                            app:layout_constraintTop_toTopOf="@id/tv1" />
+
+
+                    </android.support.constraint.ConstraintLayout>
+
+                    <View
+                        style="@style/line_vertical_common_no_margin"
+                        android:layout_height="@dimen/w35"
+                        android:background="@color/text_white_light" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <com.v5ent.xiubit.view.MyTextView
+                            android:id="@+id/totalMoneyTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="--"
+                            android:textColor="@color/text_white_common"
+                            android:textSize="@dimen/w18" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="累计已获(元)"
+                            android:textColor="@color/text_white_light"
+                            android:textSize="@dimen/w12" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View style="@style/line_horizontal_common" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <View
+                    style="@style/line_horizontal_common"
+                    android:layout_marginTop="@dimen/w12" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:background="@color/WHITE"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/w12"
+                    android:paddingLeft="@dimen/w15"
+                    android:paddingTop="@dimen/w12">
+
+                    <View
+                        android:layout_width="4dp"
+                        android:layout_height="16dp"
+                        android:layout_marginRight="6dp"
+                        android:background="@color/blue_level_2" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="如何赚奖励金"
+                        android:textColor="@color/text_black_common"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+
+                <View style="@style/line_horizontal_common" />
+
+                <LinearLayout
+                    android:id="@+id/signTab"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/w70"
+                        android:background="@color/WHITE"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/w15">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/w12"
+                            android:src="@drawable/sign_ic" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="签到"
+                                android:textColor="@color/text_black_common"
+                                android:textSize="@dimen/w16" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="最高可领30元"
+                                android:textColor="@color/text_gray_common"
+                                android:textSize="@dimen/w12" />
+
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/gotoSign"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/w15"
+                            android:background="@drawable/blue_border_2arc_ic"
+                            android:gravity="center"
+                            android:text="去签到"
+                            android:textColor="@color/text_blue_common"
+                            android:textSize="@dimen/w13" />
+
+                    </LinearLayout>
+
+
+                    <View style="@style/line_horizontal_common" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/w70"
+                    android:background="@color/WHITE"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/w15">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/w12"
+                        android:src="@drawable/sign_ic" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="晒单"
+                            android:textColor="@color/text_black_common"
+                            android:textSize="@dimen/w16" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="成功晒单一次，领0.2元奖励金"
+                            android:textColor="@color/text_gray_common"
+                            android:textSize="@dimen/w12" />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/shareDanTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/w15"
+                        android:background="@drawable/blue_border_2arc_ic"
+                        android:gravity="center"
+                        android:text="去晒单"
+                        android:textColor="@color/text_blue_common"
+                        android:textSize="@dimen/w13" />
+
+                </LinearLayout>
+
+                <View style="@style/line_horizontal_common" />
+            </LinearLayout>
+            <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="@dimen/w70"-->
+            <!--android:background="@color/WHITE"-->
+            <!--android:paddingLeft="@dimen/w15"-->
+            <!--android:gravity="center_vertical">-->
+
+            <!--<ImageView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:src="@drawable/sequfatie_ic"-->
+            <!--android:layout_marginRight="@dimen/w12"/>-->
+
+            <!--<LinearLayout-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="vertical">-->
+
+            <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textColor="@color/text_black_common"-->
+            <!--android:textSize="@dimen/w16"-->
+            <!--android:text="社区发帖"/>-->
+
+            <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textColor="@color/text_gray_common"-->
+            <!--android:textSize="@dimen/w12"-->
+            <!--android:text="最高10元/条"/>-->
+
+
+            <!--</LinearLayout>-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/gotoFaTie"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textSize="@dimen/w13"-->
+            <!--android:textColor="@color/text_blue_common"-->
+            <!--android:text="去发帖"-->
+            <!--android:gravity="center"-->
+            <!--android:layout_marginRight="@dimen/w15"-->
+            <!--android:background="@drawable/blue_border_2arc_ic"/>-->
+
+            <!--</LinearLayout>-->
+            <!--<View-->
+            <!--style="@style/line_horizontal_common"/>-->
+
+            <View
+                style="@style/line_horizontal_common"
+                android:layout_marginTop="@dimen/w12" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@color/WHITE"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/w12"
+                android:paddingLeft="@dimen/w15"
+                android:paddingTop="@dimen/w12">
+
+                <View
+                    android:layout_width="4dp"
+                    android:layout_height="16dp"
+                    android:layout_marginRight="6dp"
+                    android:background="@color/blue_level_2" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="如何花奖励金"
+                    android:textColor="@color/text_black_common"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+            <View style="@style/line_horizontal_common" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/w70"
+                android:background="@color/WHITE"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/w15">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/w12"
+                    android:src="@drawable/yiycj_ic" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="一元抽奖"
+                        android:textColor="@color/text_black_common"
+                        android:textSize="@dimen/w16" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="最高可抽iPhone X"
+                        android:textColor="@color/text_gray_common"
+                        android:textSize="@dimen/w12" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/gotoChoujiang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/w15"
+                    android:background="@drawable/blue_border_2arc_ic"
+                    android:gravity="center"
+                    android:text="去抽奖"
+                    android:textColor="@color/text_blue_common"
+                    android:textSize="@dimen/w13" />
+
+            </LinearLayout>
+
+            <View style="@style/line_horizontal_common" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/w70"
+                android:background="@color/WHITE"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/w15">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/w12"
+                    android:src="@drawable/zc_ic" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="转出到理财余额"
+                        android:textColor="@color/text_black_common"
+                        android:textSize="@dimen/w16" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="单笔投资3万(期限≥30天)可转出10元"
+                        android:textColor="@color/text_gray_common"
+                        android:textSize="@dimen/w12" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/gotoTranOut"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/w15"
+                    android:background="@drawable/blue_border_2arc_ic"
+                    android:gravity="center"
+                    android:text="去转出"
+                    android:textColor="@color/text_blue_common"
+                    android:textSize="@dimen/w13" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+</com.scwang.smartrefresh.layout.SmartRefreshLayout>

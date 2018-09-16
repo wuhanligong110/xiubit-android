@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroud_common">
+
+    <LinearLayout
+        android:id="@+id/hasNoAuthentLl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/w15"
+            android:background="@color/WHITE"
+            android:paddingTop="@dimen/w20"
+            android:paddingBottom="@dimen/w15"
+            android:orientation="vertical"
+            android:gravity="center">
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/identity_ico"
+                android:layout_marginBottom="@dimen/w25"/>
+
+            <TextView
+                android:id="@+id/goNameAuthentTv"
+                android:layout_marginLeft="@dimen/w15"
+                android:layout_marginRight="@dimen/w15"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/w55"
+                android:textSize="@dimen/w16"
+                android:text="去实名认证"
+                android:gravity="center"
+                android:textColor="@color/text_white_common"
+                android:background="@color/text_blue_common"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/w12"
+            android:textColor="@color/text_gray_common"
+            android:layout_marginLeft="@dimen/w15"
+            android:text="通过绑定银行卡完成实名认证"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/hasAuthentLl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+        <RelativeLayout
+            android:layout_marginBottom="@dimen/w15"
+            android:layout_marginTop="@dimen/w15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/w15"
+            android:paddingRight="@dimen/w15"
+            android:paddingTop="@dimen/w10"
+            android:paddingBottom="@dimen/w10"
+            android:background="@color/WHITE">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/w16"
+                android:textColor="@color/text_gray_common"
+                android:text="姓名"
+                />
+
+            <TextView
+                android:layout_alignParentRight="true"
+                android:id="@+id/nameTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/w16"
+                android:textColor="@color/text_gray_common"
+                android:text=""
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginBottom="@dimen/w15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/w15"
+            android:paddingRight="@dimen/w15"
+            android:paddingTop="@dimen/w10"
+            android:paddingBottom="@dimen/w10"
+            android:background="@color/WHITE">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/w16"
+                android:textColor="@color/text_gray_common"
+                android:text="身份证"
+                />
+
+            <TextView
+                android:layout_alignParentRight="true"
+                android:id="@+id/identityTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/w16"
+                android:textColor="@color/text_gray_common"
+                android:text=""
+                />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

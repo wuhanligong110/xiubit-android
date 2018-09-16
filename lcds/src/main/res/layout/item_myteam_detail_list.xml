@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/WHITE"
+              android:orientation="vertical">
+    <LinearLayout
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:orientation="vertical"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/nameAndPhoneTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14dp"
+            android:textColor="@color/text_black_common"
+            android:text="姓名(电话号码)"
+            android:singleLine="true"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView
+            android:id="@+id/text_customer_product_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="销售《产品名》"
+            android:textColor="@color/text_black_common6c"
+            android:textSize="12dp"/>
+    </LinearLayout>
+
+    <View style="@style/line_horizontal_common"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <TextView
+            android:id="@+id/text_customer_invest_money"
+            android:textColor="@color/text_black_common6c"
+            android:textSize="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="销售额(元)：0000.00"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView
+            android:id="@+id/recommendAllowTv"
+            android:textColor="@color/text_black_common6c"
+            android:textSize="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我的推荐奖励(元)：0.00"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView
+            android:id="@+id/directorManageAllow"
+            android:textColor="@color/text_black_common6c"
+            android:textSize="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我的直接管理津贴(元)：0.00"
+            android:layout_marginBottom="4dp"/>
+        <TextView
+        android:id="@+id/teamManageAllow"
+        android:textColor="@color/text_black_common6c"
+        android:textSize="12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="我的团队管理津贴(元)：0.00"
+        />
+    </LinearLayout>
+<View
+    style="@style/line_horizontal_common"/>
+
+    <TextView
+        android:id="@+id/text_customer_invest_date"
+        android:textColor="@color/text_black_common6c"
+        android:textSize="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:background="@color/backgroud_common"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:text="购买日：2099-00-00"/>
+
+    <View
+        style="@style/line_horizontal_common"
+        android:background="@color/backgroud_common"
+        android:layout_height="10dp"/>
+
+</LinearLayout>

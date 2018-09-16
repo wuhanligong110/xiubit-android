@@ -1,0 +1,287 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/root_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/backgroud_common">
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/topNewUserRemindTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@color/yellow_bar_bg"
+                    android:gravity="center"
+                    android:text="绑定银行卡送20元理财红包"
+                    android:textColor="@color/text_gray_common_title"
+                    android:textSize="@dimen/w12"
+                    android:visibility="gone"/>
+
+                <View style="@style/line_horizontal_common"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/w35"
+                    android:textSize="@dimen/w13"
+                    android:textColor="@color/text_gray_common"
+                    android:text="请绑定持卡人的银行卡"
+                    android:paddingLeft="@dimen/w14"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="@dimen/w5"/>
+
+                <View style="@style/line_horizontal_common"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/WHITE"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/w12">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/w49"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="@dimen/w70"
+                            android:layout_height="match_parent"
+                            android:gravity="left|center_vertical"
+                            android:textSize="@dimen/w16"
+                            android:textColor="@color/text_gray_common"
+                            android:text="持卡人"/>
+
+                        <org.xsl781.ui.view.ClearEditText
+                            android:textCursorDrawable="@drawable/edittext_cursor_shape"
+                            android:id="@+id/cedt_real_name"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical|left"
+                            android:layout_weight="3.5"
+                            android:textSize="@dimen/w14"
+                            android:textColor="@color/text_black_common"
+                            android:textColorHint="@color/text_color_hint_common"
+                            android:background="@android:color/transparent"
+                            android:hint="请输入姓名"
+                            android:paddingLeft="6dp"
+                            android:paddingRight="@dimen/w12"/>
+
+                        <ImageView
+                            android:id="@+id/identityScanEntry"
+                            android:paddingLeft="@dimen/w12"
+                            android:paddingRight="@dimen/w12"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ic_sao_ma"/>
+                    </LinearLayout>
+
+                    <!-- android:inputType="mobile" -->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:orientation="horizontal">
+
+                        <View
+                            style="@style/line_horizontal_common"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"/>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/w49"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:textSize="@dimen/w16"
+                            android:textColor="@color/text_gray_common"
+                            android:layout_width="@dimen/w70"
+                            android:layout_height="match_parent"
+                            android:gravity="left|center_vertical"
+                            android:text="身份证"/>
+
+                        <org.xsl781.ui.view.ClearEditText
+                            android:textCursorDrawable="@drawable/edittext_cursor_shape"
+                            android:id="@+id/cedt_identity_card"
+                            style="@style/edit_text_size_style"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical|left"
+                            android:layout_weight="3.5"
+                            android:background="@android:color/transparent"
+                            android:hint="请输入身份证号"
+                            android:textSize="@dimen/w14"
+                            android:textColor="@color/text_black_common"
+                            android:textColorHint="@color/text_color_hint_common"
+                            android:paddingLeft="6dp"
+                            android:paddingRight="@dimen/w12"
+                            android:maxLength="18"
+                            android:singleLine="true"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View style="@style/line_horizontal_common"/>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/WHITE"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/w12">
+
+                        <TextView
+                            android:textSize="@dimen/w16"
+                            android:textColor="@color/text_gray_common"
+                            android:layout_width="@dimen/w70"
+                            android:layout_height="match_parent"
+                            android:gravity="left|center_vertical"
+                            android:text="银行卡"/>
+
+                        <org.xsl781.ui.view.ClearEditText
+                            android:textCursorDrawable="@drawable/edittext_cursor_shape"
+                            android:id="@+id/cedt_bank_card_number"
+                            style="@style/edit_text_size_style"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical|left"
+                            android:layout_weight="3.5"
+                            android:background="@android:color/transparent"
+                            android:hint="请输入储蓄卡号"
+                            android:textSize="@dimen/w14"
+                            android:textColor="@color/text_black_common"
+                            android:textColorHint="@color/text_color_hint_common"
+                            android:inputType="number"
+                            android:maxLength="23"
+                            android:paddingLeft="6dp"
+                            android:paddingRight="@dimen/w12"
+                            android:singleLine="true"/>
+
+                        <ImageView
+                            android:id="@+id/bandScanEntry"
+                            android:paddingLeft="@dimen/w12"
+                            android:paddingRight="@dimen/w12"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ic_sao_ma"/>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_marginLeft="@dimen/w12"
+                        style="@style/line_horizontal_common"/>
+
+
+                </LinearLayout>
+
+                <View style="@style/line_horizontal_common"/>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/w49"
+                    android:background="@color/WHITE"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/w12"
+                    android:visibility="gone">
+
+
+                    <TextView
+                        android:textSize="@dimen/w16"
+                        android:textColor="@color/text_gray_common"
+                        android:layout_width="@dimen/w70"
+                        android:layout_height="match_parent"
+                        android:gravity="left|center_vertical"
+                        android:maxLength="11"
+                        android:text="预留手机"/>
+
+                    <org.xsl781.ui.view.ClearEditText
+                        android:id="@+id/cedt_phone"
+                        style="@style/edit_text_size_style"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical|left"
+                        android:layout_weight="2.8"
+                        android:background="@android:color/transparent"
+                        android:textCursorDrawable="@drawable/edittext_cursor_shape"
+                        android:hint="银行预留手机号"
+                        android:textSize="@dimen/w15"
+                        android:textColor="@color/text_black_common"
+                        android:textColorHint="@color/text_color_hint_common"
+                        android:inputType="number"
+                        android:maxLength="11"
+                        android:paddingLeft="6dp"
+                        android:paddingRight="@dimen/w12"/>
+                    
+                    <ImageView
+                        android:id="@+id/quest_iv"
+                        android:paddingLeft="@dimen/w12"
+                        android:paddingRight="@dimen/w12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_band_card_ques"/>
+                        />
+                    
+
+
+                </LinearLayout>
+                
+                <TextView
+                    android:id="@+id/error_remind_tv"
+                    android:textColor="@color/text_red_common"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="14dp"
+                    android:gravity="center"
+                    tools:text="错误提示"
+                    />
+
+
+                <Button
+                    android:id="@+id/btn_next"
+                    style="@style/btn_login_style"
+                    android:background="@drawable/btn_login_selector"
+                    android:text="下一步"
+                    android:enabled="false"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+
+    <TextView
+        android:layout_alignParentBottom="true"
+        android:id="@+id/bottomTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:gravity="center_horizontal|bottom"
+        android:textColor="@color/text_gray_common"
+        android:text="如需更换手机号，请联系客服：400-888-6987"
+        android:layout_marginBottom="20dp"
+        android:visibility="gone"/>
+
+</RelativeLayout>

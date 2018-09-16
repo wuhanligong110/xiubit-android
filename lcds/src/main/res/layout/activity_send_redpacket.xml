@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.v5ent.xiubit.activity.CouponActivity">
+
+    <View
+        android:id="@+id/statusBar"
+        android:layout_width="match_parent"
+        android:background="@color/top_title_bg"
+        android:layout_height="0dp"/>
+
+    <RelativeLayout
+        android:id="@+id/headCntainer"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:background="@color/text_blue_common"
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/backIv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:paddingRight="15dp"
+            android:paddingLeft="15dp"
+            android:src="@drawable/btn_back"
+            android:visibility="visible"/>
+
+
+        <com.flyco.tablayout.SlidingTabLayout
+            android:layout_centerHorizontal="true"
+            android:id="@+id/tabLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:tl_indicator_color="@color/WHITE"
+            app:tl_indicator_width="55dp"
+            app:tl_textSelectColor="@color/text_white_common"
+            app:tl_textUnselectColor="#cbdfff"
+            app:tl_indicator_margin_bottom="4dp"
+            app:tl_tab_space_equal="true"
+            app:tl_tab_padding="@dimen/w15"
+            app:tl_textsize="16dp"/>
+
+
+
+
+    </RelativeLayout>
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:overScrollMode="never">
+
+
+    </android.support.v4.view.ViewPager>
+
+
+
+
+
+</LinearLayout>
