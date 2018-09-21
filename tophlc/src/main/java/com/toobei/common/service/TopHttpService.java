@@ -97,9 +97,9 @@ public abstract class TopHttpService {
 
 
     /**
-     * 通过appkind 自动获取t呗或者猎财的h5的BaseUrl
+     * 通过appkind 自动获取t呗或者貅比特的h5的BaseUrl
      *
-     * @return t呗或者猎财的h5的BaseUrl
+     * @return t呗或者貅比特的h5的BaseUrl
      */
 
     public String getBaseH5urlByAppkind() {
@@ -123,7 +123,7 @@ public abstract class TopHttpService {
     public abstract String getLcdsServerDomainUrl();
 
     /**
-     *分享链接后缀，用来判别 是猎财还是tb 以及版本
+     *分享链接后缀，用来判别 是貅比特还是tb 以及版本
      */
     public abstract String getShareUrlEndSuffix();
     /**

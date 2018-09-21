@@ -70,7 +70,7 @@ public class PersonbusinessCardActivity extends MyTitleBaseActivity {
         //tab
         ArrayList<CustomTabEntity> tabList = new ArrayList<>();
         tabList.add(new CommonTabEntity("推荐理财师"));
-        tabList.add(new CommonTabEntity("邀请客户"));
+//        tabList.add(new CommonTabEntity("邀请客户"));
         mTabLayout.setTabData(tabList);
         mTabLayout.setOnTabSelectListener(new OnTabSelectListener() {
             @Override

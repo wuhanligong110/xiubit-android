@@ -228,7 +228,7 @@ class SignInActivity : NetBaseActivity() {
                             SignSharePopupWindow(ctx, ShareContent("貅比特签到,领现金奖励"
                                     , "我在貅比特签到已领${response.data.shareDesc}元现金，你也跟我一起来吧！天天签到,天天领现金"
                                     , shareLink   //签到分享网址
-                                    , "")
+                                    , "25c3a22ef87adf6964f04f858614f985")
                                     , object : ShareService.OnShareSuccessListener {
                                 override fun onShareSuccessed(sharePlatform: ShareService.SharePlatform?) {} //实际没有成功回调
 

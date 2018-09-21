@@ -216,7 +216,7 @@ public class OrgInfoDetailActivity extends TopNetworkBaseActivity<PlatFormDetail
         orginfoIV = (ImageView) homeHeadView.findViewById(R.id.orgLogoIV);
 
 
-        findViewById(R.id.img_financial_guild).setOnClickListener(this); //猎财攻略
+        findViewById(R.id.img_financial_guild).setOnClickListener(this); //貅比特攻略
 
         textOrgName = (TextView) homeHeadView.findViewById(R.id.text_orginfo_detail_name);
         textOrgRank = (TextView) homeHeadView.findViewById(R.id.text_org_rank);
@@ -692,7 +692,7 @@ public class OrgInfoDetailActivity extends TopNetworkBaseActivity<PlatFormDetail
                 hideInsFlage = !hideInsFlage;
                 tabHide.setImageResource(hideInsFlage ? R.drawable.img_arrow_down : R.drawable.img_arrow_up);
                 break;
-            case R.id.img_financial_guild: //猎财攻略
+            case R.id.img_financial_guild: //貅比特攻略
                 if (platformDetail == null) break;
 
                 WebActivityCommon.showThisActivity(this, MyApp.getInstance().getDefaultSp().getInvestmentStrategy() + "?orgCode=" + platformDetail.getOrgNo(), "");

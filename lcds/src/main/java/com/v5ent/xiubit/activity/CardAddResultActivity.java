@@ -72,8 +72,8 @@ public class CardAddResultActivity extends MyTitleBaseActivity {
                     public void onClick(View view, String text) {
                         callPhone();
                     }
-                }, false, "400-888-6987")
-                .setTextColor(R.color.text_blue_common, "400-888-6987")
+                }, false, "0755-86725461")
+                .setTextColor(R.color.text_blue_common, "0755-86725461")
                 .build();
 
         completeBtn.setOnClickListener(new View.OnClickListener() {
@@ -97,7 +97,7 @@ public class CardAddResultActivity extends MyTitleBaseActivity {
                 .callback(new PermissionListener() {
                     @Override
                     public void onSucceed(int requestCode, @NonNull List<String> grantPermissions) {
-                        PromptDialogCalTel dialog = new PromptDialogCalTel(ctx, false, "确认拨打客服电话?",  "400-888-6987");
+                        PromptDialogCalTel dialog = new PromptDialogCalTel(ctx, false, "确认拨打客服电话?",  "0755-86725461");
                         dialog.setBtnPositiveColor(R.color.text_blue_common);
                         dialog.show();
                     }

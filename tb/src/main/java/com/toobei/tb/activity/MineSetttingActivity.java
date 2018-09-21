@@ -185,7 +185,7 @@ public class MineSetttingActivity extends MyTitleBaseActivity {
                     public void onClicked(PromptDialog dialog, boolean isCancel) {
                         if (!isCancel) {
                             if (MyApp.getInstance().getDefaultSp().getIsLcdsJumpToken()) {
-                                //当前token是猎财跳过来的话就不做服务器登出
+                                //当前token是貅比特跳过来的话就不做服务器登出
                                 MyApp.getInstance().logOut(false);
                             }else {
                                 MyApp.getInstance().logOut();

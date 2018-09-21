@@ -65,7 +65,7 @@ public abstract class TopCardManagerAdd extends TopNetBaseActivity implements On
     private String bankCard = "", realName = "", identityCard = "", phone = "", bank = "";
     protected View rootView;
     private TextView mBottomTv;
-    private String mServerNum = "400-888-6987";
+    private String mServerNum = "0755-86725461";
     private TextView mErrorRemindTv;
     private boolean[] checkSuccess = new boolean[4];
     private ImageView mQuestIv;
@@ -160,8 +160,8 @@ public abstract class TopCardManagerAdd extends TopNetBaseActivity implements On
                     public void onClick(View view, String text) {
                         callPhone();
                     }
-                }, false, "400-888-6987")
-                .setTextColor(R.color.text_blue_common, "400-888-6987")
+                }, false, "0755-86725461")
+                .setTextColor(R.color.text_blue_common, "0755-86725461")
                 .build();
 
         KeyboardUtil.setupUIListenerAndCloseKeyboard(rootView, this);

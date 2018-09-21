@@ -24,7 +24,7 @@
     <!--颜色调整 todo 787878-->
     <!--Activity顶部颜色-->
 
-    <!--t呗和猎财通用颜色-->
+    <!--t呗和貅比特通用颜色-->
     <color name="text_blue_common">#7e99ce</color>
     <color name="top_title_bg">#6a7a9a</color> <!--menu bar 和部分icon-->
     <color name="top_title_text">@color/WHITE</color>

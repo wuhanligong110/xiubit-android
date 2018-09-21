@@ -86,7 +86,7 @@ class AwardMoneyActivity : NetBaseActivity(), View.OnClickListener {
             R.id.shareDanTv -> { //去晒单
                 var shareDanUrl = "http://declare.bethye.top/postDetail?order=1"
                 if (!BuildConfig.FLAVOR.equals("rel")){
-                    shareDanUrl = "http://predeclare.bethye.top/postDetail?order=1"
+                    shareDanUrl = "http://10.16.0.128:12003/postDetail?order=1"
                 }
 
                 WebActivityCommon.showThisActivity(ctx,shareDanUrl,"")

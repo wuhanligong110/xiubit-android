@@ -15,7 +15,7 @@ public class RewardDetail extends BaseEntity {
      * status : 提现状态
      * tranName : 交易名称
      * tranTime : 交易时间
-     * userType : 区分那个端（T呗，猎财）
+     * userType : 区分那个端（T呗，貅比特）
      * withdrawRemark : 提现备注
      */
 

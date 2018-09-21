@@ -152,7 +152,7 @@ class FragmentDiscover : FragmentBase() {
 
                                 val intent = Intent(ctx, WebActivityCommon::class.java)
                                 intent.putExtra("url", url)
-                                intent.putExtra("shareContent", ShareContent(bean.title, bean.summary, bean.linkUrl, bean.shareIcon))
+                                intent.putExtra("shareContent", ShareContent(bean.title, bean.summary, url, bean.shareIcon))
                                 ctx.startActivity(intent)
                             }
                             topNewsLl?.addView(view)

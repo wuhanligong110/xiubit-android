@@ -177,7 +177,7 @@ public interface ThirdPartApi {
     public Observable<InsuranceSiftEntiy> insuranceSift(@FieldMap Map<String, String> map);
 
     /**
-     * 首页猎财课堂资讯
+     * 首页貅比特课堂资讯
      *
      * @param map
      * @return

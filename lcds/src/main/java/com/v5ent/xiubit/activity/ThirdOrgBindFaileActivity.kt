@@ -24,6 +24,6 @@ class ThirdOrgBindFaileActivity : NetBaseActivity() {
             skipActivity(ctx,intent)
         }
 
-        phoneTv.setOnClickListener { SystemFunctionUtil.CallServicePhone(ctx,"400-888-6987") }
+        phoneTv.setOnClickListener { SystemFunctionUtil.CallServicePhone(ctx,"0755-86725461") }
     }
 }

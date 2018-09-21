@@ -124,7 +124,7 @@ public class MyCustomerService extends MyTitleBaseActivity implements OnMyWebVie
             return;
         } else {
             String serviceTelephone = MyApp.getInstance().getDefaultSp().getServiceTelephone();
-            if (TextUtil.isEmpty(serviceTelephone)) serviceTelephone = "400-888-6987";
+            if (TextUtil.isEmpty(serviceTelephone)) serviceTelephone = "0755-86725461";
             PromptDialogCalTel dialog = new PromptDialogCalTel(ctx, true, "致电"+serviceTelephone+"？", serviceTelephone);
             dialog.show();
         }
@@ -138,7 +138,7 @@ public class MyCustomerService extends MyTitleBaseActivity implements OnMyWebVie
                 Logger.e(permissions.toString());
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     String serviceTelephone = MyApp.getInstance().getDefaultSp().getServiceTelephone();
-                    if (TextUtil.isEmpty(serviceTelephone)) serviceTelephone = "400-888-6987";
+                    if (TextUtil.isEmpty(serviceTelephone)) serviceTelephone = "0755-86725461";
                     PromptDialogCalTel dialog = new PromptDialogCalTel(ctx, true, "致电"+serviceTelephone+"？", MyApp
                             .getInstance()
                             .getDefaultSp()

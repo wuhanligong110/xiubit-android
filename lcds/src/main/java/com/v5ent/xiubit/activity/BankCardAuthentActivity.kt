@@ -36,7 +36,7 @@ class BankCardAuthentActivity : NetBaseActivity() {
             addBankCardLl.visibility = View.GONE
             cardInfoLl.visibility = View.VISIBLE
             callPhone.setOnClickListener {
-                SystemFunctionUtil.CallServicePhone(ctx, "400-888-6987")
+                SystemFunctionUtil.CallServicePhone(ctx, "0755-86725461")
             }
 
             loadCardData()

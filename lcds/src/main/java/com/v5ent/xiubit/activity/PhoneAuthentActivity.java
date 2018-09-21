@@ -34,7 +34,7 @@ public class PhoneAuthentActivity extends MyTitleBaseActivity {
         headerLayout.showTitle("手机号");
         headerLayout.showLeftBackButton();
         mPhoneNumTv.setText(getIntent().getStringExtra("phoneNum"));
-        mServerNum = "400-888-6987";
+        mServerNum = "0755-86725461";
         callPhone.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

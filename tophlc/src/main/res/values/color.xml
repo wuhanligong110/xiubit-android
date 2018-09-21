@@ -35,7 +35,7 @@
     <color name="text_color_hint_common">#dcdcdc</color>
 
 
-    <!--t呗和猎财通用颜色-->
+    <!--t呗和貅比特通用颜色-->
     <color name="text_red_common">#fd5353</color>
 
     <color name="text_blue_common">#4e8cef</color>
@@ -43,7 +43,7 @@
     <color name="text_black_common">#4f5960</color> <!--用于一级文字颜色--><!--比如年化收益 产品总标题-->
     <color name="text_gray_common_title">#666666</color>    <!--用于二级文字颜色-->
     <color name="text_gray_common">#999999</color>    <!-- 用于说明文字 ->小字 -->
-    <color name="text_gray_commona2">#a2a2a2</color>    <!--用于说明文字->小字-猎财-->
+    <color name="text_gray_commona2">#a2a2a2</color>    <!--用于说明文字->小字-貅比特-->
 
     <color name="text_gray_commonDC">#dcdcdc</color>   <!--线的颜色 进度条的灰色-->
     <color name="text_light_blue">#9cbdf4</color><!--产品和机构标题切换颜色-->

@@ -37,7 +37,7 @@ object SystemFunctionUtil {
                 .callback(object : PermissionListener {
                     override fun onSucceed(requestCode: Int, grantPermissions: List<String>) {
                         var serviceTelephone = TopApp.getInstance().defaultSp.serviceTelephone
-                        if (TextUtil.isEmpty(serviceTelephone)) serviceTelephone = "400-888-6987"
+                        if (TextUtil.isEmpty(serviceTelephone)) serviceTelephone = "0755-86725461"
                         val dialog = PromptDialogCalTel(activity, true, "致电$serviceTelephone？", phoneNum)
                         dialog.setBtnPositiveColor(R.color.text_blue_common)
                         dialog.show()

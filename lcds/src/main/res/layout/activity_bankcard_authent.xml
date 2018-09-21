@@ -131,7 +131,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/text_blue_common"
-                android:text="400-888-6987"
+                android:text="0755-86725461"
                 android:textSize="@dimen/w14"
                 android:layout_marginRight="@dimen/w8"/>
         </LinearLayout>

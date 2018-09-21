@@ -143,20 +143,20 @@ public class FragmentHomePage extends FragmentBase {
     ImageView mHomePageTab4Iv;
     @BindView(R.id.newuser_tab)
     View mNewuserTab;
-    @BindView(R.id.insurance_iv)
-    ImageView mInsuranceIv;
-    @BindView(R.id.insurance_name_tv)
-    TextView mInsuranceNameTv;
-    @BindView(R.id.insurance_description_tv)
-    TextView mInsuranceDescriptionTv;
-    @BindView(R.id.insurance_price_tv)
-    MyTextView mInsurancePriceTv;
-    @BindView(R.id.insuranceEntry)
-    View mInsuranceEntry;
+    /*@BindView(R.id.insurance_iv)
+    ImageView mInsuranceIv;*/
+    /*@BindView(R.id.insurance_name_tv)
+    TextView mInsuranceNameTv;*/
+    /*@BindView(R.id.insurance_description_tv)
+    TextView mInsuranceDescriptionTv;*/
+    /*@BindView(R.id.insurance_price_tv)
+    MyTextView mInsurancePriceTv;*/
+    /*@BindView(R.id.insuranceEntry)
+    View mInsuranceEntry;*/
     @BindView(R.id.fund_list_rv)
     RecyclerView mFundListRv;
-    @BindView(R.id.feeRatioTv)
-    MyTextView feeRatioTv;
+    /*@BindView(R.id.feeRatioTv)
+    MyTextView feeRatioTv;*/
     @BindView(R.id.guideBgLl)
     View guideBgLl;
     @BindView(R.id.guideV1)
@@ -257,20 +257,20 @@ public class FragmentHomePage extends FragmentBase {
                 .subscribe(new NetworkObserver<InsuranceSiftEntiy>() {
                     @Override
                     public void bindViewWithDate(final InsuranceSiftEntiy response) {
-                        mInsuranceEntry.setVisibility(View.VISIBLE);
+//                        mInsuranceEntry.setVisibility(View.VISIBLE);
                         InsuranceDetialData data = response.getData();
-                        mInsuranceNameTv.setText(data.productName);
-                        mInsuranceDescriptionTv.setText(data.fullDescription);
+//                        mInsuranceNameTv.setText(data.productName);
+//                        mInsuranceDescriptionTv.setText(data.fullDescription);
 
-                        TextDecorator.decorate(mInsurancePriceTv, data.priceString + "元起")
-                                .setAbsoluteSize((int) (ctx.getResources().getDimension(R.dimen.w12)), false, "元起")
-                                .setTextColor(R.color.text_gray_common, "元起")
-                                .build();
+//                        TextDecorator.decorate(mInsurancePriceTv, data.priceString + "元起")
+//                                .setAbsoluteSize((int) (ctx.getResources().getDimension(R.dimen.w12)), false, "元起")
+//                                .setTextColor(R.color.text_gray_common, "元起")
+//                                .build();
 
-                        TextDecorator.decorate(feeRatioTv, data.feeRatio + "%佣金率")
-                                .setAbsoluteSize((int) (ctx.getResources().getDimension(R.dimen.w21)), false, data.feeRatio + "%")
-                                .setTextColor(R.color.text_red_common, data.feeRatio + "%")
-                                .build();
+//                        TextDecorator.decorate(feeRatioTv, data.feeRatio + "%佣金率")
+//                                .setAbsoluteSize((int) (ctx.getResources().getDimension(R.dimen.w21)), false, data.feeRatio + "%")
+//                                .setTextColor(R.color.text_red_common, data.feeRatio + "%")
+//                                .build();
 
                         int tagDrawableId = R.drawable.empty_photo;
                         switch (data.fristCategory) {
@@ -293,14 +293,14 @@ public class FragmentHomePage extends FragmentBase {
                                 tagDrawableId = R.drawable.icon_insurance_tag_6;
                                 break;
                         }
-                        PhotoUtil.loadImageByGlide(ctx, data.productBakimg, mInsuranceIv, R.drawable.empty_photo);
-                        mInsuranceEntry.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View v) {
-                                MobclickAgent.onEvent(ctx, "S_5_1");
-                                new JumpInsuranceService(ctx, response.getData().caseCode, JumpInsuranceService.TAG_PRODUCT_DETIAL).run();
-                            }
-                        });
+//                        PhotoUtil.loadImageByGlide(ctx, data.productBakimg, mInsuranceIv, R.drawable.empty_photo);
+//                        mInsuranceEntry.setOnClickListener(new View.OnClickListener() {
+//                            @Override
+//                            public void onClick(View v) {
+//                                MobclickAgent.onEvent(ctx, "S_5_1");
+//                                new JumpInsuranceService(ctx, response.getData().caseCode, JumpInsuranceService.TAG_PRODUCT_DETIAL).run();
+//                            }
+//                        });
 
                     }
                 });

@@ -24,7 +24,7 @@ public class WithdrawRecord extends BaseEntity {
     private String fee;//手续费
     private String status;//提现处理状态
     private String paymentDate;//预计到账时间
-    private String userType;//区分哪个端(T呗，猎财)
+    private String userType;//区分哪个端(T呗，貅比特)
     private String remark; //提现失败显示字段	string	提现状态6跟7时显示
 
     public String getRemark() {

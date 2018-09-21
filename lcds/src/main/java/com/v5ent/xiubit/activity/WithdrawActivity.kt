@@ -207,7 +207,7 @@ class WithdrawActivity : NetBaseActivity() {
     private fun clickEvent() {
         var remindStr1 = "工作日当天下午2点前提现当天到账，2点后提现次日到账。周五(工作日)2点后和节假日提现顺延至下个工作日到账。"
         var remindStr2 = "每月可享受1次免费提现服务，超过1次，每次1元手续费。"
-        var remindStr3 = "暂时只支持绑定一张银行卡，提现至其他银行卡，请联系客服（400-888-6987）更换银行卡。"
+        var remindStr3 = "暂时只支持绑定一张银行卡，提现至其他银行卡，请联系客服（0755-86725461）更换银行卡。"
 
         fun outPop(str: String) {
             PromptDialogMsg(ctx, str, "我知道了").show()

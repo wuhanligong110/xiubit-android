@@ -88,7 +88,7 @@ public class MineHelpActivity extends MyBaseActivity implements View.OnClickList
 					if (!isCancel) {
 						//用户账号为空，清空缓存信息，重新登录
 						if (MyApp.getInstance().getDefaultSp().getIsLcdsJumpToken()) {
-							//当前token是猎财跳过来的话就不做服务器登出
+							//当前token是貅比特跳过来的话就不做服务器登出
 							MyApp.getInstance().logOut(false);
 						}else {
 							MyApp.getInstance().logOut();

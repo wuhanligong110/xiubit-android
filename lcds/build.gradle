@@ -5,12 +5,12 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'  //一些扩展功能，比如自动findview
 apply plugin: 'kotlin-kapt' //注解
 dependencies {
-//    kapt 'com.android.databinding:compiler:3.0.0'
+    //    kapt 'com.android.databinding:compiler:3.0.0'
     implementation fileTree(include: '*.jar', dir: 'libs')
     implementation project(':tophlc')
     //ButterKnife 必须添加在项目Module 只在依赖项目添加无效
     //leakCanary 内存泄漏检测
-//        debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.5.4'
+    //        debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.5.4'
     debugImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
     releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
     //单元测试
@@ -23,8 +23,8 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     kapt 'com.jakewharton:butterknife-compiler:8.2.1'
     //一个UI调试工具 https://github.com/eleme/UETool
-//    debugCompile 'me.ele:uetool:1.0.15'
-//    releaseCompile 'me.ele:uetool-no-op:1.0.15'
+    //    debugCompile 'me.ele:uetool:1.0.15'
+    //    releaseCompile 'me.ele:uetool-no-op:1.0.15'
     //阿里热修复
     implementation 'com.aliyun.ams:alicloud-android-hotfix:3.2.0'
 }
@@ -38,7 +38,7 @@ android {
             storePassword 'v5entxiubit'
         }
     }
-    compileSdkVersion COMPILE_SDK_VERSION
+    compileSdkVersion 28
 //    buildToolsVersion '26.0.2'
     //     只需在主Module的gradle中配置  useLibrary ‘org.apache.http.legacy‘
     useLibrary 'org.apache.http.legacy'
@@ -58,7 +58,6 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
     }
-
     /*dexOptions {
         preDexLibraries = false
         //让它不要对Lib做preDexing
@@ -66,7 +65,6 @@ android {
         //开启incremental dexing,优化编译效率，这个功能android studio默认是关闭的。
         javaMaxHeapSize "4g"     //增加java堆内存大小
     }*/
-
     //打包(带版本号 和版本名)
     applicationVariants.all { variant ->
         variant.outputs.all { output ->
@@ -121,91 +119,93 @@ android {
         abortOnError false
         ignoreWarnings true
     }
-
     productFlavors {
         //android studio调试时使用               android studio instantRun 在多进程下无法使用 动态替换推送的进程名
         instant {
             flavorDimensions "1024"
-            //api地址
-            buildConfigField "String", "BASE_URL_HTTPS", "\"https://premarket.toobei.com/rest/api\""
-            //猎财H5地址
-            buildConfigField "String", "LCDS_H5_BASE_URL", "\"https://preliecai.toobei.com\""
-            buildConfigField "String", "LCDS_H5_BASE_URL_WEIXIN", "\"https://prenliecai.toobei.com\"" //微信H5网页，有些分享链接会用到
-//            buildConfigField "String", "LCDS_H5_BASE_URL", "\"http://10.16.2.92:8080\""   //本地联调
+            buildConfigField "String", "BASE_URL_HTTPS", "\"http://market.bethye.top/rest/api\""
+            //貅比特H5地址
+            buildConfigField "String", "LCDS_H5_BASE_URL", "\"https://liecai.bethye.top/app\""
+            buildConfigField "String", "LCDS_H5_BASE_URL_WEIXIN", "\"https://nliecai.bethye.top\""
+            //微信H5网页，有些分享链接会用到
             //t呗H5地址
-            buildConfigField "String", "TOOBEI_H5_BASE_URL", "\"https://pre.toobei.com/app\""
-            manifestPlaceholders = [GETUI_PUSH_SERVICE     : "",
-                                    GETUI_APP_ID           : "HQLGzH3xfp7ludDWdv01e2",
-                                    GETUI_APP_KEY          : "6EYEqFfTgI9gR3uDhADknA",
-                                    GETUI_APP_SECRET       : "5K7cLqYuHw7TZK87MM6it1",
+            buildConfigField "String", "TOOBEI_H5_BASE_URL", "\"https://app.bethye.top\""
+            manifestPlaceholders = [GETUI_PUSH_SERVICE     : ":pushservice",
+                                    GETUI_APP_ID           : "FqRhIQVPG38Q66qamfHUc9",
+                                    GETUI_APP_KEY          : "MWpcDq3B1w6KU946JXxOk7",
+                                    GETUI_APP_SECRET       : "YqtcZNQW0z57WDTAv77Ho",
                                     UMENG_APP_KEY          : "5a31e0daf29d985fbf00013e",
-                                    GETUI_PUSH_PROCESS_NAME: ""]
+                                    GETUI_PUSH_PROCESS_NAME: ":pushservice"]
         }
         // 预发布环境
         pre {
             flavorDimensions "1024"
-            buildConfigField "String", "BASE_URL_HTTPS", "\"https://premarket.toobei.com/rest/api\""
+            buildConfigField "String", "BASE_URL_HTTPS", "\"http://market.bethye.top/rest/api\""
+            //貅比特H5地址
+            buildConfigField "String", "LCDS_H5_BASE_URL", "\"http://liecai.bethye.top/app\""
+            buildConfigField "String", "LCDS_H5_BASE_URL_WEIXIN", "\"http://nliecai.bethye.top\""
+            //微信H5网页，有些分享链接会用到
             //t呗H5地址
-            buildConfigField "String", "TOOBEI_H5_BASE_URL", "\"https://pre.toobei.com/app\""
-            //猎财H5地址
-            buildConfigField "String", "LCDS_H5_BASE_URL", "\"https://preliecai.toobei.com\""
-            buildConfigField "String", "LCDS_H5_BASE_URL_WEIXIN", "\"https://prenliecai.toobei.com\"" //微信H5网页，有些分享链接会用到
+            buildConfigField "String", "TOOBEI_H5_BASE_URL", "\"http://app.bethye.top\""
             manifestPlaceholders = [GETUI_PUSH_SERVICE     : ":pushservice",
-                                    GETUI_APP_ID           : "HQLGzH3xfp7ludDWdv01e2",
-                                    GETUI_APP_KEY          : "6EYEqFfTgI9gR3uDhADknA",
-                                    GETUI_APP_SECRET       : "5K7cLqYuHw7TZK87MM6it1",
+                                    GETUI_APP_ID           : "FqRhIQVPG38Q66qamfHUc9",
+                                    GETUI_APP_KEY          : "MWpcDq3B1w6KU946JXxOk7",
+                                    GETUI_APP_SECRET       : "YqtcZNQW0z57WDTAv77Ho",
                                     UMENG_APP_KEY          : "5a31e0daf29d985fbf00013e",
                                     GETUI_PUSH_PROCESS_NAME: ":pushservice"]
         }
         //开发环境
         dev {
             flavorDimensions "1024"
-            buildConfigField "String", "BASE_URL_HTTPS", "\"http://10.16.0.205:6810/rest/api\""
-            //猎财H5地址
-            buildConfigField "String", "LCDS_H5_BASE_URL", "\"https://preliecai.toobei.com/app\""
-            buildConfigField "String", "LCDS_H5_BASE_URL_WEIXIN", "\"https://prenliecai.toobei.com\"" //微信H5网页，有些分享链接会用到
+            buildConfigField "String", "BASE_URL_HTTPS", "\"http://10.16.0.128:8888/rest/api\""
+            //貅比特H5地址
+            buildConfigField "String", "LCDS_H5_BASE_URL", "\"http://10.16.0.128:12001\""
+            buildConfigField "String", "LCDS_H5_BASE_URL_WEIXIN", "\"http://10.16.0.128:12002\""
+            //微信H5网页，有些分享链接会用到
             //t呗H5地址
-            buildConfigField "String", "TOOBEI_H5_BASE_URL", "\"https://pre.toobei.com/app\""
-            manifestPlaceholders = [GETUI_PUSH_SERVICE     : "",
-                                    GETUI_APP_ID           : "HQLGzH3xfp7ludDWdv01e2",
-                                    GETUI_APP_KEY          : "6EYEqFfTgI9gR3uDhADknA",
-                                    GETUI_APP_SECRET       : "5K7cLqYuHw7TZK87MM6it1",
+            buildConfigField "String", "TOOBEI_H5_BASE_URL", "\"http://app.bethye.top\""
+            manifestPlaceholders = [GETUI_PUSH_SERVICE     : ":pushservice",
+                                    GETUI_APP_ID           : "FqRhIQVPG38Q66qamfHUc9",
+                                    GETUI_APP_KEY          : "MWpcDq3B1w6KU946JXxOk7",
+                                    GETUI_APP_SECRET       : "YqtcZNQW0z57WDTAv77Ho",
                                     UMENG_APP_KEY          : "5a31e0daf29d985fbf00013e",
                                     GETUI_PUSH_PROCESS_NAME: ":pushservice"]
         }
         //正式环境  正式打包时选择这个
-       /* rel {
-            flavorDimensions "1024"
-            buildConfigField "String", "BASE_URL_HTTPS", "\"https://market.toobei.com/rest/api\""
-            //猎财H5地址 \app是为了区分t呗pc和移动端 猎财没有
-            buildConfigField "String", "LCDS_H5_BASE_URL", "\"https://liecai.toobei.com\""
-            buildConfigField "String", "LCDS_H5_BASE_URL_WEIXIN", "\"https://nliecai.toobei.com\"" //微信H5网页，有些分享链接会用到
-            buildConfigField "String", "TOOBEI_H5_BASE_URL", "\"https://toobei.com/app\"" //t呗H5地址
-            manifestPlaceholders = [GETUI_PUSH_SERVICE     : ":pushservice",
-                                    GETUI_APP_ID           : "QylcbqtCdhAVhRbKu9AHT2",
-                                    GETUI_APP_KEY          : "lMh6JwxKzq5u5QKxl6Dvn3",
-                                    GETUI_APP_SECRET       : "BLy0lqm8Cc7zGM0Hheqj13",
-                                    UMENG_APP_KEY          : "5a31e0daf29d985fbf00013e", //todo 上线前改过来
-//                                    UMENG_APP_KEY          : "59082532a3251174f4001175",
-                                    GETUI_PUSH_PROCESS_NAME: ":pushservice"]
-        }*/
+        /* rel {
+             flavorDimensions "1024"
+             buildConfigField "String", "BASE_URL_HTTPS", "\"https://market.toobei.com/rest/api\""
+             //貅比特H5地址 \app是为了区分t呗pc和移动端 貅比特没有
+             buildConfigField "String", "LCDS_H5_BASE_URL", "\"https://liecai.toobei.com\""
+             buildConfigField "String", "LCDS_H5_BASE_URL_WEIXIN", "\"https://nliecai.toobei.com\"" //微信H5网页，有些分享链接会用到
+             buildConfigField "String", "TOOBEI_H5_BASE_URL", "\"https://toobei.com/app\"" //t呗H5地址
+             manifestPlaceholders = [GETUI_PUSH_SERVICE     : ":pushservice",
+                                     GETUI_APP_ID           : "QylcbqtCdhAVhRbKu9AHT2",
+                                     GETUI_APP_KEY          : "lMh6JwxKzq5u5QKxl6Dvn3",
+                                     GETUI_APP_SECRET       : "BLy0lqm8Cc7zGM0Hheqj13",
+                                     UMENG_APP_KEY          : "5a31e0daf29d985fbf00013e", //todo 上线前改过来
+ //                                    UMENG_APP_KEY          : "59082532a3251174f4001175",
+                                     GETUI_PUSH_PROCESS_NAME: ":pushservice"]
+         }*/
         //正式环境  正式打包时选择这个
         rel {
             flavorDimensions "1024"
             buildConfigField "String", "BASE_URL_HTTPS", "\"http://market.bethye.top/rest/api\""
-            //猎财H5地址 \app是为了区分t呗pc和移动端 猎财没有
+            //貅比特H5地址 \app是为了区分t呗pc和移动端 貅比特没有
             buildConfigField "String", "LCDS_H5_BASE_URL", "\"http://liecai.bethye.top\""
-            buildConfigField "String", "LCDS_H5_BASE_URL_WEIXIN", "\"http://nliecai.bethye.top\"" //微信H5网页，有些分享链接会用到
+            buildConfigField "String", "LCDS_H5_BASE_URL_WEIXIN", "\"http://nliecai.bethye.top\""
+            //微信H5网页，有些分享链接会用到
             buildConfigField "String", "TOOBEI_H5_BASE_URL", "\"http://app.bethye.top\"" //t呗H5地址
             manifestPlaceholders = [GETUI_PUSH_SERVICE     : ":pushservice",
-                                    GETUI_APP_ID           : "QylcbqtCdhAVhRbKu9AHT2",
-                                    GETUI_APP_KEY          : "lMh6JwxKzq5u5QKxl6Dvn3",
-                                    GETUI_APP_SECRET       : "BLy0lqm8Cc7zGM0Hheqj13",
+                                    GETUI_APP_ID           : "nmAqwrOg889vO0T0xd94",
+                                    GETUI_APP_KEY          : "lvNDbQlZhR6iStqaqsKmF",
+                                    GETUI_APP_SECRET       : "WlpIAl5r4X89STI9dJDBVA",
 //                                    UMENG_APP_KEY          : "5a31e0daf29d985fbf00013e", //todo 上线前改过来
                                     UMENG_APP_KEY          : "59082532a3251174f4001175",
                                     GETUI_PUSH_PROCESS_NAME: ":pushservice"]
         }
     }
+    buildToolsVersion '28.0.2'
 }
 repositories {
     mavenCentral()

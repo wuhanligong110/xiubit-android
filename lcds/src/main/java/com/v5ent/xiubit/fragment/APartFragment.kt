@@ -26,7 +26,7 @@ import org.xsl781.utils.Logger
  * Created by yangLin on 2018/5/8.
  */
 class APartFragment : FragmentBase() {
-    private var url_pre = "http://predeclare.bethye.top/"
+    private var url_pre = "http://10.16.0.128:12003/"
     private var url_rel = "http://declare.bethye.top/"
     private var url = url_rel
     private var hasInit = false

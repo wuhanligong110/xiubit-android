@@ -280,7 +280,7 @@
         android:layout_marginRight="15dp"
         android:gravity="center_horizontal|bottom"
         android:textColor="@color/text_gray_common"
-        android:text="如需更换手机号，请联系客服：400-888-6987"
+        android:text="如需更换手机号，请联系客服：0755-86725461"
         android:layout_marginBottom="20dp"
         android:visibility="gone"/>
 

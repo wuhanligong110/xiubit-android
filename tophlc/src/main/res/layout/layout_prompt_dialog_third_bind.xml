@@ -70,7 +70,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center_vertical|left"
                     android:lineSpacingExtra="4dp"
-                    android:text="2.购买猎财专享加息标的"/>
+                    android:text="2.购买貅比特专享加息标的"/>
 
                 <TextView
                     android:textColor="@color/text_gray_common"
@@ -88,7 +88,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center_vertical|left"
                     android:lineSpacingExtra="4dp"
-                    android:text="    返回猎财购买加息产品"/>
+                    android:text="    返回貅比特购买加息产品"/>
 
 
                 <TextView
@@ -111,7 +111,7 @@
                         android:layout_height="wrap_content"
                         android:gravity="center_vertical|left"
                         android:lineSpacingExtra="4dp"
-                        android:text="    起息后，获得猎财专享"/>
+                        android:text="    起息后，获得貅比特专享"/>
                     <TextView
                         android:textColor="@color/text_red_common"
                         android:textSize="@dimen/w12"

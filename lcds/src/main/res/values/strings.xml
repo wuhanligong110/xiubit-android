@@ -234,7 +234,7 @@
     <!--declarationActivity 报单表单-->
 
     <!--declarationRecordList 报单List-->
-    <string name="declaration_list_no_records">如果客户已经购买,交易动态中却无购买记录,\n请点击下方按钮把购买信息报给理财,\n客户电话: 400-888-6987</string>
+    <string name="declaration_list_no_records">如果客户已经购买,交易动态中却无购买记录,\n请点击下方按钮把购买信息报给理财,\n客户电话: 0755-86725461</string>
 
     <!--Calculator 佣金计算器-->
 
@@ -368,7 +368,7 @@
     <string name="bank_card">银行卡</string>
     <string name="more">更多</string>
     <string name="customer_service_phone_num">客服电话</string>
-    <string name="customer_service_num">400-888-6987</string>
+    <string name="customer_service_num">0755-86725461</string>
     <string name="weixin_commution_qun">微信交流群</string>
     <string name="person_center">个人中心</string>
     <string name="konw_us">了解我们</string>

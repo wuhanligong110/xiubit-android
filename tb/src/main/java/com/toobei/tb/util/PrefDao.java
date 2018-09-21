@@ -114,7 +114,7 @@ public class PrefDao extends TopPrefDao {
     }
 
     public String getServiceTelephone() {
-        return pref.getString("serviceTelephone", "400-888-6987");
+        return pref.getString("serviceTelephone", "0755-86725461");
     }
 
     @Override
@@ -202,7 +202,7 @@ public class PrefDao extends TopPrefDao {
 
 
     /**
-     * 2016/10/27 0027  猎财攻略
+     * 2016/10/27 0027  貅比特攻略
      */
     public String getInvestmentStrategy() {
         return pref.getString("investmentStrategy", C.URL_INVESTMENTSTRATEGY);
@@ -232,7 +232,7 @@ public class PrefDao extends TopPrefDao {
     }
 
     /**
-     * 当前登录的是否猎财跳转过来的token
+     * 当前登录的是否貅比特跳转过来的token
      * @param tag
      */
    public void setIsLcdsJumpToken(boolean tag){
@@ -240,7 +240,7 @@ public class PrefDao extends TopPrefDao {
    }
 
     /**
-     * 猎财跳转过来的token
+     * 貅比特跳转过来的token
      * @return
      */
     public boolean getIsLcdsJumpToken(){

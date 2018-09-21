@@ -68,7 +68,7 @@ public class PlatformDetail extends BaseEntity {
     private String orgLogo;                                        //	    orgLogo	机构详情图片	string	机构详情图片
     private String orgName;                                        //	    orgName	平台名称	string
     private String orgNo;                                          //	    orgNo	平台编码	string
-    private String orgPlannerStrategy;                             //	    orgPlannerStrategy	猎财攻略	string	理财师1.2.1版本
+    private String orgPlannerStrategy;                             //	    orgPlannerStrategy	貅比特攻略	string	理财师1.2.1版本
     private String orgProductTag;                                  //	    orgProductTag	产品自定义标签	string	T呗/理财师1.2.1版本 (多个以英文逗号分隔)
     private String orgProfile;                                     //	    orgProfile	平台简介	string
     private String orgSecurity;                                    //	    orgSecurity	安全保障	string

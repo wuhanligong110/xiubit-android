@@ -124,7 +124,7 @@ public class PrefDao extends TopPrefDao {
     }
 
     public String getServiceTelephone() {
-        return pref.getString("serviceTelephone", "400-888-6987");
+        return pref.getString("serviceTelephone", "0755-86725461");
     }
 
     /**

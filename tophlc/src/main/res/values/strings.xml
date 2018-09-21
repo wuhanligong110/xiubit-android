@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     
-    <string name="card_bind_bottom_remind">绑卡过程中遇到任何问题，请联系客服:\n400-888-6987</string>
+    <string name="card_bind_bottom_remind">绑卡过程中遇到任何问题，请联系客服:\n0755-86725461</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
@@ -73,7 +73,7 @@
     <string name="hint_input_identity_card">请输入您的身份证号</string>
     <string name="support_bank">支持银行</string>
     <string name="warm_prompt">温馨提示</string>
-    <string name="warm_prompt_bank_add">为保障资金安全，仅支持绑定一张银行卡进行猎财余额的提现，如需解绑银行卡，请联系客服电话</string>
+    <string name="warm_prompt_bank_add">为保障资金安全，仅支持绑定一张银行卡进行貅比特余额的提现，如需解绑银行卡，请联系客服电话</string>
     <string name="prompt_bank_add2">首次绑卡需充值1.00元用于校验银行卡有效性</string>
     <string name="prompt_bank_add3">充值后的资金进入您的领会账户，您可通过提现转出</string>
     <string name="send_sms_vcode">发送验证码</string>
@@ -204,5 +204,5 @@
     <string name="umeng_my_withdraw_history">提现-点击提现记录</string>
 
     <!--手机号验证-->
-    <string name="vcode_ques_str">1.请确认当前手机号是否为该银行卡预留手机号\n\n2.检查短信是否被手机安全软件拦截\n\n3.预留手机号停用,联系银行客服咨询\n\n更多帮助致电猎财客服 400-888-6987</string>
+    <string name="vcode_ques_str">1.请确认当前手机号是否为该银行卡预留手机号\n\n2.检查短信是否被手机安全软件拦截\n\n3.预留手机号停用,联系银行客服咨询\n\n更多帮助致电貅比特客服 0755-86725461</string>
 </resources>

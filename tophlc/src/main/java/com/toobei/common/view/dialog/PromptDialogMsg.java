@@ -64,13 +64,13 @@ public class PromptDialogMsg extends Dialog implements View.OnClickListener {
             btnNegative.setText(btnNegativeText);
         }
         String str = content.toString();
-        if (str.contains("400-888-6987")) {
+        if (str.contains("0755-86725461")) {
             TextDecorator.decorate(textContent, str).makeTextClickable(new TextDecorator.OnTextClickListener() {
                 @Override
                 public void onClick(View view, String text) {
                     SystemFunctionUtil.INSTANCE.CallServicePhone((Activity) ctx, "4008886987");
                 }
-            }, false,"400-888-6987").setTextColor(R.color.text_blue_common,"400-888-6987").build();
+            }, false,"0755-86725461").setTextColor(R.color.text_blue_common,"0755-86725461").build();
             dismiss();
         } else {
             textContent.setText(str);

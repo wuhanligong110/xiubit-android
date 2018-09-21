@@ -454,9 +454,9 @@
 
 
                 </LinearLayout>
-                                <View style="@style/line_horizontal_common" />
+                                <!--<View style="@style/line_horizontal_common" />
                                 <View style="@style/line_horizontal_common"
-                                    android:layout_marginTop="12dp"/>
+                                    android:layout_marginTop="12dp"/>-->
                                 <!--<RelativeLayout
                                     android:id="@+id/fundSiftTitleRl"
                                     android:layout_width="match_parent"
@@ -593,9 +593,9 @@
                                         android:textSize="13dp" />
                                 </RelativeLayout>-->
 
-                                <include
+                                <!--<include
                                     android:id="@+id/insuranceEntry"
-                                    layout="@layout/item_insurance_list"/>
+                                    layout="@layout/item_insurance_list"/>-->
 
                                 <View
                                     style="@style/line_horizontal_common"

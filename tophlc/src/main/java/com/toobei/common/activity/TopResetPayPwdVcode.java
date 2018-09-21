@@ -91,7 +91,7 @@ public abstract class TopResetPayPwdVcode extends TopBaseActivity implements OnC
 		questionTv.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				SystemFunctionUtil.INSTANCE.CallServicePhone(ctx,"400-888-6987");
+				SystemFunctionUtil.INSTANCE.CallServicePhone(ctx,"0755-86725461");
 			}
 		});
 		initTopView();

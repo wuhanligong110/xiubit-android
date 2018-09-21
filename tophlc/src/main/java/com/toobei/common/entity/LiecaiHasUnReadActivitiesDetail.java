@@ -7,7 +7,7 @@ public class LiecaiHasUnReadActivitiesDetail {
     /**
      * activityReaded	活动	number
      * classroomReaded	课堂	number
-     * liecaiReaded	猎财	number
+     * liecaiReaded	貅比特	number
      * newsReaded	资讯	number
      * unFinishNewcomerTaskCount	未完成新手任务数量	number
      */
@@ -18,7 +18,7 @@ public class LiecaiHasUnReadActivitiesDetail {
     private String unFinishNewcomerTaskCount;
 
 //    activityReaded	活动	number
-//    liecaiReaded	猎财	number
+//    liecaiReaded	貅比特	number
 //    newsReaded	资讯	number
 
     public String getActivityReaded() {
